@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // styles
 const pageStyles = {
@@ -11,6 +12,7 @@ const pageStyles = {
 const IndexPage = ({ data: { allMarkdownRemark } }) => {
   return (
     <main style={pageStyles}>
+      <Helmet title="OSS Port" />
       <h1>Explore open source communities</h1>
       <h2>Onboard and contribute to your next project with ease</h2>
 
