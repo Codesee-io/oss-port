@@ -5,3 +5,34 @@
 body {
   background: #fafafb;
 }
+
+/* Wrapper for the user-generated content inside project */
+.project-content h1 {
+  @apply text-black-500;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+
+.project-content p,
+.project-content ul,
+.project-content ol {
+  @apply text-black-300;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.project-content ul {
+  @apply list-disc list-inside;
+}
+
+.project-content a {
+  color: #1777c1;
+  font-weight: 700;
+}
+
+.project-content a:hover,
+.project-content a:focus {
+  text-decoration: underline;
+}
