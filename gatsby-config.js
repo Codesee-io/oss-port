@@ -4,6 +4,8 @@ module.exports = {
     title: "OSS Port",
   },
   plugins: [
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-remark",
