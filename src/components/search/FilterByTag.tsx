@@ -31,7 +31,7 @@ const FilterByTag: FunctionComponent<RefinementListProvided> = ({
       {orderedTags.map((item) => (
         <ClickableTag
           isActive={item.isRefined}
-          key={item.objectID}
+          key={item.label}
           tag={item.label}
           onClick={toggleRefineTag}
         />

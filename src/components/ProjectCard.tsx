@@ -16,16 +16,10 @@ export type ProjectFrontmatter = {
 export type Project = {
   id: string;
   frontmatter: ProjectFrontmatter;
-  fields: {
-    slug: string;
-  };
+  slug: string;
 };
 
-const ProjectCard: FunctionComponent<Project> = ({
-  id,
-  frontmatter,
-  fields: { slug },
-}) => {
+const ProjectCard: FunctionComponent<Project> = ({ id, frontmatter, slug }) => {
   return (
     <div className="p-4 bg-white relative" key={id}>
       {frontmatter.avatar && (

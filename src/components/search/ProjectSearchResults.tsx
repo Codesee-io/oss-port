@@ -24,10 +24,10 @@ const ProjectSearchResults: FunctionComponent<Props> = ({
       <ProjectListWrapper>
         {defaultProjects.map((hit) => (
           <ProjectCard
-            key={hit.fields.slug}
+            key={hit.slug}
             id={hit.id}
             frontmatter={hit.frontmatter}
-            fields={{ slug: hit.fields.slug }}
+            slug={hit.slug}
           />
         ))}
       </ProjectListWrapper>
@@ -41,7 +41,7 @@ const ProjectSearchResults: FunctionComponent<Props> = ({
           key={hit.slug}
           id={hit.id}
           frontmatter={hit.frontmatter}
-          fields={{ slug: hit.slug }}
+          slug={hit.slug}
         />
       ))}
     </ProjectListWrapper>
