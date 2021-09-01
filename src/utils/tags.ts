@@ -3,6 +3,9 @@ const KNOWN_TAGS = {
   typescript: "TypeScript",
   graphql: "GraphQL",
   html: "HTML",
+  ux: "UX",
+  ui: "UI",
+  "ux/ui": "UX/UI",
 } as const;
 
 export function getFormattedTag(tag: string) {

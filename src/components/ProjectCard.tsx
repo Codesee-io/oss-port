@@ -6,6 +6,7 @@ export type ProjectFrontmatter = {
   repoUrl: string;
   name: string;
   tags: string[];
+  currentlySeeking?: string[];
   websiteUrl?: string;
   twitterUrl?: string;
   avatar?: {
