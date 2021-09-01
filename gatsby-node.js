@@ -6,20 +6,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projectTemplate = path.resolve(`src/templates/project.tsx`);
 
   const projects = await graphql(`
-    {
-      allMdx(sort: { order: ASC, fields: [frontmatter___name] }, limit: 1000) {
-        nodes {
-          id
-          slug
-          frontmatter {
+  {
+    allMdx(sort: {order: ASC, fields: [frontmatter___name]}, limit: 1000) {
+      nodes {
+        id
+        slug
+        frontmatter {
+          name
+        }
+        parent {
+          ... on File {
             name
-            avatar {
-              publicURL
-            }
+            relativeDirectory
           }
         }
       }
     }
+  }
   `);
 
   if (projects.errors) {
@@ -93,12 +96,38 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           return isThisMonth;
         });
 
-        githubData = {
-          prsMerged: {
-            count: mergedThisMonth.length,
-            maybeMore: thereMayBeMoreData
-          }
+        githubData['prsMerged'] = {
+          count: mergedThisMonth.length,
+          maybeMore: thereMayBeMoreData
         }
+
+        thereMayBeMoreData = true;
+
+        const createdThisMonth = data.repository.pullRequests.nodes.filter(({createdAt, author}) => {
+          // If author.id is set, this means that the author is a bot because specifically cast
+          // the author as a bot and get the id in the query.
+          if (author?.id) {
+            // TODO: Do we want to include bots?
+            return false;
+          }
+          const date = new Date(createdAt);
+          const now = Date.now();
+          const isThisMonth = now - date < 30 /* days */ * 24 * 60 * 60 * 1000;
+          if (!isThisMonth) {
+            // This PR is from more than a month ago.
+            // Since the data is sorted (by updated_at),
+            // this PROBABLY means we have fetched all relevant data
+            thereMayBeMoreData = false; // most likely
+          }
+          
+          return isThisMonth;
+        });
+
+        githubData['prsCreated'] = {
+          count: createdThisMonth.length,
+          maybeMore: thereMayBeMoreData
+        }
+
       } catch (err) {
         console.warn(err);
       }
