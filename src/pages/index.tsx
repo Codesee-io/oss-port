@@ -1,13 +1,12 @@
-import { graphql, Link } from "gatsby";
-import React, { FormEvent, useRef, useState } from "react";
+import { graphql } from "gatsby";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import algoliasearch from "algoliasearch/lite";
-import ProjectCard from "../components/ProjectCard";
-import ProjectSearch from "../components/ProjectSearch";
 import ProjectSearchInput from "../components/search/ProjectSearchInput";
 import { InstantSearch } from "react-instantsearch-dom";
 import ProjectSearchResults from "../components/search/ProjectSearchResults";
 import Tag from "../components/Tag";
+import FilterByTag from "../components/search/FilterByTag";
 
 // TODO disable the search if the env vars are missing
 const searchClient = algoliasearch(
@@ -23,11 +22,6 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => {
   return (
     <main className="max-w-5xl mx-auto py-12">
       <Helmet title="OSS Port" />
-      <div className="text-center space-x-2 mb-20">
-        {allMarkdownRemark.allTags.map((tag) => (
-          <Tag tag={tag.fieldValue} />
-        ))}
-      </div>
       <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
         Explore open source communities
       </h1>
@@ -40,6 +34,7 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => {
         onSearchStateChange={({ query }) => setSearchQuery(query)}
       >
         <ProjectSearchInput />
+        <FilterByTag attribute="frontmatter.tags" />
         <ProjectSearchResults defaultProjects={allMarkdownRemark.nodes} />
       </InstantSearch>
     </main>
