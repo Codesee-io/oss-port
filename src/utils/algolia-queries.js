@@ -45,6 +45,7 @@ const queries = [
         "attribute",
         "exact",
       ],
+      attributesForFaceting: ["frontmatter.tags"],
     },
     // matchFields: ["slug", "modified"], // Array<String> overrides main match fields, optional
   },
