@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { ProjectFrontmatter } from "./ProjectCard";
+import { ProjectFrontmatter } from "../types";
 
 /**
  * We need to pass some data to components that are nested pretty deep inside
