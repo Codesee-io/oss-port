@@ -1,7 +1,8 @@
 const path = require("path");
 const { graphql: github } = require("@octokit/graphql");
+const { exit } = require("process");
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
   const projectTemplate = path.resolve(`src/templates/project.tsx`);
 
@@ -48,7 +49,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       githubData = await calculateGithubData(
         githubAPI, 
         node.parent.relativeDirectory, 
-        node.parent.name
+        node.parent.name,
+        cache,
       );
     }
 
@@ -66,8 +68,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
 
-async function calculateGithubData(githubAPI, owner, repo) {
+async function calculateGithubData(githubAPI, owner, repo, cache) {
   let githubData = {};
+  const today = (new Date()).toISOString().substr(0, 10); // YYYY-MM-DD
+
+  const cacheKey = `github:${owner}/${repo}:${today}`;
+  const cached = await cache.get(cacheKey);
+  if (cached && !process.env.GITHUB_IGNORE_BUILD_CACHE) {
+    return cached;
+  }
+
   try {
     const mergedPRs = await githubAPI(`
     query mergedPRs($owner: String!, $repo: String!) {
@@ -205,6 +215,8 @@ async function calculateGithubData(githubAPI, owner, repo) {
       count: contributorsThisMonth.size,
       maybeMore: thereMayBeMoreMergeData || thereMayBeMoreCreatedData,
     }
+
+    await cache.set(cacheKey, githubData);
 
   } catch (err) {
     console.warn(err);
