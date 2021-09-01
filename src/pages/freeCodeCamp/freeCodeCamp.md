@@ -3,7 +3,9 @@ name: freeCodeCamp
 repoUrl: https://github.com/freeCodeCamp/freeCodeCamp
 twitterUrl: https://twitter.com/freeCodeCamp
 websiteUrl: https://www.freecodecamp.org/
-tags: javascript, typescript
+tags:
+  - javascript
+  - typescript
 avatar: avatar.jpg
 description: freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.
 ---

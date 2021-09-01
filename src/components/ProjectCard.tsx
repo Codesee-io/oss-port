@@ -2,10 +2,10 @@ import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 import Tag from "./Tag";
 
-type ProjectFrontmatter = {
+export type ProjectFrontmatter = {
   repoUrl: string;
   name: string;
-  tags: string;
+  tags: string[];
   websiteUrl?: string;
   twitterUrl?: string;
   avatar?: {
@@ -13,7 +13,7 @@ type ProjectFrontmatter = {
   };
 };
 
-type Props = {
+export type Project = {
   id: string;
   frontmatter: ProjectFrontmatter;
   fields: {
@@ -21,13 +21,11 @@ type Props = {
   };
 };
 
-const ProjectCard: FunctionComponent<Props> = ({
+const ProjectCard: FunctionComponent<Project> = ({
   id,
   frontmatter,
   fields: { slug },
 }) => {
-  const tags = frontmatter.tags.split(",");
-
   return (
     <div className="p-4 bg-white relative" key={id}>
       {frontmatter.avatar && (
@@ -43,7 +41,7 @@ const ProjectCard: FunctionComponent<Props> = ({
         Repo
       </a>
       <div className="mt-4">
-        {tags.map((language) => (
+        {frontmatter.tags.map((language) => (
           <Tag tag={language} key={language} className="mr-2 mb-2" />
         ))}
       </div>
