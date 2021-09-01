@@ -5,7 +5,6 @@ import algoliasearch from "algoliasearch/lite";
 import ProjectSearchInput from "../components/search/ProjectSearchInput";
 import { InstantSearch } from "react-instantsearch-dom";
 import ProjectSearchResults from "../components/search/ProjectSearchResults";
-import Tag from "../components/Tag";
 import FilterByTag from "../components/search/FilterByTag";
 
 // TODO disable the search if the env vars are missing
@@ -20,7 +19,7 @@ const IndexPage = ({ data: { allMdx } }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <main className="max-w-5xl mx-auto py-12">
+    <main className="max-w-5xl mx-auto py-12 px-2">
       <Helmet title="OSS Port" />
       <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
         Explore open source communities

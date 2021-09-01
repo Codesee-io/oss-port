@@ -10,7 +10,7 @@ const CurrentlySeeking: FunctionComponent = () => {
   }
 
   return (
-    <article className="bg-white p-4 max-w-full" style={{ width: 300 }}>
+    <article className="bg-white p-4 max-w-full mb-4" style={{ width: 300 }}>
       <h3 className="text-black-500 font-bold mb-4">Currently seeking</h3>
 
       {frontmatter.currentlySeeking.map((item) => (

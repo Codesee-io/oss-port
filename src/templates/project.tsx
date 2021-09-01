@@ -21,7 +21,7 @@ const mdxComponents = {
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
-    <main className="max-w-4xl mx-auto py-12">
+    <main className="max-w-4xl mx-auto py-12 px-2">
       <Helmet title={`OSS Port | ${mdx.frontmatter.name}`} />
       <Link to="/">Home</Link>
       <h1 className="text-black-500 font-bold text-4xl mb-4">

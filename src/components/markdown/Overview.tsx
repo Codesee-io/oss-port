@@ -7,7 +7,7 @@ const Overview: FunctionComponent = ({ children }) => {
     <div className="mb-8">
       <h2 className="text-xl text-black-500 font-bold mb-4">Overview</h2>
       {children}
-      <div className="flex space-x-6">
+      <div className="md:flex md:space-x-6">
         <CurrentlySeeking />
         <ContributionOverview />
       </div>
