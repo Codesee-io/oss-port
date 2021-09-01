@@ -191,7 +191,7 @@ async function calculateGithubData(githubAPI, owner, repo) {
         }
       } else {
         // This PR is from more than a month ago.
-        // Since the data is sorted (by updated_at),
+        // Since the data is sorted (by created_at),
         // this PROBABLY means we have fetched all relevant data
         thereMayBeMoreCreatedData = false; // most likely
       }
