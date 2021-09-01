@@ -30,10 +30,22 @@ const queries = [
         frontmatter: node.frontmatter,
       }));
     },
-    // settings: {
-    // optional, any index settings
-    // Note: by supplying settings, you will overwrite all existing settings on the index
-    // },
+    // Note: by supplying settings, we overwrite all existing settings on the index
+    settings: {
+      searchableAttributes: [
+        "frontmatter.name",
+        "frontmatter.description",
+        "frontmatter.tags",
+      ],
+      ranking: [
+        "asc(frontmatter.name)",
+        "typo",
+        "words",
+        "proximity",
+        "attribute",
+        "exact",
+      ],
+    },
     // matchFields: ["slug", "modified"], // Array<String> overrides main match fields, optional
   },
 ];
