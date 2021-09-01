@@ -8,6 +8,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { ProjectFrontmatterContextProvider } from "../components/ProjectFrontmatterContext";
 
 // Make some React components available globally in MDX files
 const shortcodes = { Overview, Contributing } as const;
@@ -49,9 +50,11 @@ export default function ProjectTemplate({ data: { mdx } }) {
         )}
       </div>
       <div className="project-content mt-8">
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
+        <ProjectFrontmatterContextProvider value={mdx.frontmatter}>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </ProjectFrontmatterContextProvider>
       </div>
     </main>
   );
@@ -67,6 +70,7 @@ export const pageQuery = graphql`
         repoUrl
         websiteUrl
         twitterUrl
+        currentlySeeking
       }
     }
   }
