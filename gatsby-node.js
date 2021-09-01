@@ -6,19 +6,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const projects = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___name] }
-        limit: 1000
-      ) {
+      allMdx(sort: { order: ASC, fields: [frontmatter___name] }, limit: 1000) {
         nodes {
           id
-          fields {
-            slug
-          }
-          parent {
-            ... on File {
-              name
-              relativeDirectory
+          slug
+          frontmatter {
+            name
+            avatar {
+              publicURL
             }
           }
         }
@@ -32,13 +27,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   // Create a page for each project
-  projects.data.allMarkdownRemark.nodes.forEach((node) => {
+  projects.data.allMdx.nodes.forEach((node) => {
     createPage({
-      path: node.fields.slug,
+      path: node.slug,
       component: projectTemplate,
       context: {
         id: node.id,
-        slug: node.fields.slug,
+        slug: node.slug,
       },
     });
   });

@@ -1,10 +1,9 @@
+// TODO make sure this works
 const myQuery = `{
-  allMarkdownRemark {
+  allMdx {
     nodes {
       id
-      fields {
-        slug
-      }
+      slug
       frontmatter {
         description
         name
@@ -24,9 +23,9 @@ const queries = [
   {
     query: myQuery,
     transformer: ({ data }) => {
-      return data.allMarkdownRemark.nodes.map((node) => ({
+      return data.allMdx.nodes.map((node) => ({
         objectID: node.id,
-        slug: node.fields.slug,
+        slug: node.slug,
         frontmatter: node.frontmatter,
       }));
     },

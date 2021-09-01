@@ -16,7 +16,7 @@ const searchClient = algoliasearch(
 
 const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 
-const IndexPage = ({ data: { allMarkdownRemark } }) => {
+const IndexPage = ({ data: { allMdx } }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -35,7 +35,7 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => {
       >
         <ProjectSearchInput />
         <FilterByTag attribute="frontmatter.tags" />
-        <ProjectSearchResults defaultProjects={allMarkdownRemark.nodes} />
+        <ProjectSearchResults defaultProjects={allMdx.nodes} />
       </InstantSearch>
     </main>
   );
@@ -43,15 +43,11 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => {
 
 export const pageQuery = graphql`
   query ProjectList {
-    allMarkdownRemark {
-      # Get a list of all the tags
-      allTags: group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      # Get a list of all the projects
+    # Get a list of all the projects
+    allMdx {
       nodes {
         id
+        slug
         frontmatter {
           name
           tags
@@ -59,9 +55,6 @@ export const pageQuery = graphql`
           avatar {
             publicURL
           }
-        }
-        fields {
-          slug
         }
       }
     }

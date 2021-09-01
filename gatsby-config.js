@@ -13,13 +13,17 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages",
+        name: "projects",
+        path: "./projects",
       },
-      __key: "pages",
     },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-slug",
+    {
+      // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".md", ".mdx"],
+      },
+    },
     {
       // https://github.com/algolia/gatsby-plugin-algolia
       // NOTE: the index is only generated when running `gatsby build`
