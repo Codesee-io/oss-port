@@ -9,9 +9,15 @@ import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ProjectFrontmatterContextProvider } from "../components/ProjectFrontmatterContext";
+import mdxElements from "../components/markdown/mdxElements";
 
 // Make some React components available globally in MDX files
-const shortcodes = { Overview, Contributing } as const;
+const mdxComponents = {
+  ...mdxElements,
+  // Make some custom React components available as shortcodes
+  Overview,
+  Contributing,
+} as const;
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
@@ -22,7 +28,7 @@ export default function ProjectTemplate({ data: { mdx } }) {
         {mdx.frontmatter.name}
       </h1>
       <p className="text-black-300 mb-6">{mdx.frontmatter.description}</p>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 mb-8">
         <a
           target="_blank"
           className="text-black-300 hover:text-primary-400"
@@ -49,13 +55,12 @@ export default function ProjectTemplate({ data: { mdx } }) {
           </a>
         )}
       </div>
-      <div className="project-content mt-8">
-        <ProjectFrontmatterContextProvider value={mdx.frontmatter}>
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-        </ProjectFrontmatterContextProvider>
-      </div>
+
+      <ProjectFrontmatterContextProvider value={mdx.frontmatter}>
+        <MDXProvider components={mdxComponents}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </ProjectFrontmatterContextProvider>
     </main>
   );
 }
@@ -71,6 +76,12 @@ export const pageQuery = graphql`
         websiteUrl
         twitterUrl
         currentlySeeking
+        contributionOverview {
+          mainLocation
+          idealEffort
+          isMentorshipAvailable
+          automatedDevEnvironment
+        }
       }
     }
   }

@@ -1,24 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 import Tag from "./Tag";
-
-export type ProjectFrontmatter = {
-  repoUrl: string;
-  name: string;
-  tags: string[];
-  currentlySeeking?: string[];
-  websiteUrl?: string;
-  twitterUrl?: string;
-  avatar?: {
-    publicURL: string;
-  };
-};
-
-export type Project = {
-  id: string;
-  frontmatter: ProjectFrontmatter;
-  slug: string;
-};
+import { Project } from "../types";
 
 const ProjectCard: FunctionComponent<Project> = ({ id, frontmatter, slug }) => {
   return (

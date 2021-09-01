@@ -9,7 +9,7 @@ body {
 }
 
 /* Wrapper for the user-generated content inside project */
-.project-content h1 {
+h1.markdown-element {
   @apply text-black-500;
   font-weight: 700;
   font-size: 21px;
@@ -17,24 +17,24 @@ body {
   margin-bottom: 18px;
 }
 
-.project-content p,
-.project-content ul,
-.project-content ol {
+p.markdown-element,
+ul.markdown-element,
+ol.markdown-element {
   @apply text-black-300;
   font-size: 14px;
   margin-bottom: 18px;
 }
 
-.project-content ul {
+ul.markdown-element {
   @apply list-disc list-inside;
 }
 
-.project-content a {
+a.markdown-element {
   color: #1777c1;
   font-weight: 700;
 }
 
-.project-content a:hover,
-.project-content a:focus {
+a.markdown-element:hover,
+a.markdown-element:focus {
   text-decoration: underline;
 }
