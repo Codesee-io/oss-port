@@ -2,16 +2,16 @@ import React, { FunctionComponent, useContext } from "react";
 import ProjectContext from "../ProjectContext";
 import IssueList from "./IssueList";
 
-const HelpWanted: FunctionComponent = () => {
+const HacktoberfestIssues: FunctionComponent = () => {
   const { githubData, frontmatter } = useContext(ProjectContext);
 
   return (
     <IssueList
-      title="Help wanted"
+      title="🎃 Hacktoberfest"
       repoUrl={frontmatter.repoUrl}
-      issues={githubData.helpIssues}
+      issues={githubData.hacktoberfestIssues}
     />
   );
 };
 
-export default HelpWanted;
+export default HacktoberfestIssues;
