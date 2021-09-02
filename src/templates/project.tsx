@@ -19,7 +19,7 @@ const mdxComponents = {
   Contributing,
 } as const;
 
-export default function ProjectTemplate({ data: { mdx } }) {
+export default function ProjectTemplate({ data: { mdx }, pageContext }) {
   return (
     <main className="max-w-4xl mx-auto py-12 px-2">
       <Helmet title={`OSS Port | ${mdx.frontmatter.name}`} />
