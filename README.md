@@ -19,6 +19,12 @@
 
 1. You can now view the project in your browser at http://localhost:8000
 
+## Contributing
+
+The map below is a good way to get familiar with the codebase:
+
+[<img src="docs/codebase-map.png" width="500">](https://app.codesee.io/maps/public/66e14ff0-0c28-11ec-83a7-234deb28a370)
+
 ### Notes
 
 - Please pin the exact version of dependencies
