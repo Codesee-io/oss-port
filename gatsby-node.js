@@ -239,7 +239,7 @@ function issueQuery(githubAPI, owner, repo, label) {
   return githubAPI(`
   query issues($owner: String!, $repo: String!, $label: [String!]) {
     repository(owner: $owner, name: $repo) {
-      issues(labels: $label, orderBy: {field: CREATED_AT, direction: DESC}, first: 10) {
+      issues(labels: $label, states: OPEN, orderBy: {field: CREATED_AT, direction: DESC}, first: 10) {
         nodes {
           id
           number
