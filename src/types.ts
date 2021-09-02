@@ -31,7 +31,15 @@ export type GitHubIssueData = {
   url: string;
 };
 
+export type GitHubMetric = {
+  count: number;
+  maybeMore: boolean;
+};
+
 export type GitHubData = {
+  prsMerged: GitHubMetric;
+  prsCreated: GitHubMetric;
+  contributors: GitHubMetric;
   helpIssues: GitHubIssueData[];
   hacktoberfestIssues: GitHubIssueData[];
 };

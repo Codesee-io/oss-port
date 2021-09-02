@@ -1,9 +1,23 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 import Tag from "./Tag";
-import { Project } from "../types";
+import { GitHubMetric, Project } from "../types";
+import RepoStats from "./RepoStats";
 
-const ProjectCard: FunctionComponent<Project> = ({ id, frontmatter, slug }) => {
+type Props = Project & {
+  githubData?: {
+    prsMerged: GitHubMetric;
+    prsCreated: GitHubMetric;
+    contributors: GitHubMetric;
+  };
+};
+
+const ProjectCard: FunctionComponent<Props> = ({
+  id,
+  frontmatter,
+  slug,
+  githubData,
+}) => {
   return (
     <div className="p-4 bg-white relative" key={id}>
       {frontmatter.avatar && (
@@ -23,6 +37,7 @@ const ProjectCard: FunctionComponent<Project> = ({ id, frontmatter, slug }) => {
           <Tag tag={language} key={language} className="mr-2 mb-2" />
         ))}
       </div>
+      {githubData && <RepoStats className="mt-4" stats={githubData} />}
     </div>
   );
 };
