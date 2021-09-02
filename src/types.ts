@@ -22,3 +22,16 @@ export type Project = {
   frontmatter: ProjectFrontmatter;
   slug: string;
 };
+
+export type GitHubIssueData = {
+  id: string;
+  number: number;
+  publishedAt: string;
+  title: string;
+  url: string;
+};
+
+export type GitHubData = {
+  helpIssues: GitHubIssueData[];
+  hacktoberfestIssues: GitHubIssueData[];
+};

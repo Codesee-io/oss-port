@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { ProjectFrontmatter } from "../types";
+import { GitHubData, ProjectFrontmatter } from "../types";
 
 /**
  * We need to pass some data to components that are nested pretty deep inside
@@ -7,9 +7,11 @@ import { ProjectFrontmatter } from "../types";
  * we store the frontmatter data into this context and retrieve it wherever we
  * need.
  */
-const ProjectFrontmatterContext = createContext<ProjectFrontmatter>(null);
+const ProjectContext = createContext<{
+  frontmatter: ProjectFrontmatter;
+  githubData: GitHubData;
+}>(null);
 
-export const ProjectFrontmatterContextProvider =
-  ProjectFrontmatterContext.Provider;
+export const ProjectContextProvider = ProjectContext.Provider;
 
-export default ProjectFrontmatterContext;
+export default ProjectContext;

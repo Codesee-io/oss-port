@@ -1,11 +1,11 @@
 import React, { FunctionComponent, useContext } from "react";
-import ProjectFrontmatterContext from "../ProjectFrontmatterContext";
+import ProjectContext from "../ProjectContext";
 import { GitPullRequestIcon, ClockIcon } from "@primer/octicons-react";
 import ToolsIcon from "../icons/ToolsIcon";
 import UsersIcon from "../icons/UsersIcon";
 
 const ContributionOverview: FunctionComponent = () => {
-  const frontmatter = useContext(ProjectFrontmatterContext);
+  const { frontmatter } = useContext(ProjectContext);
 
   if (!frontmatter?.contributionOverview) {
     return null;
