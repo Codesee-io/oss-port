@@ -1,5 +1,11 @@
 require("dotenv").config();
 
+const runAlgoliaIndex =
+  process.env.ALGOLIA_ADMIN_KEY != null && process.env.GENERATE_ALGOLIA_INDEX;
+if (!runAlgoliaIndex) {
+  console.log(`Skipping Algolia index`);
+}
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -43,7 +49,7 @@ module.exports = {
         // Used to determine whether an object changed since the last index
         // matchFields: ["slug", "modified"], // Array<String> default: ['modified']
         // concurrentQueries: false, // default: true
-        skipIndexing: process.env.ALGOLIA_ADMIN_KEY == null, // default: false, useful for e.g. preview deploys or local development
+        skipIndexing: !runAlgoliaIndex, // default: false, useful for e.g. preview deploys or local development
         // continueOnFailure: false, // default: false, don't fail the build if algolia indexing fails
       },
     },
