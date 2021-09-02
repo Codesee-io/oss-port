@@ -1,4 +1,5 @@
 export type ProjectFrontmatter = {
+  description?: string;
   repoUrl: string;
   name: string;
   tags: string[];

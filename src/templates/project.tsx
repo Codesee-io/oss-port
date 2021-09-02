@@ -1,15 +1,14 @@
 import { Helmet } from "react-helmet";
 import React from "react";
 import { graphql, Link } from "gatsby";
-import TwitterIcon from "../components/icons/TwitterIcon";
-import GitHubIcon from "../components/icons/GitHubIcon";
-import LinkIcon from "../components/icons/LinkIcon";
 import { MDXProvider } from "@mdx-js/react";
 import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ProjectFrontmatterContextProvider } from "../components/ProjectFrontmatterContext";
 import mdxElements from "../components/markdown/mdxElements";
+import RepoStats from "../components/RepoStats";
+import RepoLinks from "../components/RepoLinks";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -19,46 +18,27 @@ const mdxComponents = {
   Contributing,
 } as const;
 
-export default function ProjectTemplate({ data: { mdx }, pageContext }) {
+export default function ProjectTemplate({
+  data: { allProjects },
+  pageContext,
+}) {
+  const { githubData } = pageContext;
+
   return (
     <main className="max-w-4xl mx-auto py-12 px-2">
-      <Helmet title={`OSS Port | ${mdx.frontmatter.name}`} />
+      <Helmet title={`OSS Port | ${allProjects.frontmatter.name}`} />
       <Link to="/">Home</Link>
       <h1 className="text-black-500 font-bold text-4xl mb-4">
-        {mdx.frontmatter.name}
+        {allProjects.frontmatter.name}
       </h1>
-      <p className="text-black-300 mb-6">{mdx.frontmatter.description}</p>
-      <div className="flex space-x-4 mb-8">
-        <a
-          target="_blank"
-          className="text-black-300 hover:text-primary-400"
-          href={mdx.frontmatter.repoUrl}
-        >
-          <GitHubIcon />
-        </a>
-        {mdx.frontmatter.twitterUrl && (
-          <a
-            target="_blank"
-            className="text-black-300 hover:text-primary-400"
-            href={mdx.frontmatter.twitterUrl}
-          >
-            <TwitterIcon />
-          </a>
-        )}
-        {mdx.frontmatter.websiteUrl && (
-          <a
-            target="_blank"
-            className="text-black-300 hover:text-primary-400"
-            href={mdx.frontmatter.websiteUrl}
-          >
-            <LinkIcon />
-          </a>
-        )}
+      <div className="md:flex mb-6">
+        <RepoLinks frontmatter={allProjects.frontmatter} />
+        <RepoStats stats={githubData} />
       </div>
 
-      <ProjectFrontmatterContextProvider value={mdx.frontmatter}>
+      <ProjectFrontmatterContextProvider value={allProjects.frontmatter}>
         <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer>{allProjects.body}</MDXRenderer>
         </MDXProvider>
       </ProjectFrontmatterContextProvider>
     </main>
@@ -67,7 +47,7 @@ export default function ProjectTemplate({ data: { mdx }, pageContext }) {
 
 export const pageQuery = graphql`
   query ProjectByPath($slug: String!) {
-    mdx(slug: { eq: $slug }) {
+    allProjects: mdx(slug: { eq: $slug }) {
       body
       frontmatter {
         name
