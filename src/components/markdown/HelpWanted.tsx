@@ -4,7 +4,7 @@ import ProjectContext from "../ProjectContext";
 const HelpWanted: FunctionComponent = () => {
   const { githubData, frontmatter } = useContext(ProjectContext);
 
-  if (!githubData) {
+  if (!githubData?.helpIssues?.length) {
     return null;
   }
 
