@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { ProjectFrontmatterContextProvider } from "../components/ProjectFrontmatterContext";
+import { ProjectContextProvider } from "../components/ProjectContext";
 import mdxElements from "../components/markdown/mdxElements";
 import RepoStats from "../components/RepoStats";
 import RepoLinks from "../components/RepoLinks";
@@ -36,11 +36,13 @@ export default function ProjectTemplate({
         <RepoStats stats={githubData} />
       </div>
 
-      <ProjectFrontmatterContextProvider value={allProjects.frontmatter}>
+      <ProjectContextProvider
+        value={{ frontmatter: allProjects.frontmatter, githubData }}
+      >
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{allProjects.body}</MDXRenderer>
         </MDXProvider>
-      </ProjectFrontmatterContextProvider>
+      </ProjectContextProvider>
     </main>
   );
 }

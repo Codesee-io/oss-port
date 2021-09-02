@@ -16,6 +16,9 @@ module.exports = {
           50: "#e7e5f2",
           400: "#5845a6",
         },
+        blue: {
+          500: "#1777C1",
+        },
       },
       fill: (theme) => ({
         "black-200": theme("colors.black.200"),

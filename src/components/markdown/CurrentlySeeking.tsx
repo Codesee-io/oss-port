@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useContext } from "react";
-import ProjectFrontmatterContext from "../ProjectFrontmatterContext";
+import ProjectContext from "../ProjectContext";
 import Tag from "../Tag";
 
 const CurrentlySeeking: FunctionComponent = () => {
-  const frontmatter = useContext(ProjectFrontmatterContext);
+  const { frontmatter } = useContext(ProjectContext);
 
   if (!frontmatter?.currentlySeeking) {
     return null;
