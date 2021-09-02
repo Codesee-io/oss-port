@@ -1,6 +1,5 @@
 const path = require("path");
 const { graphql: github } = require("@octokit/graphql");
-const { exit } = require("process");
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
