@@ -19,28 +19,28 @@ const mdxComponents = {
 } as const;
 
 export default function ProjectTemplate({
-  data: { allProjects },
+  data: { projectData },
   pageContext,
 }) {
   const { githubData } = pageContext;
 
   return (
     <main className="max-w-4xl mx-auto py-12 px-2">
-      <Helmet title={`OSS Port | ${allProjects.frontmatter.name}`} />
+      <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
       <Link to="/">Home</Link>
       <h1 className="text-black-500 font-bold text-4xl mb-4">
-        {allProjects.frontmatter.name}
+        {projectData.frontmatter.name}
       </h1>
       <div className="md:flex mb-6">
-        <RepoLinks frontmatter={allProjects.frontmatter} />
-        <RepoStats stats={githubData} />
+        <RepoLinks frontmatter={projectData.frontmatter} />
+        <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
       </div>
 
       <ProjectContextProvider
-        value={{ frontmatter: allProjects.frontmatter, githubData }}
+        value={{ frontmatter: projectData.frontmatter, githubData }}
       >
         <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{allProjects.body}</MDXRenderer>
+          <MDXRenderer>{projectData.body}</MDXRenderer>
         </MDXProvider>
       </ProjectContextProvider>
     </main>
@@ -49,7 +49,7 @@ export default function ProjectTemplate({
 
 export const pageQuery = graphql`
   query ProjectByPath($slug: String!) {
-    allProjects: mdx(slug: { eq: $slug }) {
+    projectData: mdx(slug: { eq: $slug }) {
       body
       frontmatter {
         name

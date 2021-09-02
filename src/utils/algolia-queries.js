@@ -8,12 +8,6 @@ const myQuery = `{
         description
         name
         tags
-        repoUrl
-        websiteUrl
-        twitterUrl
-        avatar {
-          publicURL
-        }
       }
     }
   }
