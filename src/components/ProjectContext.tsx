@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { GitHubData, ProjectFrontmatter } from "../types";
+import { CodeSeeMapMetadata, GitHubData, ProjectFrontmatter } from "../types";
 
 /**
  * We need to pass some data to components that are nested pretty deep inside
@@ -10,6 +10,7 @@ import { GitHubData, ProjectFrontmatter } from "../types";
 const ProjectContext = createContext<{
   frontmatter: ProjectFrontmatter;
   githubData: GitHubData;
+  featuredMapMetadata?: CodeSeeMapMetadata;
 }>(null);
 
 export const ProjectContextProvider = ProjectContext.Provider;
