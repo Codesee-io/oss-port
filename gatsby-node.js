@@ -215,6 +215,16 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
       maybeMore: thereMayBeMoreMergeData || thereMayBeMoreCreatedData,
     }
 
+
+    const helpIssuesResults = await issueQuery(githubAPI, owner, repo, "help wanted");
+    const hacktoberfestIssuesResults = await issueQuery(githubAPI, owner, repo, "hacktoberfest");
+
+    const helpIssues = helpIssuesResults.repository.issues.nodes;
+    const hacktoberfestIssues = hacktoberfestIssuesResults.repository.issues.nodes;
+
+    githubData['helpIssues'] = helpIssues;
+    githubData['hacktoberfestIssues'] = hacktoberfestIssues;
+
     await cache.set(cacheKey, githubData);
 
   } catch (err) {
@@ -222,4 +232,31 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
   }
 
   return githubData;
+}
+
+
+function issueQuery(githubAPI, owner, repo, label) {
+  return githubAPI(`
+  query issues($owner: String!, $repo: String!, $label: [String!]) {
+    repository(owner: $owner, name: $repo) {
+      issues(labels: $label, orderBy: {field: CREATED_AT, direction: DESC}, first: 10) {
+        nodes {
+          id
+          number
+          publishedAt
+          title
+          url
+        }
+        totalCount
+        pageInfo {
+          endCursor
+          hasNextPage
+          startCursor
+        }
+      }
+    }
+  }
+  `, 
+  { owner, repo, label }
+  );
 }
