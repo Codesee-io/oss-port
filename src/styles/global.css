@@ -15,6 +15,22 @@ h1.markdown-element {
   margin-bottom: 18px;
 }
 
+h2.markdown-element {
+  @apply text-black-400;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 14px;
+}
+
+h3.markdown-element {
+  @apply text-black-400;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
 p.markdown-element,
 ul.markdown-element,
 ol.markdown-element {
@@ -27,6 +43,10 @@ ul.markdown-element {
   @apply list-disc list-inside;
 }
 
+ol.markdown-element {
+  @apply list-decimal list-inside;
+}
+
 a.markdown-element {
   color: #1777c1;
   font-weight: 700;
@@ -35,4 +55,12 @@ a.markdown-element {
 a.markdown-element:hover,
 a.markdown-element:focus {
   text-decoration: underline;
+}
+
+code.markdown-element {
+  @apply bg-black-50;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 5px;
 }
