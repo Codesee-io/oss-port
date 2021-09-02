@@ -8,7 +8,7 @@ if (!runAlgoliaIndex) {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.oss-port.com",
     title: "OSS Port",
   },
   plugins: [
