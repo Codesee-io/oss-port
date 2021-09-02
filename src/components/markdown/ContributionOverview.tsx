@@ -19,7 +19,7 @@ const ContributionOverview: FunctionComponent = () => {
   } = frontmatter.contributionOverview;
 
   return (
-    <article className="bg-white p-4 max-w-full" style={{ width: 300 }}>
+    <article className="bg-white p-4 max-w-full mb-4" style={{ width: 300 }}>
       <h3 className="text-black-500 font-bold mb-4">Contribution overview</h3>
       <div className="text-black-500 text-sm space-y-2">
         {mainLocation && (
