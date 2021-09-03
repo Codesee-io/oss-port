@@ -23,7 +23,7 @@ export default function ProjectTemplate({
   data: { projectData },
   pageContext,
 }) {
-  const { githubData } = pageContext;
+  const { githubData, featuredMapMetadata } = pageContext;
 
   // Dynamically populate the tabs based on the existing sections
   const hasOverviewTab = projectData.body.includes("mdx(Overview,");
@@ -47,7 +47,11 @@ export default function ProjectTemplate({
         hasLearnTab={hasLearnTab}
       />
       <ProjectContextProvider
-        value={{ frontmatter: projectData.frontmatter, githubData }}
+        value={{
+          frontmatter: projectData.frontmatter,
+          githubData,
+          featuredMapMetadata,
+        }}
       >
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{projectData.body}</MDXRenderer>
@@ -68,6 +72,7 @@ export const pageQuery = graphql`
         websiteUrl
         twitterUrl
         currentlySeeking
+        featuredMapUrl
         contributionOverview {
           mainLocation
           idealEffort

@@ -1,5 +1,6 @@
 const path = require("path");
 const calculateGithubData = require("./src/utils/calculateGithubData");
+const getCodeSeeMapMetadata = require("./src/utils/getCodeSeeMapMetadata");
 const { graphql: github } = require("@octokit/graphql");
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
@@ -18,6 +19,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
           slug
           frontmatter {
             name
+            featuredMapUrl
           }
           parent {
             ... on File {
@@ -65,6 +67,15 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       };
     }
 
+    // If the project has a featured map, load its metadata
+    let featuredMapMetadata;
+    if (node.frontmatter.featuredMapUrl) {
+      featuredMapMetadata = await getCodeSeeMapMetadata(
+        node.frontmatter.featuredMapUrl,
+        cache
+      );
+    }
+
     createPage({
       path: node.slug,
       component: projectTemplate,
@@ -72,6 +83,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         id: node.id,
         slug: node.slug,
         githubData,
+        featuredMapMetadata,
       },
     });
   }

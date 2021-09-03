@@ -15,6 +15,7 @@ export type ProjectFrontmatter = {
   avatar?: {
     publicURL: string;
   };
+  featuredMapUrl?: string;
 };
 
 export type Project = {
@@ -42,4 +43,13 @@ export type GitHubData = {
   contributors: GitHubMetric;
   helpIssues: GitHubIssueData[];
   hacktoberfestIssues: GitHubIssueData[];
+};
+
+export type CodeSeeMapMetadata = {
+  id: string;
+  name: string;
+  visibility: string;
+  featured: boolean;
+  changed: string;
+  thumbnail: string;
 };
