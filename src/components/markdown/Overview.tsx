@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from "react";
 import ContributionOverview from "./ContributionOverview";
 import CurrentlySeeking from "./CurrentlySeeking";
+import AnchorHeader from "./AnchorHeader";
 
 const Overview: FunctionComponent = ({ children }) => {
   return (
     <div className="mb-8">
-      <h2 className="text-xl text-black-500 font-bold mb-4">Overview</h2>
+      <AnchorHeader id="overview">Overview</AnchorHeader>
       {children}
       <div className="md:flex md:space-x-6">
         <CurrentlySeeking />
