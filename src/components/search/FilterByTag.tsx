@@ -3,36 +3,29 @@ import { connectRefinementList } from "react-instantsearch-dom";
 import { RefinementListProvided } from "react-instantsearch-core";
 import ClickableTag from "../ClickableTag";
 
-const FilterByTag: FunctionComponent<RefinementListProvided> = ({
-  items,
-  isFromSearch,
-  refine,
-  searchForItems,
-  createURL,
-}) => {
+type Props = RefinementListProvided & {
+  allTags: string[];
+};
+
+const FilterByTag: FunctionComponent<Props> = ({ items, refine, allTags }) => {
   const toggleRefineTag = (tag: string) => {
-    if (items.find((item) => item.label === tag).isRefined) {
+    const matchingItem = items.find(
+      (item) => item.label.toLowerCase() === tag.toLowerCase()
+    );
+    if (matchingItem?.isRefined) {
       refine([]);
     } else refine([tag]);
   };
 
-  // Algolia likes to reorder the tags, so we sort them to prevent that
-  const orderedTags = items.sort((itemA, itemB) => {
-    if (itemA.label > itemB.label) {
-      return 1;
-    } else if (itemA.label < itemB.label) {
-      return -1;
-    }
-    return 0;
-  });
+  const itemsMap = new Map(items.map((item) => [item.label, item.isRefined]));
 
   return (
     <div className="space-x-2 text-center mb-12">
-      {orderedTags.map((item) => (
+      {allTags.map((item) => (
         <ClickableTag
-          isActive={item.isRefined}
-          key={item.label}
-          tag={item.label}
+          isActive={itemsMap.get(item) || false}
+          key={item}
+          tag={item}
           onClick={toggleRefineTag}
         />
       ))}

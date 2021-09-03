@@ -9,12 +9,7 @@ type Props = {
   onClick?: (tag: string) => void;
 };
 
-const ClickableTag: FunctionComponent<Props> = ({
-  tag,
-
-  onClick,
-  isActive,
-}) => {
+const ClickableTag: FunctionComponent<Props> = ({ tag, onClick, isActive }) => {
   return (
     <button
       type="button"

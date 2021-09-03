@@ -23,12 +23,15 @@ const ProjectCard: FunctionComponent<Props> = ({
     <div className="p-4 bg-white relative" key={id}>
       {frontmatter.avatar && (
         <img
+          alt=""
           src={frontmatter.avatar.publicURL}
-          className="w-12 h-12 rounded-full absolute -right-2 -top-2"
+          className="bg-primary-400 w-12 h-12 rounded-full absolute -right-2 -top-2"
         />
       )}
       <h3 className="font-bold text-black-500">
-        <Link to={slug}>{frontmatter.name}</Link>
+        <Link to={slug} className="hover:text-primary-400">
+          {frontmatter.name}
+        </Link>
       </h3>
       {frontmatter.description && (
         <p className="text-sm text-black-500 mt-2">{frontmatter.description}</p>
@@ -38,6 +41,7 @@ const ProjectCard: FunctionComponent<Props> = ({
           href={frontmatter.repoUrl}
           target="_blank"
           title="Visit this repository"
+          rel="noopener"
           className="text-black-300 hover:text-primary-400 p-1"
         >
           <MarkGithubIcon size={20} />
@@ -47,6 +51,7 @@ const ProjectCard: FunctionComponent<Props> = ({
             href={frontmatter.websiteUrl}
             target="_blank"
             title="Visit this project's website"
+            rel="noopener"
             className="text-black-300 hover:text-primary-400 p-1"
           >
             <LinkIcon size={20} />
