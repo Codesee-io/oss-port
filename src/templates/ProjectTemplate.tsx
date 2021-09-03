@@ -12,7 +12,8 @@ import RepoLinks from "../components/RepoLinks";
 import ProjectTabs from "../components/ProjectTabs";
 import LearnSection from "../components/markdown/LearnSection";
 import Tag from "../components/Tag";
-import { Project, ProjectFrontmatter } from "../types";
+import { ProjectFrontmatter } from "../types";
+import Footer from "../components/Footer";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -44,46 +45,49 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   const hasLearnTab = projectData.frontmatter.learnLinks?.length > 0;
 
   return (
-    <main className="max-w-4xl mx-auto py-12 px-2">
-      <Helmet title={`OSS Port | ${projectData.frontmatter.name}`}>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓️</text></svg>"
-        />
-      </Helmet>
-      <Link to="/">Home</Link>
-      <div className="md:flex mb-4 justify-between">
-        <h1 className="mb-2 md:mb-0 text-black-500 font-bold text-4xl mr-4">
-          {projectData.frontmatter.name}
-        </h1>
-        <div className="space-x-2 flex-grow pt-2">
-          {projectData.frontmatter.tags.map((tag) => (
-            <Tag key={tag} tag={tag} />
-          ))}
+    <>
+      <main className="max-w-4xl mx-auto py-12 px-2">
+        <Helmet title={`OSS Port | ${projectData.frontmatter.name}`}>
+          <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓️</text></svg>"
+          />
+        </Helmet>
+        <Link to="/">Home</Link>
+        <div className="md:flex mb-4 justify-between">
+          <h1 className="mb-2 md:mb-0 text-black-500 font-bold text-4xl mr-4">
+            {projectData.frontmatter.name}
+          </h1>
+          <div className="space-x-2 flex-grow pt-2">
+            {projectData.frontmatter.tags.map((tag) => (
+              <Tag key={tag} tag={tag} />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="md:flex mb-6">
-        <RepoLinks frontmatter={projectData.frontmatter} />
-        <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
-      </div>
-      <ProjectTabs
-        hasContributingTab={hasContributingTab}
-        hasOverviewTab={hasOverviewTab}
-        hasLearnTab={hasLearnTab}
-      />
-      <ProjectContextProvider
-        value={{
-          frontmatter: projectData.frontmatter,
-          githubData,
-          featuredMapMetadata,
-        }}
-      >
-        <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{projectData.body}</MDXRenderer>
-        </MDXProvider>
-        <LearnSection />
-      </ProjectContextProvider>
-    </main>
+        <div className="md:flex mb-6">
+          <RepoLinks frontmatter={projectData.frontmatter} />
+          <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
+        </div>
+        <ProjectTabs
+          hasContributingTab={hasContributingTab}
+          hasOverviewTab={hasOverviewTab}
+          hasLearnTab={hasLearnTab}
+        />
+        <ProjectContextProvider
+          value={{
+            frontmatter: projectData.frontmatter,
+            githubData,
+            featuredMapMetadata,
+          }}
+        >
+          <MDXProvider components={mdxComponents}>
+            <MDXRenderer>{projectData.body}</MDXRenderer>
+          </MDXProvider>
+          <LearnSection />
+        </ProjectContextProvider>
+      </main>
+      <Footer />
+    </>
   );
 };
 
