@@ -84,6 +84,7 @@ export const pageQuery = graphql`
           idealEffort
           isMentorshipAvailable
           automatedDevEnvironment
+          extras
         }
       }
     }

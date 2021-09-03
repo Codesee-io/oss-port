@@ -9,6 +9,7 @@ export type ProjectFrontmatter = {
     idealEffort?: string;
     isMentorshipAvailable?: boolean;
     automatedDevEnvironment?: string;
+    extras?: string[];
   };
   websiteUrl?: string;
   twitterUrl?: string;
