@@ -10,6 +10,7 @@ const HacktoberfestIssues: FunctionComponent = () => {
       title="🎃 Hacktoberfest"
       repoUrl={frontmatter.repoUrl}
       issues={githubData.hacktoberfestIssues}
+      label="hacktoberfest"
     />
   );
 };

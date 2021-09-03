@@ -10,6 +10,7 @@ const HelpWanted: FunctionComponent = () => {
       title="Help wanted"
       repoUrl={frontmatter.repoUrl}
       issues={githubData.helpIssues}
+      label="help wanted"
     />
   );
 };

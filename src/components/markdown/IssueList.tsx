@@ -5,11 +5,28 @@ type Props = {
   issues?: GitHubIssueData[];
   title: string;
   repoUrl?: string;
+  label: string;
 };
 
 const MAX_ISSUES = 5 as const;
 
-const IssueList: FunctionComponent<Props> = ({ issues, repoUrl, title }) => {
+/**
+ * Returns the URL for the specific issue label. If the label contains spaces,
+ * they get replaced with `+` characters.
+ */
+function getLabelUrl(repoUrl: string, label: string) {
+  return (
+    repoUrl +
+    `/issues?q=is%3Aissue+is%3Aopen+label%3A%22${label.split(" ").join("+")}%22`
+  );
+}
+
+const IssueList: FunctionComponent<Props> = ({
+  issues,
+  repoUrl,
+  title,
+  label,
+}) => {
   if (!issues?.length) {
     return null;
   }
@@ -34,10 +51,7 @@ const IssueList: FunctionComponent<Props> = ({ issues, repoUrl, title }) => {
       {repoUrl && (
         <div className="text-right mt-4">
           <a
-            href={
-              repoUrl +
-              `/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22`
-            }
+            href={getLabelUrl(repoUrl, label)}
             target="_blank"
             className="text-sm font-bold hover:text-blue-500"
             rel="noreferrer"
