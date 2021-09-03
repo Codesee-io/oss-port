@@ -44,6 +44,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         authorization: `token ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
       },
     });
+  } else {
+    console.warn("No GitHub API Token set, github data will not be available.");
   }
 
   // Create a page for each project
