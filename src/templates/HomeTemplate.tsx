@@ -39,11 +39,15 @@ const HomeTemplate: FunctionComponent<Props> = ({
     <RootLayout>
       <div className="max-w-7xl mx-auto py-12 px-2">
         <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
-          Explore open source communities
+          Welcome to the OSS Port
         </h1>
-        <h2 className="text-black-300 text-xl text-center mb-6">
-          Onboard and contribute to your next project with ease
+        <h2 className="text-black-300 uppercase text-center font-medium text-lg">
+          Contribute <span className="opacity-50">&bull;</span> Maintain{" "}
+          <span className="opacity-50">&bull;</span> Impact
         </h2>
+        <p className="text-black-300 text-center mb-6">
+          the open-source communities you care about
+        </p>
         <InstantSearch searchClient={searchClient} indexName={indexName}>
           <ProjectSearchInput />
           <FilterByTag
