@@ -6,6 +6,7 @@ import { InstantSearch } from "react-instantsearch-dom";
 import FilterByTag from "../components/search/FilterByTag";
 import ProjectList from "../components/search/ProjectList";
 import { Helmet } from "react-helmet";
+import { Project } from "../types";
 
 // TODO disable the search if the env vars are missing
 const searchClient = algoliasearch(
@@ -15,7 +16,16 @@ const searchClient = algoliasearch(
 
 const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 
-const HomeTemplate: FunctionComponent = ({
+type Props = {
+  data: {
+    allProjects: {
+      nodes: Project[];
+    };
+  };
+  pageContext: any;
+};
+
+const HomeTemplate: FunctionComponent<Props> = ({
   data: { allProjects },
   pageContext,
 }) => {

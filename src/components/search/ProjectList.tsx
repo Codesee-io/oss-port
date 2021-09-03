@@ -21,6 +21,7 @@ const ProjectList: FunctionComponent<Props> = ({
   allProjects,
   searchResults,
   githubDataSet,
+  searchState,
 }) => {
   // Reconcile the search results
   let filteredResults = [...allProjects];
@@ -30,6 +31,19 @@ const ProjectList: FunctionComponent<Props> = ({
 
     filteredResults = allProjects.filter((project) =>
       slugsSet.has(project.slug)
+    );
+  }
+
+  if (filteredResults.length === 0) {
+    return (
+      <div className="text-center px-4">
+        <h3 className="text-black-500 text-2xl font-semibold mb-4">
+          No results for "{searchState.query}"
+        </h3>
+        <p className="text-black-300">
+          No projects matched your search. Try adjusting your filters.
+        </p>
+      </div>
     );
   }
 
