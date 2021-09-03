@@ -9,6 +9,7 @@ import { ProjectContextProvider } from "../components/ProjectContext";
 import mdxElements from "../components/markdown/mdxElements";
 import RepoStats from "../components/RepoStats";
 import RepoLinks from "../components/RepoLinks";
+import ProjectTabs from "../components/ProjectTabs";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -24,6 +25,11 @@ export default function ProjectTemplate({
 }) {
   const { githubData } = pageContext;
 
+  // Dynamically populate the tabs based on the existing sections
+  const hasOverviewTab = projectData.body.includes("mdx(Overview,");
+  const hasContributingTab = projectData.body.includes("mdx(Contributing,");
+  const hasLearnTab = projectData.body.includes("mdx(Learn,");
+
   return (
     <main className="max-w-4xl mx-auto py-12 px-2">
       <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
@@ -35,7 +41,11 @@ export default function ProjectTemplate({
         <RepoLinks frontmatter={projectData.frontmatter} />
         <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
       </div>
-
+      <ProjectTabs
+        hasContributingTab={hasContributingTab}
+        hasOverviewTab={hasOverviewTab}
+        hasLearnTab={hasLearnTab}
+      />
       <ProjectContextProvider
         value={{ frontmatter: projectData.frontmatter, githubData }}
       >

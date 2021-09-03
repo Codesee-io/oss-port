@@ -64,3 +64,8 @@ code.markdown-element {
   font-size: 85%;
   border-radius: 5px;
 }
+
+/* Use this class on the direct parent of an anchor to display it on hover */
+.anchor-reveal:hover > .anchor {
+  opacity: 1;
+}
