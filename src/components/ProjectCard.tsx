@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import Tag from "./Tag";
 import { GitHubMetric, Project } from "../types";
 import RepoStats from "./RepoStats";
+import { MarkGithubIcon, LinkIcon } from "@primer/octicons-react";
 
 type Props = Project & {
   githubData?: {
@@ -29,14 +30,35 @@ const ProjectCard: FunctionComponent<Props> = ({
       <h3 className="font-bold text-black-500">
         <Link to={slug}>{frontmatter.name}</Link>
       </h3>
-      <a href={frontmatter.repoUrl} target="_blank">
-        Repo
-      </a>
+      {frontmatter.description && (
+        <p className="text-sm text-black-500 mt-2">{frontmatter.description}</p>
+      )}
+      <div className="mt-3 flex space-x-2">
+        <a
+          href={frontmatter.repoUrl}
+          target="_blank"
+          title="Visit this repository"
+          className="text-black-300 hover:text-primary-400 p-1"
+        >
+          <MarkGithubIcon size={20} />
+        </a>
+        {frontmatter.websiteUrl && (
+          <a
+            href={frontmatter.websiteUrl}
+            target="_blank"
+            title="Visit this project's website"
+            className="text-black-300 hover:text-primary-400 p-1"
+          >
+            <LinkIcon size={20} />
+          </a>
+        )}
+      </div>
       <div className="mt-4">
         {frontmatter.tags.map((language) => (
           <Tag tag={language} key={language} className="mr-2 mb-2" />
         ))}
       </div>
+      <hr className="border-black-50 -ml-4 -mr-4 mt-2" />
       {githubData && <RepoStats className="mt-4" stats={githubData} />}
     </div>
   );

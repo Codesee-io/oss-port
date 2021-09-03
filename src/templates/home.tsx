@@ -23,7 +23,12 @@ const HomeTemplate: FunctionComponent = ({
 
   return (
     <main className="max-w-7xl mx-auto py-12 px-2">
-      <Helmet title="OSS Port" />
+      <Helmet title="OSS Port">
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓️</text></svg>"
+        />
+      </Helmet>
       <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
         Explore open source communities
       </h1>
@@ -54,6 +59,8 @@ export const pageQuery = graphql`
           name
           tags
           repoUrl
+          websiteUrl
+          description
           avatar {
             publicURL
           }
