@@ -7,6 +7,7 @@ import FilterByTag from "../components/search/FilterByTag";
 import ProjectList from "../components/search/ProjectList";
 import { Project } from "../types";
 import RootLayout from "../components/RootLayout";
+import { Helmet } from "react-helmet";
 
 // TODO disable the search if the env vars are missing
 const searchClient = algoliasearch(
@@ -37,6 +38,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
 
   return (
     <RootLayout>
+      <Helmet title="OSS Port | Find open-source projects" />
       <div className="max-w-7xl mx-auto py-12 px-2">
         <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
           Welcome to the OSS Port
