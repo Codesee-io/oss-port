@@ -5,8 +5,8 @@ const { graphql: github } = require("@octokit/graphql");
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
-  const projectTemplate = path.resolve(`src/templates/project.tsx`);
-  const homeTemplate = path.resolve(`src/templates/home.tsx`);
+  const projectTemplate = path.resolve(`src/templates/ProjectTemplate.tsx`);
+  const homeTemplate = path.resolve(`src/templates/HomeTemplate.tsx`);
 
   const projects = await graphql(`
     {

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import Overview from "../components/markdown/Overview";
@@ -11,6 +11,8 @@ import RepoStats from "../components/RepoStats";
 import RepoLinks from "../components/RepoLinks";
 import ProjectTabs from "../components/ProjectTabs";
 import LearnSection from "../components/markdown/LearnSection";
+import Tag from "../components/Tag";
+import { Project, ProjectFrontmatter } from "../types";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -20,10 +22,20 @@ const mdxComponents = {
   Contributing,
 } as const;
 
-export default function ProjectTemplate({
+type ProjectTemplateProps = {
+  data: {
+    projectData: {
+      frontmatter: ProjectFrontmatter;
+      body: string;
+    };
+  };
+  pageContext: any;
+};
+
+const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   data: { projectData },
   pageContext,
-}) {
+}) => {
   const { githubData, featuredMapMetadata } = pageContext;
 
   // Dynamically populate the tabs based on the existing sections
@@ -40,9 +52,16 @@ export default function ProjectTemplate({
         />
       </Helmet>
       <Link to="/">Home</Link>
-      <h1 className="text-black-500 font-bold text-4xl mb-4">
-        {projectData.frontmatter.name}
-      </h1>
+      <div className="md:flex mb-4 justify-between">
+        <h1 className="mb-2 md:mb-0 text-black-500 font-bold text-4xl mr-4">
+          {projectData.frontmatter.name}
+        </h1>
+        <div className="space-x-2 flex-grow pt-2">
+          {projectData.frontmatter.tags.map((tag) => (
+            <Tag key={tag} tag={tag} />
+          ))}
+        </div>
+      </div>
       <div className="md:flex mb-6">
         <RepoLinks frontmatter={projectData.frontmatter} />
         <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
@@ -66,7 +85,7 @@ export default function ProjectTemplate({
       </ProjectContextProvider>
     </main>
   );
-}
+};
 
 export const pageQuery = graphql`
   query ProjectByPath($slug: String!) {
@@ -84,6 +103,7 @@ export const pageQuery = graphql`
           title
           url
         }
+        tags
         contributionOverview {
           mainLocation
           idealEffort
@@ -95,3 +115,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default ProjectTemplate;
