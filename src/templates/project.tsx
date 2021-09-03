@@ -10,6 +10,7 @@ import mdxElements from "../components/markdown/mdxElements";
 import RepoStats from "../components/RepoStats";
 import RepoLinks from "../components/RepoLinks";
 import ProjectTabs from "../components/ProjectTabs";
+import LearnSection from "../components/markdown/LearnSection";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -28,7 +29,7 @@ export default function ProjectTemplate({
   // Dynamically populate the tabs based on the existing sections
   const hasOverviewTab = projectData.body.includes("mdx(Overview,");
   const hasContributingTab = projectData.body.includes("mdx(Contributing,");
-  const hasLearnTab = projectData.body.includes("mdx(Learn,");
+  const hasLearnTab = projectData.frontmatter.learnLinks?.length > 0;
 
   return (
     <main className="max-w-4xl mx-auto py-12 px-2">
@@ -56,6 +57,7 @@ export default function ProjectTemplate({
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{projectData.body}</MDXRenderer>
         </MDXProvider>
+        <LearnSection />
       </ProjectContextProvider>
     </main>
   );
@@ -73,6 +75,10 @@ export const pageQuery = graphql`
         twitterUrl
         currentlySeeking
         featuredMapUrl
+        learnLinks {
+          title
+          url
+        }
         contributionOverview {
           mainLocation
           idealEffort

@@ -48,7 +48,7 @@ ol.markdown-element {
 }
 
 a.markdown-element {
-  color: #1777c1;
+  @apply text-blue-500;
   font-weight: 700;
 }
 
