@@ -19,12 +19,12 @@ const ClickableTag: FunctionComponent<Props> = ({
     <button
       type="button"
       className={cx(
-        "inline-block rounded-md px-2 py-1 text-xs text-black-400",
+        "inline-block border rounded-md px-2 py-1 text-xs text-black-400",
         {
-          "border-primary-400 bg-primary-50": isActive,
+          "border-black-100 hover:bg-white": !isActive,
+          "border-primary-400 bg-primary-400 text-white": isActive,
         }
       )}
-      style={{ border: "1px solid #CDD3DF" }}
       onClick={() => onClick(tag)}
     >
       {getFormattedTag(tag)}
