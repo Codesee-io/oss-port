@@ -3,7 +3,16 @@ const URL = require("url").URL;
 
 const codeseeAPIToken = process.env.CODESEE_API_TOKEN;
 
+/**
+ * Fetch the metadata for featured CodeSee maps. If the user doesn't have a
+ * CodeSee API token, we skip this step. However, contributors can preview their
+ * changes when opening pull requests in GitHub.
+ */
 async function getCodeSeeMapMetadata(mapUrl, cache) {
+  if (!codeseeAPIToken) {
+    return undefined;
+  }
+
   // Figure out the map ID from its URL
   let mapId;
   let featuredMapMetadata;
