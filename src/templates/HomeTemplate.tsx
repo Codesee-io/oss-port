@@ -77,6 +77,7 @@ export const pageQuery = graphql`
           tags
           repoUrl
           websiteUrl
+          twitterUrl
           description
           avatar {
             publicURL

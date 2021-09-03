@@ -11,7 +11,10 @@ const RootLayout: FunctionComponent = ({ children }) => {
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓️</text></svg>"
         />
-        <meta name="description" content="Find your next open-source project" />
+        <meta
+          name="description"
+          content="Find your next open-source project! On OSS Port, maintainers advertise their projects for free and make it easy to onboard new contributors"
+        />
       </Helmet>
       <main className="flex-grow">{children}</main>
       <Footer />
