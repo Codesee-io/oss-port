@@ -2,18 +2,17 @@ import React, { FunctionComponent, useContext } from "react";
 import ProjectContext from "../ProjectContext";
 
 const FeaturedCodeSeeMap: FunctionComponent = () => {
-  const { featuredMapMetadata, frontmatter } = useContext(ProjectContext);
+  const { featuredMapMetadata, frontmatter, organization } =
+    useContext(ProjectContext);
 
-  if (!featuredMapMetadata) {
+  if (!featuredMapMetadata || !frontmatter?.featuredMapUrl) {
     return null;
   }
-
-  const [organization, mapName] = featuredMapMetadata.name.split("/");
 
   return (
     <article
       className="bg-white p-4 sm:flex max-w-full mb-4"
-      style={{ width: 550 }}
+      style={{ width: 624 }}
     >
       <a
         href={frontmatter.featuredMapUrl}
@@ -31,9 +30,9 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
       <div className="sm:pl-8 mt-6 sm:mt-0 text-black-500">
         <a
           href={frontmatter.featuredMapUrl}
-          className="font-bold text-lg hover:text-blue-500"
+          className="font-bold text-lg hover:text-blue-500 leading-4 mb-2"
         >
-          {mapName}
+          {featuredMapMetadata.name}
         </a>
         <div className="text-xs mb-2">{organization}</div>
         <div className="text-sm">

@@ -11,6 +11,7 @@ const ProjectContext = createContext<{
   frontmatter: ProjectFrontmatter;
   githubData: GitHubData;
   featuredMapMetadata?: CodeSeeMapMetadata;
+  organization: string;
 }>(null);
 
 export const ProjectContextProvider = ProjectContext.Provider;

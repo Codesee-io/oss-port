@@ -28,6 +28,9 @@ type ProjectTemplateProps = {
     projectData: {
       frontmatter: ProjectFrontmatter;
       body: string;
+      parent: {
+        organization: string;
+      };
     };
   };
   pageContext: any;
@@ -73,6 +76,7 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
             frontmatter: projectData.frontmatter,
             githubData,
             featuredMapMetadata,
+            organization: projectData.parent.organization,
           }}
         >
           <MDXProvider components={mdxComponents}>
@@ -108,6 +112,11 @@ export const pageQuery = graphql`
           isMentorshipAvailable
           automatedDevEnvironment
           extras
+        }
+      }
+      parent {
+        ... on File {
+          organization: relativeDirectory
         }
       }
     }
