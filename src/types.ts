@@ -16,7 +16,10 @@ export type ProjectFrontmatter = {
   avatar?: {
     publicURL: string;
   };
-  featuredMapUrl?: string;
+  featuredMap?: {
+    url: string;
+    description: string;
+  }
   learnLinks?: {
     title?: string;
     url?: string;

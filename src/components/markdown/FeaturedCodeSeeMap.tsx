@@ -5,7 +5,7 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
   const { featuredMapMetadata, frontmatter, organization } =
     useContext(ProjectContext);
 
-  if (!featuredMapMetadata || !frontmatter?.featuredMapUrl) {
+  if (!featuredMapMetadata || !frontmatter?.featuredMap?.url) {
     return null;
   }
 
@@ -15,7 +15,7 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
       style={{ width: 624 }}
     >
       <a
-        href={frontmatter.featuredMapUrl}
+        href={frontmatter.featuredMap.url}
         target="_blank"
         className="block"
         style={{ minWidth: 260 }}
@@ -29,16 +29,17 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
       </a>
       <div className="sm:pl-8 mt-6 sm:mt-0 text-black-500">
         <a
-          href={frontmatter.featuredMapUrl}
+          href={frontmatter.featuredMap.url}
           className="font-bold text-lg hover:text-blue-500 leading-4 mb-2"
         >
           {featuredMapMetadata.name}
         </a>
         <div className="text-xs mb-2">{organization}</div>
-        <div className="text-sm">
-          Get a quick overview of the major areas of our repo! Take the tour on
-          this map to discover our current areas of focus.
-        </div>
+        { frontmatter.featuredMap.description &&
+          <div className="text-sm">
+            {frontmatter.featuredMap.description || ""}
+          </div>
+        }
       </div>
     </article>
   );

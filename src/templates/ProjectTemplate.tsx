@@ -100,7 +100,10 @@ export const pageQuery = graphql`
         websiteUrl
         twitterUrl
         currentlySeeking
-        featuredMapUrl
+        featuredMap {
+          url
+          description
+        }
         learnLinks {
           title
           url
