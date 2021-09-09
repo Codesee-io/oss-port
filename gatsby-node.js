@@ -19,7 +19,9 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
           slug
           frontmatter {
             name
-            featuredMapUrl
+            featuredMap {
+              url
+            }
           }
           parent {
             ... on File {
@@ -69,9 +71,9 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
 
     // If the project has a featured map, load its metadata
     let featuredMapMetadata;
-    if (node.frontmatter.featuredMapUrl) {
+    if (node.frontmatter.featuredMap?.url) {
       featuredMapMetadata = await getCodeSeeMapMetadata(
-        node.frontmatter.featuredMapUrl,
+        node.frontmatter.featuredMap.url,
         cache
       );
     }
