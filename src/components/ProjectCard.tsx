@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Tag from "./Tag";
 import { GitHubMetric, Project } from "../types";
 import RepoStats from "./RepoStats";
@@ -20,6 +21,8 @@ const ProjectCard: FunctionComponent<Props> = ({
   slug,
   githubData,
 }) => {
+  const image = getImage(frontmatter.avatar);
+
   return (
     <div className="p-4 bg-white relative flex flex-col" key={id}>
       {/* The container below should take up as much vertical space as possible
@@ -27,11 +30,13 @@ const ProjectCard: FunctionComponent<Props> = ({
       number of tag varies between projects. */}
       <div className="flex-grow">
         {frontmatter.avatar && (
-          <img
-            alt={frontmatter.name}
-            src={frontmatter.avatar.publicURL}
-            className="bg-blue-400 w-12 h-12 rounded-full absolute -left-2 -top-3"
-          />
+          <div className="absolute -left-2 -top-3">
+            <GatsbyImage
+              image={image}
+              alt={frontmatter.name}
+              className="rounded-full w-12 h-12"
+            />
+          </div>
         )}
         <h3 className="font-bold text-black-500 pl-8">
           <Link to={slug} className="hover:text-blue-400">
