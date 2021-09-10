@@ -22,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
           slug
           frontmatter {
             name
+            repoUrl
             featuredMap {
               url
             }
@@ -61,7 +62,11 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   for (const node of nodes) {
     let githubData = {};
 
-    if (githubAPI) {
+    if (
+      githubAPI && 
+      node.frontmatter.repoUrl && 
+      node.frontmatter.repoUrl.includes("github")
+    ) {
       githubData = await calculateGithubData(
         githubAPI,
         node.parent.relativeDirectory,
