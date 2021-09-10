@@ -14,12 +14,13 @@ export type ProjectFrontmatter = {
   websiteUrl?: string;
   twitterUrl?: string;
   avatar?: {
-    publicURL: string;
+    publicURL?: string;
+    relativePath?: string;
   };
   featuredMap?: {
     url: string;
     description: string;
-  }
+  };
   learnLinks?: {
     title?: string;
     url?: string;

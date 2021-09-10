@@ -27,13 +27,13 @@ const ContributionOverview: FunctionComponent = () => {
         {mainLocation && (
           <p className="flex items-center">
             <ClockIcon size={16} className="fill-black-200 mr-2" />
-            Most contributors are in <strong>{mainLocation}</strong>
+            Most contributors are in&nbsp;<strong>{mainLocation}</strong>
           </p>
         )}
         {idealEffort && (
           <p className="flex items-center">
             <GitPullRequestIcon size={16} className="fill-black-200 mr-2" />
-            Ideal: <strong>{idealEffort}</strong>
+            Ideal:&nbsp;<strong>{idealEffort}</strong>
           </p>
         )}
         {isMentorshipAvailable && (

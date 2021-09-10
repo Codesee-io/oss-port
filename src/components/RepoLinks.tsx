@@ -10,11 +10,11 @@ type Props = {
 const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
   return (
     <div className="flex-grow md:mr-4">
-      <p className="text-black-300 mb-6 flex-grow">{frontmatter.description}</p>
+      <p className="text-black-500 mb-6 flex-grow">{frontmatter.description}</p>
       <div className="flex space-x-4 mb-8">
         <a
           target="_blank"
-          className="text-black-300 hover:text-primary-400"
+          className="text-black-300 hover:text-blue-400"
           href={frontmatter.repoUrl}
         >
           <MarkGithubIcon size={24} />
@@ -22,7 +22,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
         {frontmatter.twitterUrl && (
           <a
             target="_blank"
-            className="text-black-300 hover:text-primary-400"
+            className="text-black-300 hover:text-blue-400"
             href={frontmatter.twitterUrl}
           >
             <TwitterIcon />
@@ -31,7 +31,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
         {frontmatter.websiteUrl && (
           <a
             target="_blank"
-            className="text-black-300 hover:text-primary-400"
+            className="text-black-300 hover:text-blue-400"
             href={frontmatter.websiteUrl}
           >
             <LinkIcon size={24} />

@@ -1,0 +1,27 @@
+import { Link } from "gatsby";
+import React, { FunctionComponent } from "react";
+import Wordmark from "../images/Wordmark";
+import CallToAction from "./CallToAction";
+
+const Header: FunctionComponent = () => {
+  return (
+    <header className="bg-blue-700">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        <Link to="/" className="block">
+          <Wordmark width="200" className="my-2" />
+        </Link>
+        <div className="hidden sm:block">
+          <CallToAction
+            href="https://github.com/codesee-io/oss-port#how-to-list-your-own-project"
+            rel="noopener"
+            target="_blank"
+          >
+            Add Your Project
+          </CallToAction>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

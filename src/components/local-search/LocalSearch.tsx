@@ -74,9 +74,11 @@ const LocalSearch: FunctionComponent<Props> = ({
   }
 
   return (
-    <div>
-      <SearchInput refine={performSearch} />
-      <TagFilters tags={allTags} refine={filterByTag} />
+    <div className="pb-12">
+      <div className="max-w-7xl mx-auto px-2">
+        <SearchInput refine={performSearch} />
+        <TagFilters tags={allTags} refine={filterByTag} />
+      </div>
       <ProjectListWrapper>
         {filteredProjects.map((project) => (
           <ProjectCard

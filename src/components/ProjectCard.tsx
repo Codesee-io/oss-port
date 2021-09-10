@@ -30,11 +30,11 @@ const ProjectCard: FunctionComponent<Props> = ({
           <img
             alt={frontmatter.name}
             src={frontmatter.avatar.publicURL}
-            className="bg-primary-400 w-12 h-12 rounded-full absolute -right-2 -top-2"
+            className="bg-blue-400 w-12 h-12 rounded-full absolute -left-2 -top-3"
           />
         )}
-        <h3 className="font-bold text-black-500">
-          <Link to={slug} className="hover:text-primary-400">
+        <h3 className="font-bold text-black-500 pl-8">
+          <Link to={slug} className="hover:text-blue-400">
             {frontmatter.name}
           </Link>
         </h3>
@@ -60,7 +60,7 @@ const ProjectCard: FunctionComponent<Props> = ({
             target="_blank"
             title="Visit this repository"
             rel="noopener"
-            className="text-black-300 hover:text-primary-400 p-1"
+            className="text-black-300 hover:text-blue-400 p-1"
           >
             <MarkGithubIcon size={20} />
           </a>
@@ -70,7 +70,7 @@ const ProjectCard: FunctionComponent<Props> = ({
               target="_blank"
               title="Visit this project's website"
               rel="noopener"
-              className="text-black-300 hover:text-primary-400 p-1"
+              className="text-black-300 hover:text-blue-400 p-1"
             >
               <LinkIcon size={20} />
             </a>
@@ -81,7 +81,7 @@ const ProjectCard: FunctionComponent<Props> = ({
               target="_blank"
               title="Visit this project's Twitter feed"
               rel="noopener"
-              className="text-black-300 hover:text-primary-400 p-1"
+              className="text-black-300 hover:text-blue-400 p-1"
             >
               <TwitterIcon />
             </a>

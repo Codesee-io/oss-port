@@ -64,7 +64,7 @@ const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
           className="mt-2 text-xs flex items-center text-gray-400"
         >
           <InfoIcon size={12} className="mr-1" />
-          GitHub stats will appear during Netlify builds
+          Stats will appear during Netlify builds
         </div>
       )}
     </div>

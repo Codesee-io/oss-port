@@ -8,6 +8,21 @@ module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `OSS Port`,
+        short_name: `OSS Port`,
+        start_url: `/`,
+        background_color: `#fafafb`,
+        theme_color: `#1777c1`,
+        display: `standalone`,
+        icon: "src/images/ossport_avatar_circle.svg",
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
