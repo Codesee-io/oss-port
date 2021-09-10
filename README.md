@@ -29,11 +29,10 @@ The CodeSee Map below is a good way to get familiar with the codebase:
 ### How to list your own project
 
 1. Follow the above setup steps
-1. Take a peek inside the `/projects` directory for examples of existing repos
-1. Create a new folder inside `/projects` and name it the same as your GitHub organization
+1. Create a new folder inside `/projects` and name it the same as your GitHub handle or organization
 1. Add a new `.mdx` file using the name of your repo
 1. Copy/paste the contents of `src/templates/repoTemplate.mdx` into that file
-1. Fill out the information — most of it is optional, but extremely helpful for potential contributors
+1. Fill out the information — most of it is optional, but extremely helpful for potential contributors. If you opt not to include optional content, delete it from your template.
 1. Add a 200x200 image for your organization to your folder, for example, `./projects/distributeaid/da.png`
 1. Preview your changes locally
 1. When you're ready, open a PR!
