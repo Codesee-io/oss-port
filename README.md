@@ -34,7 +34,7 @@ The map below is a good way to get familiar with the codebase:
 1. Add a new `.mdx` file using the name of your repo
 1. Copy/paste the contents of `src/templates/repoTemplate.mdx` into that file
 1. Fill out the information. Note that most of it is optional, but extremely helpful for potential contributors.
-1. Add a 400x400 image for your organisation to your folder. For example, `./projects/distributeaid/da.png`
+1. Add a 200x200 image for your organisation to your folder. For example, `./projects/distributeaid/da.png`
 1. Preview your changes locally.
 1. When you're ready, open a PR!
 
