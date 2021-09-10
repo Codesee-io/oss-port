@@ -3,6 +3,9 @@ const calculateGithubData = require("./src/utils/calculateGithubData");
 const getCodeSeeMapMetadata = require("./src/utils/getCodeSeeMapMetadata");
 const { graphql: github } = require("@octokit/graphql");
 
+// TODO maybe look into using TS config files?
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-config/
+
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
   const projectTemplate = path.resolve(`src/templates/ProjectTemplate.tsx`);
@@ -22,6 +25,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
             featuredMap {
               url
             }
+            tags
+            description
           }
           parent {
             ... on File {
@@ -96,6 +101,16 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     component: homeTemplate,
     context: {
       githubDataSet,
+      searchIndex: generateSearchIndex(projects.data.allProjects.nodes),
     },
   });
 };
+
+function generateSearchIndex(nodes) {
+  return nodes.map((node) => ({
+    id: node.id,
+    tags: node.frontmatter.tags,
+    description: node.frontmatter.description,
+    name: node.frontmatter.name,
+  }));
+}

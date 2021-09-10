@@ -2,7 +2,7 @@
 # All deploys from the main repository branch will inherit these settings.
 [context.production]
   [context.production.environment]
-    GENERATE_ALGOLIA_INDEX = "1"
+    # EXAMPLE_ENV=1
 
 # Deploy Preview context:
 # All deploys generated from a pull/merge request will inherit these settings.

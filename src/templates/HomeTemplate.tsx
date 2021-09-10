@@ -1,21 +1,16 @@
 import { graphql } from "gatsby";
 import React, { FunctionComponent } from "react";
-import algoliasearch from "algoliasearch/lite";
-import ProjectSearchInput from "../components/search/ProjectSearchInput";
-import { InstantSearch } from "react-instantsearch-dom";
-import FilterByTag from "../components/search/FilterByTag";
-import ProjectList from "../components/search/ProjectList";
 import { Project } from "../types";
 import RootLayout from "../components/RootLayout";
 import { Helmet } from "react-helmet";
+import LocalSearch from "../components/local-search/LocalSearch";
 
-// TODO disable the search if the env vars are missing
-const searchClient = algoliasearch(
-  process.env.GATSBY_ALGOLIA_APP_ID,
-  process.env.GATSBY_ALGOLIA_API_KEY
-);
-
-const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
+export type SearchIndexItem = {
+  id: string;
+  tags: string[];
+  description: string;
+  name: string;
+};
 
 type Props = {
   data: {
@@ -27,14 +22,17 @@ type Props = {
       }[];
     };
   };
-  pageContext: any;
+  pageContext: {
+    githubDataSet: any; // TODO type this
+    searchIndex: SearchIndexItem[];
+  };
 };
 
 const HomeTemplate: FunctionComponent<Props> = ({
   data: { allProjects },
   pageContext,
 }) => {
-  const { githubDataSet } = pageContext;
+  const { githubDataSet, searchIndex } = pageContext;
 
   return (
     <RootLayout>
@@ -50,18 +48,12 @@ const HomeTemplate: FunctionComponent<Props> = ({
         <p className="text-black-300 text-center mb-6">
           the open-source communities you care about
         </p>
-        <InstantSearch searchClient={searchClient} indexName={indexName}>
-          <ProjectSearchInput />
-          <FilterByTag
-            attribute="frontmatter.tags"
-            allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
-          />
-
-          <ProjectList
-            allProjects={allProjects.nodes}
-            githubDataSet={githubDataSet}
-          />
-        </InstantSearch>
+        <LocalSearch
+          searchIndex={searchIndex}
+          allProjects={allProjects.nodes}
+          githubDataSet={githubDataSet}
+          allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
+        />
       </div>
     </RootLayout>
   );
