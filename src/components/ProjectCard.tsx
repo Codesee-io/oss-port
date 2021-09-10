@@ -95,7 +95,7 @@ const ProjectCard: FunctionComponent<Props> = ({
       </div>
       <div>
         <hr className="border-black-50 -ml-4 -mr-4 mt-2" />
-        {githubData && <RepoStats className="mt-4" stats={githubData} />}
+        <RepoStats className="mt-4" stats={githubData} />
       </div>
     </div>
   );
