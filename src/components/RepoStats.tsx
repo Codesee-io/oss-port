@@ -2,9 +2,7 @@ import { InfoIcon } from "@primer/octicons-react";
 import React, { FunctionComponent } from "react";
 import { GitHubMetric } from "../types";
 
-const STATS_ARE_MISSING =
-  process.env.NODE_ENV !== "production" &&
-  process.env.GITHUB_PERSONAL_ACCESS_TOKEN == null;
+const STATS_ARE_MISSING = process.env.NODE_ENV !== "production";
 
 type Props = {
   className?: string;
