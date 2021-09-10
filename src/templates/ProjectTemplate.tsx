@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 import React, { FunctionComponent } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -47,24 +48,39 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   const hasContributingTab = projectData.body.includes("mdx(Contributing,");
   const hasLearnTab = projectData.frontmatter.learnLinks?.length > 0;
 
+  const image = getImage(projectData.frontmatter.avatar as any);
+
   return (
     <RootLayout>
       <div className="max-w-4xl mx-auto py-12 px-2">
         <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
-        <Link to="/">Home</Link>
-        <div className="md:flex mb-4 justify-between">
-          <h1 className="mb-2 md:mb-0 text-black-500 font-bold text-4xl mr-4">
-            {projectData.frontmatter.name}
-          </h1>
-          <div className="space-x-2 flex-grow pt-2">
-            {projectData.frontmatter.tags.map((tag) => (
-              <Tag key={tag} tag={tag} />
-            ))}
+        <div className="flex">
+          {projectData.frontmatter.avatar && (
+            <div className="pr-4 hidden md:block">
+              <GatsbyImage
+                image={image}
+                alt={projectData.frontmatter.name}
+                className="rounded-full"
+              />
+            </div>
+          )}
+          <div>
+            <h1 className="mt-2 mb-4 text-black-500 font-bold text-4xl font-accent">
+              {projectData.frontmatter.name}
+            </h1>
+            <div className="space-x-2 mb-4">
+              {projectData.frontmatter.tags.map((tag) => (
+                <Tag key={tag} tag={tag} />
+              ))}
+            </div>
+            <div className="md:flex mb-6">
+              <RepoLinks frontmatter={projectData.frontmatter} />
+              <RepoStats
+                className="bg-white p-4 flex-shrink"
+                stats={githubData}
+              />
+            </div>
           </div>
-        </div>
-        <div className="md:flex mb-6">
-          <RepoLinks frontmatter={projectData.frontmatter} />
-          <RepoStats className="bg-white p-4 flex-shrink" stats={githubData} />
         </div>
         <ProjectTabs
           hasContributingTab={hasContributingTab}
@@ -115,6 +131,15 @@ export const pageQuery = graphql`
           isMentorshipAvailable
           automatedDevEnvironment
           extras
+        }
+        avatar {
+          childImageSharp {
+            gatsbyImageData(
+              width: 64
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
       parent {

@@ -4,6 +4,7 @@ import { Project } from "../types";
 import RootLayout from "../components/RootLayout";
 import { Helmet } from "react-helmet";
 import LocalSearch from "../components/local-search/LocalSearch";
+import Logo from "../images/Logo";
 
 export type SearchIndexItem = {
   id: string;
@@ -37,9 +38,10 @@ const HomeTemplate: FunctionComponent<Props> = ({
   return (
     <RootLayout>
       <Helmet title="OSS Port | Find open-source projects" />
-      <div className="max-w-7xl mx-auto py-12 px-2">
-        <h1 className="text-black-500 font-bold text-4xl text-center mb-4">
-          Welcome to the OSS Port
+      <div className="max-w-7xl mx-auto pt-12 px-2">
+        <Logo className="mx-auto w-32 lg:w-52 max-w-full mb-6" />
+        <h1 className="text-black-500 font-accent text-3xl lg:text-4xl text-center mb-4">
+          Welcome to OSS Port
         </h1>
         <h2 className="text-black-300 uppercase text-center font-medium text-lg">
           Contribute <span className="opacity-50">&bull;</span> Maintain{" "}
@@ -48,13 +50,13 @@ const HomeTemplate: FunctionComponent<Props> = ({
         <p className="text-black-300 text-center mb-6">
           the open-source communities you care about
         </p>
-        <LocalSearch
-          searchIndex={searchIndex}
-          allProjects={allProjects.nodes}
-          githubDataSet={githubDataSet}
-          allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
-        />
       </div>
+      <LocalSearch
+        searchIndex={searchIndex}
+        allProjects={allProjects.nodes}
+        githubDataSet={githubDataSet}
+        allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
+      />
     </RootLayout>
   );
 };

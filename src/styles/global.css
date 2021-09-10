@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 body {
-  background: #fafafb;
+  @apply bg-black-30;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  src: url("../fonts/FrankRuhlLibre-Black.ttf");
+  font-display: swap;
 }
 
 /* Wrapper for the user-generated content inside project */

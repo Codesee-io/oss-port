@@ -16,8 +16,9 @@ const ClickableTag: FunctionComponent<Props> = ({ tag, onClick, isActive }) => {
       className={cx(
         "inline-block border rounded-md px-2 py-1 text-xs text-black-400",
         {
-          "border-black-100 hover:bg-white": !isActive,
-          "border-primary-400 bg-primary-400 text-white": isActive,
+          "border-black-100 hover:bg-blue-500 hover:border-blue-500 hover:text-white":
+            !isActive,
+          "border-blue-700 bg-blue-700 text-white": isActive,
         }
       )}
       onClick={() => onClick(tag)}

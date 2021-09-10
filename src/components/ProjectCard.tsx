@@ -30,10 +30,10 @@ const ProjectCard: FunctionComponent<Props> = ({
           <img
             alt={frontmatter.name}
             src={frontmatter.avatar.publicURL}
-            className="bg-primary-400 w-12 h-12 rounded-full absolute -right-2 -top-2"
+            className="bg-primary-400 w-12 h-12 rounded-full absolute -left-2 -top-3"
           />
         )}
-        <h3 className="font-bold text-black-500">
+        <h3 className="font-bold text-black-500 pl-8">
           <Link to={slug} className="hover:text-primary-400">
             {frontmatter.name}
           </Link>
