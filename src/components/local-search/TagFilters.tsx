@@ -1,13 +1,12 @@
 import React, { FunctionComponent, useState } from "react";
-import { connectRefinementList } from "react-instantsearch-dom";
-import { RefinementListProvided } from "react-instantsearch-core";
 import ClickableTag from "../ClickableTag";
 
-type Props = RefinementListProvided & {
-  allTags: string[];
+type Props = {
+  tags: string[];
+  refine: (tags: string[]) => void;
 };
 
-const FilterByTag: FunctionComponent<Props> = ({ items, refine, allTags }) => {
+const TagFilters: FunctionComponent<Props> = ({ tags, refine }) => {
   const [currentFilters, setCurrentFilters] = useState<string[]>([]);
 
   const toggleRefineTag = (tag: string) => {
@@ -22,13 +21,11 @@ const FilterByTag: FunctionComponent<Props> = ({ items, refine, allTags }) => {
     refine(updatedFilters);
   };
 
-  const itemsMap = new Map(items.map((item) => [item.label, item.isRefined]));
-
   return (
     <div className="space-x-2 space-y-2 text-center mb-12">
-      {allTags.map((item) => (
+      {tags.map((item) => (
         <ClickableTag
-          isActive={itemsMap.get(item) || false}
+          isActive={currentFilters.includes(item)}
           key={item}
           tag={item}
           onClick={toggleRefineTag}
@@ -38,4 +35,4 @@ const FilterByTag: FunctionComponent<Props> = ({ items, refine, allTags }) => {
   );
 };
 
-export default connectRefinementList(FilterByTag);
+export default TagFilters;
