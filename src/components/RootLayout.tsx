@@ -33,7 +33,7 @@ const RootLayout: FunctionComponent = ({ children }) => {
         <meta property="og:image:type" content="image/png" />
 
         {/* Twitter open graph tags */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Codeseeio" />
         <meta
           name="twitter:title"
