@@ -77,7 +77,7 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
 
     let mergedThisMonth = 0;
     const contributorsThisMonth = new Set();
-    let thereMayBeMoreMergeData = true;
+    let thereMayBeMoreMergeData = mergedPRs.repository.pullRequests.totalCount > 100;
 
     mergedPRs.repository.pullRequests.nodes.forEach(({ mergedAt, author }) => {
       // If author.botId is set, this means that the author is a bot because specifically cast
@@ -106,7 +106,7 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
       maybeMore: thereMayBeMoreMergeData,
     };
 
-    let thereMayBeMoreCreatedData = true;
+
     const createdPRs = await githubAPI(
       `
     query createdPRs($owner: String!, $repo: String!) {
@@ -144,7 +144,8 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
         repo,
       }
     );
-
+    
+    let thereMayBeMoreCreatedData = createdPRs.repository.pullRequests.totalCount > 100;
     let createdThisMonth = 0;
     createdPRs.repository.pullRequests.nodes.forEach(
       ({ createdAt, author }) => {

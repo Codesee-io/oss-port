@@ -2,6 +2,7 @@ const axios = require("axios");
 const URL = require("url").URL;
 
 const codeseeAPIToken = process.env.CODESEE_API_TOKEN;
+let warned = false;
 
 /**
  * Fetch the metadata for featured CodeSee maps. If the user doesn't have a
@@ -32,12 +33,19 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
   const today = new Date().toISOString().substr(0, 10); // YYYY-MM-DD
   const cacheKey = `codesee:map:metadata:${mapId}:${today}`;
   const cached = await cache.get(cacheKey);
-  if (cached && !process.env.GITHUB_IGNORE_BUILD_CACHE) {
+  if (cached && !process.env.CODESEE_IGNORE_BUILD_CACHE) {
     return cached;
   }
 
   // If there's nothing in the cache, fetch the metadata from CodeSee
   if (mapId) {
+    if (!codeseeAPIToken) { 
+      if (!warned) {
+        console.warn("No Codesee API Token set, CodeSee Maps will not be rendered properly.");
+        warned = true;
+      }
+      return; 
+    }
     await axios
       .get(`https://app.codesee.io/api/maps/public/${mapId}/metadata`, {
         headers: { Authorization: `Bearer ${codeseeAPIToken}` },
