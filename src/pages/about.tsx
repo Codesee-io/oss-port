@@ -25,7 +25,7 @@ const About = () => {
         <div className="flex flex-col items-center justify-start" >
           <LogoWhiteBackground style={{width: "400px", paddingLeft: '33px'}}/>
           <div className="text-2xl font-bold pt-3">Let's onboard better.</div>
-          <div>Helping project contributors and maintainers</div>
+          <div>Helping contributors and maintainers</div>
           <div>eliminate the barriers to taking on a new codebase.</div>
           <CallToAction
             href="https://github.com/codesee-io/oss-port#how-to-list-your-own-project"
