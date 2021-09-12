@@ -10,14 +10,21 @@ const Header: FunctionComponent = () => {
         <Link to="/" className="block">
           <Wordmark width="200" className="my-2" />
         </Link>
-        <div className="hidden sm:block">
-          <CallToAction
-            href="https://github.com/codesee-io/oss-port#how-to-list-your-own-project"
-            rel="noopener"
-            target="_blank"
-          >
-            Add Your Project
-          </CallToAction>
+        <div className="flex items-center justify-center">
+          <div className="hidden sm:block">
+            <a href="/about" style={{color:"white", marginRight: "20px"}}>
+              About
+            </a>
+          </div>
+          <div className="hidden sm:block">
+            <CallToAction
+              href="https://github.com/codesee-io/oss-port#how-to-list-your-own-project"
+              rel="noopener"
+              target="_blank"
+            >
+              Add Your Project
+            </CallToAction>
+          </div>
         </div>
       </div>
     </header>
