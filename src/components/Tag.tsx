@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { getFormattedTag } from "../utils/tags";
 import cx from "classnames";
 
 type Props = {
@@ -16,7 +15,7 @@ const Tag: FunctionComponent<Props> = ({ tag, className }) => {
       )}
       style={{ border: "1px solid #CDD3DF" }}
     >
-      {getFormattedTag(tag)}
+      {tag}
     </span>
   );
 };

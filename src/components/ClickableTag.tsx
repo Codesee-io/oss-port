@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { getFormattedTag } from "../utils/tags";
 import cx from "classnames";
 
 type Props = {
@@ -23,7 +22,7 @@ const ClickableTag: FunctionComponent<Props> = ({ tag, onClick, isActive }) => {
       )}
       onClick={() => onClick(tag)}
     >
-      {getFormattedTag(tag)}
+      {tag}
     </button>
   );
 };
