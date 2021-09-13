@@ -17,6 +17,10 @@ type Props = {
   data: {
     allProjects: {
       nodes: Project[];
+      allLanguages: {
+        fieldValue: string;
+        totalCount: number;
+      }[];
       allTags: {
         fieldValue: string;
         totalCount: number;
@@ -44,7 +48,8 @@ const HomeTemplate: FunctionComponent<Props> = ({
           Welcome to OSS Port
         </h1>
         <p className="text-black-300 text-center mb-6 mt-2">
-          Helping contributors and maintainers<br/>
+          Helping contributors and maintainers
+          <br />
           find each other and onboard better.
         </p>
       </div>
@@ -52,6 +57,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
         searchIndex={searchIndex}
         allProjects={allProjects.nodes}
         githubDataSet={githubDataSet}
+        allLanguages={allProjects.allLanguages.map((lang) => lang.fieldValue)}
         allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
       />
     </RootLayout>
@@ -62,6 +68,10 @@ export const pageQuery = graphql`
   query AllProjectList {
     # Get a list of all the projects
     allProjects: allMdx {
+      allLanguages: group(field: frontmatter___languages) {
+        fieldValue
+        totalCount
+      }
       allTags: group(field: frontmatter___tags) {
         fieldValue
         totalCount
@@ -71,6 +81,7 @@ export const pageQuery = graphql`
         slug
         frontmatter {
           name
+          languages
           tags
           repoUrl
           websiteUrl

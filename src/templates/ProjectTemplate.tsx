@@ -48,6 +48,11 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   const hasContributingTab = projectData.body.includes("mdx(Contributing,");
   const hasLearnTab = projectData.frontmatter.learnLinks?.length > 0;
 
+  const badges = [
+    ...(projectData.frontmatter.languages || []),
+    ...(projectData.frontmatter.tags || []),
+  ];
+
   return (
     <RootLayout>
       <div className="max-w-4xl mx-auto py-12 px-2">
@@ -67,8 +72,8 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
               {projectData.frontmatter.name}
             </h1>
             <div className="space-x-2 mb-4">
-              {projectData.frontmatter.tags.map((tag) => (
-                <Tag key={tag} tag={tag} />
+              {badges.map((badge) => (
+                <Tag key={badge} tag={badge} />
               ))}
             </div>
             <div className="md:flex mb-6">
@@ -122,6 +127,7 @@ export const pageQuery = graphql`
           title
           url
         }
+        languages
         tags
         contributionOverview {
           mainLocation

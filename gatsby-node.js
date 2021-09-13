@@ -26,6 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
             featuredMap {
               url
             }
+            languages
             tags
             description
           }
@@ -63,8 +64,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     let githubData = {};
 
     if (
-      githubAPI && 
-      node.frontmatter.repoUrl && 
+      githubAPI &&
+      node.frontmatter.repoUrl &&
       node.frontmatter.repoUrl.includes("github")
     ) {
       githubData = await calculateGithubData(
@@ -116,6 +117,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
 function generateSearchIndex(nodes) {
   return nodes.map((node) => ({
     id: node.id,
+    languages: node.frontmatter.languages,
     tags: node.frontmatter.tags,
     description: node.frontmatter.description,
     name: node.frontmatter.name,
