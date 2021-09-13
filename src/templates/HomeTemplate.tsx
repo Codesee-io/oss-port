@@ -25,6 +25,10 @@ type Props = {
         fieldValue: string;
         totalCount: number;
       }[];
+      allSeeking: {
+        fieldValue: string;
+        totalCount: number;
+      }[];
     };
   };
   pageContext: {
@@ -59,6 +63,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
         githubDataSet={githubDataSet}
         allLanguages={allProjects.allLanguages.map((lang) => lang.fieldValue)}
         allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
+        allSeeking={allProjects.allSeeking.map(seek => seek.fieldValue)}
       />
     </RootLayout>
   );
@@ -76,6 +81,10 @@ export const pageQuery = graphql`
         fieldValue
         totalCount
       }
+      allSeeking: group(field: frontmatter___currentlySeeking) {
+        fieldValue
+        totalCount
+      }
       nodes {
         id
         slug
@@ -83,6 +92,7 @@ export const pageQuery = graphql`
           name
           languages
           tags
+          currentlySeeking
           repoUrl
           websiteUrl
           twitterUrl
