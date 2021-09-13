@@ -77,6 +77,7 @@ export const pageQuery = graphql`
           twitterUrl
           description
           avatar {
+            publicURL
             childImageSharp {
               gatsbyImageData(
                 width: 48

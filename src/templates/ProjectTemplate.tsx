@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import React, { FunctionComponent } from "react";
 import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Overview from "../components/markdown/Overview";
 import Contributing from "../components/markdown/Contributing";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -15,6 +14,7 @@ import LearnSection from "../components/markdown/LearnSection";
 import Tag from "../components/Tag";
 import { ProjectFrontmatter } from "../types";
 import RootLayout from "../components/RootLayout";
+import ProjectAvatar from "../components/ProjectAvatar";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -48,8 +48,6 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   const hasContributingTab = projectData.body.includes("mdx(Contributing,");
   const hasLearnTab = projectData.frontmatter.learnLinks?.length > 0;
 
-  const image = getImage(projectData.frontmatter.avatar as any);
-
   return (
     <RootLayout>
       <div className="max-w-4xl mx-auto py-12 px-2">
@@ -57,10 +55,10 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
         <div className="flex">
           {projectData.frontmatter.avatar && (
             <div className="pr-4 hidden md:block">
-              <GatsbyImage
-                image={image}
+              <ProjectAvatar
+                size={64}
+                image={projectData.frontmatter.avatar}
                 alt={projectData.frontmatter.name}
-                className="rounded-full"
               />
             </div>
           )}
@@ -133,6 +131,7 @@ export const pageQuery = graphql`
           extras
         }
         avatar {
+          publicURL
           childImageSharp {
             gatsbyImageData(
               width: 64

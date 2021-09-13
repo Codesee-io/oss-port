@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Tag from "./Tag";
 import { GitHubMetric, Project } from "../types";
 import RepoStats from "./RepoStats";
 import { MarkGithubIcon, LinkIcon } from "@primer/octicons-react";
 import TwitterIcon from "./icons/TwitterIcon";
+import ProjectAvatar from "./ProjectAvatar";
 
 type Props = Project & {
   githubData?: {
@@ -21,8 +21,6 @@ const ProjectCard: FunctionComponent<Props> = ({
   slug,
   githubData,
 }) => {
-  const image = getImage(frontmatter.avatar);
-
   return (
     <div className="p-4 bg-white relative flex flex-col" key={id}>
       {/* The container below should take up as much vertical space as possible
@@ -31,10 +29,10 @@ const ProjectCard: FunctionComponent<Props> = ({
       <div className="flex-grow">
         {frontmatter.avatar && (
           <div className="absolute -left-2 -top-3">
-            <GatsbyImage
-              image={image}
+            <ProjectAvatar
+              image={frontmatter.avatar}
               alt={frontmatter.name}
-              className="rounded-full w-12 h-12"
+              size={48}
             />
           </div>
         )}
