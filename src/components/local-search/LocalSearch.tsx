@@ -90,6 +90,16 @@ const LocalSearch: FunctionComponent<Props> = ({
           />
         ))}
       </ProjectListWrapper>
+      {filteredProjects.length === 0 && (
+        <div className="text-center px-4">
+          <h3 className="text-black-500 text-2xl font-semibold mb-4">
+            No results
+          </h3>
+          <p className="text-black-300">
+            No projects matched your search. Try adjusting your filters.
+          </p>
+        </div>
+      )}
     </div>
   );
 };
