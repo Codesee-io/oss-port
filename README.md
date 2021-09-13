@@ -30,7 +30,7 @@ The CodeSee Map below is a good way to get familiar with the codebase:
 1. Follow the above setup steps
 1. Create a new folder inside `/projects` and name it the same as your GitHub handle or organization
 1. Add a new `.mdx` file using the name of your public repo
-1. Copy/paste the contents of `projects/_template.mdx` into that file
+1. Copy/paste the contents of [`projects/_template.mdx`](https://raw.githubusercontent.com/Codesee-io/oss-port/main/projects/_template.mdx) into that file
 1. Fill out the information — most of it is optional, but extremely helpful for potential contributors. If you opt not to include the optional content, delete it from your template.
 1. Add a 200x200 image for your organization to your folder, for example, `./projects/distributeaid/da.png`
 1. Preview your changes locally
