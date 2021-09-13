@@ -30,6 +30,7 @@ module.exports = {
       options: {
         name: "projects",
         path: "./projects",
+        ignore: ["**/_template.mdx"],
       },
     },
     {
