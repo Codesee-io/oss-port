@@ -52,9 +52,8 @@ const HomeTemplate: FunctionComponent<Props> = ({
           Welcome to OSS Port
         </h1>
         <p className="text-black-300 text-center mb-6 mt-2">
-          Helping contributors and maintainers
-          <br />
-          find each other and onboard better.
+          Connecting contributors and maintainers <br/>
+          and helping all onboard better.
         </p>
       </div>
       <LocalSearch
