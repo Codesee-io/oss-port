@@ -22,7 +22,7 @@ const TagFilters: FunctionComponent<Props> = ({ tags, refine }) => {
   };
 
   return (
-    <div className="space-x-2 space-y-2 text-center mb-12">
+    <div className="space-x-2 space-y-2 text-center mb-1">
       {tags.map((item) => (
         <ClickableTag
           isActive={currentFilters.includes(item)}

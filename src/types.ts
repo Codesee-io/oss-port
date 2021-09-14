@@ -2,7 +2,8 @@ export type ProjectFrontmatter = {
   description?: string;
   repoUrl: string;
   name: string;
-  tags: string[];
+  languages?: string[];
+  tags?: string[];
   currentlySeeking?: string[];
   contributionOverview?: {
     mainLocation?: string;

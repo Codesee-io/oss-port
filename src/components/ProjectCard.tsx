@@ -21,6 +21,11 @@ const ProjectCard: FunctionComponent<Props> = ({
   slug,
   githubData,
 }) => {
+  const badges = [
+    ...(frontmatter.languages || []),
+    ...(frontmatter.tags || []),
+  ];
+
   return (
     <div className="p-4 bg-white relative flex flex-col" key={id}>
       {/* The container below should take up as much vertical space as possible
@@ -91,8 +96,8 @@ const ProjectCard: FunctionComponent<Props> = ({
           )}
         </div>
         <div className="mt-4">
-          {frontmatter.tags.map((language) => (
-            <Tag tag={language} key={language} className="mr-2 mb-2" />
+          {badges.map((badge) => (
+            <Tag tag={badge} key={badge} className="mr-2 mb-2" />
           ))}
         </div>
       </div>
