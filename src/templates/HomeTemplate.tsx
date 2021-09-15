@@ -92,6 +92,10 @@ export const pageQuery = graphql`
           languages
           tags
           currentlySeeking
+          featuredMap {
+            url
+            description
+          }
           repoUrl
           websiteUrl
           twitterUrl

@@ -6,6 +6,7 @@ import RepoStats from "./RepoStats";
 import { MarkGithubIcon, LinkIcon } from "@primer/octicons-react";
 import TwitterIcon from "./icons/TwitterIcon";
 import ProjectAvatar from "./ProjectAvatar";
+import MapIcon from "./icons/MapIcon";
 
 type Props = Project & {
   githubData?: {
@@ -72,6 +73,20 @@ const ProjectCard: FunctionComponent<Props> = ({
           >
             <MarkGithubIcon size={20} />
           </a>
+          {frontmatter.featuredMap?.url && (
+            <a
+              href={frontmatter.featuredMap.url}
+              target="_blank"
+              title={
+                frontmatter.featuredMap.description ||
+                "View this project's CodeSee map"
+              }
+              rel="noopener"
+              className="text-black-300 hover:text-blue-400 p-1"
+            >
+              <MapIcon width={20} />
+            </a>
+          )}
           {frontmatter.websiteUrl && (
             <a
               href={frontmatter.websiteUrl}
