@@ -6,7 +6,6 @@ import ProjectListWrapper from "./ProjectListWrapper";
 import ProjectCard from "../ProjectCard";
 import SearchInput from "./SearchInput";
 import TagFilters from "./TagFilters";
-import { filter } from "core-js/core/array";
 
 type Props = {
   searchIndex: SearchIndexItem[];
