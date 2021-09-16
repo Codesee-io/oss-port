@@ -30,7 +30,7 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
       <div className="sm:pl-8 mt-6 sm:mt-0 text-black-500">
         <a
           href={frontmatter.featuredMap.url}
-          className="font-bold text-lg hover:text-blue-500 leading-4 mb-2"
+          className="font-bold text-lg hover-hover:hover:text-blue-500 leading-4 mb-2"
         >
           {featuredMapMetadata.name}
         </a>

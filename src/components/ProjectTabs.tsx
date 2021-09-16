@@ -17,7 +17,7 @@ const Tab: FunctionComponent<TabProps> = ({ children, isActive, href }) => {
         "text-black-500 px-3 py-1 inline-flex items-center border-b-2 border-transparent -mb-px",
         {
           "border-black-500 font-semibold": isActive,
-          "hover:border-blue-500": !isActive,
+          "hover-hover:hover:border-blue-500": !isActive,
         }
       )}
     >
