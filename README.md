@@ -2,9 +2,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02ace102-0025-4a8b-a68e-2eba2deb3bf5/deploy-status)](https://app.netlify.com/sites/gracious-sammet-0b4268/deploys)
 
-## Running this project locally
+## Running the project
 
-1. Clone this repo
+There are 2 ways to run this project during development: using a local environment and using GitHub Codespaces.
+
+If you have a javascript development environment set up already, the local approach is pretty easy. If you just want to get up and going without having to install anything, choose Codespaces.
+
+### Local development
+
+1. Clone this repository to your machine
 1. Inside the project directory, install the dependencies using [Yarn](https://classic.yarnpkg.com/en/):
 
    ```shell
@@ -18,6 +24,21 @@
    ```
 
 1. You can now view the project in your browser at http://localhost:8000
+
+### GitHub Codespaces
+
+1. Navigate to the [repository in GitHub](https://github.com/codesee-io/oss-port)
+1. Click on the "Code" button
+
+   <img src="./docs/github-code-button.png" alt="Code button" width="104">
+
+1. Click on the "Codespaces" tab and create your own environment in your browser!
+1. In the Codespace terminal, you can run commands just like you would on a Linux system
+1. Run the project with the following command:
+
+   ```shell
+   yarn start
+   ```
 
 ## Contributing
 
