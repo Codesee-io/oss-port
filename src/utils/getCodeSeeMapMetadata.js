@@ -5,6 +5,41 @@ const codeseeAPIToken = process.env.CODESEE_API_TOKEN;
 let warned = false;
 
 /**
+ * Returns a map ID from a URL. If the URL is malformed, we return `undefined`.
+ * Valid URLs start like this:
+ * - https://app.codesee.io/maps/public/<map ID>
+ * - https://app.codesee.io/maps/<map ID>
+ *
+ * Note that we do not validate the ID we return.
+ */
+function getCodeSeeMapIdFromUrl(url) {
+  try {
+    // The featuredMap can either be a full URL or just an ID
+    const mapUrl = new URL(url);
+
+    const { host, pathname } = mapUrl;
+
+    // We expect the URL to contain /maps/public or /map
+    if (host === "app.codesee.io") {
+      const splitPath = pathname
+        .substring(1)
+        .split("/")
+        .filter((x) => !!x);
+
+      if (pathname.startsWith("/maps/public/")) {
+        if (splitPath.length >= 3) {
+          return splitPath[2];
+        }
+      } else if (pathname.startsWith("/maps/") && splitPath.length >= 2) {
+        return splitPath[1];
+      }
+    }
+  } catch (_) {}
+
+  return undefined;
+}
+
+/**
  * Fetch the metadata for featured CodeSee maps. If the user doesn't have a
  * CodeSee API token, we skip this step. However, contributors can preview their
  * changes when opening pull requests in GitHub.
@@ -15,15 +50,8 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
   }
 
   // Figure out the map ID from its URL
-  let mapId;
+  const mapId = getCodeSeeMapIdFromUrl(mapUrl);
   let featuredMapMetadata;
-  try {
-    // The featuredMap can either be a full URL or just an ID
-    const testURL = new URL(mapUrl);
-    if (testURL.host === "app.codesee.io") {
-      mapId = testURL.pathname.substring(`/maps/public/`.length);
-    }
-  } catch (_) {}
 
   if (!mapId) {
     return undefined;
@@ -39,12 +67,14 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
 
   // If there's nothing in the cache, fetch the metadata from CodeSee
   if (mapId) {
-    if (!codeseeAPIToken) { 
+    if (!codeseeAPIToken) {
       if (!warned) {
-        console.warn("No Codesee API Token set, CodeSee Maps will not be rendered properly.");
+        console.warn(
+          "No Codesee API Token set, CodeSee Maps will not be rendered properly."
+        );
         warned = true;
       }
-      return; 
+      return;
     }
     await axios
       .get(`https://app.codesee.io/api/maps/public/${mapId}/metadata`, {
@@ -52,6 +82,11 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
       })
       .then(({ data }) => {
         featuredMapMetadata = data.metadata;
+      })
+      .catch(() => {
+        console.warn(
+          "Invalid CodeSee map URL, skipping featured map generation"
+        );
       });
   }
 
@@ -62,4 +97,4 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
   return featuredMapMetadata;
 }
 
-module.exports = getCodeSeeMapMetadata;
+module.exports = { getCodeSeeMapMetadata, getCodeSeeMapIdFromUrl };
