@@ -62,30 +62,27 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
     return cached;
   }
 
-  // If there's nothing in the cache, fetch the metadata from CodeSee
-  if (mapId) {
-    if (!codeseeAPIToken) {
-      if (!warned) {
-        console.warn(
-          "No Codesee API Token set, CodeSee Maps will not be rendered properly."
-        );
-        warned = true;
-      }
-      return;
+  if (!codeseeAPIToken) {
+    if (!warned) {
+      console.warn(
+        "No Codesee API Token set, CodeSee Maps will not be rendered properly."
+      );
+      warned = true;
     }
-    await axios
-      .get(`https://app.codesee.io/api/maps/public/${mapId}/metadata`, {
-        headers: { Authorization: `Bearer ${codeseeAPIToken}` },
-      })
-      .then(({ data }) => {
-        featuredMapMetadata = data.metadata;
-      })
-      .catch(() => {
-        console.warn(
-          "Invalid CodeSee map URL, skipping featured map generation"
-        );
-      });
+    return;
   }
+
+  // If there's nothing in the cache, fetch the metadata from CodeSee
+  await axios
+    .get(`https://app.codesee.io/api/maps/public/${mapId}/metadata`, {
+      headers: { Authorization: `Bearer ${codeseeAPIToken}` },
+    })
+    .then(({ data }) => {
+      featuredMapMetadata = data.metadata;
+    })
+    .catch(() => {
+      console.warn("Invalid CodeSee map URL, skipping featured map generation");
+    });
 
   if (featuredMapMetadata) {
     await cache.set(cacheKey, featuredMapMetadata);
