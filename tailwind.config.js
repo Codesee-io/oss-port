@@ -52,7 +52,7 @@ module.exports = {
         "black-200": theme("colors.black.200"),
       }),
       screens: {
-        'hover-hover': {'raw': '(hover: hover)'},
+        'supports-hover': {'raw': '(hover: hover)'},
       }
     },
   },

@@ -43,7 +43,7 @@ const ProjectCard: FunctionComponent<Props> = ({
           </div>
         )}
         <h3 className="font-bold text-black-500 pl-8">
-          <Link to={slug} className="hover-hover:hover:text-blue-400">
+          <Link to={slug} className="supports-hover:hover:text-blue-400">
             {frontmatter.name}
           </Link>
         </h3>
@@ -69,7 +69,7 @@ const ProjectCard: FunctionComponent<Props> = ({
             target="_blank"
             title="Visit this repository"
             rel="noopener"
-            className="text-black-300 hover-hover:hover:text-blue-400 p-1"
+            className="text-black-300 supports-hover:hover:text-blue-400 p-1"
           >
             <MarkGithubIcon size={20} />
           </a>
@@ -82,7 +82,7 @@ const ProjectCard: FunctionComponent<Props> = ({
                 "View this project's CodeSee map"
               }
               rel="noopener"
-              className="text-black-300 hover-hover:hover:text-blue-400 p-1"
+              className="text-black-300 supports-hover:hover:text-blue-400 p-1"
             >
               <MapIcon width={20} />
             </a>
@@ -93,7 +93,7 @@ const ProjectCard: FunctionComponent<Props> = ({
               target="_blank"
               title="Visit this project's website"
               rel="noopener"
-              className="text-black-300 hover-hover:hover:text-blue-400 p-1"
+              className="text-black-300 supports-hover:hover:text-blue-400 p-1"
             >
               <LinkIcon size={20} />
             </a>
@@ -104,7 +104,7 @@ const ProjectCard: FunctionComponent<Props> = ({
               target="_blank"
               title="Visit this project's Twitter feed"
               rel="noopener"
-              className="text-black-300 hover-hover:hover:text-blue-400 p-1"
+              className="text-black-300 supports-hover:hover:text-blue-400 p-1"
             >
               <TwitterIcon />
             </a>

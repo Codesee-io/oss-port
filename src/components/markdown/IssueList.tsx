@@ -41,7 +41,7 @@ const IssueList: FunctionComponent<Props> = ({
             <a
               href={issue.url}
               target="_blank"
-              className="ml-2 font-semibold hover-hover:hover:text-blue-500"
+              className="ml-2 font-semibold supports-hover:hover:text-blue-500"
             >
               {issue.title}
             </a>
@@ -53,7 +53,7 @@ const IssueList: FunctionComponent<Props> = ({
           <a
             href={getLabelUrl(repoUrl, label)}
             target="_blank"
-            className="text-sm font-bold hover-hover:hover:text-blue-500"
+            className="text-sm font-bold supports-hover:hover:text-blue-500"
             rel="noreferrer"
           >
             View all
