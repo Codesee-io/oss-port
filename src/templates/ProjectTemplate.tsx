@@ -71,9 +71,9 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
             <h1 className="mt-2 mb-4 text-black-500 font-bold text-4xl font-accent">
               {projectData.frontmatter.name}
             </h1>
-            <div className="space-x-2 mb-4">
+            <div className="mb-4">
               {badges.map((badge) => (
-                <Tag key={badge} tag={badge} />
+                <Tag key={badge} tag={badge} className="mr-2 mb-2" />
               ))}
             </div>
             <div className="md:flex mb-6">
