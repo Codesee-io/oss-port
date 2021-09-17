@@ -1,6 +1,6 @@
 const path = require("path");
 const calculateGithubData = require("./src/utils/calculateGithubData");
-const getCodeSeeMapMetadata = require("./src/utils/getCodeSeeMapMetadata");
+const { getCodeSeeMapMetadata } = require("./src/utils/getCodeSeeMapMetadata");
 const { graphql: github } = require("@octokit/graphql");
 
 // TODO maybe look into using TS config files?
