@@ -6,7 +6,7 @@ const Footer: FunctionComponent = () => (
     <p className="text-sm text-center flex items-center justify-center">
       Built with tea and love by{" "}
       <a
-        className="opacity-75 hover:opacity-100 ml-1"
+        className="opacity-75 supports-hover:hover:opacity-100 ml-1"
         href="https://www.codesee.io"
         target="_blank"
         rel="noopener"

@@ -15,7 +15,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
       <div className="flex space-x-4 mb-8">
         <a
           target="_blank"
-          className="text-black-300 hover:text-blue-400"
+          className="text-black-300 supports-hover:hover:text-blue-400"
           href={frontmatter.repoUrl}
           title="Visit this repository on GitHub"
         >
@@ -24,7 +24,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
         {frontmatter.featuredMap?.url && (
           <a
             target="_blank"
-            className="text-black-300 hover:text-blue-400"
+            className="text-black-300 supports-hover:hover:text-blue-400"
             href={frontmatter.featuredMap.url}
             title={
               frontmatter.featuredMap.description ||
@@ -37,7 +37,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
         {frontmatter.twitterUrl && (
           <a
             target="_blank"
-            className="text-black-300 hover:text-blue-400"
+            className="text-black-300 supports-hover:hover:text-blue-400"
             href={frontmatter.twitterUrl}
             title="Connect with this community on Twitter"
           >
@@ -47,7 +47,7 @@ const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
         {frontmatter.websiteUrl && (
           <a
             target="_blank"
-            className="text-black-300 hover:text-blue-400"
+            className="text-black-300 supports-hover:hover:text-blue-400"
             href={frontmatter.websiteUrl}
             title="Visit this project's website"
           >

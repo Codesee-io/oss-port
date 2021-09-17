@@ -6,7 +6,7 @@ const CallToAction: FunctionComponent<AnchorHTMLAttributes<HTMLAnchorElement>> =
     return (
       <a
         className={cx(
-          "bg-yellow-200 text-black-500 hover:bg-yellow-300 rounded px-8 py-2 font-semibold",
+          "bg-yellow-200 text-black-500 supports-hover:hover:bg-yellow-300 rounded px-8 py-2 font-semibold",
           className
         )}
         {...otherProps}

@@ -51,6 +51,9 @@ module.exports = {
       fill: (theme) => ({
         "black-200": theme("colors.black.200"),
       }),
+      screens: {
+        'supports-hover': {'raw': '(hover: hover)'},
+      }
     },
   },
   variants: {
