@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
+import cx from "classnames";
 import Tag from "./Tag";
 import { GitHubMetric, Project } from "../types";
 import RepoStats from "./RepoStats";
@@ -33,7 +34,7 @@ const ProjectCard: FunctionComponent<Props> = ({
       so that the GitHub stats are vertically-aligned in a row even when the
       number of tag varies between projects. */}
       <div className="flex-grow">
-        {frontmatter.avatar && (
+        {!!frontmatter.avatar && (
           <div className="absolute -left-2 -top-3">
             <ProjectAvatar
               image={frontmatter.avatar}
@@ -42,7 +43,11 @@ const ProjectCard: FunctionComponent<Props> = ({
             />
           </div>
         )}
-        <h3 className="font-bold text-black-500 pl-8">
+        <h3
+          className={cx("font-bold text-black-500", {
+            "pl-8": frontmatter.avatar != null,
+          })}
+        >
           <Link to={slug} className="supports-hover:hover:text-blue-400">
             {frontmatter.name}
           </Link>
