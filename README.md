@@ -54,7 +54,9 @@ featuredMap:
 
 ### Tag policy
 
-Final tags are up to the maintainers of OSS Port. Your tags may be modified for the benefit of the community and to improve discoverabiity.
+Final tags are up to the maintainers of OSS Port. Your tags may be modified for the benefit of the community and to improve discoverability.
+
+We use title-casing for tags. For example: "First-Timer Friendly, Social Activism, C#, JavaScript".
 
 ### How to remove your project from OSS Port
 
