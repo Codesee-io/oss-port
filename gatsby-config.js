@@ -1,4 +1,4 @@
-require("dotenv").config();
+const emoji = require("remark-emoji");
 
 module.exports = {
   siteMetadata: {
@@ -38,6 +38,7 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".md", ".mdx"],
+        remarkPlugins: [emoji],
       },
     },
   ],
