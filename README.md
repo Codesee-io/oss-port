@@ -6,6 +6,8 @@
 
 There are 2 ways to run this project during development: using a local environment and using GitHub Codespaces.
 
+If you have a javascript development environment set up already, the local approach is pretty easy. If you just want to get up and going without having to install anything, choose Codespaces.
+
 ### Local development
 
 1. Clone this repository to your machine
