@@ -10,7 +10,7 @@ const Overview: FunctionComponent = ({ children }) => {
       <AnchorHeader id="overview">Overview</AnchorHeader>
       {children}
       <FeaturedCodeSeeMap />
-      <div className="md:flex md:space-x-6">
+      <div className="md:flex md:space-x-6 mt-8">
         <CurrentlySeeking />
         <ContributionOverview />
       </div>

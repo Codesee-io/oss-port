@@ -63,6 +63,10 @@ a.markdown-element:focus {
   text-decoration: underline;
 }
 
+img.markdown-element {
+  margin-bottom: 18px;
+}
+
 code.markdown-element {
   @apply bg-black-50;
   padding: 0.2em 0.4em;
