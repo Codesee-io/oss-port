@@ -8,7 +8,7 @@
 1. Inside the project directory, install the dependencies using [Yarn](https://classic.yarnpkg.com/en/):
 
    ```shell
-   yarn
+   yarn install
    ```
 
 1. Run the project locally:
