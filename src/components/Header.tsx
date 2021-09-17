@@ -22,7 +22,7 @@ const Header: FunctionComponent = () => {
               rel="noopener"
               target="_blank"
             >
-              Add Your Project
+              List Your Project
             </CallToAction>
           </div>
         </div>
