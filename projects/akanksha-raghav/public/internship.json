@@ -1,0 +1,174 @@
+{
+    "internship": [
+        {
+            "logo": "data:image/png;base64,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",
+            "link": "https://careers.google.com/jobs/results/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&company=Google&company=YouTube&employment_type=INTERN&q=",
+            "name": "Google"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-256/ibm-3-569470.png",
+            "link": "https://www.ibm.com/in-en/employment/entrylevel/index.html",
+            "name": "IBM"
+        },
+        {
+            "logo": "https://1000logos.net/wp-content/uploads/2019/07/Microsoft-Logo-2012%E2%80%93present.jpg",
+            "link": "https://careers.microsoft.com/students/us/en/",
+            "name": "Microsoft"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/amazon-2296099-1912058.png",
+            "link": "https://www.amazon.jobs/en/teams/internships-for-students",
+            "name": "Amazon"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/redhat-5-1175106.png",
+            "link": "https://www.redhat.com/en/jobs/categories/internships",
+            "name": "Red Hat"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/starbucks-226353.png",
+            "link": "https://www.starbucks.com/careers/find-a-job/internships",
+            "name": "Tata Starbucks"
+        },
+        {
+            "logo": "https://www.wipro.com/content/dam/nexus/en/brand/Wipro-Logo-w88X70h-Px.png",
+            "link": "https://careers.wipro.com/wilp",
+            "name": "WIPRO"
+        },
+        {
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/1920px-Infosys_logo.svg.png",
+            "link": "https://www.infosys.com/careers/apply/students.html",
+            "name": "Infosys"
+        },
+        {
+            "logo": "https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG",
+            "link": "https://www.hcltech.com/careers/training-hiring-programs",
+            "name": "HCL Technologies"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/american-137-532763.png",
+            "link": "https://jobs.americanexpress.com/jobs?keywords=internship&page=1",
+            "name": "American Express"
+        },
+        {
+            "logo": "data:image/png;base64,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",
+            "link": "https://www.adobe.com/careers/university.html",
+            "name": "Adobe"
+        },
+        {
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/BMC_Software_logo_%282014%29.svg/330px-BMC_Software_logo_%282014%29.svg.png",
+            "link": "https://jobs.bmc.com/Careers/SearchJobs/internship",
+            "name": "BMC"
+        },
+        {
+            "logo": "data:image/png;base64,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",
+            "link": "https://www.cisco.com/c/en/us/about/careers/working-at-cisco/students-and-new-graduate-programs.html",
+            "name": "Cisco"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/dell-3-555801.png",
+            "link": "https://jobs.dell.com/search-jobs?acm=ALL&alrpm=1269750&ascf=[{%22key%22:%22ALL%22,%22value%22:%22%22}]",
+            "name": "DELL"
+        },
+        {
+            "logo": "https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png",
+            "link": "https://www.paypal.com/us/webapps/mpp/jobs/students-and-grads/internships",
+            "name": "PayPal"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/intel-4-616231.png",
+            "link": "https://jobs.intel.com/page/show/search-results#t=Jobs&sort=relevancy&layout=table&f:@employeetype=[Intern%2FStudent]",
+            "name": "Intel"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/oracle-4-555887.png",
+            "link": "https://www.oracle.com/in/corporate/careers/students-grads/",
+            "name": "Oracle"
+        },
+        {
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Paytm_Logo.png",
+            "link": "https://paytm.com/careers/jobs.html?team=Internship",
+            "name": "Paytm"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/logo-1889517-1597577.png",
+            "link": "https://www.facebook.com/careers/jobs?q=internship&roles[0]=intern",
+            "name": "Facebook"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/sap-5-569505.png",
+            "link": "https://jobs.sap.com/search/?q=internship&locationsearch=&locale=en_US",
+            "name": "SAP"
+        },
+        {
+            "logo": "https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg",
+            "link": "https://salesforce.wd1.myworkdayjobs.com/External_Career_Site/0/refreshFacet/318c8bb6f553100021d223d9780d30be",
+            "name": "Salesforce"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/vmware-282496.png",
+            "link": "https://careers.vmware.com/internships",
+            "name": "VMware"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/snapchat-43-189797.png",
+            "link": "https://www.snap.com/jobs/?types=Intern",
+            "name": "Snapchat"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/linkedin-160-461814.png",
+            "link": "https://careers.linkedin.com/students/Internships",
+            "name": "LinkedIn"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/twitter-280-1175079.png",
+            "link": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#q=internship",
+            "name": "Twitter"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/samsung-226432.png",
+            "link": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers/1/refreshFacet/318c8bb6f553100021d223d9780d30be",
+            "name": "Samsung"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/apple-316-226435.png",
+            "link": "https://jobs.apple.com/en-in/search?team=internships-STDNT-INTRN",
+            "name": "Apple"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/forbes-282171.png",
+            "link": "https://apply.workable.com/forbes-media/",
+            "name": "Forbes"
+        },
+        {
+            "logo": "https://careers.ril.com/images/RIL_Logo.png",
+            "link": "https://careers.ril.com/students-and-graduates.aspx",
+            "name": "Reliance"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/github-84-436555.png",
+            "link": "https://github.com/about/careers",
+            "name": "GitHub"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/firefox-20-569406.png",
+            "link": "https://careers.mozilla.org/internships/",
+            "name": "Mozilla"
+        },
+        {
+            "logo": "https://www.linuxcareers.com/_resx/imageresource/be06e4f828ea98640182e641de0ad315a24f42ba-736-28-0-0-0",
+            "link": "https://www.linuxcareers.com/jobs/job-search-results/kw-internship/co-226/",
+            "name": "Linux"
+        },
+        {
+            "logo": "https://cdn.iconscout.com/icon/free/png-64/youtube-85-226402.png",
+            "link": "https://careers.google.com/jobs/results/?company=YouTube&employment_type=INTERN&jlo=en_US&location=&q=Youtube",
+            "name": "Youtube"
+        },
+        {
+            "logo": "https://paytmlabs.com/img/logo.svg",
+            "link": "https://jobs.lever.co/paytm?team=Internship&department=Careers",
+            "name": "Paytm Labs"
+        }
+    ]
+}

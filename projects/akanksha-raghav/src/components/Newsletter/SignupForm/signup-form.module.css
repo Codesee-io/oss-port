@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form__row {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: var(--spacer-8);
+}
+
+.form__row input {
+  width: 100%;
+  appearance: none;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: medium;
+  padding: var(--spacer-4);
+  outline: none;
+}
+
+.form__row input:hover {
+  border: 1px solid darkturquoise;
+}
+
+.form__row label {
+  font-size: smaller;
+}
+
+.form__submit {
+  display: block;
+  appearance: none;
+  padding: var(--spacer-4) var(--spacer-8);
+
+  border: none;
+  border-radius: 2px;
+  background: teal;
+
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+}

@@ -1,0 +1,79 @@
+{
+    "swags": [
+        {
+            "logo": "https://camo.githubusercontent.com/377f8cdca056c4bc9c77050b8c60fc7e46068338/68747470733a2f2f692e726564642e69742f737778376c66627538687432312e6a7067",
+            "link": "https://discord.com/hypesquad",
+            "name": "Discord - T-Shirt + Stickers + Pin!"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/e9813834755def37b65c8d2ed8d417619999d9ac/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313030302f302a4c6952723749525f32733159613742442e6a7067",
+            "link": "https://medium.com/npm-inc/npm-weekly-131-get-socks-for-docs-welcome-lorin-terri-plus-global-diversity-cfp-day-is-1b965ebc19ca",
+            "name": "NPM - Socks!"
+        },
+        {
+            "logo": "https://cdn.shopify.com/s/files/1/2396/7733/products/No_pain_1024x1024@2x.png?v=1560555469",
+            "link": "https://blockstack.myshopify.com/products/blockchain-no-pain-sticker",
+            "name": "Blockstack"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/bf9b430e727829de888b9fd6533616ee146c3be8/68747470733a2f2f64316c66797a356b7774387675392e636c6f756466726f6e742e6e65742f74336e7532707471397069306673776b397178622e6a7067",
+            "link": "https://nativescript.org/blog/nativescript-first-time-contribution-contest-continued-and-extended/",
+            "name": "NativeScript "
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/4fe37bb78f4c8d134258069bc15224f9d709ad5c/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4363635145446a555541453977524f2e6a7067",
+            "link": "https://jsbin.com/help/stickers/",
+            "name": "Jsbin"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/9a80b4f0c57a1e45de2dee9075581f117f47a0a7/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313235302f312a78534c6d70496e4139366b396265714d7746506a5a512e6a706567",
+            "link": "https://medium.com/opsdroid/contributor-sticker-packs-738058ceda59",
+            "name": "Opsdroid"
+        },
+        {
+            "logo": "https://d33wubrfki0l68.cloudfront.net/ca0061c3c33c88b2b124e64ad341e15e2a17af49/c8765/images/alligator-logo3.svg",
+            "link": "https://alligator.io/write-for-us/",
+            "name": "alligator.io"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/6e1df12acfbf542562e873610ccd352aaac5c44a/68747470733a2f2f63646e2e6e656f346a6c6162732e636f6d2f696d616765732f6365727469666965642d73686972742e706e67",
+            "link": "https://neo4j.com/graphacademy/neo4j-certification/",
+            "name": "neo4j"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/657fd7d3e77565ba15799f70a4e2099a59872459/68747470733a2f2f7777772e6761747362796a732e6f72672f7374617469632f6761747362792d69636f6e2d34613937373335343930393163323237636432656238326363643963356533612e706e67",
+            "link": "https://www.gatsbyjs.com/contributing/contributor-swag/",
+            "name": "Gatsby"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/71b33a0c7e31f45699dd7a283ea7b0b5dac97273/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f427656496d623443514141644d4d412e6a7067",
+            "link": "https://codeship.com/swag",
+            "name": "Codeship"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/ce761082c52652464c91848261024bc77acf1dd6/68747470733a2f2f7374617469632e74696c646163646e2e636f6d2f74696c64363433332d363533352d343833332d623933322d3332333036323334333933302f5a65726f5f746f5f446170705f73686972745f702e706e67",
+            "link": "https://docs.blockstack.org/authentication/building-todo-app",
+            "name": "Blockstack : Zero-to-DApp"
+        },
+        {
+            "logo": "https://camo.githubusercontent.com/211dc35d41d6183fba0474545f0d8c7e336b9e15/68747470733a2f2f64336f676d37616339316b3937752e636c6f756466726f6e742e6e65742f636f6e74656e742f64616d2f616c6578612f656e2d696e2f646576696e63656e74697665732f494e5f446576496e63656e74697665735f466562323032302e706e67",
+            "link": "https://developer.amazon.com/en-IN/alexa/alexa-skills-kit/alexa-developer-skill-promotion",
+            "name": "Amazon Alexa"
+        },
+        {
+            "logo": "https://github.blog/wp-content/uploads/2014/10/4b0317bc-4599-11e4-8bc3-0ca4dd5223e8.png",
+            "link": "https://education.github.com/pack",
+            "name": "GitHub Student Developer Pack"
+        },
+        {
+            "logo": "https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/v1451052749/svkxajebt60ayd9gwmac.png",
+            "link": "https://www.jetbrains.com/shop/eform/students",
+            "name": "JetBrains"
+        },
+        {
+            "logo": "https://download.logo.wine/logo/Bitbucket/Bitbucket-Logo.wine.png",
+            "link": "https://bitbucket.org/product/education",
+            "name": "BitBucket"
+        }
+    ]
+}

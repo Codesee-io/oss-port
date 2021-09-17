@@ -1,0 +1,30 @@
+.container {
+  max-width: 450px;
+  display: block;
+  margin: auto;
+}
+
+.container__inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  padding: var(--spacer-8) var(--spacer-12);
+}
+
+.head__container {
+  width: 100%;
+  margin: var(--spacer-10) 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: xx-large;
+  margin: 0;
+}
+
+.subhead {
+  font-size: medium;
+  color: gray;
+}
