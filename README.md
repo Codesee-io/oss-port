@@ -52,6 +52,10 @@ featuredMap:
   description: Get a quick overview of the major areas of our repo
 ```
 
+### Tag policy
+
+Final tags are up to the maintainers of OSS Port. Your tags may be modified for the benefit of the community and to improve discoverabiity.
+
 ### How to remove your project from OSS Port
 
 Open a PR to remove your project folder from this repository.
