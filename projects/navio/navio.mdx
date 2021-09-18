@@ -1,0 +1,61 @@
+---
+name: Navio
+repoUrl: https://github.com/viniciusbds/navio
+description: A simple and study purposes tool for creating and managing linux containers.
+languages: # A list of programming languages used in this project
+  - Go
+tags: # A list of keywords relevant to the contributors for this project
+  - Education
+  - Containerization
+  - Linux
+  - Docker
+  - Cgroups
+  - Namespaces
+  - CLI Application
+avatar: navio.png
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Code Reviewers
+  - Technical Writers
+  - Testers
+featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
+  url: https://app.codesee.io/maps/public/10de8a50-1821-11ec-b615-23ef4b16c81f
+  description: (optional) short description of the CodeSee Map
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Learn more about containers
+    url: https://www.youtube.com/watch?v=8fi7uSYlOdc
+  - title: Containers from Scratch
+    url: https://ericchiang.github.io/post/containers-from-scratch/
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+Navio is a simple tool for creating and managing linux containers.
+
+A container is a set of processes isolated by Linux namespaces. We use, for example, PID namespace to isolate the PID number space, UTS to isolate the hostname and MOUNT to isolate the filesystem mount points.
+
+All containers have their own rootfs (a isolated "mini operating system") associated, so that a change (for example, an installation of any library or a creation of a file) in a container does not affect others ones.
+
+It is also possible use Cgroups to limit the amount of resources that each container can use.
+
+This project exists for study purposes, so feel free to contribute 🚢 😃
+
+</Overview>
+
+<Contributing>
+
+You can contribute to the project in any way you want, either by fixing bugs, implementing new features, improving the documentation or proposing new features through issues.
+
+**Workflow:**
+
+- **Open a Issue** describing what your change is about and why
+- **Fork** and make your changes
+- **Test** it running `sudo make unit-tests` to make sure that your changes passes the tests
+- **Make Pull Request** with your changes.
+
+
+This is a suggestion, not a rule **:-)**
+
+</Contributing>
