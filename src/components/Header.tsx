@@ -12,7 +12,12 @@ const Header: FunctionComponent = () => {
         </Link>
         <div className="flex items-center justify-center">
           <div className="hidden sm:block">
-            <a href="/about/" style={{color:"white", marginRight: "20px"}}>
+            <a href="/swag" style={{ color: "white", marginRight: "20px" }}>
+              Get Swag!
+            </a>
+          </div>
+          <div className="hidden sm:block">
+            <a href="/about" style={{ color: "white", marginRight: "20px" }}>
               About
             </a>
           </div>
