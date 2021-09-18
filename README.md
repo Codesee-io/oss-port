@@ -44,7 +44,7 @@ If you have a javascript development environment set up already, the local appro
 
 The CodeSee Map below is a good way to get familiar with the codebase:
 
-[<img alt="CodeSee Map preview" src="docs/codebase-map.png" width="500">](https://app.codesee.io/maps/public/66e14ff0-0c28-11ec-83a7-234deb28a370)
+[<img alt="CodeSee Map preview" src="docs/codebase-map.png" width="500">](https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27)
 
 ### How to list your own project
 
