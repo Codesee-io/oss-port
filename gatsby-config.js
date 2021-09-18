@@ -42,5 +42,12 @@ module.exports = {
         remarkPlugins: [emoji],
       },
     },
+    {
+      resolve: `@raae/gatsby-plugin-fathom`,
+      options: {
+        site: "CXMNKQGD",
+        honorDnt: true, // Honor visitors' "do not track" policy
+      },
+    },
   ],
 };
