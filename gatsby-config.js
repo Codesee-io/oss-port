@@ -43,9 +43,9 @@ module.exports = {
       },
     },
     {
-      resolve: `@raae/gatsby-plugin-fathom`,
+      resolve: `gatsby-plugin-fathom`,
       options: {
-        site: "CXMNKQGD",
+        siteId: "CXMNKQGD",
         honorDnt: true, // Honor visitors' "do not track" policy
       },
     },

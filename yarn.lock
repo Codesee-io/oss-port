@@ -1187,6 +1187,13 @@
     core-js-pure "^3.16.0"
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@7.14.5":
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.5.tgz#665450911c6031af38f81db530f387ec04cd9a98"
+  integrity sha512-121rumjddw9c3NCQ55KGkyE1h/nzWhU/owjhw0l4mQrkzz4x9SGS1X8gFLraHwX7td3Yo4QTL+qj0NcIzN87BA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.15.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.3.tgz#2e1c2880ca118e5b2f9988322bd8a7656a32502b"
@@ -2160,11 +2167,6 @@
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-15.1.0.tgz#0f68700d1196e0a65b5e782483d5207914cd6e62"
   integrity sha512-KxKShchstSiZDVZ3aUF9WREdAoV45bzIgAbPcKfrT08+2T4nVQZGYtwDqlHT4/TLpmVIv2Si7hRHBhTWiADe4Q==
-
-"@raae/gatsby-plugin-fathom@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@raae/gatsby-plugin-fathom/-/gatsby-plugin-fathom-0.0.4.tgz#8ba8c5fd077e47de33b85df63573eede94590f39"
-  integrity sha512-0VaaOANHr6aqIW0VlMyeqV6K22clJLETcDLwx3i/pD65HWuTcBt4k2AmspCJfmtaHOA5r3SgQVSrxQsjzVsqjQ==
 
 "@sideway/address@^4.1.0":
   version "4.1.2"
@@ -6248,6 +6250,13 @@ gatsby-page-utils@^1.13.0:
     glob "^7.1.7"
     lodash "^4.17.21"
     micromatch "^4.0.4"
+
+gatsby-plugin-fathom@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-fathom/-/gatsby-plugin-fathom-2.1.1.tgz#b1e1102d3490786e037586dfcc2a4ab9c6127496"
+  integrity sha512-t5xtF+Mo7x8GPhBO0gX3DF2slAfSXmut7u+IKkZ03sIvzlJ9VKaGMI1tetKxhe8/3Vylq7edn6lgZoiIjKDU3Q==
+  dependencies:
+    "@babel/runtime" "7.14.5"
 
 gatsby-plugin-image@1.13.0:
   version "1.13.0"
