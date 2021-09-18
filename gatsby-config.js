@@ -1,3 +1,4 @@
+require("dotenv").config();
 const emoji = require("remark-emoji");
 
 module.exports = {
