@@ -42,5 +42,12 @@ module.exports = {
         remarkPlugins: [emoji],
       },
     },
+    {
+      resolve: `gatsby-plugin-fathom`,
+      options: {
+        siteId: "CXMNKQGD",
+        honorDnt: true, // Honor visitors' "do not track" policy
+      },
+    },
   ],
 };
