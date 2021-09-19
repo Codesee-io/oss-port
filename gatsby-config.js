@@ -1,4 +1,5 @@
 require("dotenv").config();
+const emoji = require("remark-emoji");
 
 module.exports = {
   siteMetadata: {
@@ -38,6 +39,14 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".md", ".mdx"],
+        remarkPlugins: [emoji],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-fathom`,
+      options: {
+        siteId: "CXMNKQGD",
+        honorDnt: true, // Honor visitors' "do not track" policy
       },
     },
   ],

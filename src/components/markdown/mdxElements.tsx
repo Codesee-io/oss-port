@@ -20,6 +20,7 @@ export default {
   h3: ({ children }) => <h3 className="markdown-element">{children}</h3>,
   h4: ({ children }) => <h4 className="markdown-element">{children}</h4>,
   h5: ({ children }) => <h5 className="markdown-element">{children}</h5>,
+  img: (props) => <img className="markdown-element" {...props} />,
   inlineCode: ({ children }) => (
     <code className="markdown-element">{children}</code>
   ),
