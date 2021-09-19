@@ -119,13 +119,13 @@ const Swag = () => {
                                     <form action="#" method="POST">
                                         <div className="grid grid-cols-2 gap-6">
                                             <div className="col-span-2">
-                                                <label htmlFor="first-name" className="block text-sm text-white">
+                                                <label htmlFor="name" className="block text-sm text-white">
                                                     Name
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="first-name"
-                                                    id="first-name"
+                                                    name="name"
+                                                    id="name"
                                                     autoComplete="given-name"
                                                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300"
                                                 />
@@ -172,7 +172,36 @@ const Swag = () => {
 
                                                 </textarea>
                                             </div>
-
+                                            <div className="col-span-6 sm:col-span-3">
+                                                <label htmlFor="t-shirt" className="block text-sm font-medium text-white">
+                                                    T-shirt size
+                                                </label>
+                                                <select
+                                                    id="t-shirt"
+                                                    name="t-shirt"
+                                                    autoComplete="t-shirt"
+                                                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                >
+                                                    <option>Small</option>
+                                                    <option>Medium</option>
+                                                    <option>Large</option>
+                                                </select>
+                                            </div>
+                                            <div className="col-span-6 sm:col-span-3">
+                                                <label htmlFor="sweatshirt" className="block text-sm font-medium text-white">
+                                                    Sweatshirt size
+                                                </label>
+                                                <select
+                                                    id="sweatshirt"
+                                                    name="sweatshirt"
+                                                    autoComplete="sweatshirt"
+                                                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                >
+                                                    <option>Small</option>
+                                                    <option>Medium</option>
+                                                    <option>Large</option>
+                                                </select>
+                                            </div>
                                             <div className="col-span-1 flex items-center h-5">
                                                 <input
                                                     id="contributor"
@@ -189,7 +218,7 @@ const Swag = () => {
                                                 <input
                                                     id="maintainer"
                                                     name="maintainer"
-                                                    type="maintainer"
+                                                    type="checkbox"
                                                     className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                                                 />
                                                 <label htmlFor="maintainer" className="font-medium text-white ml-3 text-sm">
@@ -201,6 +230,7 @@ const Swag = () => {
                                         <div className="px-4 py-3 text-right sm:px-6 sm:py-10">
                                             <button
                                                 type="submit"
+                                                onClick={submitFunction}
                                                 className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black-500 bg-yellow-200 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                             >
                                                 Claim your swag
@@ -214,9 +244,6 @@ const Swag = () => {
                     </div>
 
                 </div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFUAQA787V8fGfwsR7Rs_NT2LlsyRfU3vIsIdBGQowH6VIJA/viewform?embedded=true" width="640" height="1702" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-
             </main>
         </RootLayout>
     )
@@ -227,59 +254,65 @@ const Swag = () => {
 
 export default Swag;
 
-function submitForm() {
-    const urlFormEncoded = (obj) => {
-        var str = [];
-        for (var p in obj)
-          str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-        return str.join("&");
-      }
-      
-      const submitFunction = async (event) => {
-      event.preventDefault(); // this prevents the Form from submitting to server
-      
-      const firstName = document.getElementById('first-name').value;
-      const lastName = document.getElementById('email-address').value;
-      const gitHub = document.getElementById('github').value;
-      const address = document.getElementById('address').value;
-      const contributor = document.getElementById('contributor').value;
-      const maintainer = document.getElementById('email-address').value;
-      
-      const requestFormBody = {
-          'entry.381772108': firstName,
-          'entry.244442038': lastName,
-          'entry.244442038': gitHub,
-          'entry.244442038': address,
-          'entry.244442038': contributor,
-          'entry.244442038': maintainer,
-        }
-        
-        await submitForm(requestFormBody)
-      
-      }
-      
-      const submitForm = async (requestFormBody) => {
-        try {
-          await fetch('https://docs.google.com/forms/u/0/d/e/234234sdfds/formResponse', {
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded ',
-            },
-            method: 'POST',
-            mode: 'no-cors',
-            body: urlFormEncoded(requestFormBody)
-          });
-        } catch (err) {
-          console.error('err:', err);
-        }
-      }
+
+const urlFormEncoded = (obj) => {
+    var str = [];
+    for (var p in obj)
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");
 }
-// "entry.2021505370" value="username"
+      
+const submitFunction = async (event) => {
+    event.preventDefault(); // this prevents the Form from submitting to server
+
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const email = (document.getElementById('email-address') as HTMLInputElement).value;
+    const gitHub = (document.getElementById('github') as HTMLInputElement).value;
+    const address = (document.getElementById('address') as HTMLInputElement).value;
+    const tShirt = (document.getElementById('t-shirt') as HTMLSelectElement).value;
+    const sweatShirt = (document.getElementById('sweatshirt') as HTMLSelectElement).value;
+    const contributor = (document.getElementById('contributor') as HTMLInputElement).checked;
+    const maintainer = (document.getElementById('maintainer') as HTMLInputElement).checked;
+
+    const requestFormBody = {
+        'entry.1000020': name,
+        'entry.1000025': email,
+        'entry.2021505370': gitHub,
+        'entry.960674675': address,
+        'entry.967112212': tShirt,
+        'entry.1493121754': sweatShirt,
+    }
+
+    if (maintainer) {
+        requestFormBody['entry.1836468723']="I'm a maintainer";
+    }
+    if (contributor) {
+        requestFormBody['entry.1050494925']="I'm a contributor";
+    }
+
+    await submitForm(requestFormBody)
+}
+      
+const submitForm = async (requestFormBody) => {
+    try {
+        await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdFUAQA787V8fGfwsR7Rs_NT2LlsyRfU3vIsIdBGQowH6VIJA/formResponse', {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded ',
+        },
+        method: 'POST',
+        mode: 'no-cors',
+        body: urlFormEncoded(requestFormBody)
+        });
+    } catch (err) {
+        console.error('err:', err);
+    }
+}
+
 // "entry.1000020" value="name"
 // "entry.1000025" value="email"
+// "entry.2021505370" value="username"
 // "entry.960674675" value="address 1"
-// "entry.1468045560" value="address 2"
-// "entry.1011865037" value="address 3"
 // "entry.967112212" value="tshirt"
 // "entry.1493121754" value="sweatshirt"
 // "entry.1050494925" value="contributor"
-// "entry.1050494925" value="maintainer"
+// "entry.1836468723" value="maintainer"
