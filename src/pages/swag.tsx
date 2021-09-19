@@ -123,7 +123,7 @@ const Swag = () => {
                                     </div>
                                 </div>
                                 <div className="mt-5 md:mt-0 col-span-1">
-                                    { !signedUp ? renderSuccessMessage() : <SwagForm onSubmitSuccessful={onSubmitSuccessful} /> }
+                                    { signedUp ? renderSuccessMessage() : <SwagForm onSubmitSuccessful={onSubmitSuccessful} /> }
                                 </div>
                             </div>
                         </div>
