@@ -70,8 +70,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     ) {
       githubData = await calculateGithubData(
         githubAPI,
-        node.parent.relativeDirectory,
-        node.parent.name,
+        node.frontmatter.repoUrl,
         cache
       );
 
