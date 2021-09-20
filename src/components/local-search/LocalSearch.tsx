@@ -64,15 +64,14 @@ const LocalSearch: FunctionComponent<Props> = ({
   };
 
   const filterBySeeking = (seeking: string[]) => {
-    setFilters((prev) => ({...prev, seeking}))
-  }
+    setFilters((prev) => ({ ...prev, seeking }));
+  };
 
   // Filter projects
   let filteredProjects = [...allProjects];
   if (
-    filters.languages.length + 
-    filters.tags.length +
-    filters.seeking.length > 0
+    filters.languages.length + filters.tags.length + filters.seeking.length >
+    0
   ) {
     filteredProjects = allProjects.filter((project) => {
       // Only show projects that include ALL the tags
@@ -83,7 +82,7 @@ const LocalSearch: FunctionComponent<Props> = ({
       const hasAllLangs = filters.languages.every((lang) =>
         langs.includes(lang)
       );
-      const hasAllSeeking = filters.seeking.every((seek) => 
+      const hasAllSeeking = filters.seeking.every((seek) =>
         seeking.includes(seek)
       );
 
@@ -102,6 +101,12 @@ const LocalSearch: FunctionComponent<Props> = ({
     );
   }
 
+  const getAllActiveTags = () => [
+    ...filters.languages,
+    ...filters.seeking,
+    ...filters.tags,
+  ];
+
   return (
     <div className="pb-12">
       <div className="max-w-7xl mx-auto px-2 mb-12">
@@ -118,6 +123,7 @@ const LocalSearch: FunctionComponent<Props> = ({
             frontmatter={project.frontmatter}
             slug={project.slug}
             githubData={githubDataSet[project.slug]}
+            activeTags={getAllActiveTags()}
           />
         ))}
       </ProjectListWrapper>
