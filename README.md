@@ -68,6 +68,7 @@ To add a Map to your project:
 
 1. Sign up for [CodeSee Maps](https://codesee.io) (there's no commitment or cost!)
 1. Create a Map for your repo following [our instructions](https://docs.codesee.io/en/latest/)
+1. Set your map to public!
 1. Add an entry in your project's template for the Map (see example from Distribute Aid's Shipment Tracker project):
 
 ```
@@ -75,6 +76,7 @@ featuredMap:
   url: https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27
   description: Get a quick overview of the major areas of our repo
 ```
+
 
 That's it! 
 
