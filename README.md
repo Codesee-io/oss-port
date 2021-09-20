@@ -2,11 +2,28 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02ace102-0025-4a8b-a68e-2eba2deb3bf5/deploy-status)](https://app.netlify.com/sites/gracious-sammet-0b4268/deploys)
 
-## Running the project
+## We’re thrilled to have you in Port. It's super easy to get started, and should only take about 10 minutes.
 
-There are 2 ways to run this project during development: using a local environment and using GitHub Codespaces.
+## Step 1: Running the project
+
+There are 2 ways to run this project during development: using GitHub Codespaces or using a local environment.
 
 If you have a javascript development environment set up already, the local approach is pretty easy. If you just want to get up and going without having to install anything, choose Codespaces.
+
+### 1-click Dev Env using GitHub Codespaces
+
+1. Navigate to the [repository in GitHub](https://github.com/codesee-io/oss-port)
+1. Click on the "Code" button
+
+   <img src="./docs/github-code-button.png" alt="Code button" width="104">
+
+1. Click on the "Codespaces" tab and create your own environment in your browser!
+1. In the Codespace terminal, you can run commands just like you would on a Linux system
+1. Run the project with the following command:
+
+   ```shell
+   yarn start
+   ```
 
 ### Local development
 
@@ -25,28 +42,11 @@ If you have a javascript development environment set up already, the local appro
 
 1. You can now view the project in your browser at http://localhost:8000
 
-### GitHub Codespaces
 
-1. Navigate to the [repository in GitHub](https://github.com/codesee-io/oss-port)
-1. Click on the "Code" button
-
-   <img src="./docs/github-code-button.png" alt="Code button" width="104">
-
-1. Click on the "Codespaces" tab and create your own environment in your browser!
-1. In the Codespace terminal, you can run commands just like you would on a Linux system
-1. Run the project with the following command:
-
-   ```shell
-   yarn start
-   ```
 
 ## Contributing
 
-The CodeSee Map below is a good way to get familiar with the codebase:
-
-[<img alt="CodeSee Map preview" src="docs/codebase-map.png" width="500">](https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27)
-
-### How to list your own project
+### Step 2: List your project
 
 1. Follow the above setup steps
 1. Create your project's `.mdx` file
@@ -60,7 +60,7 @@ The CodeSee Map below is a good way to get familiar with the codebase:
 1. Preview your changes by running `yarn start`
 1. When you're ready, open a PR!
 
-### Adding a CodeSee Map to your project listing
+### Step 3: Adding a CodeSee Map to your project listing
 
 Make it easier for contributors to onboard to your project! With a CodeSee Map, they can visualize the entire codebase, with features allowing them to explore system dependencies, add additional context to pull requests, and more.
 
@@ -75,6 +75,12 @@ featuredMap:
   url: https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27
   description: Get a quick overview of the major areas of our repo
 ```
+
+That's it! 
+
+The CodeSee Map below is a good way to get familiar with the codebase:
+
+[<img alt="CodeSee Map preview" src="docs/codebase-map.png" width="500">](https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27)
 
 ### Tag policy
 
