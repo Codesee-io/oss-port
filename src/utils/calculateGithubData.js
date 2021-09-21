@@ -1,3 +1,5 @@
+const { getInfoFromGitHubUrl } = require("./getInfoFromGitHubUrl");
+
 function issueQuery(githubAPI, owner, repo, label) {
   return githubAPI(
     `
@@ -25,12 +27,19 @@ function issueQuery(githubAPI, owner, repo, label) {
   );
 }
 
-async function calculateGithubData(githubAPI, owner, repo, cache) {
+async function calculateGithubData(githubAPI, repoUrl, cache) {
   let githubData = {};
   const today = new Date().toISOString().substr(0, 10); // YYYY-MM-DD
 
-  const cacheKey = `github:${owner}/${repo}:${today}`;
+  const { owner, repoName } = getInfoFromGitHubUrl(repoUrl);
+
+  if (!owner || !repoName) {
+    throw new Error(`The url "${repoUrl}" is not a valid GitHub repo URL"`);
+  }
+
+  const cacheKey = `github:${owner}/${repoName}:${today}`;
   const cached = await cache.get(cacheKey);
+
   if (cached && !process.env.GITHUB_IGNORE_BUILD_CACHE) {
     return cached;
   }
@@ -38,8 +47,8 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
   try {
     const mergedPRs = await githubAPI(
       `
-    query mergedPRs($owner: String!, $repo: String!) {
-      repository(owner: $owner, name: $repo) {
+    query mergedPRs($owner: String!, $repoName: String!) {
+      repository(owner: $owner, name: $repoName) {
         pullRequests(first: 100, orderBy: {field: UPDATED_AT, direction: DESC}, states: MERGED) {
           pageInfo {
             startCursor
@@ -71,13 +80,14 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
     `,
       {
         owner,
-        repo,
+        repoName,
       }
     );
 
     let mergedThisMonth = 0;
     const contributorsThisMonth = new Set();
-    let thereMayBeMoreMergeData = mergedPRs.repository.pullRequests.totalCount > 100;
+    let thereMayBeMoreMergeData =
+      mergedPRs.repository.pullRequests.totalCount > 100;
 
     mergedPRs.repository.pullRequests.nodes.forEach(({ mergedAt, author }) => {
       // If author.botId is set, this means that the author is a bot because specifically cast
@@ -106,11 +116,10 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
       maybeMore: thereMayBeMoreMergeData,
     };
 
-
     const createdPRs = await githubAPI(
       `
-    query createdPRs($owner: String!, $repo: String!) {
-      repository(owner: $owner, name: $repo) {
+    query createdPRs($owner: String!, $repoName: String!) {
+      repository(owner: $owner, name: $repoName) {
         pullRequests(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
           pageInfo {
             startCursor
@@ -141,11 +150,12 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
     `,
       {
         owner,
-        repo,
+        repoName,
       }
     );
-    
-    let thereMayBeMoreCreatedData = createdPRs.repository.pullRequests.totalCount > 100;
+
+    let thereMayBeMoreCreatedData =
+      createdPRs.repository.pullRequests.totalCount > 100;
     let createdThisMonth = 0;
     createdPRs.repository.pullRequests.nodes.forEach(
       ({ createdAt, author }) => {
@@ -184,13 +194,13 @@ async function calculateGithubData(githubAPI, owner, repo, cache) {
     const helpIssuesResults = await issueQuery(
       githubAPI,
       owner,
-      repo,
+      repoName,
       "help wanted"
     );
     const hacktoberfestIssuesResults = await issueQuery(
       githubAPI,
       owner,
-      repo,
+      repoName,
       "hacktoberfest"
     );
 

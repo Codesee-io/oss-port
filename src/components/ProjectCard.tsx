@@ -15,6 +15,7 @@ type Props = Project & {
     prsCreated: GitHubMetric;
     contributors: GitHubMetric;
   };
+  activeTags?: string[];
 };
 
 const ProjectCard: FunctionComponent<Props> = ({
@@ -22,6 +23,7 @@ const ProjectCard: FunctionComponent<Props> = ({
   frontmatter,
   slug,
   githubData,
+  activeTags = [],
 }) => {
   const badges = [
     ...(frontmatter.languages || []),
@@ -117,7 +119,12 @@ const ProjectCard: FunctionComponent<Props> = ({
         </div>
         <div className="mt-4">
           {badges.map((badge) => (
-            <Tag tag={badge} key={badge} className="mr-2 mb-2" />
+            <Tag
+              tag={badge}
+              key={badge}
+              className="mr-2 mb-2"
+              isActive={activeTags.includes(badge)}
+            />
           ))}
         </div>
       </div>
