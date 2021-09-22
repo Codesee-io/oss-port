@@ -1,10 +1,13 @@
-import React from "react";
+import React, { FunctionComponent, useState } from "react";
+import Button from "./Button";
 
-interface Props {
-  onSubmitSuccessful: () => void;
-}
+const SwagForm: FunctionComponent = () => {
+  const [signedUp, setSignedUp] = useState(false);
 
-export function SwagForm({ onSubmitSuccessful }: Props) {
+  function onSubmitSuccessful() {
+    setSignedUp(true);
+  }
+
   const urlFormEncoded = (obj) => {
     var str = [];
     for (var p in obj)
@@ -79,11 +82,21 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
     }
   };
 
+  if (signedUp) {
+    return (
+      <div className="text-xl font-medium leading-6 text-white">
+        Niiiice, it worked!
+      </div>
+    );
+  }
+
   return (
     <form action="#" method="POST">
-      <div className="grid grid-cols-2 gap-6">
-        <div className="col-span-2">
-          <label htmlFor="name" className="block text-sm text-white">
+      {/* Anchor tag to scroll to this form */}
+      <a id="swag"></a>
+      <div className="space-y-6 w-96 max-w-full">
+        <div>
+          <label htmlFor="name" className="block text-sm text-white mb-1">
             Name
           </label>
           <input
@@ -91,24 +104,28 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
             name="name"
             id="name"
             autoComplete="given-name"
-            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300"
+            className="input"
           />
         </div>
 
-        <div className="col-span-2">
-          <label htmlFor="email-address" className="block text-sm text-white">
+        <div>
+          <label
+            htmlFor="email-address"
+            className="block text-sm text-white mb-1"
+          >
             Email address
           </label>
           <input
-            type="text"
+            type="email"
             name="email-address"
             id="email-address"
             autoComplete="email"
-            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300"
+            className="input"
           />
         </div>
-        <div className="col-span-2">
-          <label htmlFor="github" className="block text-sm text-white">
+
+        <div>
+          <label htmlFor="github" className="block text-sm text-white mb-1">
             GitHub username
           </label>
           <input
@@ -116,11 +133,11 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
             name="github"
             id="github"
             autoComplete="Github"
-            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300"
+            className="input"
           />
         </div>
 
-        <div className="col-span-2">
+        <div>
           <label htmlFor="country" className="block text-sm text-white">
             Complete mailing address
           </label>
@@ -129,13 +146,13 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
             name="address"
             autoComplete="address"
             rows={4}
-            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="input"
           ></textarea>
         </div>
         <div className="col-span-6 sm:col-span-3">
           <label
             htmlFor="t-shirt"
-            className="block text-sm font-medium text-white"
+            className="block text-sm font-medium text-white mb-1"
           >
             T-shirt size
           </label>
@@ -143,17 +160,17 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
             id="t-shirt"
             name="t-shirt"
             autoComplete="t-shirt"
-            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
           </select>
         </div>
         <div className="col-span-6 sm:col-span-3">
           <label
             htmlFor="sweatshirt"
-            className="block text-sm font-medium text-white"
+            className="block text-sm font-medium text-white mb-1"
           >
             Sweatshirt size
           </label>
@@ -161,53 +178,53 @@ export function SwagForm({ onSubmitSuccessful }: Props) {
             id="sweatshirt"
             name="sweatshirt"
             autoComplete="sweatshirt"
-            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
           </select>
         </div>
-        <div className="col-span-1 flex items-center h-5">
-          <input
-            id="contributor"
-            name="contributor"
-            type="checkbox"
-            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-          />
-          <label
-            htmlFor="contributor"
-            className="font-medium text-white ml-3 text-sm"
-          >
-            I'm a contributor
-          </label>
-        </div>
+        <div className="flex justify-between">
+          <div className="flex items-center">
+            <input
+              id="contributor"
+              name="contributor"
+              type="checkbox"
+              className="focus:ring-blue-500 h-4 w-4 text-blue-700 border-gray-300 rounded"
+            />
+            <label
+              htmlFor="contributor"
+              className="font-medium text-white ml-3 text-sm"
+            >
+              I'm a contributor
+            </label>
+          </div>
 
-        <div className="col-span-1 flex items-center h-5">
-          <input
-            id="maintainer"
-            name="maintainer"
-            type="checkbox"
-            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-          />
-          <label
-            htmlFor="maintainer"
-            className="font-medium text-white ml-3 text-sm"
-          >
-            I'm a maintainer
-          </label>
+          <div className="flex items-center">
+            <input
+              id="maintainer"
+              name="maintainer"
+              type="checkbox"
+              className="focus:ring-blue-500 h-4 w-4 text-blue-700 border-gray-300 rounded"
+            />
+            <label
+              htmlFor="maintainer"
+              className="font-medium text-white ml-3 text-sm"
+            >
+              I'm a maintainer
+            </label>
+          </div>
         </div>
       </div>
 
-      <div className="px-4 py-3 text-right sm:px-6 sm:py-10">
-        <button
-          type="submit"
-          onClick={submitFunction}
-          className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black-500 bg-yellow-200 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
+      <div className="py-10">
+        <Button type="submit" onClick={submitFunction}>
           Claim your swag
-        </button>
+        </Button>
       </div>
     </form>
   );
-}
+};
+
+export default SwagForm;
