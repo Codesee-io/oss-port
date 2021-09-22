@@ -5,6 +5,8 @@ import RootLayout from "../components/RootLayout";
 import { Helmet } from "react-helmet";
 import LocalSearch from "../components/local-search/LocalSearch";
 import Logo from "../images/Logo";
+import CallToAction from "../components/CallToAction";
+import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
 
 export type SearchIndexItem = {
   id: string;
@@ -52,9 +54,18 @@ const HomeTemplate: FunctionComponent<Props> = ({
           Welcome to OSS Port
         </h1>
         <p className="text-black-300 text-center mb-6 mt-2">
-          Connecting contributors and maintainers <br/>
+          Connecting contributors and maintainers <br />
           and helping all onboard better.
         </p>
+      </div>
+      <div className="sm:hidden mb-6 text-center">
+        <CallToAction
+          href={HOW_TO_LIST_PROJECT_URL}
+          rel="noopener"
+          target="_blank"
+        >
+          List Your Project
+        </CallToAction>
       </div>
       <LocalSearch
         searchIndex={searchIndex}
@@ -62,7 +73,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
         githubDataSet={githubDataSet}
         allLanguages={allProjects.allLanguages.map((lang) => lang.fieldValue)}
         allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
-        allSeeking={allProjects.allSeeking.map(seek => seek.fieldValue)}
+        allSeeking={allProjects.allSeeking.map((seek) => seek.fieldValue)}
       />
     </RootLayout>
   );
