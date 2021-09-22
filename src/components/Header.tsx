@@ -1,11 +1,12 @@
 import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 import Wordmark from "../images/Wordmark";
+import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
 import CallToAction from "./CallToAction";
 import NavLink from "./NavLink";
 
 const Header: FunctionComponent = () => (
-  <header className="bg-blue-700">
+  <header className="bg-blue-700 sm:sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
       <Link to="/" className="block">
         <Wordmark width="200" className="my-2" />
@@ -19,7 +20,7 @@ const Header: FunctionComponent = () => (
         </div>
         <div className="hidden sm:block ml-5">
           <CallToAction
-            href="https://github.com/codesee-io/oss-port#how-to-list-your-own-project"
+            href={HOW_TO_LIST_PROJECT_URL}
             rel="noopener"
             target="_blank"
           >
