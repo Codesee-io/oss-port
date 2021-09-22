@@ -1,20 +1,14 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import RootLayout from "../components/RootLayout";
 import LogoWhiteBackground from "../images/LogoWhiteBackground";
 import CallToAction from "../components/CallToAction";
+import ExternalLink from "../components/ExternalLink";
 
 
 // styles
 const pageStyles = {
   color: "#232129",
   padding: "32px 96px 96px 96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
-const linkStyles = {
-  color: "rgb(0, 84, 149)",
-  textDecoration: "underline"
 }
 
 // markup
@@ -50,7 +44,7 @@ const About = () => {
             <p className="pb-4">
               With Maps, understand how files are connected, see how a pull request fits into the larger architecture, and more.
             </p>
-            <a style={linkStyles} href="https://www.codesee.io" target="_blank">Learn more about CodeSee Maps</a>
+            <ExternalLink href="https://www.codesee.io">Learn more about CodeSee Maps</ExternalLink>
           </div>
         </div>
       </main>
