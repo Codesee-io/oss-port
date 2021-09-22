@@ -12,7 +12,7 @@ body {
   font-display: swap;
 }
 
-/* Wrapper for the user-generated content inside project */
+/* Wrapper for the user-generated content inside projects */
 h1.markdown-element {
   @apply text-black-500;
   font-weight: 700;
@@ -78,4 +78,83 @@ code.markdown-element {
 /* Use this class on the direct parent of an anchor to display it on hover */
 .anchor-reveal:hover > .anchor {
   opacity: 1;
+}
+
+/* Style input fields */
+.input[type="text"],
+.input[type="email"],
+textarea.input {
+  @apply border border-black-200 rounded bg-white px-2 py-1 block w-full focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Rewards grid */
+.rewards-grid {
+  display: grid;
+  grid-template-areas:
+    "header-maintainers"
+    "reward-tier-1-maintainers"
+    "reward-tier-2-maintainers"
+    "header-contributors"
+    "reward-tier-1-contributors"
+    "reward-tier-2-contributors"
+    "footer";
+}
+
+.rewards-grid .reward-tier-1,
+.rewards-grid .reward-tier-2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .rewards-grid {
+    grid-template-columns: 160px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0 20px;
+    grid-template-areas:
+      ". header-maintainers header-contributors"
+      "reward-tier-1 reward-tier-1-maintainers reward-tier-1-contributors"
+      "reward-tier-2 reward-tier-2-maintainers reward-tier-2-contributors"
+      ". footer footer";
+  }
+
+  .rewards-grid .reward-tier-1,
+  .rewards-grid .reward-tier-2 {
+    display: block;
+  }
+}
+
+/* Define grid areas */
+.rewards-grid .header-maintainers {
+  grid-area: header-maintainers;
+}
+
+.rewards-grid .header-contributors {
+  grid-area: header-contributors;
+}
+
+.rewards-grid .reward-tier-1-maintainers {
+  grid-area: reward-tier-1-maintainers;
+}
+
+.rewards-grid .reward-tier-1-contributors {
+  grid-area: reward-tier-1-contributors;
+}
+
+.rewards-grid .reward-tier-2-maintainers {
+  grid-area: reward-tier-2-maintainers;
+}
+
+.rewards-grid .reward-tier-2-contributors {
+  grid-area: reward-tier-2-contributors;
+}
+
+.rewards-grid .reward-tier-1 {
+  grid-area: reward-tier-1;
+}
+
+.rewards-grid .reward-tier-2 {
+  grid-area: reward-tier-2;
+}
+
+.rewards-grid .footer {
+  grid-area: footer;
 }
