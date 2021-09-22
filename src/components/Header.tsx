@@ -12,10 +12,10 @@ const Header: FunctionComponent = () => (
       </Link>
       <div className="flex items-center justify-center text-white">
         <div className="hidden sm:block">
-          <NavLink to="/swag">Get Swag!</NavLink>
+          <NavLink to="/swag/">Get Swag!</NavLink>
         </div>
         <div className="hidden sm:block">
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about/">About</NavLink>
         </div>
         <div className="hidden sm:block ml-5">
           <CallToAction
