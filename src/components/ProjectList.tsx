@@ -37,9 +37,7 @@ const ProjectList: FunctionComponent<Props> = ({
       {filteredProjects.map((project) => (
         <ProjectCard
           key={project.slug}
-          id={project.id}
-          frontmatter={project.frontmatter}
-          slug={project.slug}
+          project={project}
           githubData={githubDataSet[project.slug]}
           activeTags={allActiveTags}
         />

@@ -9,7 +9,8 @@ import TwitterIcon from "./icons/TwitterIcon";
 import ProjectAvatar from "./ProjectAvatar";
 import MapIcon from "./icons/MapIcon";
 
-type Props = Project & {
+type Props = {
+  project: Project;
   githubData?: {
     prsMerged: GitHubMetric;
     prsCreated: GitHubMetric;
@@ -19,12 +20,11 @@ type Props = Project & {
 };
 
 const ProjectCard: FunctionComponent<Props> = ({
-  id,
-  frontmatter,
-  slug,
+  project,
   githubData,
   activeTags = [],
 }) => {
+  const { frontmatter, slug } = project;
   const badges = [
     ...(frontmatter.languages || []),
     ...(frontmatter.tags || []),
@@ -33,7 +33,6 @@ const ProjectCard: FunctionComponent<Props> = ({
   return (
     <div
       className="p-4 bg-white relative flex flex-col w-full"
-      key={id}
       style={{ maxWidth: 400 }}
     >
       {/* The container below should take up as much vertical space as possible

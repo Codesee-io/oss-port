@@ -45,6 +45,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
       <div
         data-qa="sidebar-backdrop"
         className={cx("sidebar-backdrop", { active: showMobileFilters })}
+        onClick={() => setShowMobileFilters(false)}
       />
       <aside
         data-qa="sidebar"
@@ -62,14 +63,14 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
           </button>
         </div>
 
-        <div className="p-4 text-black-500 max-h-full overflow-auto">
+        <div className="p-4 text-black-500 max-h-full overflow-auto pb-12">
           <h4 className="font-semibold mb-3">Language</h4>
           {allLanguages.map((language) => (
             <Checkbox
               onChange={onCheckboxChange}
               value={language}
               key={language}
-              labelProps={{ className: "block mb-2 text-sm" }}
+              labelProps={{ className: "mb-2 sm:text-sm" }}
             >
               {language}
             </Checkbox>
@@ -80,7 +81,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
               onChange={onCheckboxChange}
               value={tag}
               key={tag}
-              labelProps={{ className: "block mb-2 text-sm" }}
+              labelProps={{ className: "mb-2 sm:text-sm" }}
             >
               {tag}
             </Checkbox>
@@ -91,7 +92,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
               onChange={onCheckboxChange}
               value={seeking}
               key={seeking}
-              labelProps={{ className: "block mb-2 text-sm" }}
+              labelProps={{ className: "mb-2 sm:text-sm" }}
             >
               {seeking}
             </Checkbox>
