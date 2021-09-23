@@ -31,7 +31,11 @@ const ProjectCard: FunctionComponent<Props> = ({
   ];
 
   return (
-    <div className="p-4 bg-white relative flex flex-col" key={id}>
+    <div
+      className="p-4 bg-white relative flex flex-col w-full"
+      key={id}
+      style={{ maxWidth: 400 }}
+    >
       {/* The container below should take up as much vertical space as possible
       so that the GitHub stats are vertically-aligned in a row even when the
       number of tag varies between projects. */}

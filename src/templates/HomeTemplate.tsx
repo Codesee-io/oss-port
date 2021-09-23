@@ -9,7 +9,7 @@ import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
 import SearchWrapper from "../components/local-search/SearchWrapper";
 import ProjectList from "../components/ProjectList";
 import SearchInput from "../components/local-search/SearchInput";
-import TagFilters from "../components/local-search/TagFilters";
+import SidebarWithFilters from "../components/SidebarWithFilters";
 
 export type SearchIndexItem = {
   id: string;
@@ -69,7 +69,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
           and helping all onboard better.
         </p>
       </div>
-      <div className="sm:hidden mb-6 text-center">
+      <div className="mb-6 text-center">
         <CallToAction
           href={HOW_TO_LIST_PROJECT_URL}
           rel="noopener"
@@ -81,14 +81,18 @@ const HomeTemplate: FunctionComponent<Props> = ({
       <SearchWrapper searchIndex={searchIndex} allProjects={allProjects.nodes}>
         <div className="max-w-7xl mx-auto px-2 mb-12">
           <SearchInput />
-          <TagFilters tags={tags.allLanguages} />
-          <TagFilters tags={tags.allTags} />
-          <TagFilters tags={tags.allSeeking} />
         </div>
-        <ProjectList
-          allProjects={allProjects.nodes}
-          githubDataSet={githubDataSet}
-        />
+        <div className="md:flex mx-auto" style={{ maxWidth: 1600 }}>
+          <ProjectList
+            allProjects={allProjects.nodes}
+            githubDataSet={githubDataSet}
+          />
+          <SidebarWithFilters
+            allLanguages={tags.allLanguages}
+            allTags={tags.allTags}
+            allSeeking={tags.allSeeking}
+          />
+        </div>
       </SearchWrapper>
     </RootLayout>
   );

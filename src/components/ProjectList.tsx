@@ -17,7 +17,7 @@ const ProjectList: FunctionComponent<Props> = ({
 
   if (filteredProjectIds.length === 0) {
     return (
-      <div className="text-center px-4 mb-32">
+      <div className="text-center px-4 mb-32 flex-grow md:pl-36 xl:pl-72">
         <h3 className="text-black-500 text-2xl font-semibold mb-4">
           No results
         </h3>
