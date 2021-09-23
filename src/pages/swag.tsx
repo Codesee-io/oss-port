@@ -51,7 +51,7 @@ const Swag = () => (
                   Create more than one Map using features Labels, Notes, and
                   Tours
                 </li>
-                <li>Complete the CodeSee <a href="https://form.typeform.com/to/LSNqGj3U">maintainer feedback form</a> </li>
+                <li>Complete the CodeSee maintainer feedback form </li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
@@ -71,7 +71,7 @@ const Swag = () => (
                   (must have #hacktoberfest-accepted tag) to at least 2 OSS Port
                   projects
                 </li>
-                <li>Complete the <a href="https://form.typeform.com/to/LSNqGj3U">contributor feedback form</a></li>
+                <li>Complete the contributor feedback form</li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
