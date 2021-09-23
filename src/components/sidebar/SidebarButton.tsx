@@ -13,7 +13,10 @@ const SidebarButton: FunctionComponent<Props> = ({ onClick, numFilters }) => (
   >
     <SlidersIcon className="w-7 h-7" />
     {numFilters > 0 && (
-      <div className="bg-magenta-500 px-1 text-xs text-white rounded-lg absolute top-0 -right-1">
+      <div
+        className="bg-magenta-500 px-1 font-semibold text-xs text-white rounded-lg absolute top-0 -right-1"
+        style={{ minWidth: 16 }}
+      >
         {numFilters}
       </div>
     )}

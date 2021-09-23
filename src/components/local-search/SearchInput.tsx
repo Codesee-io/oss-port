@@ -19,7 +19,7 @@ const SearchInput: FunctionComponent<Props> = ({ debounceDelay = 300 }) => {
       <input
         id="search"
         type="search"
-        className="mx-auto border border-black-100 bg-black-50 rounded p-2 pl-9 block mb-2 text-black-300 text-sm w-full"
+        className="mx-auto border border-black-100 bg-black-50 rounded p-2 pl-9 block mb-2 text-black-300 text-sm w-full appearance-none"
         placeholder="Find your next open-source project"
         onChange={(e) => debounceRefine(e.target.value)}
       />

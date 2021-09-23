@@ -157,6 +157,13 @@ textarea.input {
   }
 }
 
+/* Prevent scrolling the body (useful for mobile menus) */
+@media (max-width: 767px) {
+  .prevent-mobile-scroll {
+    overflow: hidden;
+  }
+}
+
 /* Rewards grid */
 .rewards-grid {
   display: grid;

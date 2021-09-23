@@ -9,6 +9,7 @@ import useSearch from "./local-search/useSearch";
 import cx from "classnames";
 import CloseIcon from "./icons/CloseIcon";
 import SidebarButton from "./sidebar/SidebarButton";
+import { pluralize } from "../utils/formatting";
 
 type Props = {
   allLanguages: string[];
@@ -21,15 +22,15 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
   allTags,
   allSeeking,
 }) => {
-  const { filterByTag, allActiveTags } = useSearch();
+  const { filterByTag, allActiveTags, filteredProjectIds } = useSearch();
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   useEffect(
     function preventBodyScroll() {
       if (showMobileFilters) {
-        document.body.style.overflow = "hidden";
+        document.body.classList.add("prevent-mobile-scroll");
       } else {
-        document.body.style.overflow = "";
+        document.body.classList.remove("prevent-mobile-scroll");
       }
     },
     [showMobileFilters]
@@ -55,6 +56,12 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
       >
         <div className="sticky top-0 p-4 text-black-500 shadow-menu sm:shadow-none flex items-center justify-between">
           <h3 className="text-lg font-semibold">Filters</h3>
+          {allActiveTags.length > 0 && (
+            <span className="flex-grow text-black-300 ml-4">
+              {filteredProjectIds.length}{" "}
+              {pluralize(filteredProjectIds.length, "result", "results")}
+            </span>
+          )}
           <button
             className="sm:hidden"
             onClick={() => setShowMobileFilters(false)}
