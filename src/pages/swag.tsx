@@ -57,10 +57,10 @@ const Swag = () => (
                   Tours
                 </li>
                 <li>Complete the{" "} 
-                    <ExternalLink href={MAINTAINER_FEEDBACK}>
+                  <ExternalLink href={MAINTAINER_FEEDBACK}>
                     maintainer feedback form
-                    </ExternalLink>{" "}
-                    </li>
+                  </ExternalLink>{" "}
+                </li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
@@ -81,9 +81,9 @@ const Swag = () => (
                   projects
                 </li>
                 <li>Complete the {" "} 
-                    <ExternalLink href={CONTRIBUTOR_FEEDBACK}>
-                        contributor feedback 
-                        </ExternalLink>{" "}form</li>
+                  <ExternalLink href={CONTRIBUTOR_FEEDBACK}>
+                    contributor feedback 
+                  </ExternalLink>{" "}form</li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
