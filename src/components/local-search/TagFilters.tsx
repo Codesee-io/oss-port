@@ -1,34 +1,22 @@
 import React, { FunctionComponent, useState } from "react";
 import ClickableTag from "../ClickableTag";
+import useSearch from "./useSearch";
 
 type Props = {
   tags: string[];
-  refine: (tags: string[]) => void;
 };
 
-const TagFilters: FunctionComponent<Props> = ({ tags, refine }) => {
-  const [currentFilters, setCurrentFilters] = useState<string[]>([]);
-
-  const toggleRefineTag = (tag: string) => {
-    let updatedFilters: string[];
-    if (currentFilters.includes(tag)) {
-      updatedFilters = currentFilters.filter((filter) => filter !== tag);
-    } else {
-      updatedFilters = [...currentFilters, tag];
-    }
-
-    setCurrentFilters(updatedFilters);
-    refine(updatedFilters);
-  };
+const TagFilters: FunctionComponent<Props> = ({ tags }) => {
+  const { filterByTag, allActiveTags } = useSearch();
 
   return (
     <div className="space-x-2 space-y-2 text-center mb-1">
       {tags.map((item) => (
         <ClickableTag
-          isActive={currentFilters.includes(item)}
+          isActive={allActiveTags.includes(item)}
           key={item}
           tag={item}
-          onClick={toggleRefineTag}
+          onClick={filterByTag}
         />
       ))}
     </div>

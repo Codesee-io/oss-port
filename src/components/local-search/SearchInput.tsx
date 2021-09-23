@@ -1,17 +1,16 @@
 import { SearchIcon } from "@primer/octicons-react";
 import React, { FunctionComponent } from "react";
 import debouncePromise from "../../utils/debouncePromise";
+import useSearch from "./useSearch";
 
 type Props = {
-  refine: (search: string) => void;
   debounceDelay?: number;
 };
 
-const SearchInput: FunctionComponent<Props> = ({
-  refine,
-  debounceDelay = 300,
-}) => {
-  const debounceRefine = debouncePromise(refine, debounceDelay);
+const SearchInput: FunctionComponent<Props> = ({ debounceDelay = 300 }) => {
+  const { searchByText } = useSearch();
+  const debounceRefine = debouncePromise(searchByText, debounceDelay);
+
   return (
     <form className="mb-4 relative mx-auto max-w-full" style={{ width: 400 }}>
       <label className="hidden" aria-hidden htmlFor="search">
