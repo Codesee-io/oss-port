@@ -81,7 +81,7 @@ const Swag = () => (
                   projects
                 </li>
                 <li>Complete the {" "} 
-                    <ExternalLink href={MAINTAINER_FEEDBACK}>
+                    <ExternalLink href={CONTRIBUTOR_FEEDBACK}>
                         contributor feedback 
                         </ExternalLink>{" "}form</li>
                 <li>
