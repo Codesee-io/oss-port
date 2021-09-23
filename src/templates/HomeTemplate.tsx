@@ -1,12 +1,15 @@
 import { graphql } from "gatsby";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useMemo } from "react";
 import { Project } from "../types";
 import RootLayout from "../components/RootLayout";
 import { Helmet } from "react-helmet";
-import LocalSearch from "../components/local-search/LocalSearch";
 import Logo from "../images/Logo";
 import CallToAction from "../components/CallToAction";
 import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
+import SearchWrapper from "../components/local-search/SearchWrapper";
+import ProjectList from "../components/ProjectList";
+import SearchInput from "../components/local-search/SearchInput";
+import SidebarWithFilters from "../components/SidebarWithFilters";
 
 export type SearchIndexItem = {
   id: string;
@@ -45,6 +48,14 @@ const HomeTemplate: FunctionComponent<Props> = ({
 }) => {
   const { githubDataSet, searchIndex } = pageContext;
 
+  const tags = useMemo(() => {
+    return {
+      allLanguages: allProjects.allLanguages.map((lang) => lang.fieldValue),
+      allTags: allProjects.allTags.map((tag) => tag.fieldValue),
+      allSeeking: allProjects.allSeeking.map((seek) => seek.fieldValue),
+    };
+  }, [allProjects.allLanguages, allProjects.allSeeking, allProjects.allTags]);
+
   return (
     <RootLayout>
       <Helmet title="OSS Port | Find open-source projects" />
@@ -58,7 +69,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
           and helping all onboard better.
         </p>
       </div>
-      <div className="sm:hidden mb-6 text-center">
+      <div className="mb-6 text-center">
         <CallToAction
           href={HOW_TO_LIST_PROJECT_URL}
           rel="noopener"
@@ -67,14 +78,22 @@ const HomeTemplate: FunctionComponent<Props> = ({
           List Your Project
         </CallToAction>
       </div>
-      <LocalSearch
-        searchIndex={searchIndex}
-        allProjects={allProjects.nodes}
-        githubDataSet={githubDataSet}
-        allLanguages={allProjects.allLanguages.map((lang) => lang.fieldValue)}
-        allTags={allProjects.allTags.map((tag) => tag.fieldValue)}
-        allSeeking={allProjects.allSeeking.map((seek) => seek.fieldValue)}
-      />
+      <SearchWrapper searchIndex={searchIndex} allProjects={allProjects.nodes}>
+        <div className="max-w-7xl mx-auto px-2 mb-12">
+          <SearchInput />
+        </div>
+        <div className="md:flex mx-auto" style={{ maxWidth: 1600 }}>
+          <ProjectList
+            allProjects={allProjects.nodes}
+            githubDataSet={githubDataSet}
+          />
+          <SidebarWithFilters
+            allLanguages={tags.allLanguages}
+            allTags={tags.allTags}
+            allSeeking={tags.allSeeking}
+          />
+        </div>
+      </SearchWrapper>
     </RootLayout>
   );
 };

@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         accent: "Frank Ruhl Libre",
       },
+      boxShadow: {
+        menu: "0px 4px 20px rgba(2, 20, 67, 0.12);",
+      },
       colors: {
         black: {
           30: "#fafafb",
@@ -47,13 +50,16 @@ module.exports = {
           300: "#ffc756",
           400: "#ffa722",
         },
+        magenta: {
+          500: "#E10079",
+        },
       },
       fill: (theme) => ({
         "black-200": theme("colors.black.200"),
       }),
       screens: {
-        'supports-hover': {'raw': '(hover: hover)'},
-      }
+        "supports-hover": { raw: "(hover: hover)" },
+      },
     },
   },
   variants: {
