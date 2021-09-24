@@ -81,7 +81,9 @@ async function getCodeSeeMapMetadata(mapUrl, cache) {
       featuredMapMetadata = data.metadata;
     })
     .catch(() => {
-      console.warn("Invalid CodeSee map URL, skipping featured map generation");
+      console.warn(
+        `Unable to generate CodeSee map for ${mapId}, skipping featured map generation`
+      );
     });
 
   if (featuredMapMetadata) {
