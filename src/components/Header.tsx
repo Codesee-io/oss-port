@@ -1,8 +1,7 @@
 import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 import Wordmark from "../images/Wordmark";
-import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
-import { DISCORD } from "../utils/constants";
+import { HOW_TO_LIST_PROJECT_URL, LEARN, DISCORD } from "../utils/constants";
 import CallToAction from "./CallToAction";
 import NavLink from "./NavLink";
 
@@ -14,6 +13,12 @@ const Header: FunctionComponent = () => (
         <Wordmark width="200" className="my-2" />
       </Link>
       <div className="flex items-center justify-center text-white">
+        
+      <div className="hidden sm:block">
+        <NavLink to={LEARN}>
+        Learn
+        </NavLink>
+        </div>
         <div className="hidden sm:block">
           <NavLink to="/swag/">Get Swag!</NavLink>
         </div>
