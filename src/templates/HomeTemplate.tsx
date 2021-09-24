@@ -67,6 +67,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
         <p className="text-black-300 text-center mb-6 mt-2">
           Connecting contributors and maintainers <br />
           and helping all onboard better.
+          <br />100,000+ potential contributors looking for their project match, list your project today!
         </p>
       </div>
       <div className="mb-6 text-center">
