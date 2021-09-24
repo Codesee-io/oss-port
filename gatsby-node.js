@@ -12,9 +12,9 @@ exports.createSchemaCustomization = ({ actions }) => {
   /**
    * Gatsby automatically infers the type of our data by inspecting each file
    * and generating a GraphQL schema. However, we've run into issues where an
-   * `avatar` field contains a string. If that's the case and that file is
-   * processed first, Gatsby will infer that `avatar` is a string, and this will
-   * break the queries at assume otherwise, like:
+   * `avatar` field contains a string that isn't a valid path. If that's the
+   * case and that file is processed first, Gatsby will infer that `avatar` is a
+   * string, and this will break the queries that assume otherwise, like:
    * ```
    * avatar {
    *   publicURL
@@ -22,7 +22,7 @@ exports.createSchemaCustomization = ({ actions }) => {
    * ```
    *
    * To prevent this, we override the generated schema by stating that the
-   * `avatar` field is always a file with a relative file.
+   * `avatar` field is always a file with a relative path.
    *
    * @see https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization
    *
