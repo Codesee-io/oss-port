@@ -8,6 +8,11 @@ import ExternalLink from "../components/ExternalLink";
 const QUALITY_PR_LINK =
   "https://hacktoberfest.digitalocean.com/resources/quality-standards";
 
+const MAINTAINER_FEEDBACK =
+    "https://form.typeform.com/to/LSNqGj3U";
+const CONTRIBUTOR_FEEDBACK =
+    "https://form.typeform.com/to/CUykigpo";
+
 const Swag = () => (
   <RootLayout>
     <main className="pt-12">
@@ -51,7 +56,11 @@ const Swag = () => (
                   Create more than one Map using features Labels, Notes, and
                   Tours
                 </li>
-                <li>Complete the CodeSee maintainer feedback form </li>
+                <li>Complete the{" "} 
+                  <ExternalLink href={MAINTAINER_FEEDBACK}>
+                    maintainer feedback form
+                  </ExternalLink>{" "}
+                </li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
@@ -71,7 +80,10 @@ const Swag = () => (
                   (must have #hacktoberfest-accepted tag) to at least 2 OSS Port
                   projects
                 </li>
-                <li>Complete the contributor feedback form</li>
+                <li>Complete the {" "} 
+                  <ExternalLink href={CONTRIBUTOR_FEEDBACK}>
+                    contributor feedback 
+                  </ExternalLink>{" "}form</li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
