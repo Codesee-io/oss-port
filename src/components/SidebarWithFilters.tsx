@@ -54,7 +54,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
           active: showMobileFilters,
         })}
       >
-        <div className="sticky top-0 p-4 text-black-500 shadow-menu sm:shadow-none flex items-center justify-between">
+        <div className="text-black-500 shadow-menu p-4 sm:py-0 sm:shadow-none flex items-center justify-between">
           <h3 className="text-lg font-semibold">Filters</h3>
           {allActiveTags.length > 0 && (
             <span className="flex-grow text-black-300 ml-4">
