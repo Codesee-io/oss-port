@@ -35,11 +35,10 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
           {featuredMapMetadata.name}
         </a>
         <div className="text-xs mb-2">{organization}</div>
-        { frontmatter.featuredMap.description &&
-          <div className="text-sm">
-            {frontmatter.featuredMap.description || ""}
-          </div>
-        }
+        <div className="text-sm">
+          {frontmatter.featuredMap.description ||
+            "Get a quick visual overview of the major areas of our repo!"}
+        </div>
       </div>
     </article>
   );
