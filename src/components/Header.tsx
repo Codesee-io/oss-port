@@ -2,8 +2,10 @@ import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 import Wordmark from "../images/Wordmark";
 import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
+import { DISCORD } from "../utils/constants";
 import CallToAction from "./CallToAction";
 import NavLink from "./NavLink";
+
 
 const Header: FunctionComponent = () => (
   <header className="bg-blue-700 sm:sticky top-0 z-50">
@@ -18,6 +20,12 @@ const Header: FunctionComponent = () => (
         <div className="hidden sm:block">
           <NavLink to="/about/">About</NavLink>
         </div>
+        <div className="hidden sm:block">
+        <NavLink to={DISCORD}>
+        Join Us <div><img src="/icon_clyde_white_RBG.png" alt="" className="hidden md:block" /></div>
+        </NavLink>
+        </div>
+        
         <div className="hidden sm:block ml-5">
           <CallToAction
             href={HOW_TO_LIST_PROJECT_URL}
@@ -31,5 +39,7 @@ const Header: FunctionComponent = () => (
     </div>
   </header>
 );
-
+//<ExternalLink href={QUALITY_PR_LINK}>
+// 7 quality PRs
+// </ExternalLink>{" "}
 export default Header;
