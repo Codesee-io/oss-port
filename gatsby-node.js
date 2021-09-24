@@ -6,6 +6,49 @@ const { graphql: github } = require("@octokit/graphql");
 // TODO maybe look into using TS config files?
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-config/
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  /**
+   * Gatsby automatically infers the type of our data by inspecting each file
+   * and generating a GraphQL schema. However, we've run into issues where an
+   * `avatar` field contains a string. If that's the case and that file is
+   * processed first, Gatsby will infer that `avatar` is a string, and this will
+   * break the queries at assume otherwise, like:
+   * ```
+   * avatar {
+   *   publicURL
+   * }
+   * ```
+   *
+   * To prevent this, we override the generated schema by stating that the
+   * `avatar` field is always a file with a relative file.
+   *
+   * @see https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization
+   *
+   * If you'd like to inspect the GraphQL schema, use the Gatsby playground:
+   * ```
+   * GATSBY_GRAPHQL_IDE=playground yarn start
+   * # visit http://localhost:8000/___graphql
+   * ```
+   *
+   * You can also export the schema using gatsby-plugin-extract-schema
+   * @see https://www.gatsbyjs.com/plugins/gatsby-plugin-extract-schema/
+   *
+   */
+  const typeDefs = `
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+
+    type MdxFrontmatter @infer {
+      avatar: File @fileByRelativePath
+    }
+  `;
+
+  createTypes(typeDefs);
+};
+
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
   const projectTemplate = path.resolve(`src/templates/ProjectTemplate.tsx`);
@@ -13,10 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
 
   const projects = await graphql(`
     {
-      allProjects: allMdx(
-        sort: { order: ASC, fields: [frontmatter___name] }
-        limit: 1000
-      ) {
+      allProjects: allMdx(limit: 1000) {
         nodes {
           id
           slug

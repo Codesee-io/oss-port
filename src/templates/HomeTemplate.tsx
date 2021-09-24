@@ -101,7 +101,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
 export const pageQuery = graphql`
   query AllProjectList {
     # Get a list of all the projects
-    allProjects: allMdx {
+    allProjects: allMdx(limit: 1000) {
       allLanguages: group(field: frontmatter___languages) {
         fieldValue
         totalCount
