@@ -6,7 +6,7 @@ import SwagForm from "../components/SwagForm";
 import ExternalLink from "../components/ExternalLink";
 
 const QUALITY_PR_LINK =
-  "https://hacktoberfest.digitalocean.com/resources/quality-standards";
+  "https://hacktoberfest.digitalocean.com/resources/qualitystandards";
 
 const MAINTAINER_FEEDBACK =
     "https://form.typeform.com/to/LSNqGj3U";
