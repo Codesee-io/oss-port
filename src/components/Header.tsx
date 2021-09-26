@@ -51,7 +51,5 @@ const Header: FunctionComponent = () => (
     </div>
   </header>
 );
-//<ExternalLink href={QUALITY_PR_LINK}>
-// 7 quality PRs
-// </ExternalLink>{" "}
+
 export default Header;
