@@ -27,7 +27,14 @@ const Header: FunctionComponent = () => (
         </div>
         <div className="hidden sm:block">
         <NavLink to={DISCORD}>
-        Join Us <div><img src="/icon_clyde_white_RBG.png" alt="" className="hidden md:block" /></div>
+          <div className="flex">
+            Join Us 
+            <img src="/icon_clyde_white_RGB.png" alt="" className="pl-1" style={{
+              width: "24px", 
+              height: "16px", 
+              alignSelf: "center"
+            }}/>
+          </div>
         </NavLink>
         </div>
         
