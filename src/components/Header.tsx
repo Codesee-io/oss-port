@@ -12,12 +12,12 @@ const Header: FunctionComponent = () => (
       <Link to="/" className="block">
         <Wordmark width="200" className="my-2" />
       </Link>
-      <div className="flex items-center justify-center text-white">
+      <div className="flex items-center justify-center text-white whitespace-nowrap">
         
-      <div className="hidden sm:block">
-        <NavLink to={LEARN}>
-        Learn
-        </NavLink>
+        <div className="hidden sm:block">
+          <NavLink to={LEARN}>
+          Learn
+          </NavLink>
         </div>
         <div className="hidden sm:block">
           <NavLink to="/swag/">Get Swag!</NavLink>
@@ -26,16 +26,16 @@ const Header: FunctionComponent = () => (
           <NavLink to="/about/">About</NavLink>
         </div>
         <div className="hidden sm:block">
-        <NavLink to={DISCORD}>
-          <div className="flex">
-            Join Us 
-            <img src="/icon_clyde_white_RGB.png" alt="" className="pl-1" style={{
-              width: "24px", 
-              height: "16px", 
-              alignSelf: "center"
-            }}/>
-          </div>
-        </NavLink>
+          <NavLink to={DISCORD}>
+            <div className="flex">
+              Join Us 
+              <img src="/icon_clyde_white_RGB.png" alt="" className="pl-1" style={{
+                width: "24px", 
+                height: "16px", 
+                alignSelf: "center"
+              }}/>
+            </div>
+          </NavLink>
         </div>
         
         <div className="hidden md:block ml-5">
