@@ -1,0 +1,61 @@
+---
+name: 8086.js
+repoUrl: https://github.com/roerohan/8086.js
+description: A basic web-based 8086 emulator built with Javascript 🚀
+languages: # A list of programming languages used in this project
+  - JavaScript
+  - HTML / CSS
+  - React
+tags: # A list of keywords relevant to the contributors for this project
+  - First Timer Friendly
+  - Education
+  - Web Framework
+avatar: 8086-avatar.svg
+websiteUrl: https://roerohan.github.io/8086.js/
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Frontend Developers
+  - Maintainers
+  - Code Reviewers
+contributionOverview: # (optional) Provide additional context to help contributors match well with your project
+  mainLocation: India
+  idealEffort: 1 PR a month
+  isMentorshipAvailable: false
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Learn React
+    url: https://reactjs.org/docs/getting-started.html
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+8086.js is a basic 8086 emulator built using Javascript, hosted at https://roerohan.github.io/8086.js/.
+
+## Basic Workflow
+
+The UI is split into 2 major halves, the right half is the `editor` and the left half is the `emulator`. Instructions can be written in the editor, and when they are executed, the registers and memory in the emulator get updated accordingly. There are a few steps which happen in the background to make this possible.
+
+1. An object of the [Emulator](./src/emulator/emulator.js) class is exported, which is the point of interaction between the frontend and the emulation logic.
+
+2. First, the [lexer](./src/emulator/parser/lexer.js) divides the source code into tokens and sends them to a [parser](./src/emulator/parser/parser.js). The parser is responsible for extracting instructions from the tokens and converting them to a form that the `CPU` understands.
+
+3. The [CPU](./src/emulator/cpu/core.js) reads the mnemonic and the operands that were sent to it by the parser, and according to these values, it executes the instructions.
+
+> Note: The communication between the parser and the CPU is NOT in terms of `shellcode`, i.e, `opcode`s and `operands`. The CPU recognizes an instruction by it's `mnemonic`, such as `MOV` or `ADD`. 
+
+</Overview>
+
+<Contributing>
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](https://github.com/roerohan/8086.js/blob/master/CONTRIBUTING.md) while contributing to the project :smile:.
+
+</Contributing>
