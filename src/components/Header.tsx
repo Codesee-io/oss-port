@@ -38,7 +38,7 @@ const Header: FunctionComponent = () => (
         </NavLink>
         </div>
         
-        <div className="hidden sm:block ml-5">
+        <div className="hidden md:block ml-5">
           <CallToAction
             href={HOW_TO_LIST_PROJECT_URL}
             rel="noopener"
