@@ -1,0 +1,114 @@
+---
+name: JZookeeperEdit
+repoUrl: https://github.com/feldoh/JZookeeperEdit
+description: A simple tool for browsing and modifying zookeeper trees
+languages: # A list of programming languages used in this project
+  - Java
+  - HTML / CSS
+tags: # A list of keywords relevant to the contributors for this project
+  - First Timer Friendly
+  - Tools
+avatar: JZookeeperEdit.jpg
+websiteUrl: http://feldoh.github.io/JZookeeperEdit/
+currentlySeeking:
+  - Developers
+  - Backend Developers
+  - DevOps
+  - Maintainers
+  - Code Reviewers
+  - Testers
+featuredMap:
+  url: https://app.codesee.io/maps/public/bd79ede0-20a5-11ec-8e87-072584a095ef
+  description: CodeSee Map of JZookeeperEdit
+contributionOverview:
+  mainLocation: Europe
+  idealEffort: Retaining compatibility with upstream Zookeeper
+  isMentorshipAvailable: true
+learnLinks:
+  - title: Learn About Zookeeper
+    url: https://zookeeper.apache.org/doc/current/zookeeperOver.html
+  - title: Get started with JavaFX
+    url: https://openjfx.io
+  - title: Maven in 5 Minutes
+    url: https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+  - title: Getting started with Curator
+    url: https://curator.apache.org/getting-started.html
+---
+
+<Overview>
+
+# Introduction
+
+JZookeeperEdit is a tool to help with browsing and modifying data in Apache Zookeeper.
+
+## Why does it exist
+
+This tool came to be out of a need to clean up large numbers of Zookeeper entries (ZNodes). Older versions of Apache Kafka would create a new node every time you used the cli without assigning a group so you could easily end up with thousands or more.
+This becomes problematic when you need to modify an entry in Zookeeper because first you have to find it amid the mass of entries and the command line tool that comes with Zookeeper (zkcli) is not very bash friendly and is extremely slow when trying to clear up large numbers of nodes.
+Even just browsing these trees can be very slow once they are big enough.
+
+As such the first version of this tool was made while we waited for a very slow bash script to try and delete a few hundred thousand nodes with three main goals
+
+* Make searching and exploring Zookeeper with regular expressions easy
+* Make editing the Data on a ZNode easy
+* Make deleting large numbers of nodes easy but safe
+
+In the end the first version of this app was written and successfully cleared all the data long before the bash script had even managed 10% of the nodes.
+Seeing how useful it was we decided to polish it up and contribute it to the community to make this sort of task easy for all.
+In this expanded scope we wanted to add a number of additional features
+
+* A cli that was bash friendly
+* Multiple cluster support
+* A better UI
+* Kerberos support
+* ACL support
+* Versions supporting a subset of useful versions of Zookeeper, namely the current versions used within the Big Data ecosystem like the ones that are part of Kafka and Hadoop as well as the Latest stable version.
+* Searching within ZNode data
+
+There are other tools that allow good browsing of a Zookeeper instance via a web UI, but few if any allow editing and most require someone to set up a server.
+JZookeeperEdit in comparison is a single binary with convenient installers which can be used from the CLI or launched like a normal app.
+
+This is a tool intended for people that just need to work with Zookeeper and don't want the faff.
+
+You can read more details on the [project page](http://feldoh.github.io/JZookeeperEdit/)
+
+</Overview>
+
+<Contributing>
+
+Thankyou for your interest in contributing to JZookeeperEdit. This project is very open to contibutions, from people of all skill levels and backgrounds. Documentation, Wiki changes, packaging etc are all valued.
+
+When contributing to this repository, please first discuss the change you wish to make via issue, you will need an issue number for your PR to be accepted.
+
+If making CLI changes keep in mind this project aims to be CLI friendly, so think about how calls could be chained, ideally provide examples in the README.md.
+
+All pull requests should target develop unless a special exemption is made such as for a critical fix. Release versions will be regularly cut from develop after sufficient testing.
+
+All pull requests must begin with an issue number in their commit message e.g "#10 Add a thing"
+
+Please note we have a code of conduct, please follow it in all your interactions with the project.
+
+You can find out more in the [contributing guide](https://github.com/feldoh/JZookeeperEdit/blob/develop/CONTRIBUTING.md) or come and have a chat over on [Gitter](https://gitter.im/JZookeeperEdit/Lobby)
+
+## Help Needed
+
+There is always plenty of work to do in this project, check the issues for good options. Some of the tickets should be very easy and a great introduction to open source, some simple refactoring and upgrades.
+There are also some much more involved tickets for anyone that really wants to get stuck in and collaborate.
+
+The most critical are probably:
+
+* Switching away from BinTray as it has been deprecated in favour of artifactory
+* Testing of the JavaFX based GUI. Testing JavaFX is very hard, be warned but anyone with experience would be much appreciated
+* Update to latest versions
+* Add a way to dump entire subtrees or indeed a whole instance to some sort of archive and restore them
+* Make it easier to contribute by getting GitHub Codespaces or some other one click environent setup working for this project
+* Fix native binary creation. Creation of RPMs, MSIs, DEBs etc is broken with the new Gluon based OpenFX Maven Plugin
+
+There is also the potential to replace JavaFX, this is a big task but it is clear JavaFX is more complex than it is worth now it is no longer included in the JRE and is very hard to build.
+
+This project might seem a little unloved but that is because the upgrade to Java 9+ broke quite a lot of things quite badly so most people still use the pre-compiled binaries that until recently were on BinTray.
+It would be great to get this project back into a more live state and able to keep up with Zookeper releases again.
+
+Ideally we would also aquire at least one more long term maintainer.
+
+</Contributing>
