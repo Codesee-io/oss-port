@@ -46,101 +46,99 @@ Simple food ordering web application built using VueJS, Firebase, NodeJS and Mon
 
 ![Preview](https://raw.githubusercontent.com/nil1729/food-order-app/master/previews/preview.jpg)
 
-## Checkout the Live Demo of this project First:
-  - Test User Credentials
-    - Email: `user@gmail.co`
-    - Password: `123456`
-  - Test Admin Credentials
-    - Email: `admin@foodsite.com`
-    - Password: `123456`
+# Checkout the Live Demo of this project First:
 
-## Run this Project on Local Environment:
+**Test User Credentials**
 
-1. **Prerequisites**
+<ul>
+  <li>
+    Email: <i>user@gmail.co</i>{" "}
+  </li>
+  <li>
+    Password: <i>123456</i>
+  </li>
+</ul>
 
-   - NodeJS installed on your Local machine
-   - MongoDB installed on your local machine or have an Atlas Account.
-   - A Gmail Account for Firebase Services.
-   - A PayPal Account and a Sandbox account for testing purposes. (For now, you can ignore this step, Currently I am planning to shift payment services to Stripe/RazorPay)
+**Test Admin Credentials**
 
-2. **Credentials Setup**
+<ul>
+  <li>
+    Email: <i>admin@foodsite.com</i>{" "}
+  </li>
+  <li>
+    Password: <i>123456</i>
+  </li>
+</ul>
 
-   - Create a `MongoDB Atlas` Account for connecting this app with MongoDB or you can use your local MongoDB. Find Tutorials [here](https://www.youtube.com/watch?v=KKyag6t98g8).
-   - Setup a `Firebase Project` for using `Firestore and Authentication`. Find Tutorials [here](https://www.youtube.com/watch?v=6juww5Lmvgo).
-   - Setup [Firestore](https://www.youtube.com/watch?v=UFLvSp4Mh9k&list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB&index=2) and [Enable Authenitaion Methods](https://www.youtube.com/watch?v=-OKrloDzGpU)
-   - Generate `Private keys for Firebase Admin`. Find tutorials [here](https://youtu.be/WtYzHTXHBp0).
-   - Create a `PayPal account` and `Sandbox account`. Find Tutorials [here](https://www.youtube.com/watch?v=AtZGoueL4Vs&t=293s)
+# Run this Project on Local Environment:
 
-3. **Project Setup**
+**Prerequisites**
 
-   - Clone this Repository or Download the zip File.
-     ```
-      >> git clone https://github.com/nil1729/food-order-app.git
-     ```
-   - Create a new file named `secret.json` on `config` directory which contains Generated Private keys on Firebase project.
+1. NodeJS installed on your Local machine
+2. MongoDB installed on your local machine or have an Atlas Account.
+3. A Gmail Account for Firebase Services.
+4. A PayPal Account and a Sandbox account for testing purposes. (For now, you can ignore this step, Currently I am planning to shift payment services to Stripe/RazorPay)
 
-     ```
-         {
-             "type": "service_account",
-             "project_id": "",
-             "private_key_id": "",
-             "private_key": "",
-             "client_email": "",
-             "client_id": "",
-             "auth_uri": "",
-             "token_uri": "",
-             "auth_provider_x509_cert_url": "",
-             "client_x509_cert_url": ""
-         }
+**Credentials Setup**
 
-     ```
+1. Create a `MongoDB Atlas` Account for connecting this app with MongoDB or you can use your local MongoDB. Find Tutorials [here](https://www.youtube.com/watch?v=KKyag6t98g8).
+2. Setup a `Firebase Project` for using `Firestore and Authentication`. Find Tutorials [here](https://www.youtube.com/watch?v=6juww5Lmvgo).
+3. Setup [Firestore](https://www.youtube.com/watch?v=UFLvSp4Mh9k&list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB&index=2) and [Enable Authenitaion Methods](https://www.youtube.com/watch?v=-OKrloDzGpU)
+4. Generate `Private keys for Firebase Admin`. Find tutorials [here](https://youtu.be/WtYzHTXHBp0).
+5. Create a `PayPal account` and `Sandbox account`. Find Tutorials [here](https://www.youtube.com/watch?v=AtZGoueL4Vs&t=293s)
 
-   - Create another `cofig.js` file on `/client/src/firebase`. Put all firebase config Credentials for Frontend. (In following Format)
+**Project Setup**
+- Clone this Repository or Download the zip File   
+    ```
+    $ git clone https://github.com/nil1729/food-order-app.git
+    ```
+- Create a new file named `secret.json` on `config` directory which contains Generated Private keys from Firebase project.
+    ```
+    {
+        "type": "service_account",
+        ...
+    }
+    ```
+- Create another `cofig.js` file on `/client/src/firebase`. Put all firebase config Credentials for Frontend. (In following Format)
+    ```
+      const firebaseConfig = {
+          apiKey: "",
+          authDomain: "",
+          databaseURL: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: "",
+          measurementId: ""
+      };
+      export default firebaseConfig;
+    ```
+- Create a `.env` file on root directory. Which Contains all necessary Secret Credentials (for backend only) for this site.  
+    ```
+      DB_URI = <- Mongo Atlas URI->
+      PAYPAL_CLIENT_ID = <- PayPal Sandbox Client ID (Also use your own client ID on Frontend)->
+      PAYPAL_CLIENT_SECRET = <- PayPal Sandbox Client Secret (Only for backend server to verify purchase)->
+    ```
+- Run this Command   
+    ```
+      $ npm run dev  // to start Vue Development server and Backend server together.
+      $ npm run server // to start only Backend server
+      $ npm run Client // to start Vue Development server only
+    ```
 
-     ```
-       const firebaseConfig = {
-           apiKey: "",
-           authDomain: "",
-           databaseURL: "",
-           projectId: "",
-           storageBucket: "",
-           messagingSenderId: "",
-           appId: "",
-           measurementId: ""
-       };
+**Admin Setup**
+1. Run this Command on root directory  
+    ```
+      $ npm run admin
+    ```
 
-       export default firebaseConfig;
-     ```
-
-   - Create a `.env` file on root directory. Which Contains all necessary Secret Credentials (for backend only) for this site.
-     ```
-      DB_URI = <- Mongo Atlas URI ->
-      PAYPAL_CLIENT_ID = <- PayPal Sandbox Client ID (Also use your own client ID on Frontend) ->
-      PAYPAL_CLIENT_SECRET = <- PayPal Sandbox Client Secret (Only for backend server to verify purchase) ->
-     ```
-   - Run this command
-
-     ```
-      >> npm run dev  // to start Vue Development server and Backend server together.
-
-      >> npm run server // to start only Backend server
-
-      >> npm run Client // to start Vue Development server only (But it will not working alone as api depends on Backend also)
-
-     ```
-
-4. **Admin Setup**
-   - Run this Command on root directory
-     ```
-       >> npm run admin
-     ```
 </Overview>
 
 <Contributing>
 
 A few guidelines for someone looking to contribute here:
 
-## If you're a beginner
+**If you're a beginner**
 
 - `Fork` this repository.
 - `Clone` your fork on local machine.
@@ -150,17 +148,18 @@ A few guidelines for someone looking to contribute here:
 - `push` the change to your fork on GitHub with `git push origin <your_branch_name>`
 - Make a `Pull Request` to the original repository, i.e. this one.
 
-<b>
-  Note: If you're looking to work on an issue, just make sure that no one else
-  has taken it already. In which case, you can look up other issues or create a
-  new one if you find something missing! :){" "}
-</b>
+**
+Note: If you're looking to work on an issue, just make sure that no one else
+has taken it already. In which case, you can look up other issues or create a
+new one if you find something missing! :){" "}
+**
 
-Some guidelines related to the code:
+**Some guidelines related to the code:**
 
 - Try to stick to the syntax style followed in the code(Especially in Frontend Part). This will help everyone to understand your code.
 - Make sure you put comments wherever necessary.
-- Include a visual preview (a screenshot or a GIF? if you are working on Frontend Part & For Backend make sure to document the API on your Pull Request or any other format (eg. POSTMAN Doc)) for any visual design changes if possible.
+- Include a visual preview (a screenshot or a GIF? if you are working on Frontend Part) for any visual design changes if possible.
+- If you are working on Backend, please make sure to add the a Simple API Description (you improve/working currently) while raising a PR
 
 If you want to add a new feature, feel free to do so! :D
 
