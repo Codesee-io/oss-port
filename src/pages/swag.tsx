@@ -29,7 +29,7 @@ const Swag = () => (
         At CodeSee, we are passionate about giving back to the open source community. So much so, that we committed to launching OSS Port in time for {" "} 
                   <ExternalLink href={HACKTOBERFEST_LINK}>
                     Hacktoberfest
-                  </ExternalLink>{" "}—a month-long global celebration of open-source software. Join us in connecting projects to people, with the goal of easing codebase onboarding for all!
+                  </ExternalLink>{" "}—a month-long global celebration of open-source software. <br/>Join us in connecting projects to people, with the goal of easing codebase onboarding for all!
         </p>
         
         <CallToAction href="#swag" className="mt-12">
