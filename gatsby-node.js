@@ -118,6 +118,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         prsMerged: githubData.prsMerged,
         prsCreated: githubData.prsCreated,
         contributors: githubData.contributors,
+        helpIssues: githubData.helpIssues,
+        hacktoberfestIssues: githubData.hacktoberfestIssues,
       };
     }
 
