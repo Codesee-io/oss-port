@@ -1,0 +1,169 @@
+---
+name: Food-Order-App
+repoUrl: https://github.com/nil1729/food-order-app
+description: Simple Food Ordering Website (MEVN, Bootstrap, Firebase)
+websiteUrl: https://food-order-app-nil.herokuapp.com/
+twitterUrl: https://twitter.com/_nilanjandeb
+avatar: food-order-app-avatar.png
+languages: # A list of programming languages used in this project
+  - JavaScript
+  - VueJS
+  - NodeJS
+tags: # A list of keywords relevant to the contributors for this project
+  - First Timer Friendly
+  - Tools
+  - Firebase
+  - E-Commerce
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Frontend Developers
+  - Backend Developers
+  - DevOps
+  - Maintainers
+  - Code Reviewers
+  - Mentors
+featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
+  url: https://app.codesee.io/maps/public/82edc210-2013-11ec-a698-bbd2bff7a221
+  description: Get a quick overview of the project with a CodeSee Map!
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Learn Git
+    url: https://learngitbranching.js.org/
+  - title: Learn VueJS
+    url: https://vuejs.org/v2/guide/
+  - title: Learn NodeJS
+    url: https://nodejs.dev/learn/introduction-to-nodejs/
+  - title: Get started with MongoDB and Mongoose
+    url: https://mongoosejs.com/docs/
+  - title: Get started with Markdown
+    url: https://www.markdownguide.org/getting-started/
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+Simple food ordering web application built using VueJS, Firebase, NodeJS and MongoDB.
+
+![Preview](https://raw.githubusercontent.com/nil1729/food-order-app/master/previews/preview.jpg)
+
+## Checkout the Live Demo of this project First:
+  - Test User Credentials
+    - Email: `user@gmail.co`
+    - Password: `123456`
+  - Test Admin Credentials
+    - Email: `admin@foodsite.com`
+    - Password: `123456`
+
+## Run this Project on Local Environment:
+
+1. **Prerequisites**
+
+   - NodeJS installed on your Local machine
+   - MongoDB installed on your local machine or have an Atlas Account.
+   - A Gmail Account for Firebase Services.
+   - A PayPal Account and a Sandbox account for testing purposes. (For now, you can ignore this step, Currently I am planning to shift payment services to Stripe/RazorPay)
+
+2. **Credentials Setup**
+
+   - Create a `MongoDB Atlas` Account for connecting this app with MongoDB or you can use your local MongoDB. Find Tutorials [here](https://www.youtube.com/watch?v=KKyag6t98g8).
+   - Setup a `Firebase Project` for using `Firestore and Authentication`. Find Tutorials [here](https://www.youtube.com/watch?v=6juww5Lmvgo).
+   - Setup [Firestore](https://www.youtube.com/watch?v=UFLvSp4Mh9k&list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB&index=2) and [Enable Authenitaion Methods](https://www.youtube.com/watch?v=-OKrloDzGpU)
+   - Generate `Private keys for Firebase Admin`. Find tutorials [here](https://youtu.be/WtYzHTXHBp0).
+   - Create a `PayPal account` and `Sandbox account`. Find Tutorials [here](https://www.youtube.com/watch?v=AtZGoueL4Vs&t=293s)
+
+3. **Project Setup**
+
+   - Clone this Repository or Download the zip File.
+     ```
+      >> git clone https://github.com/nil1729/food-order-app.git
+     ```
+   - Create a new file named `secret.json` on `config` directory which contains Generated Private keys on Firebase project.
+
+     ```
+         {
+             "type": "service_account",
+             "project_id": "",
+             "private_key_id": "",
+             "private_key": "",
+             "client_email": "",
+             "client_id": "",
+             "auth_uri": "",
+             "token_uri": "",
+             "auth_provider_x509_cert_url": "",
+             "client_x509_cert_url": ""
+         }
+
+     ```
+
+   - Create another `cofig.js` file on `/client/src/firebase`. Put all firebase config Credentials for Frontend. (In following Format)
+
+     ```
+       const firebaseConfig = {
+           apiKey: "",
+           authDomain: "",
+           databaseURL: "",
+           projectId: "",
+           storageBucket: "",
+           messagingSenderId: "",
+           appId: "",
+           measurementId: ""
+       };
+
+       export default firebaseConfig;
+     ```
+
+   - Create a `.env` file on root directory. Which Contains all necessary Secret Credentials (for backend only) for this site.
+     ```
+      DB_URI = <- Mongo Atlas URI ->
+      PAYPAL_CLIENT_ID = <- PayPal Sandbox Client ID (Also use your own client ID on Frontend) ->
+      PAYPAL_CLIENT_SECRET = <- PayPal Sandbox Client Secret (Only for backend server to verify purchase) ->
+     ```
+   - Run this command
+
+     ```
+      >> npm run dev  // to start Vue Development server and Backend server together.
+
+      >> npm run server // to start only Backend server
+
+      >> npm run Client // to start Vue Development server only (But it will not working alone as api depends on Backend also)
+
+     ```
+
+4. **Admin Setup**
+   - Run this Command on root directory
+     ```
+       >> npm run admin
+     ```
+</Overview>
+
+<Contributing>
+
+A few guidelines for someone looking to contribute here:
+
+## If you're a beginner
+
+- `Fork` this repository.
+- `Clone` your fork on local machine.
+- Make a new `branch` (say `develop-{your_github_id}`).
+- Checkout to the new branch with `git checkout <new_branch_name>`
+- Do the desired changes and `commit` them with `git commit -m '<a nice commit message here>'`.
+- `push` the change to your fork on GitHub with `git push origin <your_branch_name>`
+- Make a `Pull Request` to the original repository, i.e. this one.
+
+<b>
+  Note: If you're looking to work on an issue, just make sure that no one else
+  has taken it already. In which case, you can look up other issues or create a
+  new one if you find something missing! :){" "}
+</b>
+
+Some guidelines related to the code:
+
+- Try to stick to the syntax style followed in the code(Especially in Frontend Part). This will help everyone to understand your code.
+- Make sure you put comments wherever necessary.
+- Include a visual preview (a screenshot or a GIF? if you are working on Frontend Part & For Backend make sure to document the API on your Pull Request or any other format (eg. POSTMAN Doc)) for any visual design changes if possible.
+
+If you want to add a new feature, feel free to do so! :D
+
+Happy Coding! :smiley:
+
+</Contributing>
