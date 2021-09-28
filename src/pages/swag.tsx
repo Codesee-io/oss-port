@@ -21,15 +21,15 @@ const Swag = () => (
           className="max-w-full px-4"
           style={{ width: "400px" }}
         />
-        <h1 className="text-3xl leading-large my-4 font-accent text-center px-6">
+        <h1 className="text-2xl leading-large my-4 font-accent text-center px-6">
           Snag your OSS Port + Hacktoberfest swag!
         </h1>
-        <p className="text-lg font-medium px-6 max-w-lg text-center leading-6">
-          Set sail with an OSS Port project during Hacktoberfest 2021 and get
+        <p className="px-6 max-w-lg text-center leading-6 text-black-500">
+          Set sail with an OSS Port project during Hacktoberfest 2021 <br/>and get
           sweet swag.
         </p>
         <CallToAction href="#swag" className="mt-12">
-          Claim your swag
+          Snag Your Swag
         </CallToAction>
 
         <section className="my-12 max-w-6xl mx-auto text-black-500">
