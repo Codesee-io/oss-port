@@ -64,10 +64,9 @@ const HomeTemplate: FunctionComponent<Props> = ({
         <h1 className="text-black-500 font-accent text-3xl lg:text-4xl text-center mb-4">
           Welcome to OSS Port
         </h1>
-        <p className="text-black-300 text-center mb-6 mt-2">
-          Connecting contributors and maintainers <br />
-          and helping all onboard better.
-          <br />100,000+ potential contributors looking for their project match, list your project today!
+        <p className="text-black-500 text-center mb-6 mt-2">
+          Connecting 100,000+ potential contributors with maintainers.<br />
+          Helping all onboard better.
         </p>
       </div>
       <div className="mb-6 text-center">

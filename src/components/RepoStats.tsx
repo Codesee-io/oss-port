@@ -1,6 +1,6 @@
 import { InfoIcon } from "@primer/octicons-react";
 import React, { FunctionComponent } from "react";
-import { GitHubMetric } from "../types";
+import { GitHubIssueData, GitHubMetric } from "../types";
 
 const STATS_ARE_MISSING = process.env.NODE_ENV !== "production";
 
@@ -10,6 +10,8 @@ type Props = {
     prsCreated: GitHubMetric;
     prsMerged: GitHubMetric;
     contributors: GitHubMetric;
+    hacktoberfestIssues?: GitHubIssueData[];
+    helpIssues?: GitHubIssueData[];
   };
 };
 
@@ -29,24 +31,35 @@ function formatMetric(metric: GitHubMetric) {
 }
 
 const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
+
+  const helpWantedCount = stats?.helpIssues?.length || 0;
+  const hacktoberfestCount = stats?.hacktoberfestIssues?.length || 0;
+  const [issueName, issueCount] = hacktoberfestCount === 0 && helpWantedCount !== 0
+    ? ["Help Wanted", helpWantedCount] 
+    : ["Hack-🎃-fest", hacktoberfestCount];
+
   return (
     <div className={className}>
-      <h2 className="text-sm font-bold text-black-500 mb-4">Last 30 days</h2>
+      <div className="flex flex-row items-center justify-between">
+        <h2 className="text-xs font-bold text-blue-500 mb-4">Open issues</h2>
+        <h2 className="text-xs font-bold text-blue-500 mb-4">Last 30 days</h2>
+      </div>
       <div className="flex justify-between text-black-500 space-x-4 text-center">
+        <div>
+          <div className="text-2xl font-bold">
+            {formatMetric({count: issueCount, maybeMore: false})}
+          </div>
+          <small className="text-black-400 text-xs uppercase whitespace-nowrap">
+            {issueName}
+          </small>
+        </div>
+        <div style={{width: '10px', paddingRight: '10px', borderRight: '1px solid rgba(240, 242, 246, var(--tw-border-opacity))'}}></div>
         <div>
           <div className="text-2xl font-bold">
             {formatMetric(stats?.prsCreated)}
           </div>
           <small className="text-black-400 text-xs uppercase whitespace-nowrap">
             PRs opened
-          </small>
-        </div>
-        <div>
-          <div className="text-2xl font-bold">
-            {formatMetric(stats?.prsMerged)}
-          </div>
-          <small className="text-black-400 text-xs uppercase whitespace-nowrap">
-            PRs merged
           </small>
         </div>
         <div>
