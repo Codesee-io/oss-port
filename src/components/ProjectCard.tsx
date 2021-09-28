@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 import cx from "classnames";
 import Tag from "./Tag";
-import { GitHubMetric, Project } from "../types";
+import { GitHubIssueData, GitHubMetric, Project } from "../types";
 import RepoStats from "./RepoStats";
 import { MarkGithubIcon, LinkIcon } from "@primer/octicons-react";
 import TwitterIcon from "./icons/TwitterIcon";
@@ -15,6 +15,8 @@ type Props = {
     prsMerged: GitHubMetric;
     prsCreated: GitHubMetric;
     contributors: GitHubMetric;
+    hacktoberfestIssues?: GitHubIssueData[];
+    helpIssues?: GitHubIssueData[];
   };
   activeTags?: string[];
 };

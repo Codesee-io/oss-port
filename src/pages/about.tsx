@@ -20,15 +20,14 @@ const About = () => {
           <LogoWhiteBackground
             style={{ width: "400px", paddingLeft: "33px" }}
           />
-          <h1 className="text-2xl font-accent pt-3">Let's onboard better.</h1>
+          <h1 className="text-2xl font-accent pt-3 pb-3">Let's onboard better.</h1>
           <div>Helping contributors and maintainers</div>
           <div>eliminate the barriers to taking on a new codebase.</div>
           <CallToAction
             href={HOW_TO_LIST_PROJECT_URL}
-            className="mt-12"
-            style={{ backgroundColor: "rgb(0, 84, 149)", color: "white" }}
+            className="mt-6 bg-yellow-200"
           >
-            Add Your Project
+            List Your Project
           </CallToAction>
           <h1 className="text-2xl font-bold pt-20 pb-4">About OSS Port</h1>
           <div style={{ maxWidth: "450px" }}>

@@ -33,7 +33,7 @@ const Swag = () => (
         </p>
         
         <CallToAction href="#swag" className="mt-12">
-          Claim your swag
+          Snag Your Swag
         </CallToAction>
 
         <h2 className="text-2xl leading-large my-4 font-accent text-center px-6 mt-12">
