@@ -38,6 +38,7 @@ type Props = {
   };
   pageContext: {
     githubDataSet: any; // TODO type this
+    helpfulnessDataSet: {[slug: string]: number};
     searchIndex: SearchIndexItem[];
   };
 };
@@ -46,7 +47,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
   data: { allProjects },
   pageContext,
 }) => {
-  const { githubDataSet, searchIndex } = pageContext;
+  const { githubDataSet, helpfulnessDataSet, searchIndex } = pageContext;
 
   const tags = useMemo(() => {
     return {
@@ -86,6 +87,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
           <ProjectList
             allProjects={allProjects.nodes}
             githubDataSet={githubDataSet}
+            helpfulnessDataSet={helpfulnessDataSet}
           />
           <SidebarWithFilters
             allLanguages={tags.allLanguages}
