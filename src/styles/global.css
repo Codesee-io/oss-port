@@ -152,8 +152,9 @@ textarea.input {
 @media (min-width: 768px) {
   .sidebar {
     position: sticky;
-    top: 0;
+    top: 70px;
     width: 280px;
+    height: calc(100vh - 56px); /* 56px = header height*/
   }
 }
 
