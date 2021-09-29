@@ -194,6 +194,10 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
 
     helpfulness += helpfulMaps[node.slug] || 0;
 
+    // tie breaker, count open issues:
+    const openHelpIssues = (githubData.helpIssues || 0) + (githubData.hacktoberfestIssues || 0)
+    helpfulness += Math.min(0.9, openHelpIssues/10.0);
+
     helpfulnessDataSet[node.slug] = helpfulness;
 
     createPage({
