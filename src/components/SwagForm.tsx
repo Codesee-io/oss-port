@@ -92,8 +92,6 @@ const SwagForm: FunctionComponent = () => {
 
   return (
     <form action="#" method="POST">
-      {/* Anchor tag to scroll to this form */}
-      <a id="swag"></a>
       <div className="space-y-6 w-96 max-w-full">
         <div>
           <label htmlFor="name" className="block text-sm text-white mb-1">
@@ -220,7 +218,7 @@ const SwagForm: FunctionComponent = () => {
 
       <div className="py-10">
         <Button type="submit" onClick={submitFunction}>
-          Claim your swag
+          Snag Your Swag
         </Button>
       </div>
     </form>

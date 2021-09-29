@@ -22,14 +22,16 @@ const Swag = () => (
           className="max-w-full px-4"
           style={{ width: "400px" }}
         />
-        <h1 className="text-3xl leading-large my-4 font-accent text-center px-6">
+        <h1 className="text-2xl leading-large my-4 font-accent text-center px-6">
           OSS Port x Hacktoberfest Challenge
         </h1>
-        <p className="text-lg max-w-lg text-center leading-6">
-        At CodeSee, we are passionate about giving back to the open source community. So much so, that we committed to launching OSS Port in time for {" "} 
+        <p className="max-w-lg text-center leading-6">
+        At CodeSee, we are passionate about giving back <br/>
+        to the open source community. So much so, that we committed to launching OSS Port in time for {" "} 
                   <ExternalLink href={HACKTOBERFEST_LINK}>
                     Hacktoberfest
-                  </ExternalLink>{" "}—a month-long global celebration of open-source software. <br/>Join us in connecting projects to people, with the goal of easing codebase onboarding for all!
+                  </ExternalLink>{" "}—a month-long <br/>
+                  global celebration of open-source software. <br/><br/>Join us in connecting projects to people,<br/>with the goal of easing codebase onboarding for all!
         </p>
         
         <CallToAction href="#swag" className="mt-12">
@@ -39,9 +41,6 @@ const Swag = () => (
         <h2 className="text-2xl leading-large my-4 font-accent text-center px-6 mt-12">
           How To Participate
         </h2>
-        <p className="text-lg max-w-lg text-center leading-6">
-        To earn your very own limited edition 2021 OSS Port x Hacktoberfest swag, here’s what you need to do:
-        </p>
 
         <section className="my-12 max-w-6xl mx-auto text-black-500">
           <div className="rewards-grid lg:mr-40">
@@ -136,33 +135,20 @@ const Swag = () => (
                 </li>
               </ul>
             </div>
-            <div className="footer mt-10 text-sm p-4">
-              Contributor Rules:
-              <ul>
-                <li>You must make three (3) or five (5) pull requests (PRs) between October 1-31 (in any time zone).</li>
-                <li>PRs must be ready to review (not drafts).</li>
-                <li>Invalid PRs do not count towards your PR total.</li>
-                <li>PRs may be marked invalid by a maintainer 
-                      if it is determined to be spam, 
-                      does not follow the contribution guidelines, and
-                      is not in line with the project’s code of conduct
-                </li>
-              </ul>
-              <p>
-                Once you have submitted four PRs, fill out the form below letting us know you have completed the challenge.
-                The information gathered in the form will be stored for the purposes of sending your reward and following up with you after the event.
-              </p>
-              <p>
-                Note: Rewards will start shipping in December 2021.
-              </p>
-            </div>
           </div>
+          <p className="pt-5 text-sm text-center">
+              Fill out the form below to make your commitment to the OSS Port x Hacktoberfest challenge. Complete contributors guidelines <a className="font-bold" href="#guidelines">below</a>.<br />
+              The information gathered in the form will be stored solely for the purposes of sending your reward and following up with you after the event.
+          </p>
         </section>
 
         <section
+          id="swag"
           className="relative w-full bg-cover"
           style={{ backgroundImage: "url(/wave_field.svg)" }}
         >
+          {/* Anchor tag to scroll to this form */}
+          <a id="swag"></a>
           <div className="max-w-5xl mx-auto py-16 px-4">
             <div className="md:flex justify-between gap-6">
               <div className="">
@@ -180,6 +166,22 @@ const Swag = () => (
               </div>
               <SwagForm />
             </div>
+          </div>
+        </section>
+
+        <section>
+          <div id="guidelines" className="footer m-10 text-sm p-10">
+            Contributor Rules:
+            <ul className="list-disc list-outside pl-5">
+              <li>You must make four (4) or seven (7) pull requests (PRs) between October 1-31 (in any time zone).</li>
+              <li>PRs must be ready to review (not drafts).</li>
+              <li>Invalid PRs do not count towards your PR total.</li>
+              <li>PRs may be marked invalid by a maintainer 
+                    if it is determined to be spam, 
+                    does not follow the contribution guidelines, or
+                    is not in line with the project’s code of conduct
+              </li>
+            </ul>
           </div>
         </section>
       </div>
