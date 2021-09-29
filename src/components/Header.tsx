@@ -15,12 +15,12 @@ const Header: FunctionComponent = () => (
       <div className="flex items-center justify-center text-white whitespace-nowrap">
         
         <div className="hidden sm:block">
+          <NavLink to="/swag/">Hacktoberfest</NavLink>
+        </div>
+        <div className="hidden sm:block">
           <NavLink to={LEARN}>
           Learn
           </NavLink>
-        </div>
-        <div className="hidden sm:block">
-          <NavLink to="/swag/">Get Swag!</NavLink>
         </div>
         <div className="hidden sm:block">
           <NavLink to="/about/">About</NavLink>
