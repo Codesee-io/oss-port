@@ -71,6 +71,7 @@ const helpfulMaps = {
   "GeekBoySupreme/mongodb-boilerplate": 1,
   "ANovokmet/node-csproj-util": 1,
   "akanksha-raghav/Minor_Project": 1,
+  "feldoh/JZookeeperEdit": 5,
 };
 
 
