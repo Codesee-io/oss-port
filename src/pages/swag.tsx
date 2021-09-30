@@ -8,6 +8,7 @@ import ExternalLink from "../components/ExternalLink";
 const HACKTOBERFEST_LINK = "https://hacktoberfest.digitalocean.com/";
 const QUALITY_PR_LINK =
   "https://hacktoberfest.digitalocean.com/resources/qualitystandards";
+const HACKTOBERFEST_RULES_LINK = "https://hacktoberfest.digitalocean.com/faq";
 
 const MAINTAINER_FEEDBACK =
     "https://form.typeform.com/to/LSNqGj3U";
@@ -137,7 +138,10 @@ const Swag = () => (
             </div>
           </div>
           <p className="pt-5 text-sm text-center">
-              Fill out the form below to make your commitment to the OSS Port x Hacktoberfest challenge. Complete contributors guidelines <a className="font-bold" href="#guidelines">below</a>.<br />
+              Fill out the form below to make your commitment to the OSS Port x Hacktoberfest challenge. Complete contributors guidelines are available on the {" "}
+                <ExternalLink href={HACKTOBERFEST_RULES_LINK}>
+                    official Hacktoberfest page
+                </ExternalLink>{""}.<br />
               The information gathered in the form will be stored solely for the purposes of sending your reward and following up with you after the event.
           </p>
         </section>
@@ -166,22 +170,6 @@ const Swag = () => (
               </div>
               <SwagForm />
             </div>
-          </div>
-        </section>
-
-        <section>
-          <div id="guidelines" className="footer m-10 text-sm p-10">
-            Contributor Rules:
-            <ul className="list-disc list-outside pl-5">
-              <li>You must make four (4) or seven (7) pull requests (PRs) between October 1-31 (in any time zone).</li>
-              <li>PRs must be ready to review (not drafts).</li>
-              <li>Invalid PRs do not count towards your PR total.</li>
-              <li>PRs may be marked invalid by a maintainer 
-                    if it is determined to be spam, 
-                    does not follow the contribution guidelines, or
-                    is not in line with the project’s code of conduct
-              </li>
-            </ul>
           </div>
         </section>
       </div>
