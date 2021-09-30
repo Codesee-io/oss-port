@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const RootLayout: FunctionComponent = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div style={{position: 'relative', paddingBottom: '100px'}} className="flex flex-col min-h-screen">
       <Helmet title="OSS Port">
         <html lang="en" />
         <meta

@@ -154,7 +154,8 @@ textarea.input {
     position: sticky;
     top: 70px; /* 56px header height with some buffer */
     width: 280px;
-    height: calc(100vh - 56px); /* 56px header height */
+    height: calc(100vh - 70px); /* 56px header height with some buffer */
+    z-index: 9999;
   }
 }
 
