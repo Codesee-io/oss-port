@@ -5,3 +5,6 @@ public
 .env
 # Local Netlify folder
 .netlify
+
+# Log
+yarn-error.log
