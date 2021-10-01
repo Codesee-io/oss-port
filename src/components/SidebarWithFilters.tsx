@@ -50,7 +50,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
       />
       <aside
         data-qa="sidebar"
-        className={cx("sidebar flex-shrink-0 flex flex-col", {
+        className={cx("sidebar flex-shrink-0 flex flex-col bg-black-30", {
           active: showMobileFilters,
         })}
       >

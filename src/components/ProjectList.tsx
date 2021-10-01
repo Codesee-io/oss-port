@@ -7,11 +7,13 @@ import ProjectCard from "./ProjectCard";
 type Props = {
   allProjects: Project[];
   githubDataSet: any;
+  helpfulnessDataSet: {[slug: string]: number};
 };
 
 const ProjectList: FunctionComponent<Props> = ({
   allProjects,
   githubDataSet,
+  helpfulnessDataSet
 }) => {
   const { filteredProjectIds, allActiveTags } = useSearch();
 
@@ -31,6 +33,10 @@ const ProjectList: FunctionComponent<Props> = ({
   const filteredProjects = allProjects.filter((project) =>
     filteredProjectIds.includes(project.id)
   );
+
+  filteredProjects.sort((a: Project, b: Project) => {
+    return helpfulnessDataSet[b.slug] - helpfulnessDataSet[a.slug];
+  })
 
   return (
     <ProjectListWrapper>

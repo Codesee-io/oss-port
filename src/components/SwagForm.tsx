@@ -59,10 +59,10 @@ const SwagForm: FunctionComponent = () => {
   const submitForm = async (requestFormBody) => {
     try {
       await fetch(
-        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdFUAQA787V8fGfwsR7Rs_NT2LlsyRfU3vIsIdBGQowH6VIJA/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSdFUAQA787V8fGfwsR7Rs_NT2LlsyRfU3vIsIdBGQowH6VIJA/formResponse",
         {
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded ",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           method: "POST",
           mode: "no-cors",
@@ -92,8 +92,6 @@ const SwagForm: FunctionComponent = () => {
 
   return (
     <form action="#" method="POST">
-      {/* Anchor tag to scroll to this form */}
-      <a id="swag"></a>
       <div className="space-y-6 w-96 max-w-full">
         <div>
           <label htmlFor="name" className="block text-sm text-white mb-1">
@@ -162,9 +160,9 @@ const SwagForm: FunctionComponent = () => {
             autoComplete="t-shirt"
             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
           </select>
         </div>
         <div className="col-span-6 sm:col-span-3">
@@ -180,9 +178,9 @@ const SwagForm: FunctionComponent = () => {
             autoComplete="sweatshirt"
             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
           </select>
         </div>
         <div className="flex justify-between">
@@ -220,7 +218,7 @@ const SwagForm: FunctionComponent = () => {
 
       <div className="py-10">
         <Button type="submit" onClick={submitFunction}>
-          Claim your swag
+          Snag Your Swag
         </Button>
       </div>
     </form>

@@ -8,7 +8,7 @@ import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: "32px 96px 96px 96px",
+  padding: "32px 96px 196px 96px",
 };
 
 // markup

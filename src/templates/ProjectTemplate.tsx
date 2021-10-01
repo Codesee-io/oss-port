@@ -55,7 +55,7 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
 
   return (
     <RootLayout>
-      <div className="max-w-4xl mx-auto py-12 px-2">
+      <div style={{paddingBottom: '100px'}} className="max-w-4xl mx-auto py-12 px-2">
         <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
         <div className="flex">
           {projectData.frontmatter.avatar && (

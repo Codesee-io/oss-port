@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import CodeSeeWordmark from "../images/CodeSeeWordmark";
 
 const Footer: FunctionComponent = () => (
-  <footer className="bg-black-50 text-black-400 px-4 py-8">
+  <footer style={{position: 'absolute', bottom: 0, width: "100%"}} className="bg-black-50 text-black-400 px-4 py-8">
     <p className="text-sm text-center flex items-center justify-center">
       Built with tea and love by{" "}
       <a
