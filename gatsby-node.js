@@ -49,6 +49,32 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs);
 };
 
+// We have to do this manually right now, but hopefully can automate this soon
+// 1 - doing anything more than default
+// 2 - used one of: labels, notes, tours
+// 3 - used more than one of: labels, notes, tours
+// 4 - a fully fleshed-out map
+// 5 - a truly helpful map
+const helpfulMaps = {
+  "avneesh0612/ChatCube": 3,
+  "thvardhan/Youtuber-s-Lucky-Blocks": 1,
+  "dhruvsaxena1998/node-typescript-starter": 1,
+  "thamara/time-to-leave": 5,
+  "erik-whiting/LuluTest": 2,
+  "nil1729/food-order-app": 5,
+  "luisFilipePT/github-covid-finder": 5,
+  "akshat157/meditate-app": 5,
+  "graysonarts/rust-gpio-mqtt-bridge": 4,
+  "devcer/hydrator": 1,
+  "PaulSayantan/TermTube": 4,
+  "l2ig/aqua": 2,
+  "GeekBoySupreme/mongodb-boilerplate": 1,
+  "ANovokmet/node-csproj-util": 1,
+  "akanksha-raghav/Minor_Project": 1,
+  "feldoh/JZookeeperEdit": 5,
+};
+
+
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
   const projectTemplate = path.resolve(`src/templates/ProjectTemplate.tsx`);
@@ -60,6 +86,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         nodes {
           id
           slug
+          body
           frontmatter {
             name
             repoUrl
@@ -69,6 +96,17 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
             languages
             tags
             description
+            currentlySeeking
+            contributionOverview {
+              mainLocation
+              idealEffort
+              isMentorshipAvailable
+              automatedDevEnvironment
+            }
+            learnLinks {
+              title
+              url
+            }
           }
           parent {
             ... on File {
@@ -100,6 +138,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   // Create a page for each project
   const nodes = projects.data.allProjects.nodes;
   const githubDataSet = {};
+  const helpfulnessDataSet = {};
   for (const node of nodes) {
     let githubData = {};
 
@@ -118,6 +157,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         prsMerged: githubData.prsMerged,
         prsCreated: githubData.prsCreated,
         contributors: githubData.contributors,
+        helpIssues: githubData.helpIssues,
+        hacktoberfestIssues: githubData.hacktoberfestIssues,
       };
     }
 
@@ -129,6 +170,36 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         cache
       );
     }
+
+    let helpfulness = 0;
+    if (node.frontmatter.featuredMap?.url) {
+      helpfulness += 5;
+    }
+    if (node.frontmatter.currentlySeeking?.length) {
+      helpfulness += 1;
+    }
+    if (node.frontmatter.contributionOverview) {
+      helpfulness += Object.keys(node.frontmatter.contributionOverview).length / 2;
+    }
+    if (node.frontmatter.learnLinks?.length) {
+      helpfulness += Math.min(3, node.frontmatter.learnLinks.length);
+    }
+    if (node.body) {
+      if (node.body.includes("mdx(Overview")) {
+        helpfulness += 4;
+      }
+      if (node.body.includes("mdx(Contributing")) {
+        helpfulness += 4;
+      }
+    }
+
+    helpfulness += helpfulMaps[node.slug] || 0;
+
+    // tie breaker, count open issues:
+    const openHelpIssues = (githubData.helpIssues || 0) + (githubData.hacktoberfestIssues || 0)
+    helpfulness += Math.min(0.9, openHelpIssues/10.0);
+
+    helpfulnessDataSet[node.slug] = helpfulness;
 
     createPage({
       path: node.slug,
@@ -148,6 +219,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     component: homeTemplate,
     context: {
       githubDataSet,
+      helpfulnessDataSet,
       searchIndex: generateSearchIndex(projects.data.allProjects.nodes),
     },
   });

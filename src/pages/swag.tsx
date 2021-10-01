@@ -5,8 +5,10 @@ import CallToAction from "../components/CallToAction";
 import SwagForm from "../components/SwagForm";
 import ExternalLink from "../components/ExternalLink";
 
+const HACKTOBERFEST_LINK = "https://hacktoberfest.digitalocean.com/";
 const QUALITY_PR_LINK =
   "https://hacktoberfest.digitalocean.com/resources/qualitystandards";
+const HACKTOBERFEST_RULES_LINK = "https://hacktoberfest.digitalocean.com/faq";
 
 const MAINTAINER_FEEDBACK =
     "https://form.typeform.com/to/LSNqGj3U";
@@ -15,22 +17,31 @@ const CONTRIBUTOR_FEEDBACK =
 
 const Swag = () => (
   <RootLayout>
-    <main className="pt-12">
+    <main style={{paddingBottom: '100px'}} className="pt-12">
       <div className="flex flex-col items-center justify-start">
         <LogoWhiteBackground
           className="max-w-full px-4"
           style={{ width: "400px" }}
         />
-        <h1 className="text-3xl leading-large my-4 font-accent text-center px-6">
-          Snag your OSS Port + Hacktoberfest swag!
+        <h1 className="text-2xl leading-large my-4 font-accent text-center px-6">
+          OSS Port x Hacktoberfest Challenge
         </h1>
-        <p className="text-lg font-medium px-6 max-w-lg text-center leading-6">
-          Set sail with an OSS Port project during Hacktoberfest 2021 and get
-          sweet swag.
+        <p className="max-w-lg text-center leading-6">
+        At CodeSee, we are passionate about giving back <br/>
+        to the open source community. So much so, that we committed to launching OSS Port in time for {" "} 
+                  <ExternalLink href={HACKTOBERFEST_LINK}>
+                    Hacktoberfest
+                  </ExternalLink>{" "}—a month-long <br/>
+                  global celebration of open-source software. <br/><br/>Join us in connecting projects to people,<br/>with the goal of easing codebase onboarding for all!
         </p>
+        
         <CallToAction href="#swag" className="mt-12">
-          Claim your swag
+          Snag Your Swag
         </CallToAction>
+
+        <h2 className="text-2xl leading-large my-4 font-accent text-center px-6 mt-12">
+          How To Participate
+        </h2>
 
         <section className="my-12 max-w-6xl mx-auto text-black-500">
           <div className="rewards-grid lg:mr-40">
@@ -125,17 +136,23 @@ const Swag = () => (
                 </li>
               </ul>
             </div>
-            <div className="footer mt-10 text-sm p-4 text-center">
-              Only GitHub PRs merged to OSS Port projects during Hacktoberfest
-              2021 are eligible for rewards.
-            </div>
           </div>
+          <p className="pt-5 text-sm text-center">
+              Fill out the form below to make your commitment to the OSS Port x Hacktoberfest challenge. Complete contributors guidelines are available on the {" "}
+                <ExternalLink href={HACKTOBERFEST_RULES_LINK}>
+                    official Hacktoberfest page
+                </ExternalLink>{""}.<br />
+              The information gathered in the form will be stored solely for the purposes of sending your reward and following up with you after the event.
+          </p>
         </section>
 
         <section
+          id="swag"
           className="relative w-full bg-cover"
           style={{ backgroundImage: "url(/wave_field.svg)" }}
         >
+          {/* Anchor tag to scroll to this form */}
+          <a id="swag"></a>
           <div className="max-w-5xl mx-auto py-16 px-4">
             <div className="md:flex justify-between gap-6">
               <div className="">
