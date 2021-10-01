@@ -1,0 +1,61 @@
+---
+name: Django IMAP backend
+repoUrl: https://github.com/Sibyx/django-imap-backend
+description:  IMAP backend for Django mail package
+languages: # A list of programming languages used in this project
+  - Python
+tags: # A list of keywords relevant to the contributors for this project
+  - First Timer Friendly
+  - Tools
+  - Web Framework
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Designers
+  - Testers
+featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
+  url: https://app.codesee.io/maps/public/cbe2ee60-2175-11ec-96b5-afe99c614d3c
+  description: Repository map
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Django Emails
+    url: https://docs.djangoproject.com/en/3.2/topics/email/
+  - title: Python imaplib
+    url: https://docs.python.org/3/library/imaplib.html
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+IMAP back-end for `django.core.mail` package, aimed for uploading messages to specif mailboxes, instead of sending it
+over SMTP (or other Django email backend). Useful for debugging without fancy services like
+[mailtrap.io](https://mailtrap.io/). Library is capable of uploading messages to multiple accounts at once (one email
+to multiple mailboxes or accounts).
+
+If you like nice diagrams, check this
+[repository map](https://app.codesee.io/maps/cbe2ee60-2175-11ec-96b5-afe99c614d3c).
+
+In last few months I worked on project where we have to send a lot of emails to different mailboxes. We used fake
+(and after migration real) e-mail addresses in our staging environment. It was hard to debug these messages without
+services like [mailtrap](https://mailtrap.io/) (for which we just didn't want to pay, even it's a pretty cool product,
+client's budget is client's budged).
+
+We came up with the idea of uploading ready-to-send emails to IMAP user instead of sending it.
+
+</Overview>
+
+<Contributing>
+
+If you like nice diagrams you can also check repository
+[code map](https://app.codesee.io/maps/public/cbe2ee60-2175-11ec-96b5-afe99c614d3c).
+
+Feel free to open pull requests but please keep in mind this checklist:
+
+- write changes to to `CHANGELOG.md`
+- update `README.md` (if needed)
+- update documentation (if needed)
+
+We use [poetry](https://python-poetry.org/) for dependency management. Please write your source code according to the
+[PEP8](https://www.python.org/dev/peps/pep-0008/) code-style. [flake8](https://github.com/pycqa/flake8) is used for
+code-style and code-quality checks. Please, be sure that your IDE is following settings according to `.editorconfig`
+file.
+
+</Contributing>
