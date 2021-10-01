@@ -10,9 +10,10 @@ type Props = {
 const SearchInput: FunctionComponent<Props> = ({ debounceDelay = 300 }) => {
   const { searchByText } = useSearch();
   const debounceRefine = debouncePromise(searchByText, debounceDelay);
+  const onSubmit = (e: React.SyntheticEvent) => e.preventDefault()
 
   return (
-    <form className="mb-4 relative mx-auto max-w-full" style={{ width: 400 }}>
+    <form className="mb-4 relative mx-auto max-w-full" style={{ width: 400 }} onSubmit={onSubmit}>
       <label className="hidden" aria-hidden htmlFor="search">
         Search for open-source projects
       </label>
