@@ -1,0 +1,79 @@
+---
+name: Remote Pi Web
+repoUrl: https://github.com/zvakanaka/remote-pi-web
+description: Operate your Raspberry Pi from a web browser.
+languages:
+  - JavaScript
+  - C / C++
+  - HTML / CSS
+  - NodeJS
+tags:
+  - Education
+  - Tools
+  - Raspberry Pi
+currentlySeeking:
+  - Developers
+  - Backend Developers
+  - Frontend Developers
+  - Testers
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+Web app alternative to VNC for X11 (meant for Raspberry Pi).
+
+![Screen capture](https://i.imgur.com/H10m7uN.gif)
+
+## Road Map
+- [x] Screen viewable from web client  
+- [x] Scale canvas to browser's screen  
+- [x] Mouse control
+- [x] Keyboard control  
+- [x] Server configuration
+- [x] Sockets
+- [ ] MJPEG streaming
+- [ ] Client-side configuration  
+
+## Installation
+[Install Node.js](https://github.com/nvm-sh/nvm#about)
+```sh
+sudo apt install xdotool
+
+git clone https://github.com/zvakanaka/remote-pi-web
+cd remote-pi-web
+npm install
+```
+
+You can make your Pi think it has a screen by forcing HDMI output in the [`config.txt`](https://www.raspberrypi.org/documentation/configuration/config-txt/boot.md).
+
+This can be done by removing the `#` from the line of the `config.txt` that looks like this: `#hdmi_safe=1`.
+
+## Run
+Other env vars: `CAPTURE_METHOD` (defaults to 'native', 'scrot' requires it to be installed), `QUALITY` (defaults to 25), `REFRESH_INTERVAL_MS` (defaults to 500), `VIEW_ONLY` (defaults to false)
+```
+env DISPLAY=:0 npm start
+``` 
+
+## System Dependencies
+- `npm` (Comes with Node.js)
+- `xdotool` (if you want mouse and keyboard control)
+
+</Overview>
+
+<Contributing>
+
+## PRs Welcome!
+Any one of these would be a great PR:
+* Improve click-and-drag
+* Reduce latency - ideally using MJPEG streaming
+* Add client-side options
+* Add tests
+* Add/change anything you wish ;)
+
+## Rules
+- Do not break or degrade any current functionality
+- Follow [SemVer](https://semver.org/) when making changes
+
+</Contributing>
