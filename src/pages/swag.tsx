@@ -17,7 +17,7 @@ const CONTRIBUTOR_FEEDBACK =
 
 const Swag = () => (
   <RootLayout>
-    <main className="pt-12">
+    <main style={{paddingBottom: '100px'}} className="pt-12">
       <div className="flex flex-col items-center justify-start">
         <LogoWhiteBackground
           className="max-w-full px-4"

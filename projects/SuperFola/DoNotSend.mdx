@@ -1,0 +1,44 @@
+---
+name: DoNotSend
+repoUrl: https://github.com/SuperFola/DoNotSend
+description: Sending messages by hacking the DNS protocol. See website for demo server usage instructions
+languages:
+  - Python
+tags:
+  - First Timer Friendly
+  - Education
+  - Tools
+currentlySeeking:
+  - Developers
+  - Testers
+featuredMap:
+  url: https://app.codesee.io/maps/public/bfa21e20-229f-11ec-9ce8-ff9a2a559570
+  description: Overview of the file structure and interactions
+contributionOverview:
+  mainLocation: Europe
+  idealEffort: 1 PR a month
+  isMentorshipAvailable: false
+learnLinks:
+  - title: Understand the project structure
+    url: https://github.com/SuperFola/DoNotSend/blob/master/doc/design.md
+  - title: DNS packet structure
+    url: https://github.com/SuperFola/DoNotSend/blob/master/doc/DNSPacketStructure.md
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+The DNS protocol is conventionally used to ask for the IP address of a given website. Here it's used to send messages and retrieve other messages, instead of asking for a website IP address and retrieving its IP address.
+  
+This tool can be used to send messages by exploiting a flaw in the DNS protocol, but it could be used (as someone pointed out in [the reddit thread](https://www.reddit.com/r/Python/comments/l0ubhs/hacking_the_dns_protocol_to_use_it_as_a_messaging/)) to exfiltrate data from a network. I'm not responsible for any misuse of the project. Also note that it's most likely that your ISP is logging your DNS queries, thus it's not a 100% anonymous.
+
+</Overview>
+
+<Contributing>
+
+Get started by checking out the [chatserver over DNS](https://github.com/SuperFola/DoNotSend/blob/master/src/chatserver.py) sample ; you can even try it out by sending your DNS requests to `chat.dns.12f.pl` with the [provided client script](https://github.com/SuperFola/DoNotSend/blob/master/client.sh).
+
+Check out the [issues](https://github.com/SuperFola/DoNotSend/issues) if you want to contribute to the project, and don't forget to have fun with it!
+
+</Contributing>
