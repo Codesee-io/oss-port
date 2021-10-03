@@ -1,0 +1,81 @@
+---
+name: Django API Forms
+repoUrl: https://github.com/Sibyx/django_api_forms
+description: Django Forms approach in processing of RESTful HTTP request payload (especially for content type like JSON or MessagePack) without HTML front-end.
+languages: # A list of programming languages used in this project
+  - Python
+tags: # A list of keywords relevant to the contributors for this project
+  - First Timer Friendly
+  - Web Framework
+websiteUrl: https://sibyx.github.io/django_api_forms/
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Backend Developers
+  - Designers
+  - Maintainers
+  - Technical Writers
+  - Testers
+featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
+  url: https://app.codesee.io/maps/public/c7286640-20f6-11ec-a894-61b8cbaa0d26
+  description: Repository map
+learnLinks:
+  - title: Project docs
+    url: https://sibyx.github.io/django_api_forms/
+  - title: Working with Django Forms
+    url: https://docs.djangoproject.com/en/3.2/topics/forms/
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+The main idea was to create a simple and declarative way to specify the format of expecting requests with the ability
+to validate them. Firstly I tried to use [Django Forms](https://docs.djangoproject.com/en/3.2/topics/forms/) to
+validate my API requests (I use pure Django in my APIs). I have encountered a problem with nesting my requests without
+a huge boilerplate. Also, the whole HTML thing was pretty useless in my RESTful APIs.
+
+I wanted to:
+
+- define my requests as object (`Form`),
+- pass the request to my defined object (`form = Form.create_from_request(request)`),
+- validate my request `form.is_valid()`,
+- extract data `form.clean_data` property.
+
+I wanted to keep:
+
+- friendly declarative Django syntax,
+([DeclarativeFieldsMetaclass](https://github.com/django/django/blob/master/django/forms/forms.py#L22) is beautiful),
+- [Validators](https://docs.djangoproject.com/en/3.1/ref/validators/),
+- [ValidationError](https://docs.djangoproject.com/en/3.1/ref/exceptions/#validationerror),
+- [Form fields](https://docs.djangoproject.com/en/3.1/ref/forms/fields/) (In the end, I had to "replace" some of them).
+
+So I have decided to create a simple Python package to cover all my expectations.
+
+</Overview>
+
+<Contributing>
+
+If you like nice diagrams you can also check repository
+[code map](https://app.codesee.io/maps/public/c7286640-20f6-11ec-a894-61b8cbaa0d26).
+
+Feel free to open pull requests but please keep in mind this checklist:
+
+- write tests
+- write changes to to `CHANGELOG.md`
+- update `README.md` (if needed)
+- update documentation (if needed)
+
+We use [poetry](https://python-poetry.org/) for dependency management. Please write your source code according to the
+[PEP8](https://www.python.org/dev/peps/pep-0008/) code-style. [flake8](https://github.com/pycqa/flake8) is used for
+code-style and code-quality checks. Please, be sure that your IDE is following settings according to `.editorconfig`
+file.
+
+We use [Django-style tests](https://docs.djangoproject.com/en/3.1/topics/testing/overview/).
+
+Documentation is places in `docs` directory and it's generated using
+[mkdocs-material](https://squidfunk.github.io/mkdocs-material/). You can build docs calling `poetry run mkdocs build`.
+Docs will be in `sites` directory after build. Documentation is updated after every push to `origin/master` branch
+using GitHub Actions.
+
+
+</Contributing>
