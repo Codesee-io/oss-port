@@ -1,0 +1,78 @@
+---
+name: Utilobot
+repoUrl: https://github.com/DefCon-007/UtiloBot-New
+description: A multi-utility bot for Telegram. Make your life easier and get music links to every platform, shorten URLs, etc without ever leaving telegram..
+languages: # A list of programming languages used in this project
+  - Python
+tags: # A list of keywords relevant to the contributors for this project
+  - Chatbot
+  - Serverless
+  - Python
+avatar: utilobot.png
+websiteUrl: https://utilobot.defcon007.com/
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Developers
+  - Backend Developers
+  - Code Reviewers
+  - Technical Writers
+  - Mentors
+  - Testers
+featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
+  url: https://app.codesee.io/maps/public/55144800-2432-11ec-a223-71b4e261e7a1
+  description: Get a quick overview of the major areas of our repo
+contributionOverview: # (optional) Provide additional context to help contributors match well with your project
+  mainLocation: India
+  idealEffort: Whatever you like
+  isMentorshipAvailable: true
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Getting started with Telegram Chatbot
+    url: https://telegram.org/blog/bot-revolution
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+### 🏠 [Homepage](https://utilobot.defcon007.com)
+
+### ✨ [Demo](https://t.me/UtiloBot)
+
+## Build
+
+This bot is hosted on Google cloud functions for better scalability and less maintainance. 
+
+The project is based on Python 3.6, make sure you have the correct python version by using `python --version` or `python3 --version`. 
+
+- ```pip3 install virtualenv```
+- Create a new virtual environment for the project.
+  ```virtualenv -p python3 ./env```
+- Activate the environment created in the last step.
+  ```source ./env/bin/activate```
+- Install the dependancies. 
+  ```pip install -r requirements.txt```
+- Now, you can work and add your logic in the `lambda_function.py`. This is the main file which runs when we receive a telegram API webhook. After you are done, just create a zip and upload it to AWS Lambda.
+- Use the following command to deploy to google cloud function. 
+  ```gcloud functions deploy <FUNCTION_NAME> --runtime python38 --trigger-http --allow-unauthenticated --region asia-south1 --entry-point=lambda_handler```
+
+### Connecting Telegram 
+
+- Use Telegram's BotFather to create a new bot and add the corresponding bot token as environment variable named `BOT_TOKEN`. 
+- After the cloud function deployment is done, we need to add a new webhook url to get updates. Copy the cloud function public URL and use the guide [here](https://xabaras.medium.com/setting-your-telegram-bot-webhook-the-easy-way-c7577b2d6f72) to create a new webhook.
+
+
+</Overview>
+
+<Contributing>
+
+No contribution is big or small, the beauty of open source is you can contribute in a lot of ways.
+
+One thing to follow is first search through open issues, and if you don't find an existing one, create an issue and as soon you get a go ahead, start working on it after assigning it to yourself. 
+
+Following are some of the things for which issue creation/ pull requests are welcome
+- Found a small typo?
+- Found something missing from the Readme, or any build step is outdated. 
+- Want to add a new functionality for the bot? 
+
+The above list is just an example and not a complete list for contributions, if you face any issue or just like to know more, say hello by sending an email to ayushgoyal.iitkgp@gmail.com 
+
+</Contributing>
