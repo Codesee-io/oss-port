@@ -140,6 +140,7 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             gatsbyImageData(
+              height: 64
               width: 64
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
