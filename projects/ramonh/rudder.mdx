@@ -1,83 +1,36 @@
 ---
-name: The name of the repo or project.
-repoUrl: A url to the repo (e.g. on GitHub or GitLab)
-description: A short description of the project. This will appear on the project card contributors see when searching for a project, and at the top of your project page.
-languages: # A list of programming languages used in this project
-  - JavaScript
-  - Python
-  - Go
-  - C / C++
-  - C#
-  - Swift
-  - Objective C
-  - Java
-  - JQuery
-  - TypeScript
-  - PHP
+name: Rudder
+repoUrl: https://github.com/ramonh/rudder
+description: A rust-based terminal RSS feed reader. A Rust Reader. Rudder.
+languages: 
   - Rust
-  - Ruby
-  - HTML / CSS
-  - React
-  - Gatsby
-  - GraphQL
-  - Lua
-  - MongoDB
-  - MySQL
-  - PostgreSQL
-  - NextJS
-  - NodeJS
-  - VueJS
-  - (you may add custom entries, but please also add them to the canonical list in projects/_template.mdx)
-tags: # A list of keywords relevant to the contributors for this project
+tags:
   - First Timer Friendly
-  - Machine Learning
-  - Data Visualization
-  - Education
-  - Health
-  - Infosec
-  - Environment
-  - Social Activism
-  - Tools
-  - Web Framework
-  - Gaming
-  - Embedded Systems
-  - Raspberry Pi
-  - Android
-  - iOS
-  - Starter Template
-  - E-Commerce
-  - Social Network
-  - Productivity
-  - Browser Extension
-  - (you may add custom entries, but please also add them to the canonical list in projects/_template.mdx)
-avatar: (optional) The name of an image in the project's directory, like "avatar.png". This will appear on the project card contributors see when searching for a project.
-websiteUrl: (optional) Website for the project or organization
-twitterUrl: (optional) URL to the organization or project's Twitter page
-currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - CLI
+websiteUrl: https://crates.io/crates/rudder
+twitterUrl: https://twitter.com/hola_soy_milk
+currentlySeeking: 
   - Developers
-  - Backend Developers
-  - Frontend Developers
-  - DevOps
-  - Designers
-  - Maintainers
-  - Code Reviewers
   - Technical Writers
-  - Mentors
   - Testers
-  - (you may add custom entries, but please also add them to the canonical list in project/_template.mdx)
 featuredMap: # (optional) A CodeSee Map to serve as a visual starting point for contributors
   url: https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27
   description: (optional) short description of the CodeSee Map
-contributionOverview: # (optional) Provide additional context to help contributors match well with your project
+contributionOverview:
   mainLocation: Europe
-  idealEffort: 1 PR a month
+  idealEffort: 1 PR every 2 months
   isMentorshipAvailable: true
-  automatedDevEnvironment: https://www.gitpod.io/
-learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
-  - title: Learn Gatsby
-    url: https://www.gatsbyjs.com/
-  - title: Get started with Markdown
-    url: https://www.markdownguide.org/getting-started/
+learnLinks:
+  - title: Termimad (dependency for terminal manipulation)
+    url: https://docs.rs/termimad/0.8.30/termimad/
+  - title: Reqwest (http library)
+    url: https://docs.rs/reqwest/0.10.10/reqwest/
+  - title: Dialoguer (create CLI dialogues)
+    url: https://docs.rs/dialoguer/0.6.2/dialoguer/
+  - title: Crossterm (More CLI fun!)
+    url: https://docs.rs/crossterm/0.17.7/crossterm/
+  - title: Getting Started with Rust
+    url: https://www.rust-lang.org/
 ---
 
 <!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
