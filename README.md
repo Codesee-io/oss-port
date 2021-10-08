@@ -6,24 +6,7 @@
 
 ## Step 1: Running the project
 
-There are 2 ways to run this project during development: using GitHub Codespaces or using a local environment.
-
-If you have a javascript development environment set up already, the local approach is pretty easy. If you just want to get up and going without having to install anything, choose Codespaces.
-
-### 1-click Dev Env using GitHub Codespaces
-
-1. Navigate to the [repository in GitHub](https://github.com/codesee-io/oss-port)
-1. Click on the "Code" button
-
-   <img src="./docs/github-code-button.png" alt="Code button" width="104">
-
-1. Click on the "Codespaces" tab and create your own environment in your browser!
-1. In the Codespace terminal, you can run commands just like you would on a Linux system
-1. Run the project with the following command:
-
-   ```shell
-   yarn start
-   ```
+If you have a javascript development environment set up already, the local approach will be familiar.
 
 ### Local development
 
