@@ -4,11 +4,23 @@
 
 ## We’re thrilled to have you in Port. It's super easy to get started, and should only take about 10 minutes.
 
-## Step 1: Running the project
+## Step 1: Getting up and running
 
-If you have a javascript development environment set up already, the local approach will be familiar.
+You can put your project up on Port without having to run the app! Go ahead and check out the Github.dev steps below.
 
-### Local development
+If you have a javascript development environment set up already and prefer to run locally, the approach will be familiar.
+
+### Github.dev environment
+
+1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the OSS Port.
+1. Once on your fork's page, either press the full stop `.` key or replace `.com` in the navigation bar to `.dev`.
+
+Now you're in the Github.dev editor! Feel free to hop ahead to [our contributing section](#contributing).
+
+For more information on the Github.dev editor, please [see their docs](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor).
+
+
+### Local development (optional)
 
 1. Clone this repository to your machine
 1. Inside the project directory, install the dependencies using [Yarn](https://classic.yarnpkg.com/en/):
