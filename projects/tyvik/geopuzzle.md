@@ -26,9 +26,15 @@ currentlySeeking: # (optional) These fields are searchable and very helpful for 
   - Testers
 featuredMap:
   url: https://app.codesee.io/maps/public/01c90690-273e-11ec-8e0b-2da43c476634
-  description: File diagramm for this project
+  description: General overview
+  url: https://app.codesee.io/maps/public/1c69a080-284d-11ec-acf9-a7640383433b
+  description: Frontend
+  url: https://app.codesee.io/maps/public/af3a5ac0-284e-11ec-ba32-331364ffd2a4
+  description: Backend
+  url: https://app.codesee.io/maps/public/ab83ed00-284f-11ec-acf9-a7640383433b
+  description: Main part
 contributionOverview:
-  mainLocation: Earth
+  mainLocation: Earth (languages Russian and English)
   idealEffort: 1 PR a month
   isMentorshipAvailable: true
   automatedDevEnvironment:
@@ -45,19 +51,24 @@ learnLinks:
 
 ![geopuzzle](https://github.com/TyVik/geopuzzle/raw/1e8c970da66e35d8e11f9805355c7d041c7ebc95/static/images/puzzle.gif) 
 
-Arrange the pieces of the world! You need to drag the shape of the territory to the right place. 
+Puzzle game on Google Maps. Arrange the pieces of the world! You need to drag the shape of the territory to the right place. 
 Just like in childhood we collected pictures piece by piece, so here you can collect a country 
 from regions or whole continents from countries! 
-
-Furthermore second variation is the Quiz. In the Quiz you need find the country by flag, emblem 
-or the capital. 
 
 </Overview>
 
 <Contributing>
 
-The installation process was described in README.md. It is a little bit tricky, so do not hesitate to ask me.
+The installation process was described in [README.md](https://github.com/TyVik/geopuzzle/blob/develop/README.md). It is a little bit tricky, so do not hesitate to ask me.
 
-I speak Russian and English.
+Long story short, you have to install:
+- Python >= 3.8
+- PostgreSQL >= 12 (PostGIS 3.1)
+- NodeJS >= 12.13
+- Redis >= 5.0
+
+Link to the [sample database](https://drive.google.com/open?id=1OGXl7P9dkevD_v7QgBoW8CbsQxDjW7EI).
+
+Tests requires OSM_KEY from [https://osm-boundaries.com/](https://osm-boundaries.com/).
 
 </Contributing>
