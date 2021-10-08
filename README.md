@@ -13,7 +13,7 @@ If you have a javascript development environment set up already and prefer to ru
 ### Github.dev environment
 
 1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the OSS Port.
-1. Once on your fork's page, either press the full stop `.` key or replace `.com` in the navigation bar to `.dev`.
+1. Once on your fork's page, either press the full stop `.` key or replace `.com` in the location bar in your browser to `.dev`.
 
 Now you're in the Github.dev editor! Feel free to hop ahead to [our contributing section](#contributing).
 
