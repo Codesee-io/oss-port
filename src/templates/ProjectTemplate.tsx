@@ -55,11 +55,11 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
 
   return (
     <RootLayout>
-      <div style={{paddingBottom: '100px'}} className="max-w-4xl mx-auto py-12 px-2">
+      <div className="max-w-4xl mx-auto pt-12 px-2 pb-24">
         <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
         <div className="flex">
           {projectData.frontmatter.avatar && (
-            <div className="pr-4 hidden md:block">
+            <div className="pr-4 hidden md:block flex-shrink-0">
               <ProjectAvatar
                 size={64}
                 image={projectData.frontmatter.avatar}
@@ -140,6 +140,7 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             gatsbyImageData(
+              height: 64
               width: 64
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]

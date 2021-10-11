@@ -1,0 +1,79 @@
+---
+name: Minifierbeans
+repoUrl: https://github.com/Chris2011/minifierbeans
+description: Plugin to minify JS , CSS and HTML for quicker page load times by reducing the size of js/css/html files.
+languages: # A list of programming languages used in this project
+  - Java
+  - JavaScript
+tags: # A list of keywords relevant to the contributors for this project
+  - Minify CSS, HTML, JS, JSON, XML
+  - Tools
+  - Apache NetBeans
+  - postcss
+  - cssnano
+  - html-minifier-terser
+avatar: apache-netbeans.svg
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - UX
+  - Designers
+  - Backend Developers
+  - Frontend Developers
+  - Maintainers
+  - Testers
+contributionOverview: # (optional) Provide additional context to help contributors match well with your project
+  mainLocation: Europe
+  idealEffort: 4 PR a month
+  isMentorshipAvailable: true
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Apache NetBeans DevFAQ
+    url: https://netbeans.apache.org/wiki/DevFaqIndex.asciidoc
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+![License](https://img.shields.io/github/license/Chris2011/minifierbeans.svg)
+![Release](https://img.shields.io/github/release/Chris2011/minifierbeans.svg)
+![Contributors](https://img.shields.io/github/contributors/chris2011/minifierbeans.svg)
+![Downloads](https://img.shields.io/github/downloads/chris2011/minifierbeans/total.svg)
+
+
+## Description
+
+Plugin to minify JS , CSS and HTML for quicker page load times by reducing the size of js/css/html files.
+This plugin remove all unnecessary characters from source code, without changing its functionality. These unnecessary characters usually include white space characters, new line characters, comments, and sometimes block delimiters, which are used to add readability to the code but are not required for it to execute.
+
+- To minify all js , css or html , right click on folder in netbeans and select Minify WEB Content option ; it will minify all css & js file.
+- To minify single js/css/html file , right click on js/css/html file in netbeans and select Minify JS/CSS/HTML option to minify file.
+
+Also optimize by compressing image PNG/JPEG (Currently Supported format) and provides other functionality such as image Base64 Encoder/Decoder .
+
+
+## Compiler used
+
+#### JS
+    - Single file action -> Google Closure Compiler (Node based)
+    - Minify WEB Content -> YUI Compressor (Unmaintained - Java based) - #46
+    - Copy minifed JS -> YUI Compressor (Unmaintained - Java based) #46
+#### CSS
+    - Single file action -> PostCSS with CSSNano (Node based)
+    - Minify WEB Content -> YUI Compressor (Unmaintained - Java based) #46
+    - Copy minifed CSS -> YUI Compressor (Unmaintained - Java based) #46
+#### HTML
+    - Single file action -> html-minifier-terser (Node based)
+    - Minify WEB Content -> htmlcompressor (Unmaintained - Java based) #46
+    - Copy minifed HTML -> htmlcompressor (Unmaintained - Java based) #46
+#### XML
+    - Single file action -> Minify-XML (Node based)
+    - Minify WEB Content -> htmlcompressor (Unmaintained - Java based) #46
+    - Copy minifed XML -> htmlcompressor (Unmaintained - Java based) #46
+#### JSON
+    - Custom implementation
+#### Images
+#### - PngTastic (Java based) [#46](https://github.com/Chris2011/minifierbeans/issues/46)
+</Overview>
+
+<Contributing>
+WIP: This section will be added later. For more info please see https://github.com/Chris2011/minifierbeans/blob/master/Readme.md
+</Contributing>

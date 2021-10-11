@@ -1,10 +1,13 @@
 import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 import Wordmark from "../images/Wordmark";
-import { HOW_TO_LIST_PROJECT_URL, LEARN, DISCORD } from "../utils/constants";
+import {
+  HOW_TO_LIST_PROJECT_URL,
+  LEARN_LINK,
+  DISCORD_LINK,
+} from "../utils/constants";
 import CallToAction from "./CallToAction";
 import NavLink from "./NavLink";
-
 
 const Header: FunctionComponent = () => (
   <header className="bg-blue-700 sm:sticky top-0 z-50">
@@ -13,31 +16,33 @@ const Header: FunctionComponent = () => (
         <Wordmark width="200" className="my-2" />
       </Link>
       <div className="flex items-center justify-center text-white whitespace-nowrap">
-        
         <div className="hidden sm:block">
           <NavLink to="/swag/">Hacktoberfest</NavLink>
         </div>
         <div className="hidden sm:block">
-          <NavLink to={LEARN}>
-          Learn
-          </NavLink>
+          <NavLink to={LEARN_LINK}>Learn</NavLink>
         </div>
         <div className="hidden sm:block">
           <NavLink to="/about/">About</NavLink>
         </div>
         <div className="hidden sm:block">
-          <NavLink to={DISCORD}>
+          <NavLink to={DISCORD_LINK}>
             <div className="flex">
-              Join Us 
-              <img src="/icon_clyde_white_RGB.png" alt="" className="pl-1" style={{
-                width: "24px", 
-                height: "16px", 
-                alignSelf: "center"
-              }}/>
+              Join Us
+              <img
+                src="/icon_clyde_white_RGB.png"
+                alt=""
+                className="pl-1"
+                style={{
+                  width: "24px",
+                  height: "16px",
+                  alignSelf: "center",
+                }}
+              />
             </div>
           </NavLink>
         </div>
-        
+
         <div className="hidden md:block ml-5">
           <CallToAction
             href={HOW_TO_LIST_PROJECT_URL}
