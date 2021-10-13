@@ -33,7 +33,7 @@ learnLinks:
 
 ## Build
 
-This bot is hosted on Google cloud functions for better scalability and less maintainance.
+This bot is hosted on Google cloud functions for better scalability and less maintenance.
 
 The project is based on Python 3.6, make sure you have the correct python version by using `python --version` or `python3 --version`.
 
@@ -42,7 +42,7 @@ The project is based on Python 3.6, make sure you have the correct python versio
   `virtualenv -p python3 ./env`
 - Activate the environment created in the last step.
   `source ./env/bin/activate`
-- Install the dependancies.
+- Install the dependencies.
   `pip install -r requirements.txt`
 - Now, you can work and add your logic in the `lambda_function.py`. This is the main file which runs when we receive a telegram API webhook. After you are done, just create a zip and upload it to AWS Lambda.
 - Use the following command to deploy to google cloud function.
