@@ -16,7 +16,7 @@ type Props = {
 };
 
 function formatMetric(metric: GitHubMetric) {
-  if (metric == null) {
+  if (metric === null) {
     return "0";
   }
 

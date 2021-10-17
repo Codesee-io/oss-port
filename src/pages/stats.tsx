@@ -47,7 +47,7 @@ const StatsPage: FC<Props> = ({ data: { allProjects, site } }) => {
     .slice(0, 5);
 
   const numMaps = allProjects.nodes.filter(
-    (project) => project.frontmatter.featuredMap != null
+    (project) => project.frontmatter.featuredMap !== null
   ).length;
   const percentMaps = ((numMaps / numProjects) * 100).toFixed();
 

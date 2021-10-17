@@ -25,7 +25,7 @@ type Props = {
  * @see gatsby-plugin-image
  */
 const ProjectAvatar: FunctionComponent<Props> = ({ alt, image, size }) => {
-  if (image.childImageSharp != null) {
+  if (image.childImageSharp !== null) {
     const parsedImage = getImage(image);
     return (
       <GatsbyImage image={parsedImage} alt={alt} className="rounded-full" />

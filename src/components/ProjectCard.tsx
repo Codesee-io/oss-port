@@ -52,7 +52,7 @@ const ProjectCard: FunctionComponent<Props> = ({
         )}
         <h3
           className={cx("font-bold text-black-500", {
-            "pl-8": frontmatter.avatar != null,
+            "pl-8": frontmatter.avatar !== null,
           })}
         >
           <Link to={slug} className="supports-hover:hover:text-blue-400">
