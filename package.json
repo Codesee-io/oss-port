@@ -4,6 +4,7 @@
   "private": true,
   "description": "OSS Port",
   "author": "Maxime Preaux",
+  "license": "MIT",
   "keywords": [
     "gatsby"
   ],
