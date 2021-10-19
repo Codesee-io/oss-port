@@ -21,7 +21,8 @@ function getCodeSeeMapIdFromUrl(url) {
 
     // We expect the URL to contain /maps/public or /map
     if (host === "app.codesee.io") {
-      const splitPath = pathname.split("/").filter((x) => Boolean(x));
+      const splitPath = pathname.split("/").filter((x) => !!x);
+
       if (pathname.startsWith("/maps/public/")) {
         if (splitPath.length >= 3) {
           return splitPath[2];
