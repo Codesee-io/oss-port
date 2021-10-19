@@ -11,7 +11,7 @@ type Props = {
 const RepoLinks: FunctionComponent<Props> = ({ frontmatter }) => {
   return (
     <div className="flex-grow md:mr-4">
-      <p className="text-black-500 mb-6 flex-grow">{frontmatter.description}</p>
+      <p className="text-black-500 mb-6">{frontmatter.description}</p>
       <div className="flex space-x-4 mb-8">
         <a
           target="_blank"

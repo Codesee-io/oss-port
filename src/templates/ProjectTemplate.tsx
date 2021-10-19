@@ -57,32 +57,30 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
     <RootLayout>
       <div className="max-w-4xl mx-auto pt-12 px-2 pb-24">
         <Helmet title={`OSS Port | ${projectData.frontmatter.name}`} />
-        <div className="flex">
-          {projectData.frontmatter.avatar && (
-            <div className="pr-4 hidden md:block flex-shrink-0">
-              <ProjectAvatar
-                size={64}
-                image={projectData.frontmatter.avatar}
-                alt={projectData.frontmatter.name}
-              />
-            </div>
-          )}
-          <div>
-            <h1 className="mt-2 mb-4 text-black-500 font-bold text-4xl font-accent">
-              {projectData.frontmatter.name}
-            </h1>
-            <div className="mb-4">
-              {badges.map((badge) => (
-                <Tag key={badge} tag={badge} className="mr-2 mb-2" />
-              ))}
-            </div>
-            <div className="md:flex mb-6">
-              <RepoLinks frontmatter={projectData.frontmatter} />
-              <RepoStats
-                className="bg-white p-4 flex-shrink"
-                stats={githubData}
-              />
-            </div>
+        {projectData.frontmatter.avatar && (
+          <div className="pr-4 hidden md:block flex-shrink-0">
+            <ProjectAvatar
+              size={64}
+              image={projectData.frontmatter.avatar}
+              alt={projectData.frontmatter.name}
+            />
+          </div>
+        )}
+        <div>
+          <h1 className="mt-2 mb-4 text-black-500 font-bold text-4xl font-accent">
+            {projectData.frontmatter.name}
+          </h1>
+          <div className="mb-4">
+            {badges.map((badge) => (
+              <Tag key={badge} tag={badge} className="mr-2 mb-2" />
+            ))}
+          </div>
+          <div className="md:flex mb-6">
+            <RepoLinks frontmatter={projectData.frontmatter} />
+            <RepoStats
+              className="bg-white p-4 flex-shrink"
+              stats={githubData}
+            />
           </div>
         </div>
         <ProjectTabs
