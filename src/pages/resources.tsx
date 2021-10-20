@@ -2,6 +2,7 @@ import React from "react";
 import RootLayout from "../components/RootLayout";
 import HowToListYourProject from "../resources/HowToListYourProject.mdx";
 import mdxElements from "../components/markdown/mdxElements";
+import CallToAction from "../components/CallToAction";
 import { MDXProvider } from "@mdx-js/react";
 
 // Make some React components available globally in MDX files
@@ -36,6 +37,30 @@ const Resources = () => (
         <MDXProvider components={mdxComponents}>
           <HowToListYourProject />
         </MDXProvider>
+      </section>
+      <section
+        id="swag"
+        className="relative w-full bg-cover"
+        style={{ backgroundImage: "url(/wave_field.svg)" }}
+      >
+        {/* Anchor tag to scroll to this form */}
+        <a id="swag"></a>
+        <div className="max-w-5xl mx-auto py-16 px-4">
+          <div className="md:flex justify-center gap-6">
+            <div className="max-w-xl text-center">
+              <h2 className="text-4xl mb-8 font-accent leading-large text-white">
+                Looking for additional support about CodeSee?
+              </h2>
+              <CallToAction
+                href="mailto:support@codesee.io"
+                rel="noopener"
+                target="_blank"
+              >
+                Learn more
+              </CallToAction>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </RootLayout>
