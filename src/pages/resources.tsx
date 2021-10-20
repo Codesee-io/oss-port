@@ -52,16 +52,16 @@ const Resources = () => (
         <a id="resources"></a>
         <div className="max-w-5xl mx-auto py-16 px-4">
           <div className="md:flex justify-center gap-6">
-            <div className="max-w-xl text-center">
+            <div className="max-w-3xl text-center">
               <h2 className="text-4xl mb-8 font-accent leading-large text-white">
-                Looking for additional support about CodeSee?
+                Looking for more helpful and inspiring developer resources?
               </h2>
               <CallToAction
-                href="mailto:support@codesee.io"
+                href="https://learn.codesee.io"
                 rel="noopener"
                 target="_blank"
               >
-                Learn more
+                Visit Our Blog
               </CallToAction>
             </div>
           </div>
