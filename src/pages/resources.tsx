@@ -34,17 +34,22 @@ const Resources = () => (
         <h2 className="text-4xl font-accent leading-large text-black-500 mb-6">
           Resources
         </h2>
-        <MDXProvider components={mdxComponents}>
-          <HowToListYourProject />
-        </MDXProvider>
+        <div className="lg:flex flex-row-reverse">
+          <div className="w-full h-100"></div>
+          <div className="w-full">
+            <MDXProvider components={mdxComponents}>
+              <HowToListYourProject />
+            </MDXProvider>
+          </div>
+        </div>
       </section>
       <section
-        id="swag"
+        id="resources"
         className="relative w-full bg-cover"
         style={{ backgroundImage: "url(/wave_field.svg)" }}
       >
         {/* Anchor tag to scroll to this form */}
-        <a id="swag"></a>
+        <a id="resources"></a>
         <div className="max-w-5xl mx-auto py-16 px-4">
           <div className="md:flex justify-center gap-6">
             <div className="max-w-xl text-center">
