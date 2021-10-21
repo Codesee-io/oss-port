@@ -16,7 +16,7 @@ const Resources = () => (
   <RootLayout>
     <main style={{ paddingBottom: "100px" }}>
       <section
-        id="swag"
+        id="resources"
         className="relative w-full bg-cover mb-12"
         style={{ backgroundImage: "url(/wave_field_light.svg)" }}
       >
