@@ -7,19 +7,19 @@ import ProjectCard from "./ProjectCard";
 type Props = {
   allProjects: Project[];
   githubDataSet: any;
-  helpfulnessDataSet: {[slug: string]: number};
+  helpfulnessDataSet: { [slug: string]: number };
 };
 
 const ProjectList: FunctionComponent<Props> = ({
   allProjects,
   githubDataSet,
-  helpfulnessDataSet
+  helpfulnessDataSet,
 }) => {
   const { filteredProjectIds, allActiveTags } = useSearch();
 
   if (filteredProjectIds.length === 0) {
     return (
-      <div className="text-center px-4 mb-32 flex-grow md:pl-36 xl:pl-72">
+      <div className="text-center px-4 mt-24 mb-32 flex-grow">
         <h3 className="text-black-500 text-2xl font-semibold mb-4">
           No results
         </h3>
@@ -36,7 +36,7 @@ const ProjectList: FunctionComponent<Props> = ({
 
   filteredProjects.sort((a: Project, b: Project) => {
     return helpfulnessDataSet[b.slug] - helpfulnessDataSet[a.slug];
-  })
+  });
 
   return (
     <ProjectListWrapper>

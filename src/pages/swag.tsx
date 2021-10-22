@@ -10,14 +10,12 @@ const QUALITY_PR_LINK =
   "https://hacktoberfest.digitalocean.com/resources/qualitystandards";
 const HACKTOBERFEST_RULES_LINK = "https://hacktoberfest.digitalocean.com/faq";
 
-const MAINTAINER_FEEDBACK =
-    "https://form.typeform.com/to/LSNqGj3U";
-const CONTRIBUTOR_FEEDBACK =
-    "https://form.typeform.com/to/CUykigpo";
+const MAINTAINER_FEEDBACK = "https://form.typeform.com/to/LSNqGj3U";
+const CONTRIBUTOR_FEEDBACK = "https://form.typeform.com/to/CUykigpo";
 
 const Swag = () => (
   <RootLayout>
-    <main style={{paddingBottom: '100px'}} className="pt-12">
+    <main className="pt-12">
       <div className="flex flex-col items-center justify-start">
         <LogoWhiteBackground
           className="max-w-full px-4"
@@ -27,14 +25,20 @@ const Swag = () => (
           OSS Port x Hacktoberfest Challenge
         </h1>
         <p className="max-w-lg text-center leading-6">
-        At CodeSee, we are passionate about giving back <br/>
-        to the open source community. So much so, that we committed to launching OSS Port in time for {" "} 
-                  <ExternalLink href={HACKTOBERFEST_LINK}>
-                    Hacktoberfest
-                  </ExternalLink>{" "}—a month-long <br/>
-                  global celebration of open-source software. <br/><br/>Join us in connecting projects to people,<br/>with the goal of easing codebase onboarding for all!
+          At CodeSee, we are passionate about giving back <br />
+          to the open source community. So much so, that we committed to
+          launching OSS Port in time for{" "}
+          <ExternalLink href={HACKTOBERFEST_LINK}>
+            Hacktoberfest
+          </ExternalLink>{" "}
+          —a month-long <br />
+          global celebration of open-source software. <br />
+          <br />
+          Join us in connecting projects to people,
+          <br />
+          with the goal of easing codebase onboarding for all!
         </p>
-        
+
         <CallToAction href="#swag" className="mt-12">
           Snag Your Swag
         </CallToAction>
@@ -67,7 +71,8 @@ const Swag = () => (
                   Create more than one Map using features Labels, Notes, and
                   Tours
                 </li>
-                <li>Complete the{" "} 
+                <li>
+                  Complete the{" "}
                   <ExternalLink href={MAINTAINER_FEEDBACK}>
                     maintainer feedback form
                   </ExternalLink>{" "}
@@ -91,10 +96,13 @@ const Swag = () => (
                   (must have #hacktoberfest-accepted tag) to at least 2 OSS Port
                   projects
                 </li>
-                <li>Complete the {" "} 
+                <li>
+                  Complete the{" "}
                   <ExternalLink href={CONTRIBUTOR_FEEDBACK}>
-                    contributor feedback 
-                  </ExternalLink>{" "}form</li>
+                    contributor feedback
+                  </ExternalLink>{" "}
+                  form
+                </li>
                 <li>
                   Post to Twitter, Facebook, or LinkedIn sharing your OSS Port
                   experience with the #Hacktoberfest hashtag
@@ -138,11 +146,16 @@ const Swag = () => (
             </div>
           </div>
           <p className="pt-5 text-sm text-center">
-              Fill out the form below to make your commitment to the OSS Port x Hacktoberfest challenge. Complete contributors guidelines are available on the {" "}
-                <ExternalLink href={HACKTOBERFEST_RULES_LINK}>
-                    official Hacktoberfest page
-                </ExternalLink>{""}.<br />
-              The information gathered in the form will be stored solely for the purposes of sending your reward and following up with you after the event.
+            Fill out the form below to make your commitment to the OSS Port x
+            Hacktoberfest challenge. Complete contributors guidelines are
+            available on the{" "}
+            <ExternalLink href={HACKTOBERFEST_RULES_LINK}>
+              official Hacktoberfest page
+            </ExternalLink>
+            {""}.<br />
+            The information gathered in the form will be stored solely for the
+            purposes of sending your reward and following up with you after the
+            event.
           </p>
         </section>
 

@@ -57,7 +57,11 @@ const SearchWrapper: FunctionComponent<Props> = ({
     }
 
     // Toggle tags in our list
-    if (newTagList.includes) updateSearchResults(filters.search, newTagList);
+    updateSearchResults(filters.search, newTagList);
+  };
+
+  const clearAllTags = () => {
+    updateSearchResults(filters.search, []);
   };
 
   /**
@@ -114,6 +118,7 @@ const SearchWrapper: FunctionComponent<Props> = ({
         filterByTag,
         filteredProjectIds,
         allActiveTags: filters.tags,
+        clearAllTags,
       }}
     >
       {children}

@@ -1,8 +1,9 @@
 import React, {
   ChangeEvent,
+  Dispatch,
   FunctionComponent,
+  SetStateAction,
   useEffect,
-  useState,
 } from "react";
 import Checkbox from "./Checkbox";
 import useSearch from "./local-search/useSearch";
@@ -10,30 +11,35 @@ import cx from "classnames";
 import CloseIcon from "./icons/CloseIcon";
 import SidebarButton from "./sidebar/SidebarButton";
 import { pluralize } from "../utils/formatting";
+import SecondaryButton from "./SecondaryButton";
 
 type Props = {
   allLanguages: string[];
   allTags: string[];
   allSeeking: string[];
+  showSidebar: boolean;
+  setShowSidebar: Dispatch<SetStateAction<boolean>>;
 };
 
 const SidebarWithFilters: FunctionComponent<Props> = ({
   allLanguages,
   allTags,
   allSeeking,
+  showSidebar,
+  setShowSidebar,
 }) => {
-  const { filterByTag, allActiveTags, filteredProjectIds } = useSearch();
-  const [showMobileFilters, setShowMobileFilters] = useState(false);
+  const { filterByTag, allActiveTags, filteredProjectIds, clearAllTags } =
+    useSearch();
 
   useEffect(
     function preventBodyScroll() {
-      if (showMobileFilters) {
+      if (showSidebar) {
         document.body.classList.add("prevent-mobile-scroll");
       } else {
         document.body.classList.remove("prevent-mobile-scroll");
       }
     },
-    [showMobileFilters]
+    [showSidebar]
   );
 
   const onCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -45,39 +51,43 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
     <>
       <div
         data-qa="sidebar-backdrop"
-        className={cx("sidebar-backdrop", { active: showMobileFilters })}
-        onClick={() => setShowMobileFilters(false)}
+        className={cx("sidebar-backdrop", { active: showSidebar })}
+        onClick={() => setShowSidebar(false)}
       />
       <aside
         data-qa="sidebar"
         className={cx("sidebar flex-shrink-0 flex flex-col bg-black-30", {
-          active: showMobileFilters,
+          active: showSidebar,
         })}
       >
-        <div className="text-black-500 shadow-menu p-4 sm:py-0 sm:shadow-none flex items-center justify-between">
-          <h3 className="text-lg font-semibold">Filters</h3>
+        <div className="text-black-500 shadow-menu p-4 md:px-8 flex items-center justify-between">
+          <h3 className="text-xl font-semibold">Filters</h3>
           {allActiveTags.length > 0 && (
-            <span className="flex-grow text-black-300 ml-4">
-              {filteredProjectIds.length}{" "}
-              {pluralize(filteredProjectIds.length, "result", "results")}
-            </span>
+            <>
+              <span className="flex-grow text-black-300 ml-4">
+                {filteredProjectIds.length}{" "}
+                {pluralize(filteredProjectIds.length, "result", "results")}
+              </span>
+              <SecondaryButton onClick={clearAllTags} className="mr-6">
+                Clear
+              </SecondaryButton>
+            </>
           )}
-          <button
-            className="sm:hidden"
-            onClick={() => setShowMobileFilters(false)}
-          >
+
+          <button onClick={() => setShowSidebar(false)}>
             <CloseIcon className="w-6 h-6" />
           </button>
         </div>
 
-        <div className="p-4 text-black-500 max-h-full overflow-auto pb-12">
+        <div className="p-4 md:px-8 text-black-500 max-h-full overflow-auto pb-12">
           <h4 className="font-semibold mb-3">Language</h4>
           {allLanguages.map((language) => (
             <Checkbox
               onChange={onCheckboxChange}
               value={language}
+              checked={allActiveTags.includes(language)}
               key={language}
-              labelProps={{ className: "mb-2 sm:text-sm" }}
+              labelProps={{ className: "mb-1" }}
             >
               {language}
             </Checkbox>
@@ -87,8 +97,9 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
             <Checkbox
               onChange={onCheckboxChange}
               value={tag}
+              checked={allActiveTags.includes(tag)}
               key={tag}
-              labelProps={{ className: "mb-2 sm:text-sm" }}
+              labelProps={{ className: "mb-1" }}
             >
               {tag}
             </Checkbox>
@@ -98,8 +109,9 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
             <Checkbox
               onChange={onCheckboxChange}
               value={seeking}
+              checked={allActiveTags.includes(seeking)}
               key={seeking}
-              labelProps={{ className: "mb-2 sm:text-sm" }}
+              labelProps={{ className: "mb-1" }}
             >
               {seeking}
             </Checkbox>
@@ -107,7 +119,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
         </div>
       </aside>
       <SidebarButton
-        onClick={() => setShowMobileFilters((prev) => !prev)}
+        onClick={() => setShowSidebar((prev) => !prev)}
         numFilters={allActiveTags.length}
       />
     </>
