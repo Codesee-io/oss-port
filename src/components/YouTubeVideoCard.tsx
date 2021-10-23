@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
 
 interface Props {
    youTubeID: string,
