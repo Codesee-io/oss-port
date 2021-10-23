@@ -33,14 +33,9 @@ const Resources = () => (
         <h2 className="text-4xl font-accent leading-large text-black-500 mb-6">
           Resources
         </h2>
-        <div className="lg:flex flex-row-reverse">
-          <div className="w-full h-100"></div>
-          <div className="w-full">
-            <MDXProvider components={mdxComponents}>
-              <HowToListYourProject />
-            </MDXProvider>
-          </div>
-        </div>
+        <MDXProvider components={mdxComponents}>
+          <HowToListYourProject />
+        </MDXProvider>
       </section>
       <section
         id="resources"
