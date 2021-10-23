@@ -30,7 +30,7 @@ const Resources = () => (
           </div>
         </div>
       </section>
-      <section className="px-12">
+      <section className="px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl font-accent leading-large text-black-500 mb-6">
           Resources
         </h2>
