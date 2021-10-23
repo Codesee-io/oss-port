@@ -12,7 +12,7 @@ const YouTubeVideoCard: FunctionComponent<Props> = ({ youTubeID, title, body }) 
   const alt = `Video thumbnail for ${youTubeID}`;
   return (
     <a href={videoLink} className="flex bg-white py-4 px-4 mb-4" rel="noopener" target="_blank">
-      <img src={imageLink} alt={alt} className="mr-8" />
+      <img width="320"  height=" 180" src={imageLink} alt={alt} className="mr-8" />
       <div className="flex flex-col justify-center text-black-500">
         <h3 className="font-semibold text-lg mb-4">{title}</h3>
         <p>{body}</p>
