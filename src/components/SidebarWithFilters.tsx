@@ -119,7 +119,7 @@ const SidebarWithFilters: FunctionComponent<Props> = ({
         </div>
       </aside>
       <SidebarButton
-        onClick={() => setShowSidebar((prev) => !prev)}
+        onClick={() => setShowSidebar(true)}
         numFilters={allActiveTags.length}
       />
     </>
