@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import SlidersIcon from "./icons/SlidersIcon";
 import useSearch from "./local-search/useSearch";
 import SecondaryButton from "./SecondaryButton";
 
@@ -14,10 +15,8 @@ const ToggleFiltersButton: FC<Props> = (props) => {
     label = allActiveTags.length.toString();
   }
   return (
-    <SecondaryButton
-      {...props}
-      className="hidden md:flex items-center space-x-2"
-    >
+    <SecondaryButton {...props} className="inline-flex items-center space-x-2">
+      <SlidersIcon className="w-4 h-4" />
       <span>Filters</span>
       {label && (
         <span

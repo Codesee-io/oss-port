@@ -9,10 +9,7 @@ const SecondaryButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
 }) => {
   return (
     <button
-      className={cx(
-        "bg-black-30 text-black-300 supports-hover:hover:bg-white border border-gray-300 rounded px-4 py-1 font-medium",
-        className
-      )}
+      className={cx("secondary-button", className)}
       type={type}
       {...otherProps}
     >

@@ -83,8 +83,10 @@ const HomeTemplate: FunctionComponent<Props> = ({
         </CallToAction>
       </div>
       <SearchWrapper searchIndex={searchIndex} allProjects={allProjects.nodes}>
-        <div className="max-w-5xl space-x-4 flex justify-center mx-auto px-2 mb-12">
+        <div className="max-w-5xl space-x-4 flex justify-center mx-auto px-2 mb-4">
           <SearchInput />
+        </div>
+        <div className="filters-wrapper">
           <ToggleFiltersButton onClick={() => setShowSidebar(true)} />
         </div>
         <div className="mx-auto" style={{ maxWidth: 1600 }}>

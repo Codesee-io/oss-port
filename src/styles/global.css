@@ -95,6 +95,9 @@ textarea.input {
 }
 
 /* Projects grid */
+/* 2 cards at 400px + 32px gap = 832px */
+/* 3 cards at 400px + 32px * 2 gap  = 1264px */
+
 .projects-wrapper {
   justify-content: center;
   justify-items: center;
@@ -102,16 +105,39 @@ textarea.input {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 832px) {
   .projects-wrapper {
     grid-template-columns: repeat(2, auto);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1264px) {
   .projects-wrapper {
     grid-template-columns: repeat(3, auto);
     max-width: 1600px;
+  }
+}
+
+/* Match the width of the cards inside the projects-wrapper */
+.filters-wrapper {
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  text-align: right;
+  max-width: 100%;
+  display: none;
+}
+
+@media (min-width: 832px) {
+  .filters-wrapper {
+    display: block;
+    padding: 0;
+    width: 832px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .filters-wrapper {
+    width: 1264px;
   }
 }
 
@@ -152,9 +178,21 @@ textarea.input {
   transform: translateX(0);
 }
 
+/* Secondary buttons */
+.secondary-button {
+  @apply bg-white text-black-300 border border-gray-300 rounded px-4 py-1 font-medium;
+}
+
+@media (hover: hover) {
+  .secondary-button:hover {
+    box-shadow: inset 0 0 1px 0 #535e79;
+  }
+}
+
 /* Prevent scrolling the body */
 .prevent-mobile-scroll {
   overflow: hidden;
+  padding-right: 15px;
 }
 
 /* Rewards grid */
