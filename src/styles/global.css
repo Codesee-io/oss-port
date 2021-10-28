@@ -37,12 +37,25 @@ h3.markdown-element {
   margin-bottom: 12px;
 }
 
+h4.markdown-element {
+  @apply text-black-400;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+
 p.markdown-element,
 ul.markdown-element,
 ol.markdown-element {
   @apply text-black-300;
   font-size: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
+}
+
+/* reduce the vertical space between paragraphs */
+p.markdown-element + p.markdown-element {
+  margin-top: -0.75rem;
 }
 
 ul.markdown-element {
@@ -51,6 +64,21 @@ ul.markdown-element {
 
 ol.markdown-element {
   @apply list-decimal list-inside;
+}
+
+/* remove the vertical space between nested lists */
+ul.markdown-element ol,
+ol.markdown-element ol,
+ul.markdown-element ul,
+ol.markdown-element ul {
+  margin-bottom: 0;
+}
+
+/* specify the vertical space below pre elements inside of list items */
+ul.markdown-element pre,
+ol.markdown-element pre {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 a.markdown-element {
@@ -73,6 +101,14 @@ code.markdown-element {
   margin: 0;
   font-size: 85%;
   border-radius: 5px;
+}
+
+pre.markdown-element {
+  @apply bg-black-50 text-black-500;
+  border-radius: 5px;
+  font-size: 85%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 /* Use this class on the direct parent of an anchor to display it on hover */

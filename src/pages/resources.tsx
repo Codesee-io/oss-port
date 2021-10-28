@@ -21,7 +21,7 @@ const Resources = () => (
       >
         <div className="max-w-5xl mx-auto py-32 px-4">
           <div className="text-center max-w-xl ml-auto mr-auto text-black-500">
-            <h2 className="text-4xl font-accent leading-large">Resources</h2>
+            <h1 className="text-4xl font-accent leading-large">Resources</h1>
             <p className="my-4">
               All the info you need to onboard your crew at the OSS Port:
               showcase or find a project, make a map, or create a tour.
@@ -29,10 +29,7 @@ const Resources = () => (
           </div>
         </div>
       </section>
-      <section className="px-4 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-accent leading-large text-black-500 mb-6">
-          Resources
-        </h2>
+      <section className="px-4 max-w-4xl mx-auto pb-20">
         <MDXProvider components={mdxComponents}>
           <HowToListYourProject />
         </MDXProvider>
@@ -44,7 +41,7 @@ const Resources = () => (
       >
         {/* Anchor tag to scroll to this form */}
         <a id="resources"></a>
-        <div className="max-w-5xl mx-auto py-16 px-4">
+        <div className="max-w-5xl mx-auto py-24 px-4">
           <div className="md:flex justify-center gap-6">
             <div className="max-w-3xl text-center">
               <h2 className="text-4xl mb-8 font-accent leading-large text-white">
