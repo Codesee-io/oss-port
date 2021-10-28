@@ -24,4 +24,5 @@ export default {
   inlineCode: ({ children }) => (
     <code className="markdown-element">{children}</code>
   ),
+  pre: ({ children }) => <pre className="markdown-element">{children}</pre>,
 };
