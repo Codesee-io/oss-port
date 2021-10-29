@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React, { FunctionComponent, useMemo } from "react";
+import React, { FunctionComponent, useMemo, useState } from "react";
 import { Project } from "../types";
 import RootLayout from "../components/RootLayout";
 import { Helmet } from "react-helmet";
@@ -10,6 +10,7 @@ import SearchWrapper from "../components/local-search/SearchWrapper";
 import ProjectList from "../components/ProjectList";
 import SearchInput from "../components/local-search/SearchInput";
 import SidebarWithFilters from "../components/SidebarWithFilters";
+import ToggleFiltersButton from "../components/ToggleFiltersButton";
 
 export type SearchIndexItem = {
   id: string;
@@ -38,7 +39,7 @@ type Props = {
   };
   pageContext: {
     githubDataSet: any; // TODO type this
-    helpfulnessDataSet: {[slug: string]: number};
+    helpfulnessDataSet: { [slug: string]: number };
     searchIndex: SearchIndexItem[];
   };
 };
@@ -48,6 +49,7 @@ const HomeTemplate: FunctionComponent<Props> = ({
   pageContext,
 }) => {
   const { githubDataSet, helpfulnessDataSet, searchIndex } = pageContext;
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const tags = useMemo(() => {
     return {
@@ -66,7 +68,8 @@ const HomeTemplate: FunctionComponent<Props> = ({
           Welcome to OSS Port
         </h1>
         <p className="text-black-500 text-center mb-6 mt-2">
-          Connecting 100,000+ potential contributors with maintainers.<br />
+          Connecting 100,000+ potential contributors with maintainers.
+          <br />
           Helping all onboard better.
         </p>
       </div>
@@ -80,16 +83,21 @@ const HomeTemplate: FunctionComponent<Props> = ({
         </CallToAction>
       </div>
       <SearchWrapper searchIndex={searchIndex} allProjects={allProjects.nodes}>
-        <div className="max-w-7xl mx-auto px-2 mb-12">
+        <div className="max-w-5xl space-x-4 flex justify-center mx-auto px-2 mb-4">
           <SearchInput />
         </div>
-        <div className="md:flex mx-auto" style={{ maxWidth: 1600 }}>
+        <div className="filters-wrapper">
+          <ToggleFiltersButton onClick={() => setShowSidebar(true)} />
+        </div>
+        <div className="mx-auto" style={{ maxWidth: 1600 }}>
           <ProjectList
             allProjects={allProjects.nodes}
             githubDataSet={githubDataSet}
             helpfulnessDataSet={helpfulnessDataSet}
           />
           <SidebarWithFilters
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
             allLanguages={tags.allLanguages}
             allTags={tags.allTags}
             allSeeking={tags.allSeeking}

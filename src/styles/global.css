@@ -37,12 +37,25 @@ h3.markdown-element {
   margin-bottom: 12px;
 }
 
+h4.markdown-element {
+  @apply text-black-400;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+
 p.markdown-element,
 ul.markdown-element,
 ol.markdown-element {
   @apply text-black-300;
   font-size: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
+}
+
+/* reduce the vertical space between paragraphs */
+p.markdown-element + p.markdown-element {
+  margin-top: -0.75rem;
 }
 
 ul.markdown-element {
@@ -51,6 +64,21 @@ ul.markdown-element {
 
 ol.markdown-element {
   @apply list-decimal list-inside;
+}
+
+/* remove the vertical space between nested lists */
+ul.markdown-element ol,
+ol.markdown-element ol,
+ul.markdown-element ul,
+ol.markdown-element ul {
+  margin-bottom: 0;
+}
+
+/* specify the vertical space below pre elements inside of list items */
+ul.markdown-element pre,
+ol.markdown-element pre {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 a.markdown-element {
@@ -75,6 +103,14 @@ code.markdown-element {
   border-radius: 5px;
 }
 
+pre.markdown-element {
+  @apply bg-black-50 text-black-500;
+  border-radius: 5px;
+  font-size: 85%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+}
+
 /* Use this class on the direct parent of an anchor to display it on hover */
 .anchor-reveal:hover > .anchor {
   opacity: 1;
@@ -87,83 +123,112 @@ textarea.input {
   @apply border border-black-200 rounded bg-white px-2 py-1 block w-full focus:ring-blue-500 focus:border-blue-500;
 }
 
+/* Make the native checkboxes chunkier */
 .input[type="checkbox"] {
-  @apply mr-2 cursor-pointer border-blue-500;
+  @apply mr-2 cursor-pointer;
+  height: 18px;
+  width: 18px;
 }
 
 /* Projects grid */
+/* 2 cards at 400px + 32px gap = 832px */
+/* 3 cards at 400px + 32px * 2 gap  = 1264px */
+
 .projects-wrapper {
-  justify-content: end;
-  justify-items: end;
+  justify-content: center;
+  justify-items: center;
   margin: 0 auto;
   max-width: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 832px) {
   .projects-wrapper {
     grid-template-columns: repeat(2, auto);
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1264px) {
   .projects-wrapper {
     grid-template-columns: repeat(3, auto);
     max-width: 1600px;
   }
 }
 
+/* Match the width of the cards inside the projects-wrapper */
+.filters-wrapper {
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  text-align: right;
+  max-width: 100%;
+  display: none;
+}
+
+@media (min-width: 832px) {
+  .filters-wrapper {
+    display: block;
+    padding: 0;
+    width: 832px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .filters-wrapper {
+    width: 1264px;
+  }
+}
+
 /* Sidebar with filters */
-@media (max-width: 767px) {
-  .sidebar-backdrop {
-    @apply bg-black-500;
-    pointer-events: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    position: fixed;
-    transition: opacity 100ms linear;
-    z-index: 60;
-  }
-  .sidebar-backdrop.active {
-    opacity: 0.3;
-    pointer-events: all;
-  }
+.sidebar-backdrop {
+  @apply bg-black-500;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 100ms linear;
+  z-index: 60;
+}
 
-  .sidebar {
-    background: white;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    position: fixed;
-    transform: translateX(100%);
-    transition: transform 150ms ease-out;
-    width: 80%;
-    z-index: 61;
-    will-change: transform;
-  }
+.sidebar-backdrop.active {
+  opacity: 0.3;
+  pointer-events: all;
+}
 
-  .sidebar.active {
-    transform: translateX(0);
+.sidebar {
+  background: white;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 150ms ease-out;
+  width: 480px;
+  max-width: 100%;
+  z-index: 61;
+  will-change: transform;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Secondary buttons */
+.secondary-button {
+  @apply bg-white text-black-300 border border-gray-300 rounded px-4 py-1 font-medium;
+}
+
+@media (hover: hover) {
+  .secondary-button:hover {
+    box-shadow: inset 0 0 1px 0 #535e79;
   }
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    position: sticky;
-    top: 70px; /* 56px header height with some buffer */
-    width: 280px;
-    height: calc(100vh - 70px); /* 56px header height with some buffer */
-    z-index: 9999;
-  }
-}
-
-/* Prevent scrolling the body (useful for mobile menus) */
-@media (max-width: 767px) {
-  .prevent-mobile-scroll {
-    overflow: hidden;
-  }
+/* Prevent scrolling the body */
+.prevent-mobile-scroll {
+  overflow: hidden;
+  padding-right: 15px;
 }
 
 /* Rewards grid */

@@ -17,7 +17,7 @@ const Checkbox: FunctionComponent<Props> = ({
   return (
     <label
       {...labelProps}
-      className={cx("block cursor-pointer", labelProps?.className)}
+      className={cx("cursor-pointer flex items-center", labelProps?.className)}
     >
       <input
         type="checkbox"

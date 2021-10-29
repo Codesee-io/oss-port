@@ -1,0 +1,115 @@
+---
+name: preserver-plus
+repoUrl: https://github.com/hsbalar/preserver-plus
+description: Minimal online/offline notes taking app with rich text formatting.
+languages: # A list of programming languages used in this project
+  - JavaScript
+  - HTML / CSS
+  - Angular
+  - CouchDB
+  - NodeJS
+tags: # A list of keywords relevant to the contributors for this project
+  - Productivity
+  - Notetaking
+  - First Timer Friendly
+avatar:
+websiteUrl: https://preserver-plus.netlify.app
+twitterUrl: https://twitter.com/hsbalar
+currentlySeeking: # (optional) These fields are searchable and very helpful for contributors to match well with your project
+  - Designers
+  - Maintainers
+  - Code Reviewers
+  - Developers
+  - Testers
+  - Frontend Developers
+
+learnLinks: # (optional) A list of links to support new contributors in learning about your project and tech stack and culture / community
+  - title: Get started PouchDB
+    url: https://pouchdb.com/
+  - title: Learn CouchDB
+    url: https://couchdb.apache.org/
+  - title: Get started with angular2gridster
+    url: https://github.com/swiety85/angular2gridster
+---
+
+<!-- Divide your content into sections using our handy shortcodes. Each section is optional -->
+
+<Overview>
+
+# Preserver Plus
+
+### Minimal notes app with rich text formatting.
+
+This app is built using `Angular` and `Express` platform with `PouchDB` for storing local notes on browser and `CouchDB` to sync notes on cloud.
+
+Otherthan that I've used below open source packages..
+
+- `Superlogin`
+- `CKEditor5`
+- `Angular2gridster`
+- `Ant Design`
+
+## Key Features
+
+- Rich text editor.
+- Online/Offline sync with your account.
+- WYSIWYG notes.
+- Syntax highlighting.
+- Toolbar for text formatting.
+- Local db and Remote db.
+- PWA (Progressive web app).
+
+## Running the app locally
+
+```bash
+# Clone repo
+$ git clone https://github.com/hsbalar/preserver-plus.git
+
+# Go into this repository
+$ cd preserver-plus
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+
+Angular app will be listen on `localhost:4200`.
+
+## Running node server
+
+```bash
+# Go into this repository
+$ cd server/
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+
+Node server will be listen on `localhost:4000`.
+
+###### Note: You should have pouchdb installed and instance running on `localhost:5984` to sync up local pouchdb to central couchdb.
+
+## Deployed on
+
+- This app is deployed on [Netlify](https://www.netlify.com/).
+- Auth server deployed on [Heroku](https://www.heroku.com/).
+
+</Overview>
+
+<Contributing>
+
+The project welcomes all kinds of contribution. Be it related to the documentation or a full-fledged feature!
+The following are the feature in roadmap.
+
+- [-] To do multiple dashboard.
+- [-] To do miltuple notes editable.
+- [-] To Preserve position of notes in dashboard.
+- [-] To have vertical & horizontal scroll layout in dashboard.
+- [-] To download notes.
+
+</Contributing>
