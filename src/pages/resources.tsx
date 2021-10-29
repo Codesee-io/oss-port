@@ -1,5 +1,6 @@
 import React from "react";
 import RootLayout from "../components/RootLayout";
+import IntroToPort from "../resources/IntroToPort.mdx";
 import HowToListYourProject from "../resources/HowToListYourProject.mdx";
 import mdxElements from "../components/markdown/mdxElements";
 import CallToAction from "../components/CallToAction";
@@ -31,6 +32,7 @@ const Resources = () => (
       </section>
       <section className="px-4 max-w-4xl mx-auto pb-20">
         <MDXProvider components={mdxComponents}>
+          <IntroToPort />
           <HowToListYourProject />
         </MDXProvider>
       </section>
