@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import Wordmark from "../images/Wordmark";
 import {
   HOW_TO_LIST_PROJECT_URL,
-  LEARN_LINK,
+  RESOURCES_LINK,
   DISCORD_LINK,
 } from "../utils/constants";
 import CallToAction from "./CallToAction";
@@ -23,7 +23,7 @@ const Header: FunctionComponent = () => (
           <NavLink to="/swag/">Hacktoberfest</NavLink>
         </div>
         <div className="hidden sm:block">
-          <NavLink to={LEARN_LINK}>Learn</NavLink>
+          <NavLink to={RESOURCES_LINK}>Resources</NavLink>
         </div>
         <div className="hidden sm:block">
           <NavLink to="/about/">About</NavLink>

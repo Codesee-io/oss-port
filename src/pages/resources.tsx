@@ -3,6 +3,7 @@ import RootLayout from "../components/RootLayout";
 import IntroToPort from "../resources/IntroToPort.mdx";
 import HowToListYourProject from "../resources/HowToListYourProject.mdx";
 import GettingStartedSection from "../resources/GettingStartedSection.mdx";
+import LargeCodebase from "../resources/LargeCodebase.mdx";
 import mdxElements from "../components/markdown/mdxElements";
 import CallToAction from "../components/CallToAction";
 import { MDXProvider } from "@mdx-js/react";
@@ -36,6 +37,7 @@ const Resources = () => (
           <IntroToPort />
           <HowToListYourProject />
           <GettingStartedSection />
+          <LargeCodebase />
         </MDXProvider>
       </section>
       <section

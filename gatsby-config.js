@@ -7,6 +7,7 @@ module.exports = {
     title: "OSS Port",
   },
   plugins: [
+    "gatsby-plugin-netlify",
     "gatsby-plugin-typescript",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",

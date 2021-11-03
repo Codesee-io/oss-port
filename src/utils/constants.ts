@@ -3,4 +3,4 @@ export const HOW_TO_LIST_PROJECT_URL =
 
 export const DISCORD_LINK = "https://discord.gg/JbAChX3a3a";
 
-export const LEARN_LINK = "/resources/";
+export const RESOURCES_LINK = "/resources/";
