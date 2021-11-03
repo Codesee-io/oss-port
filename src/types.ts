@@ -22,6 +22,11 @@ export type ProjectFrontmatter = {
     url: string;
     description: string;
   };
+  maps?: {
+    url: string;
+    description: string;
+    subTitle?: string;
+  }[];
   learnLinks?: {
     title?: string;
     url?: string;

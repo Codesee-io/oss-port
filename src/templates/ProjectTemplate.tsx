@@ -15,6 +15,7 @@ import Tag from "../components/Tag";
 import { ProjectFrontmatter } from "../types";
 import RootLayout from "../components/RootLayout";
 import ProjectAvatar from "../components/ProjectAvatar";
+import Maps from "../components/Maps";
 
 // Make some React components available globally in MDX files
 const mdxComponents = {
@@ -41,7 +42,7 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
   data: { projectData },
   pageContext,
 }) => {
-  const { githubData, featuredMapMetadata } = pageContext;
+  const { githubData, featuredMapMetadata, mapsMetadata } = pageContext;
 
   // Dynamically populate the tabs based on the existing sections
   const hasOverviewTab = projectData.body.includes("mdx(Overview,");
@@ -93,6 +94,7 @@ const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = ({
             frontmatter: projectData.frontmatter,
             githubData,
             featuredMapMetadata,
+            mapsMetadata,
             organization: projectData.parent.organization,
           }}
         >
@@ -124,6 +126,11 @@ export const pageQuery = graphql`
         learnLinks {
           title
           url
+        }
+        maps {
+          url
+          description
+          subTitle
         }
         languages
         tags

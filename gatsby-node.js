@@ -107,6 +107,11 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
               title
               url
             }
+            maps {
+              url
+              description
+              subTitle
+            }
           }
           parent {
             ... on File {
@@ -171,6 +176,19 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       );
     }
 
+    // If the project has maps, load their metadata
+    let mapsMetadata = [];
+    if (node.frontmatter.maps?.length) {
+      for (let map of node.frontmatter.maps) {
+        const metaData = await getCodeSeeMapMetadata(
+          map.url,
+          cache
+        )
+
+        mapsMetadata.push(metaData)
+      }
+    }
+
     let helpfulness = 0;
     if (node.frontmatter.featuredMap?.url) {
       helpfulness += 5;
@@ -197,7 +215,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
 
     // tie breaker, count open issues:
     const openHelpIssues = (githubData.helpIssues || 0) + (githubData.hacktoberfestIssues || 0)
-    helpfulness += Math.min(0.9, openHelpIssues/10.0);
+    helpfulness += Math.min(0.9, openHelpIssues / 10.0);
 
     helpfulnessDataSet[node.slug] = helpfulness;
 
@@ -209,6 +227,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         slug: node.slug,
         githubData,
         featuredMapMetadata,
+        mapsMetadata
       },
     });
   }

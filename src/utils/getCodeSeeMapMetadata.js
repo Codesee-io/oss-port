@@ -31,7 +31,7 @@ function getCodeSeeMapIdFromUrl(url) {
         return splitPath[1];
       }
     }
-  } catch (_) {}
+  } catch (_) { }
 
   return undefined;
 }
