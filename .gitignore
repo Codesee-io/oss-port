@@ -6,5 +6,8 @@ public
 # Local Netlify folder
 .netlify
 
+# VS CODE PLUGIN
+.history/
+
 # Log
 yarn-error.log

@@ -19,7 +19,6 @@ Now you're in the Github.dev editor! Feel free to hop ahead to [our contributing
 
 For more information on the Github.dev editor, please [see their docs](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor).
 
-
 ### Local development (optional)
 
 1. Clone this repository to your machine
@@ -36,8 +35,6 @@ For more information on the Github.dev editor, please [see their docs](https://d
    ```
 
 1. You can now view the project in your browser at http://localhost:8000
-
-
 
 ## Contributing
 
@@ -72,8 +69,19 @@ featuredMap:
   description: Get a quick overview of the major areas of our repo
 ```
 
+If you would like to display multiple maps you can add an entry called "maps"
 
-That's it! 
+```
+maps:
+  - url: https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27
+    description: Get a quick visual overview of the major areas of our repo!
+    subTitle: devdocs
+  - url: https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27
+    description: Another map!
+    subTitle: testMap
+```
+
+That's it!
 
 The CodeSee Map below is a good way to get familiar with the codebase:
 
