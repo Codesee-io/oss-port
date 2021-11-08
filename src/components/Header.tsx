@@ -11,9 +11,6 @@ import NavLink from "./NavLink";
 
 const Header: FunctionComponent = () => (
   <header className="bg-blue-700 sm:sticky top-0 z-50">
-    <div className="w-full text-center bg-yellow-200 py-3 px-3">
-      Taking part in our Hacktoberfest challenge? Don't forget to submit the form by November 5th at 11:59pm PT! Details <Link className="underline" to="/swag">here</Link>.
-    </div>
     <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
       <Link to="/" className="block">
         <Wordmark width="200" className="my-2" />
