@@ -8,14 +8,14 @@
 
 You can put your project up on Port without having to run the app! Go ahead and check out the Github.dev steps below.
 
-If you have a javascript development environment set up already and prefer to run locally, the approach will be familiar.
+If you have a JavaScript development environment set up already and prefer to run locally, the approach will be familiar.
 
-### Github.dev environment
+### github.dev environment
 
 1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the OSS Port.
 1. Once on your fork's page, either press the full stop `.` key or replace `.com` in the location bar in your browser to `.dev`.
 
-Now you're in the Github.dev editor! Feel free to hop ahead to [our contributing section](#contributing).
+Now you're in the github.dev editor! Feel free to hop ahead to [our contributing section](#contributing).
 
 For more information on the Github.dev editor, please [see their docs](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor).
 
