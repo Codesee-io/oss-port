@@ -6,7 +6,7 @@
 
 ## Step 1: Getting up and running
 
-You can put your project up on Port without having to run the app! Go ahead and check out the Github.dev steps below.
+You can put your project up on Port without having to run the app! Go ahead and check out the github.dev steps below.
 
 If you have a JavaScript development environment set up already and prefer to run locally, the approach will be familiar.
 
