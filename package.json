@@ -28,7 +28,7 @@
     "dotenv": "10.0.0",
     "gatsby": "3.13.0",
     "gatsby-plugin-fathom": "2.1.1",
-    "gatsby-plugin-image": "1.13.0",
+    "gatsby-plugin-image": "1.14.2",
     "gatsby-plugin-manifest": "3.13.0",
     "gatsby-plugin-mdx": "2.14.0",
     "gatsby-plugin-netlify": "3.14.0",

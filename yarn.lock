@@ -4197,6 +4197,14 @@ babel-plugin-remove-graphql-queries@^3.13.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-3.13.0.tgz#fd0cde2d1090bc76944586ace2378086b14a0bba"
   integrity sha512-6kznO5vqrcVAZLwwJwDev4QyjjRhW+G665NZgdUsjF/j9pikyZ5zp58c75wijkY7eXH2W1lhzd4GS3zxLQibCQ==
 
+babel-plugin-remove-graphql-queries@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-3.14.0.tgz#33b607cbc2824f72aa3d3b68f52912bf295b79c7"
+  integrity sha512-uRqbsHOcJ1kWn6IK6clZOGHBnQCddiz1LuoGIpv/hcGZCO1nCy16z9KMgEM8TdGG6L6cO31mNr1RcVmvGtcCEw==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    gatsby-core-utils "^2.14.0"
+
 babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
@@ -7127,22 +7135,23 @@ gatsby-plugin-fathom@2.1.1:
   dependencies:
     "@babel/runtime" "7.14.5"
 
-gatsby-plugin-image@1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.13.0.tgz#d4ed6a5ee1067e90a6225b48e5ab0653345e6edd"
-  integrity sha512-ZJcModngwC+2r/mQRz03kWpEpeA4OfgJeyCKC3wBjx3dr8n5fpYRmhnX21U6Wh9QyjdVh0sHykmYEgs2vrPa1A==
+gatsby-plugin-image@1.14.2:
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.14.2.tgz#3955e370d8eb96cd3675001220f315a66ad8ea06"
+  integrity sha512-5kw7sAjqrNfMz7E1oMVfOz4CrG6AtIQNYVl1jTAI9sAuTLz/EJEHOM2z54pFUk/irNkrhXDZyEnDjY2d06U7rQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
-    "@babel/parser" "^7.14.9"
-    "@babel/traverse" "^7.14.9"
+    "@babel/parser" "^7.15.5"
+    "@babel/runtime" "^7.15.4"
+    "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^3.13.0"
+    babel-plugin-remove-graphql-queries "^3.14.0"
     camelcase "^5.3.1"
-    chokidar "^3.5.1"
+    chokidar "^3.5.2"
     common-tags "^1.8.0"
-    fs-extra "^8.1.0"
-    gatsby-core-utils "^2.13.0"
-    objectFitPolyfill "^2.3.0"
+    fs-extra "^10.0.0"
+    gatsby-core-utils "^2.14.0"
+    objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
 gatsby-plugin-manifest@3.13.0:
@@ -10927,7 +10936,7 @@ object.values@^1.1.0, object.values@^1.1.4:
     define-properties "^1.1.3"
     es-abstract "^1.18.2"
 
-objectFitPolyfill@^2.3.0:
+objectFitPolyfill@^2.3.5:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/objectFitPolyfill/-/objectFitPolyfill-2.3.5.tgz#be8c83064aabfa4e88780f776c2013c48ce1f745"
   integrity sha512-8Quz071ZmGi0QWEG4xB3Bv5Lpw6K0Uca87FLoLMKMWjB6qIq9IyBegP3b/VLNxv2WYvIMGoeUQ+c6ibUkNa8TA==
