@@ -21,7 +21,7 @@
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@octokit/graphql": "4.8.0",
-    "@primer/octicons-react": "15.1.0",
+    "@primer/octicons-react": "15.2.0",
     "autoprefixer": "10.3.3",
     "axios": "0.21.2",
     "classnames": "2.3.1",
