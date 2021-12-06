@@ -23,7 +23,7 @@
     "@octokit/graphql": "4.8.0",
     "@primer/octicons-react": "15.1.0",
     "autoprefixer": "10.3.3",
-    "axios": "0.21.2",
+    "axios": "0.24.0",
     "classnames": "2.3.1",
     "dotenv": "10.0.0",
     "gatsby": "3.13.0",
