@@ -45,7 +45,7 @@
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
     "remark-emoji": "2.2.0",
-    "tailwindcss": "2.2.9"
+    "tailwindcss": "2.2.19"
   },
   "engines": {
     "node": ">=14.0.0"
