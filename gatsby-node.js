@@ -74,7 +74,6 @@ const helpfulMaps = {
   "feldoh/JZookeeperEdit": 5,
 };
 
-
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const { createPage } = actions;
   const projectTemplate = path.resolve(`src/templates/ProjectTemplate.tsx`);
@@ -180,12 +179,10 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     let mapsMetadata = [];
     if (node.frontmatter.maps?.length) {
       for (let map of node.frontmatter.maps) {
-        const metaData = await getCodeSeeMapMetadata(
-          map.url,
-          cache
-        )
-
-        mapsMetadata.push(metaData)
+        const metaData = await getCodeSeeMapMetadata(map.url, cache);
+        if (metaData) {
+          mapsMetadata.push(metaData);
+        }
       }
     }
 
@@ -197,7 +194,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       helpfulness += 1;
     }
     if (node.frontmatter.contributionOverview) {
-      helpfulness += Object.keys(node.frontmatter.contributionOverview).length / 2;
+      helpfulness +=
+        Object.keys(node.frontmatter.contributionOverview).length / 2;
     }
     if (node.frontmatter.learnLinks?.length) {
       helpfulness += Math.min(3, node.frontmatter.learnLinks.length);
@@ -214,7 +212,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     helpfulness += helpfulMaps[node.slug] || 0;
 
     // tie breaker, count open issues:
-    const openHelpIssues = (githubData.helpIssues || 0) + (githubData.hacktoberfestIssues || 0)
+    const openHelpIssues =
+      (githubData.helpIssues || 0) + (githubData.hacktoberfestIssues || 0);
     helpfulness += Math.min(0.9, openHelpIssues / 10.0);
 
     helpfulnessDataSet[node.slug] = helpfulness;
@@ -227,7 +226,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         slug: node.slug,
         githubData,
         featuredMapMetadata,
-        mapsMetadata
+        mapsMetadata,
       },
     });
   }
