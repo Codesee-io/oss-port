@@ -31,12 +31,12 @@ function formatMetric(metric: GitHubMetric) {
 }
 
 const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
-
   const helpWantedCount = stats?.helpIssues?.length || 0;
   const hacktoberfestCount = stats?.hacktoberfestIssues?.length || 0;
-  const [issueName, issueCount] = hacktoberfestCount === 0 && helpWantedCount !== 0
-    ? ["Help Wanted", helpWantedCount] 
-    : ["Hack-🎃-fest", hacktoberfestCount];
+  const [issueName, issueCount] =
+    hacktoberfestCount === 0 && helpWantedCount !== 0
+      ? ["Help Wanted", helpWantedCount]
+      : ["Hack-🎃-fest", hacktoberfestCount];
 
   return (
     <div className={className}>
@@ -47,13 +47,20 @@ const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
       <div className="flex justify-between text-black-500 space-x-4 text-center">
         <div>
           <div className="text-2xl font-bold">
-            {formatMetric({count: issueCount, maybeMore: false})}
+            {formatMetric({ count: issueCount, maybeMore: false })}
           </div>
           <small className="text-black-400 text-xs uppercase whitespace-nowrap">
             {issueName}
           </small>
         </div>
-        <div style={{width: '10px', paddingRight: '10px', borderRight: '1px solid rgba(240, 242, 246, var(--tw-border-opacity))'}}></div>
+        <div
+          style={{
+            width: "10px",
+            paddingRight: "10px",
+            borderRight:
+              "1px solid rgba(240, 242, 246, var(--tw-border-opacity))",
+          }}
+        ></div>
         <div>
           <div className="text-2xl font-bold">
             {formatMetric(stats?.prsCreated)}
@@ -77,7 +84,7 @@ const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
           className="mt-2 text-xs flex items-center text-gray-400"
         >
           <InfoIcon size={12} className="mr-1" />
-          Stats will appear during Netlify builds
+          Stats will appear after builds
         </div>
       )}
     </div>

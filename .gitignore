@@ -4,8 +4,8 @@ public/build
 /build
 .DS_Store
 .env
-# Local Netlify folder
-.netlify
+.vercel
+.output
 
 # VS CODE PLUGIN
 .history/
