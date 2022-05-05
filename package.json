@@ -11,7 +11,7 @@
     "remix"
   ],
   "scripts": {
-    "build": "yarn run build:css && remix build",
+    "build": "yarn run dev:projects && yarn run build:css && remix build",
     "build:css": "tailwindcss -m -i ./styles/index.css -o app/styles/index.css",
     "dev": "yarn run dev:projects && concurrently \"yarn run dev:css\" \"remix dev\"",
     "dev:css": "postcss styles --base styles --dir app/styles -w",
