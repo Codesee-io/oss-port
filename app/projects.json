@@ -1,0 +1,5005 @@
+[
+  {
+    "slug": "anovokmet/node-csproj-util",
+    "attributes": {
+      "name": "node-csproj-util",
+      "repoUrl": "https://github.com/ANovokmet/node-csproj-util",
+      "description": "Edit Visual Studio project files using Node.js",
+      "languages": [
+        "TypeScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/f80d1b70-1b8d-11ec-a310-7974b05b52ee",
+        "description": "node-csproj-util"
+      }
+    }
+  },
+  {
+    "slug": "akhil16/raycasting-with-p5",
+    "attributes": {
+      "name": "Raycasting-with-P5.",
+      "repoUrl": "https://github.com/Akhil16/Raycasting-with-P5",
+      "description": "A simple map grid made using P5.js created a 3D map like classic 3D games.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "Markdown"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Data Visualization",
+        "Education",
+        "Web Framework",
+        "Gaming",
+        "Starter Template",
+        "Productivity"
+      ],
+      "avatar": "Raycasted.gif",
+      "websiteUrl": "https://raycast.akhilenduchaturvedi.tk/",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/23407f40-2727-11ec-8e0b-2da43c476634",
+        "description": "(optional) basic map ... still updating"
+      },
+      "contributionOverview": {
+        "mainLocation": "India"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn P5",
+          "url": "https://p5js.org/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "archish27/nora-covid-19-bot",
+    "attributes": {
+      "name": "Nora COVID-19 Bot",
+      "repoUrl": "https://github.com/Archish27/nora-covid-19-bot",
+      "description": "COVID-19 self-awareness bot that addresses frequently asked questions to help educate folks about the virus. It provides awareness about social distancing, self-isolation, quarantine.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Health",
+        "Social Activism",
+        "Machine Learning"
+      ],
+      "avatar": "logo.png",
+      "websiteUrl": "https://norabot.netlify.app",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/e1e6eca0-21fe-11ec-9348-e1d61854fcda",
+        "description": "CodeSee Map to help you get started abd get to know the project"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Getting Started with Rasa",
+          "url": "https://rasa.com/docs/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ayush7614/bundli-frontend",
+    "attributes": {
+      "name": "Bundli-Frontend",
+      "repoUrl": "https://github.com/Ayush7614/Bundli-Frontend",
+      "description": "Bundli-Frontend is a open source project which contains different code of frontend Development with HTML, CSS, JS, REACT, ANGULAR and APIs etc. which makes your life easier for learning frontend and make your interest more in frontend.",
+      "languages": [
+        "HTML / CSS",
+        "JavaScript",
+        "React",
+        "Angular",
+        "VueJS",
+        "TypeScript",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Automation"
+      ],
+      "avatar": "avtar.gif",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Backend Developers",
+        "Developers",
+        "DevOps",
+        "Technical Writers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/c6cc5fe0-2983-11ec-8411-137e7a8331b4",
+        "description": "Major areas of our focus and how we wish to further expand on the same."
+      },
+      "contributionOverview": {
+        "mainLocation": "India, Asia-Pacific",
+        "idealEffort": "2 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn HTML, CSS",
+          "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G"
+        },
+        {
+          "title": "Learn JavaScript",
+          "url": "https://www.w3schools.com/js/"
+        },
+        {
+          "title": "Learn NodeJS",
+          "url": "https://youtube.com/playlist?list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B"
+        },
+        {
+          "title": "Learn ReactJS",
+          "url": "https://www.youtube.com/watch?v=4UZrsTqkcW4"
+        },
+        {
+          "title": "Learn GitHub Actions",
+          "url": "https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "chris2011/gitlogbeans",
+    "attributes": {
+      "name": "Gitlogbeans",
+      "repoUrl": "https://github.com/Chris2011/gitlogbeans",
+      "description": "Show git commit logs in NetBeans.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Git",
+        "Tools"
+      ],
+      "avatar": "apache-netbeans.svg",
+      "currentlySeeking": [
+        "UX",
+        "Designers",
+        "Backend Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "4 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Apache NetBeans DevFAQ",
+          "url": "https://netbeans.apache.org/wiki/DevFaqIndex.asciidoc"
+        },
+        {
+          "title": "JGit project page",
+          "url": "https://www.eclipse.org/jgit/"
+        },
+        {
+          "title": "JGit Cookbook",
+          "url": "https://github.com/centic9/jgit-cookbook"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "chris2011/minifierbeans",
+    "attributes": {
+      "name": "Minifierbeans",
+      "repoUrl": "https://github.com/Chris2011/minifierbeans",
+      "description": "Plugin to minify JS , CSS and HTML for quicker page load times by reducing the size of js/css/html files.",
+      "languages": [
+        "Java",
+        "JavaScript"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "avatar": "apache-netbeans.svg",
+      "currentlySeeking": [
+        "UX",
+        "Designers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "4 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Apache NetBeans DevFAQ",
+          "url": "https://netbeans.apache.org/wiki/DevFaqIndex.asciidoc"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "codesee-io/oss-port",
+    "attributes": {
+      "name": "OSS Port",
+      "repoUrl": "https://github.com/Codesee-io/oss-port",
+      "websiteUrl": "https://www.oss-port.com",
+      "description": "OSS Port is the coolest way to browse open-source projects looking for contributors.",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Gatsby",
+        "React"
+      ],
+      "currentlySeeking": [
+        "Project Owners"
+      ],
+      "tags": [
+        "First Timer Friendly"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps",
+          "Features PR diagrams"
+        ]
+      },
+      "avatar": "ossport_avatar_circle.svg",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "maps": [
+        {
+          "url": "https://app.codesee.io/maps/public/848e3630-1650-11ec-8bc1-7d4a4822cc27",
+          "description": "Get a quick visual overview of the major areas of our repo!",
+          "subTitle": "devdocs"
+        }
+      ],
+      "learnLinks": [
+        {
+          "title": "Learn Gatsby",
+          "url": "https://www.gatsbyjs.com/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "cyborg-nit-rourkela/project-sirius",
+    "attributes": {
+      "name": "Project Sirius",
+      "repoUrl": "https://github.com/CYBORG-NIT-ROURKELA/project-sirius",
+      "description": "End-to-end application for management of event feedback, Mass certificate generation, download and mailing.",
+      "languages": [
+        "HTML / CSS",
+        "JavaScript",
+        "JQuery",
+        "PHP",
+        "MySQL"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools"
+      ],
+      "avatar": "logo.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/2b063a60-235a-11ec-9000-0db11fbd1f1b",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "websiteUrl": "https://sirius-cyborg.herokuapp.com/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "learnLinks": [
+        {
+          "title": "Learn HTML / CSS / PHP / MySQL",
+          "url": "https://www.w3schools.com/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "deepninja07x/weather-js",
+    "attributes": {
+      "name": "Weather-JS.",
+      "repoUrl": "https://github.com/DeepNinja07x/Weather-JS",
+      "description": "A simple API-based weather web application made using HTML5, CSS3, and JavaScript.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Environment",
+        "Tools"
+      ],
+      "avatar": "x-icon.png",
+      "websiteUrl": "https://deepninja07x.github.io/Weather-JS/",
+      "twitterUrl": "https://twitter.com/Deepraj_Rakshit",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/3c7f8c50-21b2-11ec-82ba-4f649219975d",
+        "description": "A breakdown of the project structure of the Weather-JS app."
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PRs a month",
+        "isMentorshipAvailable": false
+      }
+    }
+  },
+  {
+    "slug": "defcon-007/utilobot-new",
+    "attributes": {
+      "name": "Utilobot",
+      "repoUrl": "https://github.com/DefCon-007/UtiloBot-New",
+      "description": "A multi-utility bot for Telegram. Make your life easier and get music links to every platform, shorten URLs, etc without ever leaving telegram..",
+      "languages": [
+        "Python"
+      ],
+      "avatar": "utilobot.png",
+      "websiteUrl": "https://utilobot.defcon007.com/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/55144800-2432-11ec-a223-71b4e261e7a1",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "Whatever you like",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Getting started with Telegram Chatbot",
+          "url": "https://telegram.org/blog/bot-revolution"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "defcon-007/whatsend",
+    "attributes": {
+      "name": "WhatSend.",
+      "repoUrl": "https://github.com/DefCon-007/WhatSend",
+      "description": "A chrome extension to send messages in bulk to multiple people from the comfort of a web browser for free on Whatsapp.",
+      "languages": [
+        "JavaScript",
+        "Python",
+        "JQuery",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Browser Extension"
+      ],
+      "avatar": "whatsend.png",
+      "websiteUrl": "https://whatsend.defcon007.com/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Technical Writers",
+        "Testers",
+        "UX"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/9aea22f0-2d97-11ec-88c6-01b45cdc96eb"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "evilflowerscatalog/evilflowerscatalog",
+    "attributes": {
+      "name": "EvilFlowersCatalog",
+      "repoUrl": "https://github.com/EvilFlowersCatalog/EvilFlowersCatalog",
+      "description": "Simple e-book catalog server compatible with OPDS 1.2 written in Python with simple management REST API (basic CRUD operations).",
+      "languages": [
+        "Python",
+        "PostgreSQL"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Web Framework"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/2efe4d70-2287-11ec-b30b-77ee297ccc10",
+        "description": "Repository map"
+      },
+      "learnLinks": [
+        {
+          "title": "OPDS 1.2 specification",
+          "url": "https://specs.opds.io/opds-1.2"
+        },
+        {
+          "title": "Django API Forms docs (library used as request parser)",
+          "url": "https://github.com/Sibyx/django_api_forms"
+        },
+        {
+          "title": "Porcupine python (library used for serialisation)",
+          "url": "https://github.com/zurek11/porcupine-python"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "gautam-arora24/resize-observer-hook",
+    "attributes": {
+      "name": "resize-observer-hook",
+      "repoUrl": "https://github.com/Gautam-Arora24/resize-observer-hook",
+      "description": "⚛️ A React Hook to monitor changes in the size of an element using native ResizeObserver API 🔍",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly"
+      ],
+      "avatar": "avatar.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/000d9b10-2345-11ec-ad6a-f56fac63bd6c",
+        "description": "Visual Diagram"
+      },
+      "websiteUrl": "https://gautam-arora24.github.io/resize-observer-hook/",
+      "twitterUrl": "http://twitter.com/Gautamarora24",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "ResizeObserver API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "harshcasper/rotten-scripts",
+    "attributes": {
+      "name": "Rotten Scripts",
+      "repoUrl": "https://github.com/harshcasper/rotten-scripts",
+      "description": "Scripts that will make you go WOW!",
+      "languages": [
+        "JavaScript",
+        "Python",
+        "Go",
+        "Rust",
+        "NodeJS",
+        "Shell"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Machine Learning",
+        "Data Visualization",
+        "Tools",
+        "Automation",
+        "Scraping"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Developers",
+        "DevOps",
+        "Technical Writers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/ae34bbe0-214e-11ec-b340-258e59e3e2dc",
+        "description": "Major areas of our focus and how we wish to further expand on the same."
+      },
+      "contributionOverview": {
+        "mainLocation": "India, Asia-Pacific",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Python",
+          "url": "https://automatetheboringstuff.com/"
+        },
+        {
+          "title": "Learn NodeJS",
+          "url": "https://youtube.com/playlist?list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B"
+        },
+        {
+          "title": "Learn Go",
+          "url": "https://www.youtube.com/playlist?list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q"
+        },
+        {
+          "title": "Learn Rust",
+          "url": "https://doc.rust-lang.org/book/"
+        },
+        {
+          "title": "Learn GitHub Actions",
+          "url": "https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "kashika18/walmart_sales_project",
+    "attributes": {
+      "name": "Walmart_Sales_Project",
+      "repoUrl": "https://github.com/Kashika18/Walmart_Sales_Project",
+      "description": "A prediction of Walmart Sales. Get a weekly as well as a monthly prediction of Sales from Walmart and make your sale strategy better.",
+      "languages": [
+        "Python",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Machine Learning",
+        "Data Visualization",
+        "Web Framework"
+      ]
+    }
+  },
+  {
+    "slug": "logerfo/csharp-colors",
+    "attributes": {
+      "name": "C# Colors",
+      "repoUrl": "https://github.com/Logerfo/csharp-colors",
+      "description": "Visual Studio Code extension that adds colored border around C# colors in the text editor.",
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "C#"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "avatar": "icon.png",
+      "websiteUrl": "https://logerfo.tk/",
+      "twitterUrl": "https://twitter.com/logerfo",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/825f60e0-1764-11ec-82f4-d5830c93f948"
+      },
+      "learnLinks": [
+        {
+          "title": "VSCode Extension API",
+          "url": "https://code.visualstudio.com/api"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "m-razavi/javapersianutils.core",
+    "attributes": {
+      "name": "JavaPersianUtils.Core",
+      "repoUrl": "https://github.com/M-Razavi/JavaPersianUtils.Core",
+      "description": "JavaPersianUtils.Core is a collection of Persian helper extension methods to eas development for Persian language and Iran",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Backend Developers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/86352410-22b4-11ec-8846-d363605aaa23",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "contributionOverview": {
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      }
+    }
+  },
+  {
+    "slug": "muhammadtouseeq/easyimagepicker",
+    "attributes": {
+      "name": "EasyImagePicker",
+      "repoUrl": "https://github.com/MuhammadTouseeq/EasyImagePicker",
+      "description": "EasyImagePicker allow us to pick image from camera or gallery without creating a lot of boilerplate code. It support Android 10 version.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Education",
+        "Media",
+        "Android"
+      ],
+      "avatar": "avatar.jpg",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a5509790-1ebc-11ec-ab55-99c1e0efec17",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Android",
+          "url": "https://developer.android.com/codelabs/build-your-first-android-app"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "paulsayantan/termtube",
+    "attributes": {
+      "name": "TermTube",
+      "repoUrl": "https://github.com/PaulSayantan/TermTube",
+      "description": "A Terminal User Interface made for YouTube. Audio & Video Playback right from your Terminal.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Media"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/9033a700-1d0c-11ec-a981-5f80e2c33b31",
+        "description": "Visual Codebase Map to understand file structure for this project"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "10 PRs a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Golang",
+          "url": "https://golang.org/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "pradyuman7/lookatme",
+    "attributes": {
+      "name": "LookAtMe",
+      "repoUrl": "https://github.com/Pradyuman7/LookAtMe",
+      "description": "VideoView that plays video only when 👀 are open and 👦 is detected with various other features.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Android",
+        "Machine Learning"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://android.jlelse.eu/a-videoview-that-detects-your-face-and-tracks-your-eyes-afc3a04fd735",
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": null
+      },
+      "learnLinks": [
+        {
+          "title": "Learn about LookAtMe",
+          "url": "https://android.jlelse.eu/a-videoview-that-detects-your-face-and-tracks-your-eyes-afc3a04fd735"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "pumpkinseed/sqlfuzz",
+    "attributes": {
+      "name": "sqlfuzz",
+      "repoUrl": "https://github.com/PumpkinSeed/sqlfuzz",
+      "description": "Load random data into SQL tables for testing purposes. The tool can get the layout of the SQL table and fill it up with random data.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a154b990-1f03-11ec-b8bc-775881970ff8"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "scorchingshade/nextevents",
+    "attributes": {
+      "name": "NextEvents, an event planner app in nextJs",
+      "repoUrl": "https://github.com/ScorchingShade/NextEvents",
+      "description": "NextEvents is a planning app for all your upcoming events",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React",
+        "NextJS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "Starter Template",
+        "Machine Learning"
+      ],
+      "avatar": "nextevents.jpeg",
+      "websiteUrl": "https://aknext.netlify.app/",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Backend Developers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/f391b0d0-22b1-11ec-8415-678e910efb84",
+        "description": "A CodeSee map to show the current developed components"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn NextJs",
+          "url": "https://nextjs.org/docs/getting-started"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "scorchingshade/pinch",
+    "attributes": {
+      "name": "Pinch",
+      "repoUrl": "https://github.com/ScorchingShade/Pinch",
+      "description": "PinchX takes care of your basic web design building a beautiful simplistic design in minutes! Written in SCSS/SASS, the generated css is comprehensive, simple and minimal!",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "Starter Template"
+      ],
+      "avatar": "pinch.png",
+      "websiteUrl": "https://scorchingshade.github.io/Pinch/",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/44b11870-20e1-11ec-9e0d-53e330c73b66"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "PinchX is a CSS library for quickly bootstrapping a prototype app",
+          "url": "https://github.com/ScorchingShade/Pinch#readme"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        },
+        {
+          "title": "Learn CSS and",
+          "url": "https://web.dev/learn/css/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "scorchingshade/plano",
+    "attributes": {
+      "name": "Plano, the planning app",
+      "repoUrl": "https://github.com/ScorchingShade/Plano",
+      "description": "Plano is a quick decision web app aimed at reducing the effort in planning and deciding your daily chores!",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React",
+        "NextJS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "Starter Template",
+        "Machine Learning"
+      ],
+      "avatar": "Plano.png",
+      "websiteUrl": "https://github.com/ScorchingShade/Plano",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Backend Developers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/34be6cd0-20e4-11ec-b220-a9bfdc3af9e9",
+        "description": "A CodeSee map to show the current developed components"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn NextJs",
+          "url": "https://nextjs.org/docs/getting-started"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "scorchingshade/windows11clone",
+    "attributes": {
+      "name": "Windows 11 Demo",
+      "repoUrl": "https://github.com/ScorchingShade/Windows11Clone",
+      "description": "A windows 11 clone homepage.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "NextJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "Starter Template"
+      ],
+      "avatar": "windows.jpg",
+      "websiteUrl": "https://windows11demo.netlify.app/",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/956b3340-22ad-11ec-bd98-4f6e10139d3f",
+        "description": "(optional) The directory structure of the app is kept to a minimum branching for the first build."
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn NextJs",
+          "url": "https://nextjs.org/docs/getting-started"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "shashankjain12/bookish-invention",
+    "attributes": {
+      "name": "Bookish Invention",
+      "repoUrl": "https://github.com/Shashankjain12/bookish-invention",
+      "description": "This project involves one of the research work of creating a project that deals with the creation of visually interactive graphs when we pass that module any kind of notebook of any kind of image file you just need to specify the type of image you need to pass on to that document and it will do all the hard work for you by itself by creating of certain nodes with the help of one of the most advanced library of python for desktop creation using Tkinter.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Machine Learning",
+        "Data Visualization",
+        "Education"
+      ],
+      "avatar": "bookish.png",
+      "websiteUrl": "https://github.com/Shashankjain12/bookish-invention",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/50de8840-235b-11ec-a05c-a38053910af1",
+        "description": "Get a quick overview of the project structure"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn NLP",
+          "url": "https://towardsdatascience.com/10-free-resources-for-learning-natural-language-processing-81a380540cd1"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        },
+        {
+          "title": "Learn Pytesseract to convert any image to string",
+          "url": "https://pypi.org/project/pytesseract/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sibyx/django-imap-backend",
+    "attributes": {
+      "name": "Django IMAP backend",
+      "repoUrl": "https://github.com/Sibyx/django-imap-backend",
+      "description": "IMAP backend for Django mail package",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/cbe2ee60-2175-11ec-96b5-afe99c614d3c",
+        "description": "Repository map"
+      },
+      "learnLinks": [
+        {
+          "title": "Django Emails",
+          "url": "https://docs.djangoproject.com/en/3.2/topics/email/"
+        },
+        {
+          "title": "Python imaplib",
+          "url": "https://docs.python.org/3/library/imaplib.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sibyx/django_api_forms",
+    "attributes": {
+      "name": "Django API Forms",
+      "repoUrl": "https://github.com/Sibyx/django_api_forms",
+      "description": "Django Forms approach in processing of RESTful HTTP request payload (especially for content type like JSON or MessagePack) without HTML front-end.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Web Framework"
+      ],
+      "websiteUrl": "https://sibyx.github.io/django_api_forms/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Designers",
+        "Maintainers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/c7286640-20f6-11ec-a894-61b8cbaa0d26",
+        "description": "Repository map"
+      },
+      "learnLinks": [
+        {
+          "title": "Project docs",
+          "url": "https://sibyx.github.io/django_api_forms/"
+        },
+        {
+          "title": "Working with Django Forms",
+          "url": "https://docs.djangoproject.com/en/3.2/topics/forms/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sibyx/phpgpx",
+    "attributes": {
+      "name": "phpGPX",
+      "repoUrl": "https://github.com/Sibyx/phpGPX",
+      "description": "Simple library for reading and creating GPX files written in PHP.",
+      "languages": [
+        "PHP"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools",
+        "Web Framework"
+      ],
+      "websiteUrl": "https://sibyx.github.io/phpGPX/",
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/1372dde0-21f2-11ec-82ba-4f649219975d",
+        "description": "Project repository map"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "GPX Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/GPS_Exchange_Format"
+        },
+        {
+          "title": "GPX specification",
+          "url": "https://www.topografix.com/GPX/1/1/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "superfola/donotsend",
+    "attributes": {
+      "name": "DoNotSend",
+      "repoUrl": "https://github.com/SuperFola/DoNotSend",
+      "description": "Sending messages by hacking the DNS protocol. See website for demo server usage instructions",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/bfa21e20-229f-11ec-9ce8-ff9a2a559570",
+        "description": "Overview of the file structure and interactions"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Understand the project structure",
+          "url": "https://github.com/SuperFola/DoNotSend/blob/master/doc/design.md"
+        },
+        {
+          "title": "DNS packet structure",
+          "url": "https://github.com/SuperFola/DoNotSend/blob/master/doc/DNSPacketStructure.md"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "wospm/checker",
+    "attributes": {
+      "name": "WOSPM Checker",
+      "repoUrl": "https://github.com/WOSPM/checker",
+      "description": "A checker for project owners to measure their open source project if it is a welcoming project for contributors or not.",
+      "languages": [
+        "PHP"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers"
+      ]
+    }
+  },
+  {
+    "slug": "zigrazor/cxxautomata",
+    "attributes": {
+      "name": "CXXAutomata",
+      "repoUrl": "https://github.com/ZigRazor/CXXAutomata",
+      "description": "A C++ library for simulating automata and Turing machines",
+      "languages": [
+        "C / C++"
+      ],
+      "tags": [
+        "Tools",
+        "Productivity"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/056943d0-25f6-11ec-b05a-410c40d81c25"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "zigrazor/cxxgraph",
+    "attributes": {
+      "name": "CXXGraph",
+      "repoUrl": "https://github.com/ZigRazor/CXXGraph",
+      "description": "Header-Only C++ Library for Graph Representation and Algorithms",
+      "languages": [
+        "C / C++"
+      ],
+      "tags": [
+        "Tools",
+        "Productivity"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/7b69a8a0-25f5-11ec-967f-e9ebe81cc743"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "zigrazor/cxxlog",
+    "attributes": {
+      "name": "CXXLog",
+      "repoUrl": "https://github.com/ZigRazor/CXXLog",
+      "description": "HeaderOnly Logging Utilities",
+      "languages": [
+        "C / C++"
+      ],
+      "tags": [
+        "Tools",
+        "Productivity"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/582efe20-25f6-11ec-b126-cd8f6f2ba318"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "zigrazor/pystatemachine",
+    "attributes": {
+      "name": "PyStateMachine",
+      "repoUrl": "https://github.com/ZigRazor/PyStateMachine",
+      "description": "Python State Machine",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "Tools",
+        "Productivity"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/ca507b10-25f5-11ec-ab92-dd555ad8b2b8"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "abhishekpatel946/smart-vehicle-fleet-manager",
+    "attributes": {
+      "name": "Smart Vehicle Fleet Manager",
+      "repoUrl": "https://github.com/abhishekpatel946/Smart-Vehicle-Fleet-Manager",
+      "description": "App to track vehicle over-speeding, fuel theft alert, accident alert, speed log, fuel log, maintenance log, fuel refill log and displayed it on a dashboard in form of tables, charts, and graphs.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://smart-vehicle-fleet-manager.web.app/",
+      "currentlySeeking": [
+        "Developers",
+        "DevOps",
+        "Designers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a week"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "title": "Learn Firebase",
+          "url": "https://firebase.google.com/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "akanksha-raghav/minor_project",
+    "attributes": {
+      "name": "Student Mantras",
+      "repoUrl": "https://github.com/akanksha-raghav/Minor_Project",
+      "description": "Student Mantras is a react based web application for listing various opportunities.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education"
+      ],
+      "websiteUrl": "https://mantras.vercel.app/",
+      "twitterUrl": "https://twitter.com/studentcodein",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/2b50ad40-179b-11ec-9ae7-bb50746beee9"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn react",
+          "url": "https://www.reactjs.org/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "akshat157/meditate-app",
+    "attributes": {
+      "name": "Meditate-app",
+      "repoUrl": "https://github.com/akshat157/meditate-app",
+      "description": "A ReactJS based webapp to assist the users in meditation.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Health"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/8cc20bb0-1781-11ec-9213-43592b84fb11",
+        "description": "Get a quick overview of the project with a CodeSee Map!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Git",
+          "url": "https://learngitbranching.js.org/"
+        },
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/tutorial/tutorial.html"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "amitmerchant1990/electron-markdownify",
+    "attributes": {
+      "name": "Markdownify",
+      "repoUrl": "https://github.com/amitmerchant1990/electron-markdownify",
+      "description": "A minimal Markdown editor desktop app",
+      "languages": [
+        "JavaScript",
+        "JQuery",
+        "HTML / CSS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "E-Commerce"
+      ],
+      "avatar": "app/img/markdownify.png",
+      "websiteUrl": "https://markdownify.js.org",
+      "twitterUrl": "https://twitter.com/amit_merchant",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/584d86e0-22ba-11ec-acd9-a7e5e267c7c9",
+        "description": "A CodeSee Map for Markdownify"
+      }
+    }
+  },
+  {
+    "slug": "apoorve73/racefor100.github.io",
+    "attributes": {
+      "name": "Race for 100 Game",
+      "repoUrl": "https://github.com/Apoorve73/racefor100.github.io",
+      "description": "This Guess to Win based game is built in pure JavaScript. Play with the Computer and try to crack it :)",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Gaming"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://apoorve73.github.io/racefor100.github.io/",
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/3326ebc0-21c7-11ec-ad6f-ffe0aa54c51d",
+        "description": "Major project focus areas and what is the flow of code."
+      },
+      "contributionOverview": {
+        "mainLocation": "India, Asia-Pacific",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn JavaScript",
+          "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=1295s"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "arghyadeep99/aarogya-bot",
+    "attributes": {
+      "name": "Aarogya-Bot",
+      "repoUrl": "https://github.com/arghyadeep99/Aarogya-Bot",
+      "description": "Aarogya Bot is an AI-driven chatbot that will help you answer your basic medical queries, amidst the Covid-19 pandemic, where moving out to consult a doctor isn't a luxury anymore. The chatbot can respond to your medical queries only to the best of its knowledge graph base.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "NodeJS",
+        "VueJS",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "Health",
+        "Machine Learning"
+      ],
+      "avatar": "Aarogya-Bot.jpeg",
+      "websiteUrl": "https://github.com/arghyadeep99/Aarogya-Bot",
+      "twitterUrl": "https://twitter.com/arghyadeepdas99",
+      "currentlySeeking": [
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/5a400310-22f1-11ec-92cc-4b20a07d58d9",
+        "description": "A breakdown of the project structure of Aarogya-Bot."
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "3 PRs a month",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "arghyadeep99/project-somaiya-classroom",
+    "attributes": {
+      "name": "Project-Somaiya-Classroom",
+      "repoUrl": "https://github.com/arghyadeep99/Project-Somaiya-Classroom",
+      "description": "An Android app for students and teachers to use as a resource exchange platform for my university.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Android",
+        "Tools",
+        "Education"
+      ],
+      "avatar": "Project-Somaiya-Classroom.png",
+      "websiteUrl": "https://github.com/arghyadeep99/Project-Somaiya-Classroom",
+      "twitterUrl": "https://twitter.com/arghyadeepdas99",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a83ba140-2077-11ec-80d4-5da4602c42a6",
+        "description": "A breakdown of the project structure of the Android app Somaiya Classroom."
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "4 PRs a month",
+        "isMentorshipAvailable": false
+      }
+    }
+  },
+  {
+    "slug": "aromalanil/react-rhino",
+    "attributes": {
+      "name": "React Rhino.",
+      "repoUrl": "https://github.com/aromalanil/react-rhino",
+      "description": "A lightweight global state management library for React.js",
+      "languages": [
+        "TypeScript",
+        "React"
+      ],
+      "tags": [
+        "Tools",
+        "Web Framework"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://aromalanil.tech",
+      "twitterUrl": "https://twitter.com/aromalanil",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "title": "Learn useContext hook",
+          "url": "https://www.youtube.com/watch?v=5LrDIWkK_Bc"
+        },
+        {
+          "title": "Learn Typescript",
+          "url": "https://www.typescriptlang.org/docs/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "arshadkazmi42/general-feedback",
+    "attributes": {
+      "name": "general-feedback",
+      "repoUrl": "https://github.com/arshadkazmi42/general-feedback",
+      "description": "General feedback app is a generic feedback app, which can take any number of multiple choice questions and those questions can be used to take feedbacks from people in the same app.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Android",
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "general-feedback-avatar.png",
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/190e1400-21ab-11ec-b442-7d1977346cad",
+        "description": "Get a quick overview of the project with a CodeSee Map!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Git",
+          "url": "https://learngitbranching.js.org/"
+        },
+        {
+          "title": "Create a PR",
+          "url": "https://github.com/firstcontributions/first-contributions"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "avneesh0612/chatcube",
+    "attributes": {
+      "name": "ChatCube",
+      "repoUrl": "https://github.com/avneesh0612/ChatCube",
+      "description": "This is a 1:1 chat application.",
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "HTML / CSS",
+        "React",
+        "NextJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Web Framework"
+      ],
+      "avatar": "ChatCube.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/fcd05ca0-1cfd-11ec-a1cb-e5e5ff9435fd",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "websiteUrl": "https://www.chatcube.me/",
+      "twitterUrl": "https://twitter.com/avneesh0612",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Next",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "title": "Learn Typescript",
+          "url": "https://www.typescriptlang.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "bislara/code-n-stitch",
+    "attributes": {
+      "name": "code-n-stitch",
+      "repoUrl": "https://github.com/bislara/code-n-stitch",
+      "description": "Collection of small projects and scripts that are awesome and might help a developer",
+      "languages": [
+        "JavaScript",
+        "Python",
+        "HTML / CSS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework",
+        "Automation",
+        "Scraping"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/e6a7a0a0-220c-11ec-98a8-4bec1db34da1",
+        "description": "Overview of the project structure and list of scripts and projects."
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Python",
+          "url": "https://www.python.org/about/gettingstarted/"
+        },
+        {
+          "title": "Learn JavaScript",
+          "url": "https://www.w3schools.com/js/DEFAULT.asp"
+        },
+        {
+          "title": "Learn HTML/CSS",
+          "url": "https://www.w3schools.com/"
+        },
+        {
+          "title": "Learn GitHub Actions",
+          "url": "https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "blenderskool/untab",
+    "attributes": {
+      "name": "UnTab",
+      "repoUrl": "https://github.com/blenderskool/untab",
+      "description": "🔍 A productivity tool to boost your browser workflow!",
+      "languages": [
+        "JavaScript",
+        "Svelte",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "Productivity",
+        "Browser Extension",
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "untab_avatar.png",
+      "websiteUrl": "https://getuntab.now.sh",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/75008680-234f-11ec-a862-7b4a8522ed3e",
+        "description": "Codebase structure"
+      },
+      "contributionOverview": {
+        "idealEffort": "2 PRs a month"
+      },
+      "learnLinks": [
+        {
+          "title": "About UnTab",
+          "url": "https://getuntab.now.sh/"
+        },
+        {
+          "title": "Contribution guidelines",
+          "url": "https://github.com/blenderskool/untab/blob/master/CONTRIBUTING.md"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "comodoro/fractalzoo",
+    "attributes": {
+      "name": "FractalZoo",
+      "repoUrl": "https://github.com/comodoro/FractalZoo",
+      "description": "Androd fractal visualisation",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Android"
+      ],
+      "avatar": "fractalzoo.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a0d9c5e0-24e5-11ec-992f-b1502cc33c49",
+        "description": "Overview of the app"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "crweiner/hacktoberfest-swag-list",
+    "attributes": {
+      "name": "Hacktoberfest Swag List",
+      "repoUrl": "https://github.com/crweiner/hacktoberfest-swag-list",
+      "description": "Multiple companies give out swag for Hacktoberfest, and this repo tries to list them all.",
+      "languages": [
+        "Ruby",
+        "HTML / CSS",
+        "Markdown"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Productivity"
+      ],
+      "avatar": "H-icon-light.png",
+      "websiteUrl": "https://hacktoberfestswaglist.com/",
+      "twitterUrl": "https://twitter.com/C_Dubbs",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/b9f9e900-26b2-11ec-a38d-6b2f104ddfe3",
+        "description": "Check out our CodeSee map to see how the site is set up!"
+      },
+      "learnLinks": [
+        {
+          "title": "Hacktoberfest",
+          "url": "https://hacktoberfest.digitalocean.com/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "danibram/mocker-data-generator",
+    "attributes": {
+      "name": "mocker-data-generator",
+      "repoUrl": "https://github.com/danibram/mocker-data-generator",
+      "description": "A simplified way to generate masive mock data based on a schema, using the awesome fake/random data generators like (FakerJs, ChanceJs, CasualJs and RandExpJs), all in one tool to generate your fake data for testing.",
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "NodeJS"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "websiteUrl": "https://dbr.io",
+      "twitterUrl": "https://twitter.com/danibram",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/7c3c4000-2436-11ec-b4f9-53ae33fb0c9c"
+      },
+      "learnLinks": [
+        {
+          "title": "Website Live Tester Diagram",
+          "url": "https://app.codesee.io/maps/public/0871b4b0-243c-11ec-a096-cfd59e99ca24"
+        },
+        {
+          "title": "Live Tester",
+          "url": "https://danibram.github.io/mocker-data-generator/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dbalatero/hyperkey.spoon",
+    "attributes": {
+      "name": "HyperKey.spoon",
+      "repoUrl": "https://github.com/dbalatero/HyperKey.spoon",
+      "description": "An OSX library to bind keys to a modifier and show a popup overlay of all key bindings",
+      "languages": [
+        "Lua"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America"
+      },
+      "learnLinks": [
+        {
+          "title": "What is Hammerspoon?",
+          "url": "https://www.hammerspoon.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dbalatero/skyrocket.spoon",
+    "attributes": {
+      "name": "SkyRocket.spoon",
+      "repoUrl": "https://github.com/dbalatero/SkyRocket.spoon",
+      "description": "Resize and move windows using the mouse and modifier keys. A Hammerspoon clone of Zooom/2 functionality.",
+      "languages": [
+        "Lua"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America"
+      },
+      "learnLinks": [
+        {
+          "title": "What is Hammerspoon?",
+          "url": "https://www.hammerspoon.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dbalatero/vimmode.spoon",
+    "attributes": {
+      "name": "VimMode.spoon",
+      "repoUrl": "https://github.com/dbalatero/VimMode.spoon",
+      "description": "A library to add Vim motions and operators to all your input fields on OS X",
+      "languages": [
+        "Lua"
+      ],
+      "tags": [
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America"
+      },
+      "learnLinks": [
+        {
+          "title": "What is Hammerspoon?",
+          "url": "https://www.hammerspoon.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "devcer/hydrator",
+    "attributes": {
+      "name": "Hydrator.",
+      "repoUrl": "https://github.com/devcer/hydrator",
+      "description": "A browser addon to remind you to drink water frequently while you enjoy your sweet time on your computer.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Health"
+      ],
+      "avatar": "bottle-200.png",
+      "websiteUrl": "https://addons.mozilla.org/en-US/firefox/addon/hydrator/",
+      "twitterUrl": "https://twitter.com/isantoshv",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Designers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/09e16310-1940-11ec-9553-7bdf0d6344f6",
+        "description": "CodeSee Map of the code repo"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Extensions",
+          "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
+        },
+        {
+          "title": "Extensions Workshop",
+          "url": "https://extensionworkshop.com/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "devtron-labs/devtron",
+    "attributes": {
+      "name": "Devtron",
+      "repoUrl": "https://github.com/devtron-labs/devtron",
+      "description": "An Open Source Software Delivery Workflow for Kubernetes",
+      "languages": [
+        "Go",
+        "TypeScript"
+      ],
+      "tags": [
+        "Tools",
+        "Kubernetes"
+      ],
+      "avatar": "Devtron-Logo.png",
+      "websiteUrl": "https://devtron.ai/",
+      "twitterUrl": "https://twitter.com/DevtronL",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Technical Writers",
+        "Testers"
+      ],
+      "learnLinks": [
+        {
+          "title": "Let's Learn Devtron",
+          "url": "https://docs.devtron.ai/"
+        },
+        {
+          "title": "Getting Started",
+          "url": "https://github.com/devtron-labs/devtron#rocket-getting-started"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dhruvsaxena1998/node-typescript-starter",
+    "attributes": {
+      "name": "Node typescript starter",
+      "repoUrl": "https://github.com/dhruvsaxena1998/node-typescript-starter",
+      "description": "Node.js express template written with typescript. Purpose of this template is to get started in minutes with nodejs and typscript and all the workflow pre-configured.",
+      "languages": [
+        "TypeScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Starter Template",
+        "Education"
+      ],
+      "avatar": "node-typscript-starter.png",
+      "websiteUrl": "https://dhruvsaxena1998.github.io/node-typescript-starter/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/b547bb80-1d02-11ec-9eb0-ad351a9f5b0c",
+        "description": "Map to understand folder-structure better."
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Typescript",
+          "url": "https://www.typescriptlang.org/docs/"
+        },
+        {
+          "title": "Learn NodeJS",
+          "url": "https://nodejs.dev/learn/introduction-to-nodejs"
+        },
+        {
+          "title": "Learn Express",
+          "url": "https://expressjs.com/en/resources/learning.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "distributeaid/distributeaid.org",
+    "attributes": {
+      "name": "distributeaid.org",
+      "description": "Distribute Aid's landing site, where people can learn about our organization, mission, and wonderful volunteers.",
+      "repoUrl": "https://github.com/distributeaid/distributeaid.org",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Gatsby",
+        "HTML / CSS"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/ddc21460-098f-11ec-b053-333e0b8cd199",
+        "description": "Architecture diagram"
+      },
+      "tags": [
+        "Social Activism",
+        "First Timer Friendly"
+      ],
+      "twitterUrl": "https://twitter.com/DistributeAid/",
+      "avatar": "da.png",
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Gatsby",
+          "url": "https://www.gatsbyjs.com/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        },
+        {
+          "title": "Get started with Contentful",
+          "url": "https://www.contentful.com/developers/docs/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "distributeaid/shipment-tracker",
+    "attributes": {
+      "name": "Shipment Tracker",
+      "description": "A web app and API by Distribute Aid to coordinate aid shipments around the world",
+      "repoUrl": "https://github.com/distributeaid/shipment-tracker",
+      "languages": [
+        "TypeScript",
+        "GraphQL",
+        "React"
+      ],
+      "twitterUrl": "https://twitter.com/DistributeAid/",
+      "currentlySeeking": [
+        "Backend Developers",
+        "DevOps"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "2 PRs a month",
+        "isMentorshipAvailable": true
+      },
+      "avatar": "da.png"
+    }
+  },
+  {
+    "slug": "dnnrly/abbreviate",
+    "attributes": {
+      "name": "abbreviate",
+      "repoUrl": "https://github.com/dnnrly/abbreviate",
+      "description": "Supporting your DevOps by shortening your strings using common abbreviations and clever guesswork.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "twitterUrl": "https://twitter.com/pascaldoesgo",
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/aef6be70-2171-11ec-922f-73b8df2aa67a"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "6 PR a year",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "dnnrly/hoofli",
+    "attributes": {
+      "name": "hoofli",
+      "repoUrl": "https://github.com/dnnrly/hoofli",
+      "description": "Generate PlantUML diagrams from Chrome or Firefox network inspections.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "twitterUrl": "https://twitter.com/pascaldoesgo",
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/d78e36e0-2173-11ec-9551-537c5ee7bea6"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "6 PR a year",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "dnnrly/httpref",
+    "attributes": {
+      "name": "httpref",
+      "repoUrl": "https://github.com/dnnrly/httpref",
+      "description": "Command line, offline, access to HTTP status code, common header, and port references.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "twitterUrl": "https://twitter.com/pascaldoesgo",
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/0c0ff210-2173-11ec-96b5-afe99c614d3c"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "6 PR a year",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "dnnrly/puzzle-template",
+    "attributes": {
+      "name": "puzzle-template",
+      "repoUrl": "https://github.com/dnnrly/puzzle-template",
+      "description": "A generic template for puzzle projects such as Project Euler or Advent of Code .",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "twitterUrl": "https://twitter.com/pascaldoesgo",
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/495c4730-2174-11ec-a40e-8b543b602219"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "6 PR a year",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "docker-slim/docker-slim",
+    "attributes": {
+      "name": "docker-slim",
+      "repoUrl": "https://github.com/docker-slim/docker-slim",
+      "description": "Make your containers better, smaller, and more secure with DockerSlim. This tool for developers provides a set of commands to simplify and optimize your developer experience with containers.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Docker",
+        "DevOps"
+      ],
+      "avatar": "docker-slim.png",
+      "websiteUrl": "https://dockersl.im",
+      "twitterUrl": "https://twitter.com/DockerSlim",
+      "currentlySeeking": [
+        "Developers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/1cedd540-6451-11ec-a279-0572ca5abbdc",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "contributionOverview": {
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://gitpod.io/#https://github.com/docker-slim/docker-slim"
+      },
+      "learnLinks": [
+        {
+          "title": "README",
+          "url": "https://github.com/docker-slim/docker-slim"
+        },
+        {
+          "title": "Build Instructions",
+          "url": "https://github.com/docker-slim/docker-slim#build-process"
+        },
+        {
+          "title": "How to Contribute",
+          "url": "https://github.com/docker-slim/docker-slim/blob/master/CONTRIBUTING.md"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dracarys18/tweetbot",
+    "attributes": {
+      "name": "TweetBot",
+      "repoUrl": "https://github.com/dracarys18/TweetBot",
+      "description": "A Telegram Bot to Stream the tweets from any account from Twitter to your telegram channel.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "(optional) The name of an image in the project's directory, like \"avatar.png\". This will appear on the project card contributors see when searching for a project.",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/74da8940-21e1-11ec-921e-6d460d7c194e"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Python",
+          "url": "https://docs.python.org/3/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "edoardottt/cariddi",
+    "attributes": {
+      "name": "cariddi",
+      "repoUrl": "https://github.com/edoardottt/cariddi",
+      "description": "Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more...",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "Infosec"
+      ],
+      "avatar": "cariddi.png",
+      "websiteUrl": "https://www.edoardoottavianelli.it",
+      "twitterUrl": "https://twitter.com/edoardottt2",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month"
+      }
+    }
+  },
+  {
+    "slug": "edoardottt/scilla",
+    "attributes": {
+      "name": "scilla",
+      "repoUrl": "https://github.com/edoardottt/scilla",
+      "description": "Information Gathering tool - DNS / Subdomains / Ports / Directories enumeration",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "Infosec"
+      ],
+      "avatar": "scilla.png",
+      "websiteUrl": "https://www.edoardoottavianelli.it",
+      "twitterUrl": "https://twitter.com/edoardottt2",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month"
+      }
+    }
+  },
+  {
+    "slug": "erik-whiting/lulutest",
+    "attributes": {
+      "name": "LuluTest",
+      "repoUrl": "https://github.com/erik-whiting/LuluTest",
+      "description": "Browser automation framework in Python",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "avatar.png",
+      "twitterUrl": "https://twitter.com/ErikWhiting4",
+      "currentlySeeking": [
+        "Developers",
+        "DevOps",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/4cceaf70-1ef4-11ec-ab55-99c1e0efec17",
+        "description": "High level overview of how the modules are connected"
+      },
+      "contributionOverview": {
+        "mainLocation": "US",
+        "idealEffort": "Everything helps",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Getting Started with Browser Automation (written by project owner)",
+          "url": "https://erikscode.space/index.php/2019/09/27/getting-started-with-browser-automation-testing-in-python/"
+        },
+        {
+          "title": "Learning Selenium with Python",
+          "url": "https://selenium-python.readthedocs.io/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fairlearn/fairlearn",
+    "attributes": {
+      "name": "Fairlearn",
+      "repoUrl": "https://github.com/fairlearn/fairlearn",
+      "description": "Fairlearn is an open-source, community-driven project to help data scientists improve fairness of AI systems.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "Machine Learning",
+        "Social Activism"
+      ],
+      "avatar": "fairlearn.png",
+      "websiteUrl": "https://fairlearn.org",
+      "currentlySeeking": [
+        "Developers",
+        "Researchers",
+        "Maintainers"
+      ],
+      "contributionOverview": {
+        "idealEffort": "as it suits you"
+      },
+      "learnLinks": [
+        {
+          "title": "Get started",
+          "url": "https://fairlearn.org/main/quickstart.html"
+        },
+        {
+          "title": "Contributor guide",
+          "url": "https://fairlearn.org/main/contributor_guide/index.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "feldoh/jzookeeperedit",
+    "attributes": {
+      "name": "JZookeeperEdit",
+      "repoUrl": "https://github.com/feldoh/JZookeeperEdit",
+      "description": "A simple tool for browsing and modifying zookeeper trees",
+      "languages": [
+        "Java",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "JZookeeperEdit.jpg",
+      "websiteUrl": "http://feldoh.github.io/JZookeeperEdit/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/bd79ede0-20a5-11ec-8e87-072584a095ef",
+        "description": "CodeSee Map of JZookeeperEdit"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "Retaining compatibility with upstream Zookeeper",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Zookeeper",
+          "url": "https://zookeeper.apache.org/doc/current/zookeeperOver.html"
+        },
+        {
+          "title": "Get started with JavaFX",
+          "url": "https://openjfx.io"
+        },
+        {
+          "title": "Maven in 5 Minutes",
+          "url": "https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html"
+        },
+        {
+          "title": "Getting started with Curator",
+          "url": "https://curator.apache.org/getting-started.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "felipecaputo/git-project-manager",
+    "attributes": {
+      "name": "VSCode Git Project Manager extension",
+      "repoUrl": "https://github.com/felipecaputo/git-project-manager",
+      "description": "A VSCode extension that searches for git repositories and allows you to easily and quickly switch between them",
+      "languages": [
+        "TypeScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Productivity"
+      ],
+      "avatar": "icon.png",
+      "websiteUrl": "https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager",
+      "currentlySeeking": [
+        "Developers",
+        "Mentors"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/42d93d70-2d11-11ec-83ed-59bebf71da1a",
+        "description": "Extension map"
+      },
+      "contributionOverview": {
+        "mainLocation": "Brazil",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Write your first extension",
+          "url": "https://code.visualstudio.com/api/get-started/your-first-extension"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "flameshot-org/flameshot",
+    "attributes": {
+      "name": "Flameshot",
+      "repoUrl": "https://github.com/flameshot-org/flameshot",
+      "description": "Powerful yet simple to use screenshot software.",
+      "languages": [
+        "C / C++",
+        "Qt"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Productivity",
+        "Tools",
+        "CLI"
+      ],
+      "avatar": "flameshot.svg",
+      "websiteUrl": "https://flameshot.org",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers",
+        "UX"
+      ],
+      "contributionOverview": {
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://github.com/flameshot-org/flameshot/actions"
+      },
+      "learnLinks": [
+        {
+          "title": "Contribution Guidelines",
+          "url": "https://github.com/flameshot-org/flameshot/blob/master/docs/CONTRIBUTING.md"
+        },
+        {
+          "title": "Learn Qt",
+          "url": "https://doc.qt.io/qt-5.15/"
+        },
+        {
+          "title": "Learn CMake",
+          "url": "https://cmake.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "freecodecamp/freecodecamp",
+    "attributes": {
+      "name": "freeCodeCamp",
+      "repoUrl": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "twitterUrl": "https://twitter.com/freeCodeCamp",
+      "websiteUrl": "https://www.freecodecamp.org/",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "TypeScript"
+      ],
+      "tags": [
+        "Education",
+        "First Timer Friendly"
+      ],
+      "avatar": "avatar.jpg",
+      "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.",
+      "currentlySeeking": [
+        "Code Reviewers",
+        "Technical Writers",
+        "Frontend Developers",
+        "Issue Triage"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      }
+    }
+  },
+  {
+    "slug": "funilrys/pyfunceble",
+    "attributes": {
+      "name": "PyFunceble",
+      "repoUrl": "https://github.com/funilrys/PyFunceble",
+      "description": "A tool to check the availability or syntax of domain, IP or URL.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "CLI"
+      ],
+      "avatar": "pyfunceble.png",
+      "websiteUrl": "https://pyfunceble.github.io",
+      "twitterUrl": "https://twitter.com/pyfunceble",
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Read the history of the project!",
+          "url": "https://pyfunceble.readthedocs.io/en/dev/history.html"
+        },
+        {
+          "title": "Install, test or look at it!",
+          "url": "https://pyfunceble.readthedocs.io/en/dev/installation/index.html#development-version"
+        },
+        {
+          "title": "Learn how to use it!",
+          "url": "https://pyfunceble.readthedocs.io/en/dev/usage/index.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "garimasingh128/gitsetgo",
+    "attributes": {
+      "name": "Git Set Go Application",
+      "repoUrl": "https://github.com/garimasingh128/gitsetgo",
+      "description": "A Github Resume generator 👨‍💻👩‍ to create your own personalised resume based on your Github profile. 🔎 This tool lets you have your resume on a single click.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers"
+      ],
+      "learnLinks": [
+        {
+          "title": "Learn Git",
+          "url": "https://learngitbranching.js.org/"
+        },
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/tutorial/tutorial.html"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "geekboysupreme/mongodb-boilerplate",
+    "attributes": {
+      "name": "mongodb-boilerplate",
+      "repoUrl": "https://github.com/GeekBoySupreme/mongodb-boilerplate",
+      "description": "Boilerplate Code to start building an App connected to a MongoDB Instance.",
+      "languages": [
+        "JavaScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a5ccebd0-2022-11ec-80d4-5da4602c42a6",
+        "description": "mongodb-boilerplate map"
+      }
+    }
+  },
+  {
+    "slug": "graysonarts/rust-gpio-mqtt-bridge",
+    "attributes": {
+      "name": "GPIO to MQTT Bridge",
+      "repoUrl": "https://github.com/graysonarts/rust-gpio-mqtt-bridge",
+      "description": "A small rust command line tool that sends MQTT messages based on transitions of GPIO pins.",
+      "languages": [
+        "Rust"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Embedded Systems",
+        "Raspberry Pi"
+      ],
+      "avatar": "logo.png",
+      "websiteUrl": "https://graysonarts.com",
+      "twitterUrl": "https://twitter.com/graysonarts",
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/20814330-1cea-11ec-93a4-597e0e9e12ee",
+        "description": "A bit of an overview of the project and where to start."
+      },
+      "contributionOverview": {
+        "mainLocation": "Pacific Time",
+        "idealEffort": "Anything",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "haifahrul/go-server-side-ag-grid",
+    "attributes": {
+      "name": "go-server-side-ag-grid",
+      "repoUrl": "https://github.com/haifahrul/go-server-side-ag-grid",
+      "description": "A reference implementation showing how to perform server-side operations using ag-Grid with api server node.js and go",
+      "languages": [
+        "Go",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "NodeJS",
+        "HTML / CSS",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "tags": [
+        "Data Visualization",
+        "Tools"
+      ],
+      "avatar": "avatar.jpg",
+      "websiteUrl": "https://raw.githubusercontent.com/haifahrul/go-server-side-ag-grid/main/data/sample.png",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Backend Developers",
+        "Technical Writers",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/861a2580-2155-11ec-9225-01ea8cc71213",
+        "description": "A breakdown of the project structure of go-server-side-ag-grid."
+      },
+      "contributionOverview": {
+        "mainLocation": "Indonesian",
+        "idealEffort": "4 PRs a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Getting Started with What is Ag-Grid?",
+          "url": "https://www.ag-grid.com/"
+        },
+        {
+          "title": "Others tools for ag-grid server side based on NodeJS",
+          "url": "http://ag-grid.com/nodejs-server-side-operations/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "harryandriyan/amazsell",
+    "attributes": {
+      "name": "amazsell.",
+      "repoUrl": "https://github.com/harryandriyan/amazsell",
+      "description": "Amazon Review Sucker & Classifier Tool!",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React",
+        "MongoDB",
+        "NodeJS"
+      ],
+      "tags": [
+        "Scraping",
+        "E-Commerce"
+      ],
+      "avatar": null,
+      "websiteUrl": null,
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors",
+        "Testers"
+      ],
+      "learnLinks": [
+        {
+          "title": "Get started Puppeteer",
+          "url": "https://github.com/puppeteer/puppeteer"
+        },
+        {
+          "title": "Learn MongoDB",
+          "url": "https://university.mongodb.com/"
+        },
+        {
+          "title": "Get started with Ant Design",
+          "url": "https://ant.design"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "hsbalar/preserver-plus",
+    "attributes": {
+      "name": "preserver-plus",
+      "repoUrl": "https://github.com/hsbalar/preserver-plus",
+      "description": "Minimal online/offline notes taking app with rich text formatting.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "Angular",
+        "CouchDB",
+        "NodeJS"
+      ],
+      "tags": [
+        "Productivity",
+        "Notetaking",
+        "First Timer Friendly"
+      ],
+      "avatar": null,
+      "websiteUrl": "https://preserver-plus.netlify.app",
+      "twitterUrl": "https://twitter.com/hsbalar",
+      "currentlySeeking": [
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Developers",
+        "Testers",
+        "Frontend Developers"
+      ],
+      "learnLinks": [
+        {
+          "title": "Get started PouchDB",
+          "url": "https://pouchdb.com/"
+        },
+        {
+          "title": "Learn CouchDB",
+          "url": "https://couchdb.apache.org/"
+        },
+        {
+          "title": "Get started with angular2gridster",
+          "url": "https://github.com/swiety85/angular2gridster"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "iamayushdas/cart",
+    "attributes": {
+      "name": "Collcart",
+      "repoUrl": "https://github.com/iamayushdas/cart",
+      "description": "Explore new and trendy getups & webseries with Collcart!!",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Web Framework",
+        "E-Commerce"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": null,
+      "twitterUrl": "https://twitter.com/imayushdas",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/602b7190-1d03-11ec-a1cb-e5e5ff9435fd",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "contributionOverview": {
+        "mainLocation": "India, New Delhi",
+        "idealEffort": "3 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Gatsby",
+          "url": "https://www.gatsbyjs.com/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "itsnitinr/driwwwle-v2",
+    "attributes": {
+      "name": "Driwwwle",
+      "repoUrl": "https://github.com/itsnitinr/driwwwle-v2/",
+      "description": "The open-source social network for developers to showcase their projects. It's like Dribbble, but for developers.",
+      "languages": [
+        "JavaScript",
+        "NextJS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Social Network"
+      ],
+      "avatar": "logo.png",
+      "websiteUrl": "https://driwwwle.com",
+      "twitterUrl": "https://twitter.com/driwwwle",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/21f9b390-21e6-11ec-8ae9-47e63580b2cf",
+        "description": "How Driwwwle's codebase looks like"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn NextJS",
+          "url": "https://nextjs.org/learn/basics/create-nextjs-app"
+        },
+        {
+          "title": "Learn NodeJS",
+          "url": "https://www.youtube.com/playlist?list=PLillGF-RfqbZ2ybcoD2OaabW2P7Ws8CWu"
+        },
+        {
+          "title": "Learn Socket.io",
+          "url": "https://socket.io/get-started/chat"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "jai-dewani/memeify",
+    "attributes": {
+      "name": "Memeify",
+      "repoUrl": "https://github.com/jai-dewani/memeify",
+      "description": "A meme creator webapp made using React.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://jai-dewani.github.io/memeify/",
+      "twitterUrl": "https://twitter.com/jai_dewani",
+      "currentlySeeking": [
+        "Backend Developers",
+        "Frontend Developers",
+        "Maintainers",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/e075bde0-1b02-11ec-b92b-e5a767dffd82",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn ReactJs",
+          "url": "https://reactjs.org/docs/getting-started.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "kambleaa007/kittycat",
+    "attributes": {
+      "name": "KittyCat",
+      "repoUrl": "https://github.com/kambleaa007/KittyCat",
+      "description": "KittyCat is a react based web application for listing various Adoption of Cats.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education"
+      ],
+      "websiteUrl": "https://kambleaa007.github.io/KittyCat/",
+      "twitterUrl": "https://twitter.com/CodeKumar",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/e0e41710-2208-11ec-8ae9-47e63580b2cf"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn react",
+          "url": "https://www.reactjs.org/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "kinkusuma/math-quiz",
+    "attributes": {
+      "name": "math-quiz",
+      "repoUrl": "https://github.com/kinkusuma/math-quiz",
+      "description": "Math quiz game build with flutter.",
+      "languages": [
+        "Dart"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Gaming",
+        "Android",
+        "iOS"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "UX"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/12f67ee0-2f0c-11ec-9e8b-418f1ca137ab",
+        "description": "code overview"
+      },
+      "contributionOverview": {
+        "mainLocation": "Southeast Asia",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Dart",
+          "url": "https://dart.dev/"
+        },
+        {
+          "title": "Learn Flutter",
+          "url": "https://flutter.dev/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "l2ig/aqua",
+    "attributes": {
+      "name": "aqua",
+      "repoUrl": "https://github.com/l2ig/aqua",
+      "description": "A minimal and fast 🏃 web framework for Deno.",
+      "languages": [
+        "TypeScript"
+      ],
+      "tags": [
+        "Web Framework"
+      ],
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/d4813010-1cb4-11ec-942f-ed44d2bfc656"
+      },
+      "contributionOverview": {
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn more about Deno",
+          "url": "https://deno.land/manual"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "lpegoraro/password-manager",
+    "attributes": {
+      "name": "Password Manager",
+      "repoUrl": "https://github.com/lpegoraro/password-manager",
+      "description": "Password manager homemade for learning Go",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Infosec",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Americas",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "N/A (Figuring out where to rest it better)"
+      },
+      "learnLinks": [
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        },
+        {
+          "title": "Go By Example",
+          "url": "https://gobyexample.com/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "luisfilipept/github-covid-finder",
+    "attributes": {
+      "name": "GitHub Covid Finder",
+      "repoUrl": "https://github.com/luisFilipePT/github-covid-finder",
+      "description": "To face the worldwide Coronavirus crisis, we want to simplify the search for repositories with projects that work in the fight against covid19.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Health",
+        "Social Activism"
+      ],
+      "avatar": "logo.png",
+      "websiteUrl": "https://commit-to-fight-covid.netlify.app",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/412aa7c0-1d26-11ec-9eb0-ad351a9f5b0c",
+        "description": "CodeSee Map to help you get started abd get to know the project"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "moja-global/community-website",
+    "attributes": {
+      "name": "Moja Global's Community Website",
+      "repoUrl": "https://github.com/moja-global/community-website",
+      "websiteUrl": "https://community.moja.global/",
+      "description": "Community Website for Moja Global. This website is for people to get a glimpse of Moja Global's projects and their developments. The website also holds blogs and guides by the Moja family to help you better understand our work and hopefully learn from the experience of others.",
+      "languages": [
+        "React",
+        "JavaScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Environment",
+        "Web Application",
+        "DevOps",
+        "Web Accessibility"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Maintainers",
+        "Technical Writers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Docusaurus",
+          "url": "https://docusaurus.io/docs"
+        },
+        {
+          "title": "Learn MDX",
+          "url": "https://mdxjs.com/"
+        },
+        {
+          "title": "Learn React",
+          "url": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3"
+        },
+        {
+          "title": "Learn YAML",
+          "url": "https://learnxinyminutes.com/docs/yaml/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "moja-global/flint-ui",
+    "attributes": {
+      "name": "Moja Global's FLINT-UI",
+      "repoUrl": "https://github.com/moja-global/FLINT-UI",
+      "description": "User-Interface client for Moja Global's FLINT to configure cloud-based simulations. This project provides an intuitive way for new to explore some preconfigured FLINT modules, including the Generic Budget Carbon Model (GCBM), in order to better understand how the FLINT system works.",
+      "websiteUrl": "https://docs.moja.global/projects/flint-ui/en/latest/",
+      "languages": [
+        "VueJS",
+        "JavaScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Environment",
+        "Web Application",
+        "DevOps",
+        "Web Accessibility"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Frontend Developers",
+        "Maintainers",
+        "Technical Writers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn VueJS",
+          "url": "https://www.freecodecamp.org/news/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446/"
+        },
+        {
+          "title": "Learn Docker",
+          "url": "https://docker-curriculum.com/"
+        },
+        {
+          "title": "Learn reStructuredText",
+          "url": "https://www.writethedocs.org/guide/writing/reStructuredText/"
+        },
+        {
+          "title": "Learn Sphinx",
+          "url": "https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "moja-global/moja_global_docs",
+    "attributes": {
+      "name": "Moja Global's Documentation",
+      "repoUrl": "https://github.com/moja-global/moja_global_docs",
+      "websiteUrl": "https://docs.moja.global",
+      "description": "Official documentation for moja Global",
+      "languages": [
+        "C / C++"
+      ],
+      "tags": [
+        "First Timer Friendly"
+      ],
+      "avatar": "avatar.png",
+      "currentlySeeking": [
+        "Technical Writers",
+        "Maintainers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a week",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn reStructuredText",
+          "url": "https://www.writethedocs.org/guide/writing/reStructuredText/"
+        },
+        {
+          "title": "Learn Sphinx",
+          "url": "https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview"
+        },
+        {
+          "title": "Web Accessibility",
+          "url": "https://www.w3.org/WAI/fundamentals/"
+        },
+        {
+          "title": "C++ for beginners",
+          "url": "https://www.youtube.com/playlist?list=PLAE85DE8440AA6B83"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "mradulrathore/hangmangame",
+    "attributes": {
+      "name": "Hangman Game.",
+      "repoUrl": "https://github.com/mradulrathore/HangmanGame",
+      "description": "It is a simple Java-based hangman game.The player has to guess the hidden word by guessing the individual characters of the word.",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Gaming"
+      ],
+      "avatar": "logo.png",
+      "websiteUrl": "https://mradulrathore.github.io/",
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      }
+    }
+  },
+  {
+    "slug": "muhammadawaisshaikh/community-events-angular",
+    "attributes": {
+      "name": "ComEve (Community Events)",
+      "repoUrl": "https://github.com/muhammadawaisshaikh/community-events-angular",
+      "twitterUrl": "https://twitter.com/developerorium/status/1444012109075927042",
+      "websiteUrl": "https://muhammadawaisshaikh.github.io/community-events-angular/",
+      "languages": [
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "Social Network",
+        "First Timer Friendly",
+        "Web Application"
+      ],
+      "avatar": "avatar.png",
+      "description": "Community Events App built with ❤️ using Angular, NgRx, Rxjs to do thrill in",
+      "currentlySeeking": [
+        "Code Reviewers",
+        "Technical Writers",
+        "Frontend Developers",
+        "Issue Triage"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Pakistan",
+        "idealEffort": "1 PR a month / As much as you can",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      }
+    }
+  },
+  {
+    "slug": "nil1729/food-order-app",
+    "attributes": {
+      "name": "Food-Order-App",
+      "repoUrl": "https://github.com/nil1729/food-order-app",
+      "description": "Simple Food Ordering Website (MEVN, Bootstrap, Firebase)",
+      "websiteUrl": "https://food-order-app-nil.herokuapp.com/",
+      "twitterUrl": "https://twitter.com/_nilanjandeb",
+      "avatar": "food-order-app-avatar.png",
+      "languages": [
+        "JavaScript",
+        "VueJS",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "E-Commerce"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Mentors"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/82edc210-2013-11ec-a698-bbd2bff7a221",
+        "description": "Get a quick overview of the project with a CodeSee Map!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Git",
+          "url": "https://learngitbranching.js.org/"
+        },
+        {
+          "title": "Learn VueJS",
+          "url": "https://vuejs.org/v2/guide/"
+        },
+        {
+          "title": "Learn NodeJS",
+          "url": "https://nodejs.dev/learn/introduction-to-nodejs/"
+        },
+        {
+          "title": "Get started with MongoDB and Mongoose",
+          "url": "https://mongoosejs.com/docs/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "official-abhi/vaccine-tracker-react-native",
+    "attributes": {
+      "name": "vaccine-tracker-app",
+      "repoUrl": "https://github.com/official-abhi/vaccine-tracker-react-native",
+      "description": "cross platform app to track and store your vaccination credential and certificate with realtime firebase database and government apis",
+      "languages": [
+        "JavaScript",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Android",
+        "iOS"
+      ],
+      "currentlySeeking": [
+        "Backend Developers",
+        "Testers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/f29f4f20-28d3-11ec-bc42-559f2f5abf0a",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "React Native",
+          "url": "https://www.tutorialspoint.com/react_native/index.htm"
+        },
+        {
+          "title": "setu api",
+          "url": "https://apisetu.gov.in/"
+        },
+        {
+          "title": "JavaScript",
+          "url": "https://www.w3schools.com/js/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ojaswa1942/go-watch",
+    "attributes": {
+      "name": "go-watch",
+      "repoUrl": "https://github.com/ojaswa1942/go-watch",
+      "description": "HTTP middleware to watch, report and recover from unhandled exceptions in GoLang.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "twitterUrl": "https://twitter.com/ojaswa1942",
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/1196ded0-1cf8-11ec-93a4-597e0e9e12ee"
+      },
+      "contributionOverview": {
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn GoLang",
+          "url": "https://golang.org/doc/tutorial/getting-started"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        },
+        {
+          "title": "Practice GoLang",
+          "url": "https://gophercises.com/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "openziti/edge",
+    "attributes": {
+      "name": "Ziti Edge",
+      "repoUrl": "https://github.com/openziti/edge",
+      "websiteUrl": "https://ziti.dev",
+      "description": "Application-embedded connectivity and zero-trust components.",
+      "languages": [
+        "Go"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "tags": [
+        "Infosec"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps"
+        ]
+      },
+      "avatar": "ziti.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/a4e93b10-268f-11ec-95bd-47058f32abec",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Ziti",
+          "url": "https://ziti.dev/"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://github.com/openziti/ziti/tree/release-next/quickstart#readme"
+        },
+        {
+          "title": "Company website",
+          "url": "http://netfoundry.io"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "openziti/fabric",
+    "attributes": {
+      "name": "Ziti Fabric",
+      "repoUrl": "https://github.com/openziti/fabric",
+      "websiteUrl": "https://ziti.dev",
+      "description": "Geo-scale overlay network and core network programming model.",
+      "languages": [
+        "Go"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "tags": [
+        "Infosec"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps"
+        ]
+      },
+      "avatar": "ziti.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/45c1cea0-2693-11ec-95bd-47058f32abec",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Ziti",
+          "url": "https://ziti.dev/"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://github.com/openziti/ziti/tree/release-next/quickstart#readme"
+        },
+        {
+          "title": "Company website",
+          "url": "http://netfoundry.io"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "openziti/foundation",
+    "attributes": {
+      "name": "Ziti Foundation",
+      "repoUrl": "https://github.com/openziti/foundation",
+      "websiteUrl": "https://ziti.dev",
+      "description": "Foundation components for the Ziti golang ecosystem.",
+      "languages": [
+        "Go"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "tags": [
+        "Infosec"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps"
+        ]
+      },
+      "avatar": "ziti.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/45c1cea0-2693-11ec-95bd-47058f32abec",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Ziti",
+          "url": "https://ziti.dev/"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://github.com/openziti/ziti/tree/release-next/quickstart#readme"
+        },
+        {
+          "title": "Company website",
+          "url": "http://netfoundry.io"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "openziti/ziti-sdk-js",
+    "attributes": {
+      "name": "Ziti JavaScript SDK",
+      "repoUrl": "https://github.com/openziti/ziti-sdk-js",
+      "websiteUrl": "https://ziti.dev",
+      "description": "A JavaScript-based SDK for delivering secure, Zero-Trust, browser-based web applications over a Ziti Network.",
+      "languages": [
+        "JavaScript"
+      ],
+      "currentlySeeking": [
+        "Testers"
+      ],
+      "tags": [
+        "Web Application",
+        "Infosec"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps"
+        ]
+      },
+      "avatar": "ziti.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/12213800-239c-11ec-8afb-0d2533b87e31",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Ziti",
+          "url": "https://ziti.dev/"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://github.com/openziti/ziti/tree/release-next/quickstart#readme"
+        },
+        {
+          "title": "Company website",
+          "url": "http://netfoundry.io"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "openziti/ziti",
+    "attributes": {
+      "name": "Ziti",
+      "repoUrl": "https://github.com/openziti/ziti",
+      "websiteUrl": "https://ziti.dev",
+      "description": "Executables for the open-core Ziti release.",
+      "languages": [
+        "Go"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "tags": [
+        "CLI",
+        "Infosec"
+      ],
+      "contributionOverview": {
+        "mainLocation": "America",
+        "isMentorshipAvailable": true,
+        "extras": [
+          "Features code maps"
+        ]
+      },
+      "avatar": "ziti.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/4e83ba30-268e-11ec-81a1-59efefb8ce6c",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn About Ziti",
+          "url": "https://ziti.dev/"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://github.com/openziti/ziti/tree/release-next/quickstart#readme"
+        },
+        {
+          "title": "Company website",
+          "url": "http://netfoundry.io"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "patroklossam/warehouse",
+    "attributes": {
+      "name": "WareHouse",
+      "repoUrl": "https://github.com/patroklossam/WareHouse",
+      "description": "This is an open-source warehouse management system. You can set your own storage rooms, same or different products in each room with different quantities as well as customer information. Easy way to update any information that is stored and get reported for low quantities. Search across all storage rooms to find the product you are missing!",
+      "languages": [
+        "Java",
+        "SQLite"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/bae43700-2296-11ec-b0ad-e31aed3380be"
+      }
+    }
+  },
+  {
+    "slug": "rafaeelaudibert/encryptor",
+    "attributes": {
+      "name": "Encryptor",
+      "repoUrl": "https://github.com/rafaeelaudibert/Encryptor",
+      "description": "Several encryptors (cryptographic secure or not) available in a REST API fashion, using Flask.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Cryptography"
+      ],
+      "currentlySeeking": [
+        "Developers"
+      ],
+      "avatar": "encryptor.png",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/5b42cc90-2df3-11ec-80d0-7d2f654f857e",
+        "description": "Featured map with a minimal Tour walking through the codebase."
+      }
+    }
+  },
+  {
+    "slug": "ramonh/rudder",
+    "attributes": {
+      "name": "Rudder",
+      "repoUrl": "https://github.com/ramonh/rudder",
+      "description": "A rust-based terminal RSS feed reader. A Rust Reader. Rudder.",
+      "languages": [
+        "Rust"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "CLI"
+      ],
+      "websiteUrl": "https://crates.io/crates/rudder",
+      "twitterUrl": "https://twitter.com/hola_soy_milk",
+      "currentlySeeking": [
+        "Developers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/bfc53040-25f1-11ec-bc9d-a5e1821b6e6e",
+        "description": "Overview of Rust-based structure for this crate!"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR every 2 months",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Termimad (dependency for terminal manipulation)",
+          "url": "https://docs.rs/termimad/0.8.30/termimad/"
+        },
+        {
+          "title": "Reqwest (http library)",
+          "url": "https://docs.rs/reqwest/0.10.10/reqwest/"
+        },
+        {
+          "title": "Dialoguer (create CLI dialogues)",
+          "url": "https://docs.rs/dialoguer/0.6.2/dialoguer/"
+        },
+        {
+          "title": "Crossterm (More CLI fun!)",
+          "url": "https://docs.rs/crossterm/0.17.7/crossterm/"
+        },
+        {
+          "title": "Getting Started with Rust",
+          "url": "https://www.rust-lang.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "richecr/duck-orm",
+    "attributes": {
+      "name": "DuckORM",
+      "repoUrl": "https://github.com/richecr/duck-orm",
+      "description": "The Duck-ORM package is an asynchronous ORM for Python, with support for Postgres and SQLite.",
+      "languages": [
+        "Python",
+        "PostgreSQL",
+        "SQLite"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Environment",
+        "Tools",
+        "Web Framework"
+      ],
+      "websiteUrl": "https://richecr.github.io/duck-orm/",
+      "twitterUrl": "https://twitter.com/richzinho_ecr",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/c1fd33e0-29ec-11ec-a596-f1eab4412285",
+        "description": "Overview of Python structure for this DuckORM!"
+      },
+      "contributionOverview": {
+        "mainLocation": "America",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Databases",
+          "url": "https://github.com/encode/databases"
+        },
+        {
+          "title": "PostgreSQL",
+          "url": "https://www.postgresql.org/docs/"
+        },
+        {
+          "title": "SQLite",
+          "url": "https://www.sqlite.org/docs.html"
+        },
+        {
+          "title": "Let's Build an ORM - Greg Back (Pyohio 2019)",
+          "url": "https://www.youtube.com/watch?v=6rw0p9AOYb8&ab_channel=PyOhio"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "rizqirizqi/jest-coverage-to-csv",
+    "attributes": {
+      "name": "jest-coverage-to-csv",
+      "repoUrl": "https://github.com/rizqirizqi/jest-coverage-to-csv",
+      "description": "Jest coverage report converter from json to csv.",
+      "languages": [
+        "JavaScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Productivity",
+        "CLI"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Asia",
+        "automatedDevEnvironment": "https://github.com/rizqirizqi/jest-coverage-to-csv/actions"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Jest",
+          "url": "https://jestjs.io/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "rizqirizqi/scientific-name-fetcher",
+    "attributes": {
+      "name": "Scientific Name Fetcher",
+      "repoUrl": "https://github.com/rizqirizqi/scientific-name-fetcher",
+      "description": "Fetch plants and animals scientific name information from the internet.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Environment",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers",
+        "Technical Writers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Asia"
+      }
+    }
+  },
+  {
+    "slug": "rizqirizqi/webpconvert",
+    "attributes": {
+      "name": "WebpConvert",
+      "repoUrl": "https://github.com/rizqirizqi/webpconvert",
+      "description": "CLI Converter from png/jpg images to webp.",
+      "languages": [
+        "JavaScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Productivity",
+        "CLI"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Asia",
+        "automatedDevEnvironment": "https://github.com/rizqirizqi/webpconvert/actions"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Webp",
+          "url": "https://developers.google.com/speed/webp"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "roerohan/8086.js",
+    "attributes": {
+      "name": "8086.js",
+      "repoUrl": "https://github.com/roerohan/8086.js",
+      "description": "A basic web-based 8086 emulator built with Javascript 🚀",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Web Framework"
+      ],
+      "avatar": "8086-avatar.svg",
+      "websiteUrl": "https://roerohan.github.io/8086.js/",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Maintainers",
+        "Code Reviewers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/docs/getting-started.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "roerohan/react-vnc",
+    "attributes": {
+      "name": "react-vnc",
+      "repoUrl": "https://github.com/roerohan/react-vnc",
+      "description": "A React Component to connect to a websockified VNC client using noVNC.",
+      "languages": [
+        "TypeScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools",
+        "Web Framework"
+      ],
+      "websiteUrl": "https://roerohan.github.io/react-vnc/",
+      "currentlySeeking": [
+        "Developers",
+        "Frontend Developers",
+        "Designers",
+        "Maintainers",
+        "Code Reviewers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/docs/getting-started.html"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "roerohan/vscode-mongosnippets-nodejs",
+    "attributes": {
+      "name": "vscode-MongoSnippets-NodeJS",
+      "repoUrl": "https://github.com/roerohan/vscode-MongoSnippets-NodeJS",
+      "description": "VSCode Extension - Mongo Snippets.",
+      "languages": [
+        "TypeScript"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Web Framework"
+      ],
+      "avatar": "mongo-snippets.png",
+      "websiteUrl": "https://marketplace.visualstudio.com/items?itemName=roerohan.mongo-snippets-for-node-js",
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Code Reviewers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": false
+      },
+      "learnLinks": [
+        {
+          "title": "Building VSCode Extensions - 1",
+          "url": "https://code.visualstudio.com/api/get-started/your-first-extension"
+        },
+        {
+          "title": "Building VSCode Extensions - 2",
+          "url": "https://medium.com/swlh/build-your-own-vscode-extension-d5a7dcc6764f"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "rohittp0/gramup",
+    "attributes": {
+      "name": "GramUp.",
+      "repoUrl": "https://github.com/rohittp0/GramUp",
+      "description": "GramUp enables you unlimited cloud backup and easy restore functionality and that too for free",
+      "languages": [
+        "Python",
+        "Markdown"
+      ],
+      "tags": [
+        "Tools",
+        "CLI"
+      ],
+      "avatar": "GramUp Icon.png",
+      "currentlySeeking": [
+        "Developers",
+        "Designers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers",
+        "UX"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/82cdf100-2de8-11ec-80d0-7d2f654f857e",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://github.dev/rohittp0/GramUp/blob/main"
+      }
+    }
+  },
+  {
+    "slug": "shauryauppal/pywhatsapp",
+    "attributes": {
+      "name": "PyWhatsapp",
+      "repoUrl": "https://github.com/shauryauppal/PyWhatsapp",
+      "description": "Python Automation using selenium & Scheduling of messages and media",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "Automation"
+      ],
+      "avatar": "avatar.png",
+      "websiteUrl": "https://shauryauppal.medium.com/pywhatsapp-whatsapp-automation-cfe972e7d50a",
+      "twitterUrl": "https://twitter.com/shaurya_uppal",
+      "currentlySeeking": [
+        "Developers",
+        "Automation",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/d8e8bb20-29f5-11ec-b1ce-cb4bb2caa6dd",
+        "description": "A breakdown of the project structure of the PyWhatsapp"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "2 PR a month"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Python",
+          "url": "https://www.python.org/"
+        },
+        {
+          "title": "Selenium with Python",
+          "url": "https://selenium-python.readthedocs.io/"
+        },
+        {
+          "title": "Python AutoIt Scripting",
+          "url": "https://github.com/jacexh/pyautoit"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "shivammathur/setup-php",
+    "attributes": {
+      "name": "setup-php",
+      "repoUrl": "https://github.com/shivammathur/setup-php",
+      "description": "GitHub action to set up PHP with extensions, php.ini configuration, coverage drivers, and various tools.",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "PHP",
+        "Shell"
+      ],
+      "avatar": "setup-php.png",
+      "websiteUrl": "https://setup-php.com",
+      "twitterUrl": "https://twitter.com/setup_php",
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/59e54290-23e6-11ec-95de-15c6708e23a1"
+      }
+    }
+  },
+  {
+    "slug": "shopyo/shopyo",
+    "attributes": {
+      "name": "Shopyo",
+      "repoUrl": "https://github.com/shopyo/shopyo",
+      "description": "A web framework based on Flask which focuses on modules and confers Django advantages",
+      "languages": [
+        "JavaScript",
+        "Python",
+        "HTML / CSS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Web Framework"
+      ],
+      "avatar": "avatar.png",
+      "twitterUrl": "https://twitter.com/shopyoproject",
+      "currentlySeeking": [
+        "Backend Developers",
+        "Frontend Developers",
+        "Technical Writers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/6e486c20-1979-11ec-b615-23ef4b16c81f"
+      },
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "The Starting Point",
+          "url": "https://shopyo.readthedocs.org/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "subhayu99/finadict",
+    "attributes": {
+      "name": "finadict",
+      "repoUrl": "https://github.com/subhayu99/finadict",
+      "description": "A simple and easy to use WebApp for Stocks / Cryptocurreny / Foreign Exchange prices prediction.",
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Machine Learning",
+        "Data Visualization",
+        "Web Application",
+        "Finance"
+      ],
+      "avatar": "finadict.png",
+      "websiteUrl": "https://finadict.tech/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "DevOps",
+        "Designers",
+        "Code Reviewers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/98139390-2284-11ec-9a58-dd146936e2c1",
+        "description": "Starting guide for the project"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": "https://www.gitpod.io/"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Python",
+          "url": "https://www.learnpython.org/"
+        },
+        {
+          "title": "Streamlit",
+          "url": "https://streamlit.io/"
+        },
+        {
+          "title": "FB Prophet",
+          "url": "https://facebook.github.io/prophet/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "codesee-io/test",
+    "attributes": {
+      "repoUrl": "https://github.com/Codesee-io/test",
+      "name": "Test repo"
+    }
+  },
+  {
+    "slug": "tewarig/meowform",
+    "attributes": {
+      "name": "MeowForm",
+      "repoUrl": "https://github.com/tewarig/MeowForm",
+      "description": "Make backend-less forms with MeowForm and get. Unlimited Responses ,in your inbox .",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React",
+        "NodeJS"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Forms"
+      ],
+      "avatar": "meow.png",
+      "twitterUrl": "https://twitter.com/OyeTewari",
+      "websiteUrl": "https://meowform.xyz/",
+      "currentlySeeking": [
+        "Backend Developers",
+        "Frontend Developers",
+        "Technical Writers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/364a5510-20c5-11ec-a0c3-11d394df1005"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a week"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "title": "Get started with Markdown",
+          "url": "https://www.markdownguide.org/getting-started/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "thamara/time-to-leave",
+    "attributes": {
+      "name": "Time to Leave",
+      "repoUrl": "https://github.com/thamara/time-to-leave",
+      "description": "Log work hours and get notified when it's time to leave the office and start to live.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "Python"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "time-to-leave.png",
+      "websiteUrl": "https://timetoleave.app/",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Brazil",
+        "isMentorshipAvailable": false
+      },
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/798d8e40-19c3-11ec-b873-35f335ec68d2",
+        "description": "Get a quick visual overview of the major areas of our repo!"
+      },
+      "learnLinks": [
+        {
+          "title": "Electron Quick Start",
+          "url": "https://www.electronjs.org/docs/tutorial/quick-start"
+        },
+        {
+          "title": "Time to Leave Developer guide",
+          "url": "https://github.com/thamara/time-to-leave/blob/main/DEVELOPMENT.md"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "thvardhan/youtuber-s-lucky-blocks",
+    "attributes": {
+      "name": "Minecraft Youtubers Lucky Blocks.",
+      "repoUrl": "https://github.com/thvardhan/Youtuber-s-Lucky-Blocks",
+      "description": "A minecraft mod that adds youtubers lucky blocks to the game. One can break the blocks and get random drops which are related to a particular youtuber",
+      "languages": [
+        "Java"
+      ],
+      "tags": [
+        "Gaming",
+        "Media"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Maintainers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/d72c1310-1ab7-11ec-8faa-452918c66fe9",
+        "description": "Map demonstrating how the project files work together"
+      },
+      "contributionOverview": {
+        "mainLocation": "India",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Learn Minecraft forge 1.12",
+          "url": "https://mcforge.readthedocs.io/en/1.12.x/"
+        },
+        {
+          "title": "Learn Minecraft forge 1.16 (to port the mod)",
+          "url": "https://mcforge.readthedocs.io/en/1.16.x/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tomassirio/birthdaybot",
+    "attributes": {
+      "name": "Birthdaybot",
+      "repoUrl": "https://github.com/tomassirio/BirthdayBot",
+      "description": "A simple Discord Bot to know users birthdays",
+      "languages": [
+        "JavaScript",
+        "MongoDB"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools",
+        "Gaming",
+        "Raspberry Pi",
+        "Starter Template",
+        "Productivity"
+      ],
+      "avatar": "birthday.jpeg",
+      "websiteUrl": "https://github.com/tomassirio",
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Discord API",
+          "url": "https://discord.com/developers/docs/intro"
+        },
+        {
+          "title": "Javascript Documentation",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tomassirio/bitcointelegrambot",
+    "attributes": {
+      "name": "BitcoinTelegramBot",
+      "repoUrl": "https://github.com/tomassirio/BitcoinTelegramBot",
+      "description": "A simple Telegram Bot to consult Bitcoin Prices",
+      "languages": [
+        "Go",
+        "MongoDB"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools",
+        "Cryptography",
+        "Raspberry Pi",
+        "Starter Template",
+        "Productivity"
+      ],
+      "avatar": "bitcointelegrambot.png",
+      "websiteUrl": "https://github.com/tomassirio",
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Go Documentation",
+          "url": "https://golang.org/doc/"
+        },
+        {
+          "title": "Telegram API",
+          "url": "https://core.telegram.org/bots/api"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tomassirio/listbot",
+    "attributes": {
+      "name": "Listbot",
+      "repoUrl": "https://github.com/tomassirio/ListBot",
+      "description": "A simple discord bot to create and share lists",
+      "languages": [
+        "JavaScript",
+        "MongoDB"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools",
+        "Gaming",
+        "Raspberry Pi",
+        "Starter Template",
+        "Productivity"
+      ],
+      "avatar": "listbot.png",
+      "websiteUrl": "https://github.com/tomassirio",
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Discord API",
+          "url": "https://discord.com/developers/docs/intro"
+        },
+        {
+          "title": "Javascript Documentation",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tomassirio/wednesdaybot",
+    "attributes": {
+      "name": "WednesdayBot",
+      "repoUrl": "https://github.com/tomassirio/WednesdayBot",
+      "description": "A simple Discord Bot to know when Wednesdays are here my dudes",
+      "languages": [
+        "JavaScript",
+        "MongoDB"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "Tools",
+        "Gaming",
+        "Raspberry Pi",
+        "Starter Template",
+        "Productivity"
+      ],
+      "avatar": "wednesdaybot.png",
+      "websiteUrl": "https://github.com/tomassirio",
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "DevOps",
+        "Maintainers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Mentors",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Worldwide",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "learnLinks": [
+        {
+          "title": "Discord API",
+          "url": "https://discord.com/developers/docs/intro"
+        },
+        {
+          "title": "Javascript Documentation",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tyvik/geopuzzle",
+    "attributes": {
+      "name": "GeoPuzzle",
+      "repoUrl": "https://github.com/tyvik/geopuzzle",
+      "description": "Arrange the pieces of the world! You need to drag the shape of the territory to the right place.",
+      "languages": [
+        "JavaScript",
+        "Python",
+        "TypeScript",
+        "HTML / CSS",
+        "React",
+        "PostgreSQL",
+        "Markdown"
+      ],
+      "tags": [
+        "Data Visualization",
+        "Education",
+        "Gaming"
+      ],
+      "avatar": "geopuzzle.png",
+      "websiteUrl": "https://geopuzzle.org/",
+      "twitterUrl": null,
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Designers",
+        "Mentors",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/01c90690-273e-11ec-8e0b-2da43c476634",
+        "description": "General overview"
+      },
+      "contributionOverview": {
+        "mainLocation": "Earth (languages Russian and English)",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true,
+        "automatedDevEnvironment": null
+      },
+      "learnLinks": [
+        {
+          "title": "GeoPuzzle — собери мир по кусочкам",
+          "url": "https://habr.com/ru/post/427209/"
+        },
+        {
+          "title": "GeoPuzzle — собери мир по кусочкам",
+          "url": "https://tyvik.ru/posts/geopuzzle/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "umutphp/awesome-cli",
+    "attributes": {
+      "name": "Awesome CLI",
+      "repoUrl": "https://github.com/umutphp/awesome-cli",
+      "description": "A simple command line tool to give you a fancy command line interface to dive into Awesome lists.",
+      "languages": [
+        "Go"
+      ],
+      "avatar": "awesome-cli-avatar.png",
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers"
+      ]
+    }
+  },
+  {
+    "slug": "umutphp/wp-vulnerability-check",
+    "attributes": {
+      "name": "WordPress Vulnerability Check",
+      "repoUrl": "https://github.com/umutphp/wp-vulnerability-check",
+      "description": "WordPress Vulnerability Check (wp-vulnerability-check) is a console application to check the WPScan Vulnerability Database via API to identify the security issues of WordPress plugins installed.",
+      "languages": [
+        "PHP"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Tools"
+      ],
+      "avatar": "wp-vulnerability-check-avatar.png",
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers"
+      ]
+    }
+  },
+  {
+    "slug": "unishubh/starlord",
+    "attributes": {
+      "name": "starlord",
+      "repoUrl": "https://github.com/unishubh/starlord",
+      "websiteUrl": "https://starlord-seven.vercel.app/",
+      "description": "Starlord is a full fledged online examination solution. It holds the functionality to create as well as attempt examinations.",
+      "languages": [
+        "JavaScript",
+        "HTML / CSS",
+        "React"
+      ],
+      "tags": [
+        "First Timer Friendly"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/b25936a0-21ae-11ec-82ba-4f649219975d",
+        "description": "Get a quick overview of the major areas of our repo"
+      }
+    }
+  },
+  {
+    "slug": "veracioux/tuterm",
+    "attributes": {
+      "name": "tuterm",
+      "repoUrl": "https://github.com/veracioux/tuterm",
+      "description": "A better way to learn CLI programs",
+      "languages": [
+        "Bash"
+      ],
+      "tags": [
+        "First Timer Friendly",
+        "Education",
+        "CLI"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Testers"
+      ],
+      "contributionOverview": {
+        "mainLocation": "Europe",
+        "isMentorshipAvailable": true
+      }
+    }
+  },
+  {
+    "slug": "viniciusbds/navio",
+    "attributes": {
+      "name": "Navio",
+      "repoUrl": "https://github.com/viniciusbds/navio",
+      "description": "A simple and study purposes tool for creating and managing linux containers.",
+      "languages": [
+        "Go"
+      ],
+      "tags": [
+        "Education",
+        "Docker",
+        "Tools"
+      ],
+      "avatar": "navio.png",
+      "contributionOverview": {
+        "mainLocation": "South America",
+        "idealEffort": "1 PR a month",
+        "isMentorshipAvailable": true
+      },
+      "currentlySeeking": [
+        "Developers",
+        "Code Reviewers",
+        "Technical Writers",
+        "Testers"
+      ],
+      "featuredMap": {
+        "url": "https://app.codesee.io/maps/public/10de8a50-1821-11ec-b615-23ef4b16c81f",
+        "description": "Get a quick overview of the major areas of our repo"
+      },
+      "learnLinks": [
+        {
+          "title": "Learn more about containers",
+          "url": "https://www.youtube.com/watch?v=8fi7uSYlOdc"
+        },
+        {
+          "title": "Containers from Scratch",
+          "url": "https://ericchiang.github.io/post/containers-from-scratch/"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "zvakanaka/remote-pi-web",
+    "attributes": {
+      "name": "Remote Pi Web",
+      "repoUrl": "https://github.com/zvakanaka/remote-pi-web",
+      "description": "Operate your Raspberry Pi from a web browser.",
+      "languages": [
+        "JavaScript",
+        "C / C++",
+        "HTML / CSS",
+        "NodeJS"
+      ],
+      "tags": [
+        "Education",
+        "Tools",
+        "Raspberry Pi"
+      ],
+      "currentlySeeking": [
+        "Developers",
+        "Backend Developers",
+        "Frontend Developers",
+        "Testers"
+      ]
+    }
+  }
+]

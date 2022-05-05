@@ -5,28 +5,34 @@
   "description": "OSS Port",
   "author": "Maxime Preaux",
   "license": "MIT",
+  "sideEffects": false,
   "keywords": [
-    "gatsby"
+    "open source",
+    "remix"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "build": "yarn run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/index.css -o app/styles/index.css",
+    "dev": "yarn run dev:projects && concurrently \"yarn run dev:css\" \"remix dev\"",
+    "dev:css": "postcss styles --base styles --dir app/styles -w",
+    "dev:projects": "npx ts-node app/utils/parse-projects.ts",
+    "start": "remix-serve build"
   },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@octokit/graphql": "4.8.0",
     "@primer/octicons-react": "15.2.0",
-    "autoprefixer": "10.3.3",
+    "@remix-run/node": "^1.4.3",
+    "@remix-run/react": "^1.4.3",
+    "@remix-run/serve": "^1.4.3",
+    "autoprefixer": "^10.4.7",
     "axios": "0.24.0",
     "classnames": "2.3.1",
+    "concurrently": "^7.1.0",
     "dotenv": "10.0.0",
-    "gatsby": "3.14.5",
+    "front-matter": "^4.0.2",
+    "gatsby": "3.13.0",
     "gatsby-plugin-fathom": "2.1.1",
     "gatsby-plugin-image": "1.14.2",
     "gatsby-plugin-manifest": "3.14.0",
@@ -40,21 +46,30 @@
     "gatsby-source-filesystem": "3.14.0",
     "gatsby-transformer-sharp": "3.14.0",
     "js-search": "2.0.0",
-    "postcss": "8.3.11",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "6.1.0",
     "remark-emoji": "2.2.0",
-    "tailwindcss": "2.2.19"
+    "tailwindcss": "^3.0.24",
+    "tiny-invariant": "^1.2.0"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "devDependencies": {
+    "@remix-run/dev": "^1.4.3",
+    "@remix-run/eslint-config": "^1.4.3",
     "@types/classnames": "2.3.1",
     "@types/js-search": "1.4.0",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "6.1.2",
+    "eslint": "^8.11.0",
     "jest": "27.2.0",
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "typescript": "^4.5.5"
   }
 }

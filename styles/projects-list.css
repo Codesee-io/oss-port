@@ -1,0 +1,114 @@
+/* Style input fields */
+.input[type="text"],
+.input[type="email"],
+textarea.input {
+  @apply border border-black-200 rounded bg-white px-2 py-1 block w-full focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Make the native checkboxes chunkier */
+.input[type="checkbox"] {
+  @apply mr-2 cursor-pointer;
+  height: 18px;
+  width: 18px;
+}
+
+/* Projects grid */
+/* 2 cards at 400px + 32px gap = 832px */
+/* 3 cards at 400px + 32px * 2 gap  = 1264px */
+
+.projects-wrapper {
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 832px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 1264px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(3, auto);
+    max-width: 1600px;
+  }
+}
+
+/* Match the width of the cards inside the projects-wrapper */
+.filters-wrapper {
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  text-align: right;
+  max-width: 100%;
+  display: none;
+}
+
+@media (min-width: 832px) {
+  .filters-wrapper {
+    display: block;
+    padding: 0;
+    width: 832px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .filters-wrapper {
+    width: 1264px;
+  }
+}
+
+/* Sidebar with filters */
+.sidebar-backdrop {
+  @apply bg-black-500;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 100ms linear;
+  z-index: 60;
+}
+
+.sidebar-backdrop.active {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+.sidebar {
+  background: white;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 150ms ease-out;
+  width: 480px;
+  max-width: 100%;
+  z-index: 61;
+  will-change: transform;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Secondary buttons */
+.secondary-button {
+  @apply bg-white text-black-300 border border-gray-300 rounded px-4 py-1 font-medium;
+}
+
+@media (hover: hover) {
+  .secondary-button:hover {
+    box-shadow: inset 0 0 1px 0 #535e79;
+  }
+}
+
+/* Prevent scrolling the body */
+.prevent-mobile-scroll {
+  overflow: hidden;
+  padding-right: 15px;
+}
