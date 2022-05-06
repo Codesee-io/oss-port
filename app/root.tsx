@@ -13,7 +13,19 @@ import {
 import tailwindStyles from "./styles/index.css";
 
 export function links() {
-  return [{ rel: "stylesheet", href: tailwindStyles }];
+  return [
+    { rel: "stylesheet", href: tailwindStyles },
+    {
+      rel: "icon",
+      href: "/favicon.png",
+      type: "image/png",
+    },
+    {
+      rel: "icon",
+      href: "/favicon.svg",
+      type: "image/svg+xml",
+    },
+  ];
 }
 
 export const meta: MetaFunction = () => ({
