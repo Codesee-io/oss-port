@@ -31,13 +31,13 @@ const SearchWrapper: FunctionComponent<Props> = ({
   });
 
   const projectSearch = useRef<Search>();
-  const [filteredProjectIds, setFilteredProjectIds] = useState(
+  const [filteredProjectSlugs, setFilteredProjectSlugs] = useState(
     allProjects.map((project) => project.slug)
   );
 
   useEffect(
     function buildSearchIndex() {
-      const search = new Search("id"); // `id` is the unique identifier for search results
+      const search = new Search("slug"); // `slug` is the unique identifier for search results
       search.addIndex("name");
       search.addIndex("languages");
       search.addIndex("tags");
@@ -103,14 +103,14 @@ const SearchWrapper: FunctionComponent<Props> = ({
         newSearchValue
       ) as Project[];
 
-      const matchingProjectIds = searchProjects.map((project) => project.slug);
+      const matchingSlugs = searchProjects.map((project) => project.slug);
       filteredProjects = filteredProjects.filter((project) =>
-        matchingProjectIds.includes(project.slug)
+        matchingSlugs.includes(project.slug)
       );
     }
 
     // Update the state
-    setFilteredProjectIds(filteredProjects.map((project) => project.slug));
+    setFilteredProjectSlugs(filteredProjects.map((project) => project.slug));
     setFilters({
       search: newSearchValue,
       tags: newTags,
@@ -122,7 +122,7 @@ const SearchWrapper: FunctionComponent<Props> = ({
       value={{
         searchByText: performSearch,
         filterByTag,
-        filteredProjectIds,
+        filteredProjectIds: filteredProjectSlugs,
         allActiveTags: filters.tags,
         clearAllTags,
       }}
