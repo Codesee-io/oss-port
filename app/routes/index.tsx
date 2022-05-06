@@ -3,22 +3,24 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useMemo, useState } from "react";
 
-import CallToAction from "../components/CallToAction";
-import RootLayout from "../components/RootLayout";
-import Logo from "../images/Logo";
+import type { GitHubData, Project, ProjectCategory } from "~/types";
 import { HOW_TO_LIST_PROJECT_URL } from "../utils/constants";
 import {
   generateSearchIndex,
   getProjects,
   getProjectsMetadata,
-} from "../projects.server";
-import SearchWrapper from "../components/local-search/SearchWrapper";
-import ProjectList from "../components/ProjectList";
-import SearchInput from "../components/local-search/SearchInput";
-import SidebarWithFilters from "../components/SidebarWithFilters";
-import ToggleFiltersButton from "../components/ToggleFiltersButton";
+} from "~/projects.server";
+import { getGitHubData } from "~/github.server";
+import Logo from "~/images/Logo";
+import SearchWrapper from "~/components/local-search/SearchWrapper";
+import ProjectList from "~/components/ProjectList";
+import SearchInput from "~/components/local-search/SearchInput";
+import SidebarWithFilters from "~/components/SidebarWithFilters";
+import ToggleFiltersButton from "~/components/ToggleFiltersButton";
+import CallToAction from "~/components/CallToAction";
+import RootLayout from "~/components/RootLayout";
 
-import projectsStyles from "../styles/projects-list.css";
+import projectsStyles from "~/styles/projects-list.css";
 
 export function links() {
   return [{ rel: "stylesheet", href: projectsStyles }];
@@ -38,15 +40,29 @@ export const loader: LoaderFunction = async () => {
   }, {});
 
   const { allLanguages, allTags, allSeeking } = getProjectsMetadata();
+  const githubData = getGitHubData();
 
-  return json({
+  const payload: LoaderData = {
     projects,
     searchIndex,
     helpfulness,
     allLanguages,
     allTags,
     allSeeking,
-  });
+    githubData,
+  };
+
+  return json(payload);
+};
+
+type LoaderData = {
+  projects: Project[];
+  searchIndex: any;
+  helpfulness: any;
+  allLanguages: ProjectCategory[];
+  allTags: ProjectCategory[];
+  allSeeking: ProjectCategory[];
+  githubData: { [key: string]: GitHubData };
 };
 
 export default function Index() {
@@ -57,7 +73,8 @@ export default function Index() {
     allLanguages,
     allTags,
     allSeeking,
-  } = useLoaderData();
+    githubData,
+  } = useLoaderData<LoaderData>();
 
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -67,7 +84,7 @@ export default function Index() {
       allTags: allTags.map((lang) => lang.fieldValue).sort(),
       allSeeking: allSeeking.map((lang) => lang.fieldValue).sort(),
     };
-  }, [allLanguages]);
+  }, [allLanguages, allSeeking, allTags]);
 
   return (
     <RootLayout>
@@ -101,8 +118,7 @@ export default function Index() {
         <div className="mx-auto" style={{ maxWidth: 1600 }}>
           <ProjectList
             allProjects={projects}
-            // githubDataSet={githubDataSet}
-            githubDataSet={{}}
+            githubDataSet={githubData}
             helpfulnessDataSet={helpfulness}
           />
           <SidebarWithFilters

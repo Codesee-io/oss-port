@@ -4,7 +4,6 @@ We’re thrilled to have you in Port. It's super easy to get started, and should
 
 **Remix todos:**
 
-- [ ] fetch data from GitHub
 - [ ] use the correct favicon
 - [ ] pull the projects from the file system during development
 
