@@ -5,7 +5,6 @@
   "description": "OSS Port",
   "author": "Maxime Preaux",
   "license": "MIT",
-  "sideEffects": false,
   "keywords": [
     "open source",
     "remix"
@@ -17,7 +16,8 @@
     "dev:css": "postcss styles --base styles --dir app/styles -w",
     "dev:projects": "npx ts-node app/utils/parse-projects.ts",
     "start": "remix-serve build",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
