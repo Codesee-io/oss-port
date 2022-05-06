@@ -6,6 +6,7 @@ public/build
 .env
 .vercel
 .output
+/api
 
 # VS CODE PLUGIN
 .history/

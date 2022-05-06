@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -6,6 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
 
 import tailwindStyles from "./styles/index.css";
@@ -41,7 +43,15 @@ export const meta: MetaFunction = () => ({
   "twitter:image:alt": "TODO",
 });
 
+export async function loader() {
+  return json({
+    fathomSiteId: process.env.FATHOM_SITE_ID,
+  });
+}
+
 export default function App() {
+  const { fathomSiteId } = useLoaderData<{ fathomSiteId?: string }>();
+
   return (
     <html lang="en">
       <head>
@@ -50,6 +60,14 @@ export default function App() {
       </head>
       <body className="bg-black-30">
         <Outlet />
+        {fathomSiteId && (
+          <script
+            src="https://cdn.usefathom.com/script.js"
+            data-site={fathomSiteId}
+            data-spa="auto"
+            defer
+          />
+        )}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
