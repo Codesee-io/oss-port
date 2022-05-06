@@ -12,7 +12,19 @@ type Props = {
  */
 const ProjectAvatar: FC<Props> = ({ alt, avatar, size }) => {
   if (avatar) {
-    return <img alt={alt} src={avatar} width={size} height={size} />;
+    return (
+      <img
+        className="rounded-full object-cover"
+        alt={alt}
+        src={avatar}
+        width={size}
+        height={size}
+        style={{
+          width: size,
+          height: size,
+        }}
+      />
+    );
   }
 
   // TODO render a placeholder here
