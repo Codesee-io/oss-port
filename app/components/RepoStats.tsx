@@ -1,21 +1,15 @@
 import { InfoIcon } from "@primer/octicons-react";
-import React, { FunctionComponent } from "react";
-import { GitHubIssueData, GitHubMetric } from "../types";
+import type { FC } from "react";
+import type { GitHubData, GitHubMetric } from "../types";
 
 const STATS_ARE_MISSING = process.env.NODE_ENV !== "production";
 
 type Props = {
   className?: string;
-  stats?: {
-    prsCreated: GitHubMetric;
-    prsMerged: GitHubMetric;
-    contributors: GitHubMetric;
-    hacktoberfestIssues?: GitHubIssueData[];
-    helpIssues?: GitHubIssueData[];
-  };
+  stats?: GitHubData;
 };
 
-function formatMetric(metric: GitHubMetric) {
+function formatMetric(metric?: GitHubMetric) {
   if (metric == null) {
     return "0";
   }
@@ -30,7 +24,7 @@ function formatMetric(metric: GitHubMetric) {
   return metric.count;
 }
 
-const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
+const RepoStats: FC<Props> = ({ stats, className }) => {
   const helpWantedCount = stats?.helpIssues?.length || 0;
   const hacktoberfestCount = stats?.hacktoberfestIssues?.length || 0;
   const [issueName, issueCount] =
@@ -84,7 +78,7 @@ const RepoStats: FunctionComponent<Props> = ({ stats, className }) => {
           className="mt-2 text-xs flex items-center text-gray-400"
         >
           <InfoIcon size={12} className="mr-1" />
-          Stats will appear after builds
+          Stats appear on production
         </div>
       )}
     </div>

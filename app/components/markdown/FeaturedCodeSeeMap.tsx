@@ -1,11 +1,18 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import type { FC } from "react";
+import type { Project } from "~/types";
 
-const FeaturedCodeSeeMap: FunctionComponent = () => {
-  const { featuredMapMetadata, frontmatter, organization } =
-    useContext(ProjectContext);
+type Props = {
+  organization: string;
+  featuredMap: Project["attributes"]["featuredMap"];
+  featuredMapMetadata: any;
+};
 
-  if (!featuredMapMetadata || !frontmatter?.featuredMap?.url) {
+const FeaturedCodeSeeMap: FC<Props> = ({
+  featuredMapMetadata,
+  featuredMap,
+  organization,
+}) => {
+  if (!featuredMapMetadata || !featuredMap?.url) {
     return null;
   }
 
@@ -15,8 +22,9 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
       style={{ width: 624 }}
     >
       <a
-        href={frontmatter.featuredMap.url}
+        href={featuredMap.url}
         target="_blank"
+        rel="noreferrer"
         className="block"
         style={{ minWidth: 260 }}
       >
@@ -25,18 +33,19 @@ const FeaturedCodeSeeMap: FunctionComponent = () => {
           width="260"
           height="150"
           className="object-cover rounded"
+          alt="CodeSee map of this codebase"
         />
       </a>
       <div className="sm:pl-8 mt-6 sm:mt-0 text-black-500">
         <a
-          href={frontmatter.featuredMap.url}
+          href={featuredMap.url}
           className="font-bold text-lg supports-hover:hover:text-blue-500 leading-4 mb-2"
         >
           {featuredMapMetadata.name}
         </a>
         <div className="text-xs mb-2">{organization}</div>
         <div className="text-sm">
-          {frontmatter.featuredMap.description ||
+          {featuredMap.description ||
             "Get a quick visual overview of the major areas of our repo!"}
         </div>
       </div>

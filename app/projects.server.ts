@@ -1,5 +1,5 @@
-import projects from "./projects.json";
-import { Project, ProjectCategory } from "./types";
+import projects from "./data/projects.json";
+import type { Project, ProjectCategory } from "./types";
 
 export function getProjects() {
   return projects as Array<Project>;

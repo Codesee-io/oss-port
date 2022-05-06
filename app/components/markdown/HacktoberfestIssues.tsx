@@ -1,18 +1,19 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import type { FC } from "react";
+import type { GitHubData } from "~/types";
 import IssueList from "./IssueList";
 
-const HacktoberfestIssues: FunctionComponent = () => {
-  const { githubData, frontmatter } = useContext(ProjectContext);
-
-  return (
-    <IssueList
-      title="🎃 Hacktoberfest"
-      repoUrl={frontmatter.repoUrl}
-      issues={githubData.hacktoberfestIssues}
-      label="hacktoberfest"
-    />
-  );
+type Props = {
+  githubData: GitHubData;
+  repoUrl: string;
 };
+
+const HacktoberfestIssues: FC<Props> = ({ githubData, repoUrl }) => (
+  <IssueList
+    title="🎃 Hacktoberfest"
+    repoUrl={repoUrl}
+    issues={githubData.hacktoberfestIssues}
+    label="hacktoberfest"
+  />
+);
 
 export default HacktoberfestIssues;

@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from "react";
-import { GitHubIssueData } from "../../types";
+import type { FC } from "react";
+import type { GitHubIssueData } from "~/types";
 
 type Props = {
   issues?: GitHubIssueData[];
@@ -21,12 +21,7 @@ function getLabelUrl(repoUrl: string, label: string) {
   );
 }
 
-const IssueList: FunctionComponent<Props> = ({
-  issues,
-  repoUrl,
-  title,
-  label,
-}) => {
+const IssueList: FC<Props> = ({ issues, repoUrl, title, label }) => {
   if (!issues?.length) {
     return null;
   }
@@ -41,6 +36,7 @@ const IssueList: FunctionComponent<Props> = ({
             <a
               href={issue.url}
               target="_blank"
+              rel="noreferrer"
               className="ml-2 font-semibold supports-hover:hover:text-blue-500"
             >
               {issue.title}
@@ -53,8 +49,8 @@ const IssueList: FunctionComponent<Props> = ({
           <a
             href={getLabelUrl(repoUrl, label)}
             target="_blank"
-            className="text-sm font-bold supports-hover:hover:text-blue-500"
             rel="noreferrer"
+            className="text-sm font-bold supports-hover:hover:text-blue-500"
           >
             View all
           </a>

@@ -51,6 +51,10 @@ export type GitHubIssueData = {
   publishedAt: string;
   title: string;
   url: string;
+  labels: {
+    nodes: Array<{ name: string }>;
+    totalCount: number;
+  };
 };
 
 export type GitHubMetric = {

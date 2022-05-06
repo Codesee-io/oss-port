@@ -3,20 +3,22 @@ import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useCatch, Link } from "@remix-run/react";
 
-import RootLayout from "../../components/RootLayout";
-import ProjectAvatar from "../../components/ProjectAvatar";
-import RepoLinks from "../../components/RepoLinks";
-import RepoStats from "../../components/RepoStats";
-import ProjectTabs from "../../components/ProjectTabs";
-import Tag from "../../components/Tag";
-import { getProject } from "../../projects.server";
-import type { Project } from "../../types";
-import LearnSection from "../../components/markdown/LearnSection";
-import AnchorHeader from "../../components/markdown/AnchorHeader";
-import CurrentlySeeking from "../../components/markdown/CurrentlySeeking";
-import ContributionOverview from "../../components/markdown/ContributionOverview";
-import markdownStyles from "../../styles/markdown.css";
-import HelpWanted from "../../components/markdown/HelpWanted";
+import { getProject } from "~/projects.server";
+import type { GitHubData, Project } from "~/types";
+import { getGitHubDataForProject } from "~/github.server";
+import RootLayout from "~/components/RootLayout";
+import ProjectAvatar from "~/components/ProjectAvatar";
+import RepoLinks from "~/components/RepoLinks";
+import RepoStats from "~/components/RepoStats";
+import ProjectTabs from "~/components/ProjectTabs";
+import Tag from "~/components/Tag";
+import LearnSection from "~/components/markdown/LearnSection";
+import AnchorHeader from "~/components/markdown/AnchorHeader";
+import CurrentlySeeking from "~/components/markdown/CurrentlySeeking";
+import ContributionOverview from "~/components/markdown/ContributionOverview";
+import HelpWanted from "~/components/markdown/HelpWanted";
+import markdownStyles from "~/styles/markdown.css";
+import HacktoberfestIssues from "~/components/markdown/HacktoberfestIssues";
 
 export function links() {
   return [{ rel: "stylesheet", href: markdownStyles }];
@@ -25,7 +27,9 @@ export function links() {
 export const loader: LoaderFunction = async ({ params }) => {
   const { projectOwner, project: projectName } = params;
 
-  const project = await getProject(projectOwner + "/" + projectName);
+  const slug = `${projectOwner}/${projectName}`.toLowerCase();
+  const project = await getProject(slug);
+  const githubData = getGitHubDataForProject(slug);
 
   // If we couldn't find a matching project, throw a 404
   // https://remix.run/docs/en/v1/guides/not-found
@@ -35,17 +39,22 @@ export const loader: LoaderFunction = async ({ params }) => {
     });
   }
 
-  return json(project);
+  return json({ githubData, project });
 };
 
 export const meta: MetaFunction = ({ data }) => {
-  if (data?.attributes?.name) {
-    return { title: `OSS Port | ${data.attributes.name}` };
+  if (data?.project?.attributes?.name) {
+    return { title: `OSS Port | ${data.project.attributes.name}` };
   }
 
   return {
     title: `OSS Port | 404`,
   };
+};
+
+type LoaderData = {
+  project: Project;
+  githubData: GitHubData;
 };
 
 export function CatchBoundary() {
@@ -89,13 +98,14 @@ export function CatchBoundary() {
   );
 }
 
-const Project: FC = () => {
-  const project = useLoaderData<Project>();
+const ProjectPage: FC = () => {
+  const { project, githubData } = useLoaderData<LoaderData>();
 
   // Dynamically populate the tabs based on the existing sections
   const hasOverviewTab = project.body.overview.length > 0;
   const hasContributingTab = project.body.contributing.length > 0;
-  const hasLearnTab = project.attributes.learnLinks?.length > 0;
+  const hasLearnTab =
+    !!project.attributes.learnLinks && project.attributes.learnLinks.length > 0;
 
   const badges = [
     ...(project.attributes.languages || []),
@@ -125,10 +135,10 @@ const Project: FC = () => {
           </div>
           <div className="md:flex mb-6">
             <RepoLinks frontmatter={project.attributes} />
-            {/* <RepoStats
+            <RepoStats
               className="bg-white p-4 flex-shrink"
               stats={githubData}
-            /> */}
+            />
           </div>
         </div>
         <ProjectTabs
@@ -160,14 +170,13 @@ const Project: FC = () => {
           />
           <div className="md:flex md:space-x-4">
             <HelpWanted
-              githubData={
-                {
-                  /** TODO */
-                }
-              }
+              githubData={githubData}
               repoUrl={project.attributes.repoUrl}
             />
-            {/* <HacktoberfestIssues /> */}
+            <HacktoberfestIssues
+              githubData={githubData}
+              repoUrl={project.attributes.repoUrl}
+            />
             {/* <Maps /> */}
           </div>
         </div>
@@ -177,4 +186,4 @@ const Project: FC = () => {
   );
 };
 
-export default Project;
+export default ProjectPage;

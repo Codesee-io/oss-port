@@ -2,12 +2,14 @@ import path from "path";
 import fs from "fs/promises";
 import parseFrontMatter from "front-matter";
 import invariant from "tiny-invariant";
-import { Project } from "../types";
+import type { Project } from "../types";
+import { getGitHubDataForProjects } from "./github-data";
 
 // Configure our markdown parser
 const md = require("markdown-it")({
   html: true, // Allows HTML in the markdown
   breaks: true, // Outputs new lines a <br/> tags
+  linkify: true, // Outputs link-like text as links
 });
 
 // Add support for Slack-style emojis :tada:
@@ -79,7 +81,11 @@ function parseMarkdown(content: string) {
 }
 
 async function exportProjectsToJson() {
-  const outputPath = path.join(__dirname, "../projects.json");
+  // We'll store data in the directory below, so we make sure it exists
+  const outputDirectory = path.join(__dirname, "../data");
+  try {
+    await fs.mkdir(outputDirectory);
+  } catch (_) {}
 
   const projectsPath = path.join(__dirname, "../../public/projects");
 
@@ -143,8 +149,20 @@ async function exportProjectsToJson() {
     })
   );
 
-  console.log(`Writing ${projectsData.length} projects to ${outputPath}`);
-  await fs.writeFile(outputPath, JSON.stringify(projectsData, null, 2));
+  // The paths of the data files we're about to output
+  const outputProjectsPath = path.join(outputDirectory, "projects.json");
+  const outputGithubPath = path.join(outputDirectory, "github.json");
+
+  // Grab a bunch of information from GitHub if we have the right env vars
+  const githubData = await getGitHubDataForProjects(projectsData);
+  if (githubData != null) {
+    await fs.writeFile(outputGithubPath, JSON.stringify(githubData, null, 2));
+  }
+
+  console.log(
+    `Writing ${projectsData.length} projects to ${outputProjectsPath}`
+  );
+  await fs.writeFile(outputProjectsPath, JSON.stringify(projectsData, null, 2));
 }
 
 exportProjectsToJson();

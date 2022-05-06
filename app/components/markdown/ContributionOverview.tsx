@@ -1,9 +1,9 @@
-import { FC } from "react";
+import type { FC } from "react";
 import { GitPullRequestIcon, ClockIcon } from "@primer/octicons-react";
 import ToolsIcon from "../icons/ToolsIcon";
 import UsersIcon from "../icons/UsersIcon";
 import InfoIcon from "../icons/InfoIcon";
-import { Project } from "../../types";
+import type { Project } from "~/types";
 
 type Props = {
   contributionOverview: Project["attributes"]["contributionOverview"];

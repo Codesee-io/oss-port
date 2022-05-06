@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Project } from "../../types";
+import type { Project } from "~/types";
 import AnchorHeader from "./AnchorHeader";
 import FormattedLink from "./FormattedLink";
 
@@ -21,7 +21,7 @@ const LearnSection: FC<Props> = ({ learnLinks }) => {
       <ul className="list-inside list-disc text-black-400 text-sm">
         {learnLinks.map((link, index) => (
           <li key={index}>
-            <FormattedLink href={link.url}>{link.title}</FormattedLink>
+            <FormattedLink href={link.url || ""}>{link.title}</FormattedLink>
           </li>
         ))}
       </ul>
