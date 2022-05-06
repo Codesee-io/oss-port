@@ -7,7 +7,7 @@ export function getProjects() {
 
 export function getProject(slug: string): Project | undefined {
   const matchingProject = getProjects().find(
-    (project) => project.slug === slug
+    (project) => project.slug === slug.toLowerCase()
   );
   return matchingProject;
 }
