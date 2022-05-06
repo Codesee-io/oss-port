@@ -14,10 +14,7 @@ export type ProjectAttributes = {
   };
   websiteUrl?: string;
   twitterUrl?: string;
-  avatar?: {
-    publicURL?: string;
-    relativePath?: string;
-  };
+  avatar?: string;
   featuredMap?: {
     url: string;
     description: string;
@@ -40,7 +37,12 @@ export type ProjectCategory = {
 
 export type Project = {
   attributes: ProjectAttributes;
+  body: {
+    contributing: string;
+    overview: string;
+  };
   slug: string;
+  organization: string;
 };
 
 export type GitHubIssueData = {

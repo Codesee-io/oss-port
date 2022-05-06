@@ -2,6 +2,17 @@ import path from "path";
 import fs from "fs/promises";
 import parseFrontMatter from "front-matter";
 import invariant from "tiny-invariant";
+import { Project } from "../types";
+
+// Configure our markdown parser
+const md = require("markdown-it")({
+  html: true, // Allows HTML in the markdown
+  breaks: true, // Outputs new lines a <br/> tags
+});
+
+// Add support for Slack-style emojis :tada:
+const emoji = require("markdown-it-emoji");
+md.use(emoji);
 
 function postHasValidAttributes(attributes: any) {
   return (
@@ -23,22 +34,48 @@ async function getAllMdxFiles(dirName: string, files: string[]) {
   return files;
 }
 
-function getSlugFromRepoUrl(repoUrl: string) {
+function getRepoOwnerAndName(repoUrl: string) {
   const github = "https://github.com/";
   const gitlab = "https://gitlab.com/";
+
   if (repoUrl.startsWith(github)) {
-    const [org, name] = repoUrl.slice(github.length).split("/");
-    return `${org}/${name}`.toLowerCase();
+    const [owner, name] = repoUrl.slice(github.length).split("/");
+    return { owner, name };
   }
 
   if (repoUrl.startsWith(gitlab)) {
-    const [org, name] = repoUrl.slice(gitlab.length).split("/");
-    return `${org}/${name}`.toLowerCase();
+    const [owner, name] = repoUrl.slice(gitlab.length).split("/");
+    return { owner, name };
   }
 
   throw new Error(
     `Only GitHub and GitLab repositories are permitted at this time`
   );
+}
+
+function getSlugFromRepoUrl(repoUrl: string) {
+  const { owner, name } = getRepoOwnerAndName(repoUrl);
+  return `${owner}/${name}`.toLowerCase();
+}
+
+const CONTRIBUTING_TAGS = ["<Contributing>", "</Contributing>"];
+const OVERVIEW_TAGS = ["<Overview>", "</Overview>"];
+
+function extractSectionFromContent(
+  content: string,
+  startTag: string,
+  endTag: string
+) {
+  if (content.includes(startTag) && content.includes(endTag)) {
+    const from = content.indexOf(startTag) + startTag.length;
+    const to = content.indexOf(endTag);
+    return content.slice(from, to).trim();
+  }
+  return "";
+}
+
+function parseMarkdown(content: string) {
+  return md.render(content);
 }
 
 async function exportProjectsToJson() {
@@ -70,18 +107,39 @@ async function exportProjectsToJson() {
       );
 
       const slug = getSlugFromRepoUrl(attributes.repoUrl);
+      const { owner } = getRepoOwnerAndName(attributes.repoUrl);
       if (attributes.avatar) {
         const splitPath = fileName.split("/");
         const parentFolder = splitPath[splitPath.length - 2];
         attributes.avatar =
-          "projects/" + parentFolder + "/" + attributes.avatar;
+          "/projects/" + parentFolder + "/" + attributes.avatar;
       }
 
-      return {
+      // Parse the <Contributing> and <Overview> sections in the markdown
+      let contributing = extractSectionFromContent(
+        body,
+        CONTRIBUTING_TAGS[0],
+        CONTRIBUTING_TAGS[1]
+      );
+      contributing = parseMarkdown(contributing);
+
+      let overview = extractSectionFromContent(
+        body,
+        OVERVIEW_TAGS[0],
+        OVERVIEW_TAGS[1]
+      );
+      overview = parseMarkdown(overview);
+
+      const project: Project = {
         slug,
         attributes,
-        body,
+        body: {
+          contributing,
+          overview,
+        },
+        organization: owner,
       };
+      return project;
     })
   );
 

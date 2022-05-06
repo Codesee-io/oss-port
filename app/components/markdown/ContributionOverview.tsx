@@ -1,14 +1,16 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import { FC } from "react";
 import { GitPullRequestIcon, ClockIcon } from "@primer/octicons-react";
 import ToolsIcon from "../icons/ToolsIcon";
 import UsersIcon from "../icons/UsersIcon";
 import InfoIcon from "../icons/InfoIcon";
+import { Project } from "../../types";
 
-const ContributionOverview: FunctionComponent = () => {
-  const { frontmatter } = useContext(ProjectContext);
+type Props = {
+  contributionOverview: Project["attributes"]["contributionOverview"];
+};
 
-  if (!frontmatter?.contributionOverview) {
+const ContributionOverview: FC<Props> = ({ contributionOverview }) => {
+  if (!contributionOverview) {
     return null;
   }
 
@@ -18,7 +20,7 @@ const ContributionOverview: FunctionComponent = () => {
     automatedDevEnvironment,
     idealEffort,
     extras,
-  } = frontmatter.contributionOverview;
+  } = contributionOverview;
 
   return (
     <article className="bg-white p-4 max-w-full mb-4" style={{ width: 300 }}>

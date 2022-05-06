@@ -1,14 +1,14 @@
-import React, { FunctionComponent } from "react";
+import type { FC } from "react";
 
 type Props = {
   href: string;
 };
 
-const FormattedLink: FunctionComponent<Props> = ({ href, children }) => {
+const FormattedLink: FC<Props> = ({ href, children }) => {
   return (
     <a
       href={href}
-      className="markdown-element"
+      className="text-blue-500 font-bold hover:underline"
       target="_blank"
       rel="noreferrer"
     >

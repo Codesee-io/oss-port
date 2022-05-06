@@ -1,14 +1,16 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import type { FC } from "react";
 import IssueList from "./IssueList";
 
-const HelpWanted: FunctionComponent = () => {
-  const { githubData, frontmatter } = useContext(ProjectContext);
+type Props = {
+  repoUrl: string;
+  githubData: any;
+};
 
+const HelpWanted: FC<Props> = ({ githubData, repoUrl }) => {
   return (
     <IssueList
       title="Help wanted"
-      repoUrl={frontmatter.repoUrl}
+      repoUrl={repoUrl}
       issues={githubData.helpIssues}
       label="help wanted"
     />

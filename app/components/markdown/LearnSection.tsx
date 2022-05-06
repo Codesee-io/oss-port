@@ -1,12 +1,14 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import type { FC } from "react";
+import { Project } from "../../types";
 import AnchorHeader from "./AnchorHeader";
 import FormattedLink from "./FormattedLink";
 
-const LearnSection: FunctionComponent = () => {
-  const { frontmatter } = useContext(ProjectContext);
+type Props = {
+  learnLinks: Project["attributes"]["learnLinks"];
+};
 
-  if (!frontmatter?.learnLinks) {
+const LearnSection: FC<Props> = ({ learnLinks }) => {
+  if (!learnLinks) {
     return null;
   }
 
@@ -16,8 +18,8 @@ const LearnSection: FunctionComponent = () => {
       <p className="mb-4">
         Resources to learn more about our technology and community.
       </p>
-      <ul className="list-inside list-disc">
-        {frontmatter.learnLinks.map((link, index) => (
+      <ul className="list-inside list-disc text-black-400 text-sm">
+        {learnLinks.map((link, index) => (
           <li key={index}>
             <FormattedLink href={link.url}>{link.title}</FormattedLink>
           </li>

@@ -1,19 +1,20 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "../ProjectContext";
+import type { FC } from "react";
+import { Project } from "../../types";
 import Tag from "../Tag";
 
-const CurrentlySeeking: FunctionComponent = () => {
-  const { frontmatter } = useContext(ProjectContext);
+type Props = {
+  currentlySeeking: Project["attributes"]["currentlySeeking"];
+};
 
-  if (!frontmatter?.currentlySeeking) {
+const CurrentlySeeking: FC<Props> = ({ currentlySeeking }) => {
+  if (!currentlySeeking) {
     return null;
   }
 
   return (
     <article className="bg-white p-4 max-w-full mb-4" style={{ width: 300 }}>
       <h3 className="text-black-500 font-bold mb-4">Currently seeking</h3>
-
-      {frontmatter.currentlySeeking.map((item) => (
+      {currentlySeeking.map((item) => (
         <Tag tag={item} key={item} className="mr-2 mb-2" />
       ))}
     </article>

@@ -1,7 +1,8 @@
-import { FC } from "react";
+import type { FC } from "react";
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useCatch, Link } from "@remix-run/react";
+
 import RootLayout from "../../components/RootLayout";
 import ProjectAvatar from "../../components/ProjectAvatar";
 import RepoLinks from "../../components/RepoLinks";
@@ -10,11 +11,21 @@ import ProjectTabs from "../../components/ProjectTabs";
 import Tag from "../../components/Tag";
 import { getProject } from "../../projects.server";
 import type { Project } from "../../types";
+import LearnSection from "../../components/markdown/LearnSection";
+import AnchorHeader from "../../components/markdown/AnchorHeader";
+import CurrentlySeeking from "../../components/markdown/CurrentlySeeking";
+import ContributionOverview from "../../components/markdown/ContributionOverview";
+import markdownStyles from "../../styles/markdown.css";
+import HelpWanted from "../../components/markdown/HelpWanted";
 
-export const loader: LoaderFunction = ({ params }) => {
+export function links() {
+  return [{ rel: "stylesheet", href: markdownStyles }];
+}
+
+export const loader: LoaderFunction = async ({ params }) => {
   const { projectOwner, project: projectName } = params;
 
-  const project = getProject(projectOwner + "/" + projectName);
+  const project = await getProject(projectOwner + "/" + projectName);
 
   // If we couldn't find a matching project, throw a 404
   // https://remix.run/docs/en/v1/guides/not-found
@@ -82,8 +93,8 @@ const Project: FC = () => {
   const project = useLoaderData<Project>();
 
   // Dynamically populate the tabs based on the existing sections
-  const hasOverviewTab = false; // project.body.includes("mdx(Overview,");
-  const hasContributingTab = false; // project.body.includes("mdx(Contributing,");
+  const hasOverviewTab = project.body.overview.length > 0;
+  const hasContributingTab = project.body.contributing.length > 0;
   const hasLearnTab = project.attributes.learnLinks?.length > 0;
 
   const badges = [
@@ -98,7 +109,7 @@ const Project: FC = () => {
           <div className="pr-4 hidden md:block flex-shrink-0">
             <ProjectAvatar
               size={64}
-              image={project.attributes.avatar}
+              avatar={project.attributes.avatar}
               alt={project.attributes.name}
             />
           </div>
@@ -125,20 +136,42 @@ const Project: FC = () => {
           hasOverviewTab={hasOverviewTab}
           hasLearnTab={hasLearnTab}
         />
-        {/* <ProjectContextProvider
-          value={{
-            frontmatter: project.attributes,
-            githubData,
-            featuredMapMetadata,
-            mapsMetadata,
-            organization: project.parent.organization,
-          }}
-        >
-          <MDXProvider components={mdxComponents}>
-            <MDXRenderer>{project.body}</MDXRenderer>
-          </MDXProvider>
-          <LearnSection />
-        </ProjectContextProvider> */}
+        <div className="mb-8">
+          <AnchorHeader id="overview">Overview</AnchorHeader>
+          <div
+            className="markdown-content"
+            dangerouslySetInnerHTML={{ __html: project.body.overview }}
+          />
+          {/* <FeaturedCodeSeeMap /> */}
+          <div className="md:flex md:space-x-6 mt-8">
+            <CurrentlySeeking
+              currentlySeeking={project.attributes.currentlySeeking}
+            />
+            <ContributionOverview
+              contributionOverview={project.attributes.contributionOverview}
+            />
+          </div>
+        </div>
+        <div className="mb-8">
+          <AnchorHeader id="contributing">Contributing</AnchorHeader>
+          <div
+            className="markdown-content"
+            dangerouslySetInnerHTML={{ __html: project.body.contributing }}
+          />
+          <div className="md:flex md:space-x-4">
+            <HelpWanted
+              githubData={
+                {
+                  /** TODO */
+                }
+              }
+              repoUrl={project.attributes.repoUrl}
+            />
+            {/* <HacktoberfestIssues /> */}
+            {/* <Maps /> */}
+          </div>
+        </div>
+        <LearnSection learnLinks={project.attributes.learnLinks} />
       </div>
     </RootLayout>
   );

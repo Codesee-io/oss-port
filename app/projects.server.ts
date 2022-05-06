@@ -5,7 +5,7 @@ export function getProjects() {
   return projects as Array<Project>;
 }
 
-export function getProject(slug: string): Project | undefined {
+export async function getProject(slug: string): Promise<Project | undefined> {
   const matchingProject = getProjects().find(
     (project) => project.slug === slug.toLowerCase()
   );
