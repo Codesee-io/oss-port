@@ -44,7 +44,7 @@ function getSlugFromRepoUrl(repoUrl: string) {
 async function exportProjectsToJson() {
   const outputPath = path.join(__dirname, "../projects.json");
 
-  const projectsPath = path.join(__dirname, "../../projects");
+  const projectsPath = path.join(__dirname, "../../public/projects");
 
   // Get all the mdx files inside the projects directory
   const allMdxFiles = await getAllMdxFiles(projectsPath, []);
@@ -58,7 +58,7 @@ async function exportProjectsToJson() {
     allProjects.map(async (fileName) => {
       const file = await fs.readFile(path.join(fileName));
 
-      const { attributes } = parseFrontMatter<{
+      const { attributes, body } = parseFrontMatter<{
         repoUrl: string;
         name: string;
         [key: string]: any;
@@ -70,10 +70,17 @@ async function exportProjectsToJson() {
       );
 
       const slug = getSlugFromRepoUrl(attributes.repoUrl);
+      if (attributes.avatar) {
+        const splitPath = fileName.split("/");
+        const parentFolder = splitPath[splitPath.length - 2];
+        attributes.avatar =
+          "projects/" + parentFolder + "/" + attributes.avatar;
+      }
 
       return {
         slug,
         attributes,
+        body,
       };
     })
   );

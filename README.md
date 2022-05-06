@@ -4,12 +4,12 @@ We’re thrilled to have you in Port. It's super easy to get started, and should
 
 **Remix todos:**
 
-- [ ] fix the project avatars
 - [ ] populate the markdown inside projects
 - [ ] parse emojis in markdown
 - [ ] fetch data from GitHub
 - [ ] use the correct favicon
 - [ ] pull the projects from the file system during development
+- [ ] investigate why the search index doesn't work with the "Markdownify" project
 
 ## Step 1: Getting up and running
 

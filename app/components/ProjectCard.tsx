@@ -38,7 +38,7 @@ const ProjectCard: FC<Props> = ({ project, githubData, activeTags = [] }) => {
         {!!attributes.avatar && (
           <div className="absolute -left-2 -top-3">
             <ProjectAvatar
-              image={attributes.avatar}
+              avatar={attributes.avatar}
               alt={attributes.name}
               size={48}
             />
