@@ -16,7 +16,8 @@
     "dev": "yarn run dev:projects && concurrently \"yarn run dev:css\" \"remix dev\"",
     "dev:css": "postcss styles --base styles --dir app/styles -w",
     "dev:projects": "npx ts-node app/utils/parse-projects.ts",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "test": "jest"
   },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
