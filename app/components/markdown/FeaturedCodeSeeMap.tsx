@@ -12,7 +12,7 @@ const FeaturedCodeSeeMap: FC<Props> = ({
   featuredMap,
   organization,
 }) => {
-  if (!featuredMapMetadata || !featuredMap?.url) {
+  if (!featuredMap?.url) {
     return null;
   }
 
@@ -29,7 +29,10 @@ const FeaturedCodeSeeMap: FC<Props> = ({
         style={{ minWidth: 260 }}
       >
         <img
-          src={featuredMapMetadata.thumbnail}
+          src={
+            featuredMapMetadata.thumbnail ||
+            "https://app.codesee.io/sample_map.svg"
+          }
           width="260"
           height="150"
           className="object-cover rounded"
@@ -41,7 +44,7 @@ const FeaturedCodeSeeMap: FC<Props> = ({
           href={featuredMap.url}
           className="font-bold text-lg supports-hover:hover:text-blue-500 leading-4 mb-2"
         >
-          {featuredMapMetadata.name}
+          {featuredMapMetadata.name || "CodeSee Map"}
         </a>
         <div className="text-xs mb-2">{organization}</div>
         <div className="text-sm">

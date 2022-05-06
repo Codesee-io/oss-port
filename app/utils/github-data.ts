@@ -13,7 +13,7 @@ export async function getGitHubDataForProjects(projects: Project[]) {
       },
     });
   } else {
-    console.log("No GitHub API Token set, github data will not be available.");
+    console.log("No GitHub API Token set, GitHub data will not be available.");
     return;
   }
 

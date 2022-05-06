@@ -4,7 +4,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData, useCatch, Link } from "@remix-run/react";
 
 import { getProject } from "~/projects.server";
-import type { GitHubData, Project } from "~/types";
+import type { CodeSeeMapMetadata, GitHubData, Project } from "~/types";
 import { getGitHubDataForProject } from "~/github.server";
 import RootLayout from "~/components/RootLayout";
 import ProjectAvatar from "~/components/ProjectAvatar";
@@ -19,6 +19,9 @@ import ContributionOverview from "~/components/markdown/ContributionOverview";
 import HelpWanted from "~/components/markdown/HelpWanted";
 import markdownStyles from "~/styles/markdown.css";
 import HacktoberfestIssues from "~/components/markdown/HacktoberfestIssues";
+import FeaturedCodeSeeMap from "~/components/markdown/FeaturedCodeSeeMap";
+import Maps from "~/components/Maps";
+import { getCodeSeeMapMetadata } from "~/codesee.server";
 
 export function links() {
   return [{ rel: "stylesheet", href: markdownStyles }];
@@ -31,6 +34,14 @@ export const loader: LoaderFunction = async ({ params }) => {
   const project = await getProject(slug);
   const githubData = getGitHubDataForProject(slug);
 
+  let featuredMapMetadata: CodeSeeMapMetadata | undefined;
+  if (project?.attributes.featuredMap?.url) {
+    // Grab the map's metadata
+    featuredMapMetadata = await getCodeSeeMapMetadata(
+      project.attributes.featuredMap.url
+    );
+  }
+
   // If we couldn't find a matching project, throw a 404
   // https://remix.run/docs/en/v1/guides/not-found
   if (!project) {
@@ -39,7 +50,7 @@ export const loader: LoaderFunction = async ({ params }) => {
     });
   }
 
-  return json({ githubData, project });
+  return json({ githubData, project, featuredMapMetadata });
 };
 
 export const meta: MetaFunction = ({ data }) => {
@@ -55,6 +66,7 @@ export const meta: MetaFunction = ({ data }) => {
 type LoaderData = {
   project: Project;
   githubData: GitHubData;
+  featuredMapMetadata: CodeSeeMapMetadata;
 };
 
 export function CatchBoundary() {
@@ -99,7 +111,8 @@ export function CatchBoundary() {
 }
 
 const ProjectPage: FC = () => {
-  const { project, githubData } = useLoaderData<LoaderData>();
+  const { project, githubData, featuredMapMetadata } =
+    useLoaderData<LoaderData>();
 
   // Dynamically populate the tabs based on the existing sections
   const hasOverviewTab = project.body.overview.length > 0;
@@ -152,7 +165,11 @@ const ProjectPage: FC = () => {
             className="markdown-content"
             dangerouslySetInnerHTML={{ __html: project.body.overview }}
           />
-          {/* <FeaturedCodeSeeMap /> */}
+          <FeaturedCodeSeeMap
+            organization={project.organization}
+            featuredMap={project.attributes.featuredMap}
+            featuredMapMetadata={featuredMapMetadata}
+          />
           <div className="md:flex md:space-x-6 mt-8">
             <CurrentlySeeking
               currentlySeeking={project.attributes.currentlySeeking}
@@ -177,7 +194,7 @@ const ProjectPage: FC = () => {
               githubData={githubData}
               repoUrl={project.attributes.repoUrl}
             />
-            {/* <Maps /> */}
+            <Maps maps={project.attributes.maps} mapsMetadata={{}} />
           </div>
         </div>
         <LearnSection learnLinks={project.attributes.learnLinks} />

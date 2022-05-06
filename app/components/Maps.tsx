@@ -1,16 +1,18 @@
-import React, { FunctionComponent, useContext } from "react";
-import ProjectContext from "./ProjectContext";
+import type { FC } from "react";
+import type { Project } from "~/types";
 import FormattedLink from "./markdown/FormattedLink";
 
-const Maps: FunctionComponent = () => {
-  const { frontmatter, mapsMetadata } = useContext(ProjectContext);
-  const maps = frontmatter.maps || [];
+type Props = {
+  mapsMetadata: any;
+  maps: Project["attributes"]["maps"];
+};
 
+const Maps: FC<Props> = ({ mapsMetadata, maps = [] }) => {
   if (!maps.length) return null;
 
   return (
     <section>
-      <h2 className="markdown-element mt-4">Our CodeSee Maps</h2>
+      <h3 className="my-4">Our CodeSee Maps</h3>
       <div className="md:flex md:space-x-4">
         <ul className="md:flex gap-2 m-0 p-0">
           {maps.map(({ url, description, subTitle }, i) => (
@@ -25,10 +27,14 @@ const Maps: FunctionComponent = () => {
                 <FormattedLink href={url}>
                   {mapsMetadata[i] ? (
                     <img
-                      src={mapsMetadata[i].thumbnail}
+                      src={
+                        mapsMetadata[i].thumbnail ||
+                        "https://app.codesee.io/sample_map.svg"
+                      }
                       width="260"
                       height="150"
                       className="object-cover rounded"
+                      alt="Preview of a CodeSee Map"
                     />
                   ) : (
                     <div

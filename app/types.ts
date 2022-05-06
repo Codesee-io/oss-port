@@ -73,8 +73,20 @@ export type GitHubData = {
 export type CodeSeeMapMetadata = {
   id: string;
   name: string;
-  visibility: string;
+  entityRoleEveryone: string;
   featured: boolean;
+  insights: {
+    lastCommitDate: string;
+    commitCountLast30Days: string;
+    createDate: string;
+    linesOfCode: string;
+  };
   changed: string;
+  repos: Array<{
+    url: string;
+    defaultBranch: string;
+    isPublic: boolean;
+  }>;
+  hasPrivateRepos: false;
   thumbnail: string;
 };
