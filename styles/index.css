@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  src: url("/FrankRuhlLibre-Black.ttf");
+  font-display: swap;
+}
