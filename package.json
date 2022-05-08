@@ -20,7 +20,6 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@octokit/graphql": "4.8.0",
     "@primer/octicons-react": "15.2.0",
