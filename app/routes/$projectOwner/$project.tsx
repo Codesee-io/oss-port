@@ -55,11 +55,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export const meta: MetaFunction = ({ data }) => {
   if (data?.project?.attributes?.name) {
-    return { title: `OSS Port | ${data.project.attributes.name}` };
+    return { title: `Open-Source Hub | ${data.project.attributes.name}` };
   }
 
   return {
-    title: `OSS Port | 404`,
+    title: `Open-Source Hub | 404`,
   };
 };
 

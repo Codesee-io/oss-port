@@ -1,4 +1,4 @@
-Thank you for submitting your project to The OSS Port!
+Thank you for submitting your project to Open-Source Hub!
 
 Before continuing, please make sure you read and abide by our [Code of Conduct](../../code_of_conduct.md).
 

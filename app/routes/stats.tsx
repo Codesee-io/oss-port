@@ -4,12 +4,11 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 import RootLayout from "../components/RootLayout";
-import LogoWhiteBackground from "../images/LogoWhiteBackground";
 import { getProjects, getProjectsMetadata } from "../projects.server";
-import { Project, ProjectCategory } from "../types";
+import type { Project, ProjectCategory } from "../types";
 
 export const meta: MetaFunction = () => ({
-  title: "Stats | OSS Port",
+  title: "Stats | Open-Source Hub",
 });
 
 export const loader: LoaderFunction = async () => {
@@ -54,7 +53,6 @@ const StatsPage: FC = () => {
   return (
     <RootLayout>
       <main className="py-12 md:py-20 px-4 max-w-xl mx-auto">
-        <LogoWhiteBackground style={{ width: 400 }} className="mx-auto" />
         <h1 className="text-3xl font-accent leading-relaxed text-center mt-4 mb-8">
           Stats and trends
         </h1>

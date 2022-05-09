@@ -10,7 +10,7 @@ import YouTubeVideoCard from "../components/YouTubeVideoCard";
 import markdownStyles from "../styles/markdown.css";
 
 export const meta: MetaFunction = () => ({
-  title: "Resources for OSS Port",
+  title: "Resources for Open-Source Hub",
 });
 
 export function links() {
@@ -33,7 +33,7 @@ const Resources = () => (
           <div className="text-center max-w-xl ml-auto mr-auto text-black-500">
             <h1 className="text-4xl font-accent leading-large">Resources</h1>
             <p className="my-4">
-              All the info you need to onboard your crew at the OSS Port:
+              All the info you need to onboard your crew at the Open-Source Hub:
               showcase or find a project, make a map, or create a tour.
             </p>
           </div>
@@ -46,7 +46,7 @@ const Resources = () => (
         </h2>
         <YouTubeVideoCard
           youTubeID="gDAvFPnNFyo"
-          title="Intro to the OSS Port"
+          title="Intro to Open-Source Hub"
           body="Ahoy! Let Ramón from CodeSee show you the ropes at the Port!"
         />
       </section>

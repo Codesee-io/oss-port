@@ -11,7 +11,6 @@ import {
   getProjectsMetadata,
 } from "~/projects.server";
 import { getGitHubData } from "~/github.server";
-import Logo from "~/images/Logo";
 import SearchWrapper from "~/components/local-search/SearchWrapper";
 import ProjectList from "~/components/ProjectList";
 import SearchInput from "~/components/local-search/SearchInput";
@@ -27,7 +26,7 @@ export function links() {
 }
 
 export const meta: MetaFunction = () => ({
-  title: "OSS Port | Find open-source projects",
+  title: "Open-Source Hub | Find open-source projects",
 });
 
 export const loader: LoaderFunction = async () => {
@@ -89,9 +88,8 @@ export default function Index() {
   return (
     <RootLayout>
       <div className="max-w-7xl mx-auto pt-12 px-2">
-        <Logo className="mx-auto w-32 lg:w-52 max-w-full mb-6" />
         <h1 className="text-black-500 font-accent text-3xl lg:text-4xl text-center mb-4">
-          Welcome to OSS Port
+          Welcome to Open-Source Hub
         </h1>
         <p className="text-black-500 text-center mb-6 mt-2">
           Connecting 100,000+ potential contributors with maintainers.

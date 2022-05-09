@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
+import type { FC } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const RootLayout: FunctionComponent = ({ children }) => {
+const RootLayout: FC = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />

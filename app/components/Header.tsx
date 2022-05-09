@@ -1,6 +1,5 @@
-import React, { FunctionComponent } from "react";
+import type { FC } from "react";
 import { Link } from "@remix-run/react";
-import Wordmark from "../images/Wordmark";
 import {
   HOW_TO_LIST_PROJECT_URL,
   RESOURCES_LINK,
@@ -8,12 +7,18 @@ import {
 } from "../utils/constants";
 import CallToAction from "./CallToAction";
 import NavLink from "./NavLink";
+import logo from "~/images/logo_white.png";
 
-const Header: FunctionComponent = () => (
+const Header: FC = () => (
   <header className="bg-blue-700 sm:sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
       <Link to="/" className="block">
-        <Wordmark width="200" className="my-2" />
+        <img
+          src={logo}
+          alt=""
+          className="my-2"
+          style={{ width: 305, height: 40 }}
+        />
       </Link>
       <div className="flex items-center justify-center text-white whitespace-nowrap">
         <div className="hidden sm:block">

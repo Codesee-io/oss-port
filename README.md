@@ -1,10 +1,10 @@
 <p align="center">
-<img src="./docs/mark.png" alt="OSS Port logo" width="60" height="60">
+<img src="./docs/mark.png" alt="Open-Source Hub log" width="60" height="60">
 </p>
 
-<h1 align="center">OSS Port</h1>
+<h1 align="center">Open-Source Hub</h1>
 
-Welcome to OSS Port! This website and community connects open source maintainers and collaborators. Please join [our Discord channel](https://discord.gg/opensource) if you have any questions or just want to chat!
+Welcome to Open-Source Hub! This website and community connects open source maintainers and collaborators. Please join [our Discord channel](https://discord.gg/opensource) if you have any questions or just want to chat!
 
 ## Project setup
 
@@ -26,11 +26,11 @@ yarn dev
 
 ### github.dev environment
 
-You can also contribute to OSS Port without having to run the app on your local machine! Go ahead and check out the github.dev steps below.
+You can also contribute to OSH without having to run the app on your local machine! Go ahead and check out the github.dev steps below.
 
 If you have a JavaScript development environment set up already and prefer to run locally, the approach will be familiar.
 
-1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the OSS Port.
+1. [Create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the OSH.
 1. Once on your fork's page, either press the full stop `.` key or replace `.com` in the location bar in your browser to `.dev`.
 
 Now you're in the github.dev editor! Feel free to hop ahead to [our contributing section](#contributing).
@@ -90,11 +90,11 @@ The CodeSee Map below is a good way to get familiar with the codebase:
 
 ### Tag policy
 
-Final tags are up to the maintainers of OSS Port. Your tags may be modified for the benefit of the community and to improve discoverability.
+Final tags are up to the maintainers of Open-Source Hub. Your tags may be modified for the benefit of the community and to improve discoverability.
 
 We use title-casing for tags. For example: "First-Timer Friendly, Social Activism, C#, JavaScript".
 
-### How to remove your project from OSS Port
+### How to remove your project from Open-Source Hub
 
 Open a PR to remove your project folder from this repository.
 
