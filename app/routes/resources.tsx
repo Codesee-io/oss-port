@@ -2,11 +2,8 @@ import { MDXProvider } from "@mdx-js/react";
 import type { MetaFunction } from "@remix-run/node";
 import RootLayout from "../components/RootLayout";
 import HowToListYourProject from "../resources/HowToListYourProject.mdx";
-import GettingStartedSection from "../resources/GettingStartedSection.mdx";
-import LargeCodebase from "../resources/LargeCodebase.mdx";
 import mdxElements from "../components/markdown/mdxElements";
 import CallToAction from "../components/CallToAction";
-import YouTubeVideoCard from "../components/YouTubeVideoCard";
 import markdownStyles from "../styles/markdown.css";
 
 export const meta: MetaFunction = () => ({
@@ -26,8 +23,8 @@ const Resources = () => (
   <RootLayout>
     <main>
       <section
-        className="relative w-full bg-cover mb-12"
-        style={{ backgroundImage: "url(/wave_field_light.svg)" }}
+        className="relative w-full bg-cover mb-12 bg-blue-100"
+        // style={{ backgroundImage: "url(/wave_field_light.svg)" }}
       >
         <div className="max-w-5xl mx-auto py-32 px-4">
           <div className="text-center max-w-xl ml-auto mr-auto text-black-500">
@@ -40,22 +37,11 @@ const Resources = () => (
         </div>
       </section>
 
-      <section className="px-4 max-w-4xl mx-auto mb-4">
-        <h2 className="text-black-400 font-semibold mb-3 text-lg">
-          Getting Started
-        </h2>
-        <YouTubeVideoCard
-          youTubeID="gDAvFPnNFyo"
-          title="Intro to Open-Source Hub"
-          body="Ahoy! Let Ramón from CodeSee show you the ropes at the Port!"
-        />
-      </section>
-
       <section className="px-4 max-w-4xl mx-auto pb-20 markdown-content">
         <MDXProvider components={mdxComponents}>
           <HowToListYourProject />
-          <GettingStartedSection />
-          <LargeCodebase />
+          {/* <GettingStartedSection />
+          <LargeCodebase /> */}
         </MDXProvider>
       </section>
       <section
