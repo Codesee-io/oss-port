@@ -4,6 +4,8 @@
 
 <h1 align="center">OSS Port</h1>
 
+**OSS Port is now Open-Source Hub! We've moved to [a new repository](https://github.com/Codesee-io/opensourcehub).**
+
 Welcome to OSS Port! This website and community connects open source maintainers and collaborators. Please join [our Discord channel](https://discord.gg/opensource) if you have any questions or just want to chat!
 
 ## Project setup
