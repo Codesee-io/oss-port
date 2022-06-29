@@ -24,7 +24,7 @@
     "@octokit/graphql": "4.8.0",
     "@primer/octicons-react": "15.2.0",
     "@remix-run/node": "^1.4.3",
-    "@remix-run/react": "^1.4.3",
+    "@remix-run/react": "^1.5.1",
     "@remix-run/vercel": "^1.4.3",
     "@vercel/node": "^1.15.0",
     "autoprefixer": "^10.4.7",
